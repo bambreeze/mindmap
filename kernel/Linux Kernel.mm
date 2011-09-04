@@ -1,0 +1,36 @@
+<map version="0.9.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1314436088769" TEXT="Linux Kernel">
+<node CREATED="1314436092630" ID="ID_1157985821" MODIFIED="1314436102613" POSITION="right" TEXT="Process Management"/>
+<node CREATED="1314436121579" ID="ID_1250859528" MODIFIED="1315123240535" POSITION="right">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Memory Management
+    </p>
+    <p>
+      (Ch1/8/9)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1315123244348" ID="ID_350240484" MODIFIED="1315123274412" TEXT="Memory Addresses">
+<node CREATED="1315123168075" ID="ID_1935897798" MODIFIED="1315123187281" TEXT="Logical Address"/>
+<node CREATED="1314440025526" ID="ID_6589395" MODIFIED="1315123161070" TEXT="Linear Address (Virtual Address)"/>
+<node CREATED="1314440062647" ID="ID_1510281728" MODIFIED="1315123161070" TEXT="Physical Address"/>
+</node>
+<node CREATED="1315123311858" ID="ID_1885773399" MODIFIED="1315123365947" TEXT="Segmentation">
+<node CREATED="1315123414222" ID="ID_1932689008" MODIFIED="1315123462847" TEXT="segment : offset"/>
+</node>
+<node CREATED="1315123367113" ID="ID_1300788823" MODIFIED="1315124351196" STYLE="fork" TEXT="Paging"/>
+</node>
+<node CREATED="1314436133101" ID="ID_1160710559" MODIFIED="1314436147393" POSITION="right" TEXT="Virtual File System"/>
+<node CREATED="1314436147807" ID="ID_1574595510" MODIFIED="1315124813816" POSITION="right" TEXT="Device Driver">
+<node CREATED="1314437026181" ID="ID_293195365" MODIFIED="1314437032324" TEXT="Char Device"/>
+<node CREATED="1314437033071" ID="ID_1001063607" MODIFIED="1314437036828" TEXT="Block Device"/>
+<node CREATED="1314437037466" ID="ID_613067207" MODIFIED="1314437043175" TEXT="Network Device"/>
+</node>
+</node>
+</map>
