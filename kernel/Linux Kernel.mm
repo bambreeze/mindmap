@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1314436088769" TEXT="Linux Kernel">
 <node CREATED="1314436092630" ID="ID_1157985821" MODIFIED="1315906681478" POSITION="right" TEXT="Process Management">
-<node CREATED="1315906710224" ID="ID_1707237907" MODIFIED="1315920045187">
+<node CREATED="1315906710224" ID="ID_1707237907" MODIFIED="1316835196956">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -22,10 +22,123 @@
 <node CREATED="1315914376062" ID="ID_1275568405" MODIFIED="1315914386584" TEXT="TASK_UNINTERRUPTIBLE"/>
 <node CREATED="1315914414290" ID="ID_1327507856" MODIFIED="1315914416204" TEXT="..."/>
 </node>
-<node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1315918219425" TEXT="unsigned int flags;"/>
-<node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1315914264857" TEXT="void * stack;">
+<node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1316831863401" TEXT="void * stack;">
 <arrowlink DESTINATION="ID_632220490" ENDARROW="Default" ENDINCLINATION="36;0;" ID="Arrow_ID_694562155" STARTARROW="None" STARTINCLINATION="36;0;"/>
 </node>
+<node CREATED="1316842437493" ID="ID_18418388" MODIFIED="1316842444704" TEXT="atomic_t usage;"/>
+<node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1315918219425" TEXT="unsigned int flags;"/>
+<node CREATED="1316843580854" ID="ID_970644983" MODIFIED="1316843582837" TEXT="..."/>
+<node CREATED="1316843584303" ID="ID_1772179729" MODIFIED="1316843597075" TEXT="struct list_head tasks;">
+<node CREATED="1316843734093" ID="ID_803741408" MODIFIED="1316843763407">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>process list</b>&#160;- a list that links together all existing process descriptors.&#160;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1316843916945" ID="ID_27378462" MODIFIED="1316917741413">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>init_task</b>&#160;- Initial task structure
+    </p>
+    <p>
+      struct task_struct init_task = INIT_TASK(init_task);
+    </p>
+    <p>
+      (arch/x86/kernel/init_task.c)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1316917476163" ID="ID_686524080" MODIFIED="1316917781400">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>for_each_process(p)</b>&#160;- scans the whole process list
+    </p>
+    <p>
+      (include/linux/sched.h)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1316917874162" ID="ID_1633106799" MODIFIED="1316917876740" TEXT="..."/>
+<node CREATED="1316917878242" ID="ID_1660815912" MODIFIED="1316920095859" TEXT="struct task_struct *real_parent;">
+<node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1316920198129" TEXT="Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists.">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1316920096768" ID="ID_1869882986" MODIFIED="1316920105763" TEXT="struct task_struct *parent;">
+<node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1316932825951" TEXT="Points to the current parent of P ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1316920113462" ID="ID_1642509929" MODIFIED="1316920123737" TEXT="struct list_head children;"/>
+<node CREATED="1316920125217" ID="ID_1281826325" MODIFIED="1316920134265" TEXT="struct list_head sibling;"/>
+<node CREATED="1316928405128" ID="ID_455203133" MODIFIED="1316928406488" TEXT="..."/>
+<node CREATED="1316928408514" ID="ID_1880307065" MODIFIED="1316928415120" TEXT="pid_t pid;"/>
+<node CREATED="1316928416665" ID="ID_60895847" MODIFIED="1316928421519" TEXT="pid_t tgid;">
+<node CREATED="1316928466599" ID="ID_579056398" MODIFIED="1316932815634" TEXT="PID of the thread group leader of P">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1316920339866" ID="ID_4315816" MODIFIED="1316928482088" TEXT="struct task_struct *group_leader;">
+<node CREATED="1316920358624" ID="ID_1174745410" MODIFIED="1316932813151" TEXT="Process descriptor pointer of the group leader of P">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1316920108998" ID="ID_844028112" MODIFIED="1316920110400" TEXT="..."/>
+<node CREATED="1316928554073" ID="ID_62137992" MODIFIED="1316928886431" TEXT="struct pid_link pids[PIDTYPE_MAX];">
+<arrowlink DESTINATION="ID_274205463" ENDARROW="Default" ENDINCLINATION="350;0;" ID="Arrow_ID_1300014786" STARTARROW="None" STARTINCLINATION="350;0;"/>
+<node CREATED="1316932857095" ID="ID_1959762196" MODIFIED="1316932931821">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      enum pid_type
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;PIDTYPE_PID,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;PIDTYPE_PGID,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;PIDTYPE_SID,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;PIDTYPE_MAX
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1316928586259" ID="ID_1527760070" MODIFIED="1316928598021" TEXT="..."/>
 <node CREATED="1315917811701" ID="ID_749542623" MODIFIED="1315919278470" TEXT="struct thread_struct thread;">
 <arrowlink DESTINATION="ID_1017458029" ENDARROW="Default" ENDINCLINATION="172;7;" ID="Arrow_ID_1554473956" STARTARROW="None" STARTINCLINATION="291;6;"/>
 </node>
@@ -71,6 +184,57 @@
 <node CREATED="1315919664821" ID="ID_1222193728" MODIFIED="1315919688724" TEXT="struct desc_struct tls_array[]"/>
 <node CREATED="1315919706622" ID="ID_1308739630" MODIFIED="1315919724986" TEXT="unsigned long sp;"/>
 <node CREATED="1315919726190" ID="ID_844385859" MODIFIED="1315919727479" TEXT="..."/>
+</node>
+<node CREATED="1316928640993" ID="ID_274205463" MODIFIED="1316928886430">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>struct pid_link</b>
+    </p>
+    <p>
+      (include/linux/pid.h)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1316928699044" ID="ID_1729999827" MODIFIED="1316932589085" TEXT="struct hlist_node node;"/>
+<node CREATED="1316931912268" ID="ID_28056775" MODIFIED="1316932656178">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct pid *pid;
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1316928771487" ID="ID_116010920" MODIFIED="1316928793593" TEXT="atomic_t count;"/>
+<node CREATED="1316928794768" ID="ID_340123140" MODIFIED="1316932589085" TEXT="struct hlist_head tasks[PIDTYPE_MAX];">
+<arrowlink DESTINATION="ID_1729999827" ENDARROW="Default" ENDINCLINATION="251;0;" ID="Arrow_ID_545094462" STARTARROW="None" STARTINCLINATION="251;0;"/>
+<node CREATED="1316928839340" ID="ID_1171258771" MODIFIED="1316928853089" TEXT="lists of tasks that use this pid">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1316928813011" ID="ID_640516611" MODIFIED="1316928814767" TEXT="..."/>
+<node CREATED="1316932018473" ID="ID_1149046420" MODIFIED="1316932029192" TEXT="struct upid numbers[1];">
+<node CREATED="1316932051355" ID="ID_1051743616" MODIFIED="1316932056000" TEXT="int nr;">
+<node CREATED="1316932155505" ID="ID_2304393" MODIFIED="1316932160980" TEXT="The PID number">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1316932056544" ID="ID_513109031" MODIFIED="1316932085118" TEXT="struct pid_namespace *ns;"/>
+<node CREATED="1316932086156" ID="ID_373966593" MODIFIED="1316932098245" TEXT="struct hlist_node pid_chain;">
+<node CREATED="1316932217219" ID="ID_1628611484" MODIFIED="1316932221519" TEXT="The links to the next and previous elements in the hash chain list">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1315920793500" ID="ID_563320112" MODIFIED="1315920806443" TEXT="Process Switch">
 <node CREATED="1315920831165" ID="ID_879189016" MODIFIED="1315920845616" TEXT="TSS - Task State Segment"/>
@@ -160,8 +324,7 @@
       arch/x86/boot/pm.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1316768632029" ID="ID_211395724" MODIFIED="1316768669162" TEXT="Preliminary Initializtion of the IDT"/>
 </node>
@@ -178,8 +341,7 @@
       arch/x86/kernel/traps.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1316768903176" ID="ID_1890823974" MODIFIED="1316768984999">
 <richcontent TYPE="NODE"><html>
@@ -194,8 +356,7 @@
       arch/x86/kernel/irqinit.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -223,8 +384,7 @@
       include/linux/irqdesc.h
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1316769293384" ID="ID_1080578207" MODIFIED="1316769683134">
 <richcontent TYPE="NODE"><html>
@@ -239,8 +399,7 @@
       include/linux/interrupt.h
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1316769506966" ID="ID_1652292667" MODIFIED="1316769519510" TEXT="Interrupt Handling">
 <node CREATED="1316769521668" ID="ID_50319059" MODIFIED="1316769620312" TEXT="Save the IRQ value and the register&apos;s contents on the Kernel Mode stack.">
