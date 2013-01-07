@@ -1,9 +1,0 @@
-startup_32						arch/x86/kernel/head_32.S
-	initial_code
-		i386_start_kernel
-
-i386_start_kernel					arch/x86/kernel/head32.c
-	start_kernel()					init/main.c
-		setup_arch(&command_line)   arch/x86/kernel/setup.c
-			paging_init()			arch/x86/mm/init_32.c
-				pagetable_init()	arch/x86/mm/init_32.c

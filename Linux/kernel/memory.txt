@@ -1,0 +1,27 @@
+startup_32				// arch/x86/kernel/head_32.S
+  initial_code
+    i386_start_kernel
+
+i386_start_kernel			// arch/x86/kernel/head32.c
+  start_kernel()			// init/main.c
+    setup_arch(&command_line)   	// arch/x86/kernel/setup.c
+      paging_init()			// arch/x86/mm/init_32.c
+        pagetable_init()
+
+do_page_fault()*			// arch/x86/mm/fault.c
+  __do_page_fault()
+    find_vma()				// mm/mmap.c
+    handle_mm_fault()*			// mm/memory.c
+      pgd_offset()
+      pud_alloc()
+      pmd_alloc()
+      __pte_alloc()
+      handle_pte_fault()*
+        do_anonymous_page()*		// demand paging
+          mk_pte()
+          set_pte_at()
+        do_wp_page()*			// copy on write
+          alloc_page()
+          mk_pte()
+          set_pte_at_notify()
+
