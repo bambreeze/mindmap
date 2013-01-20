@@ -393,5 +393,45 @@
 </node>
 </node>
 </node>
+<node CREATED="1358477579981" ID="ID_188150470" MODIFIED="1358478261732" POSITION="right" TEXT="System Call">
+<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1358478064889">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358478074124">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>System Calls</b>&#160;is an explicit request to the kernel made via a software interrupt
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1358478009557">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/invoking_system_call.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
 </node>
 </map>
