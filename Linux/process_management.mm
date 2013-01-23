@@ -152,6 +152,17 @@
 <arrowlink DESTINATION="ID_1707237907" ENDARROW="Default" ENDINCLINATION="288;0;" ID="Arrow_ID_1054171908" STARTARROW="None" STARTINCLINATION="288;0;"/>
 </node>
 <node CREATED="1315920882285" ID="ID_1192976465" MODIFIED="1315920884871" TEXT="..."/>
+<node CREATED="1358849568031" ID="ID_1241600752" MODIFIED="1358849630809">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/thread_stack.png" />
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node CREATED="1315917852994" ID="ID_1017458029" MODIFIED="1315919278470" POSITION="right">
 <richcontent TYPE="NODE"><html>
@@ -394,21 +405,7 @@
 </node>
 </node>
 <node CREATED="1358477579981" ID="ID_188150470" MODIFIED="1358478261732" POSITION="right" TEXT="System Call">
-<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1358478064889">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service
-    </p>
-  </body>
-</html>
-</richcontent>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358478074124">
+<node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358931159125">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -418,8 +415,20 @@
       <b>System Calls</b>&#160;is an explicit request to the kernel made via a software interrupt
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+</node>
+<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1358931246216">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1358478009557">
 <richcontent TYPE="NODE"><html>
@@ -429,8 +438,79 @@
   <body>
     <img src="kernel/invoking_system_call.png" />
   </body>
+</html></richcontent>
+</node>
+<node CREATED="1358755437681" ID="ID_175528966" MODIFIED="1358910021898" TEXT="__kernel_vsyscall">
+<node CREATED="1358755526774" ID="ID_1499798077" MODIFIED="1358910350792" TEXT="int $0x80">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      start_kernel()&#160;&#160;&#160;&#160;// init/main.c
+    </p>
+    <p>
+      &#160;&#160;trap_init()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/traps.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;set_system_trap_gate(SYSCALL_VECTOR, &amp;system_call);
+    </p>
+  </body>
 </html>
 </richcontent>
+</node>
+<node CREATED="1358755781853" ID="ID_884374445" MODIFIED="1358931016215">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      system_call&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/entry_32.S
+    </p>
+    <p>
+      &#160;&#160;SAVE_ALL
+    </p>
+    <p>
+      &#160;&#160;call *sys_call_table(,%eax,4)
+    </p>
+    <p>
+      &#160;&#160;restore_all
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1358755538689" ID="ID_6960833" MODIFIED="1358910356696" TEXT="sysenter">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      enable_sep_cpu()
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_CS_MSR&#160;&#160;&#160;= __KERNEL_CS
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_EIP_MSR&#160;&#160;= sysenter_entry()
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_ESP_MSR = local TSS
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1358931054084" TEXT="sysenter_entry()  // similar to system_call"/>
+</node>
 </node>
 </node>
 </node>
