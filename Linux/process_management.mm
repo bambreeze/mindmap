@@ -132,6 +132,98 @@
 </node>
 <node CREATED="1316928586259" ID="ID_1527760070" MODIFIED="1316928598021" TEXT="..."/>
 <node CREATED="1315917811701" ID="ID_749542623" MODIFIED="1315919278470" TEXT="struct thread_struct thread;"/>
+<node CREATED="1365579578563" ID="ID_1019245271" MODIFIED="1365579657681" TEXT="struct signal_struct *signal;">
+<node CREATED="1365579746517" ID="ID_1869627772" MODIFIED="1365579763094" TEXT="include/linux/sched.h"/>
+<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1365581158381">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
+    </p>
+    <p>
+      atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
+    </p>
+    <p>
+      int nr_threads;
+    </p>
+    <p>
+      wait_queue_head_t wait_chldexit; /* The processes sleeping in a wait4() system call */
+    </p>
+    <p>
+      struct task_struct *curr_target;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
+    </p>
+    <p>
+      struct sigpending shared_pending; /* Data structure storing the shared pending signals */
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1365579658729" ID="ID_676626903" MODIFIED="1366168508938" TEXT="struct sighand_struct *sighand;">
+<node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1365580739073" TEXT="include/linux/sched.h"/>
+<node CREATED="1365580739916" ID="ID_462838517" MODIFIED="1365581097429">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
+    </p>
+    <p>
+      struct k_sigaction action[_NSIG];&#160;&#160;/* The actions to be performed upon delivering the signals */
+    </p>
+    <p>
+      spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1366168611255" ID="ID_682990093" MODIFIED="1366168655978" TEXT="include/arch/x86/include/asm/signal.h"/>
+<node CREATED="1366168658355" ID="ID_1469689717" MODIFIED="1366168721108">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      __sighandler_t sa_handler;
+    </p>
+    <p>
+      unsigned long sa_flags;
+    </p>
+    <p>
+      __sigrestore_t sa_restorer;
+    </p>
+    <p>
+      sigset_t sa_mask;
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1366168813462" ID="ID_1425755890" MODIFIED="1366168820289">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* Type of a signal handler.&#160;&#160;*/
+    </p>
+    <p>
+      typedef void (*__sighandler_t)(int);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
 <node CREATED="1315920856358" ID="ID_1577581463" MODIFIED="1315920858319" TEXT="..."/>
 </node>
 <node CREATED="1315906535124" ID="ID_632220490" MODIFIED="1315920050132" POSITION="right">
@@ -160,8 +252,7 @@
   <body>
     <img src="kernel/thread_stack.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1315917852994" ID="ID_1017458029" MODIFIED="1315919278470" POSITION="right">
@@ -459,8 +550,7 @@
       &#160;&#160;&#160;&#160;set_system_trap_gate(SYSCALL_VECTOR, &amp;system_call);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1358755781853" ID="ID_884374445" MODIFIED="1358931016215">
 <richcontent TYPE="NODE"><html>
@@ -481,8 +571,7 @@
       &#160;&#160;restore_all
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1358755538689" ID="ID_6960833" MODIFIED="1358910356696" TEXT="sysenter">
@@ -506,8 +595,7 @@
       &#160;&#160;SYSENTER_ESP_MSR = local TSS
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1358931054084" TEXT="sysenter_entry()  // similar to system_call"/>
 </node>
