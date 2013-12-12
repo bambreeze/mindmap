@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1386561895481" ID="ID_829416847" MODIFIED="1386837813117" TEXT="i2c subsystem">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386839806486" POSITION="right" TEXT="I2C core device driver">
+<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386857434514" POSITION="right" TEXT="I2C core device driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386837756259" ID="ID_1367330475" MODIFIED="1386837765965" TEXT="include/linux/i2c.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -34,8 +34,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386566110083" ID="ID_21007906" MODIFIED="1386838061969" TEXT="drivers/i2c/i2c-boardinfo.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -57,8 +56,7 @@
       int __i2c_first_dynamic_bus_num;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386566915437" ID="ID_838152003" MODIFIED="1386839868955" TEXT="i2c_register_board_info(busnum, info, len)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -129,8 +127,7 @@
       &#160;&#160;&#160;&#160;list_add_tail(&amp;devinfo-&gt;list, &amp;<b><font color="#6600ff">__i2c_board_list</font></b>);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386661068135" ID="ID_1138031974" MODIFIED="1386837380731" TEXT="drivers/i2c/i2c-core.c">
@@ -174,8 +171,7 @@
       struct device_type <b><font color="#6600ff">i2c_client_type;</font></b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386661557285" HGAP="18" ID="ID_1392130145" MODIFIED="1386664198030" VSHIFT="5">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -262,8 +258,7 @@
       /static void __exit i2c_exit(void)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386645899702" ID="ID_1125737854" MODIFIED="1386838842423" TEXT="i2c bus main module">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -302,8 +297,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;i2c_register_driver(THIS_MODULE, &amp;dummy_driver)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386577955597" ID="ID_1854986455" MODIFIED="1386839866202">
@@ -382,8 +376,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><font color="#0033ff">i2c_new_device</font></b><font color="#0033ff">()</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386562121189" ID="ID_558056265" MODIFIED="1386838952979">
@@ -465,8 +458,7 @@
       &#160;&#160;&#160;&#160;status = <b><font color="#cc0033">device_register</font></b>(&amp;client-&gt;dev);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386581425609" ID="ID_26770044" MODIFIED="1386653585287">
@@ -551,8 +543,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><font color="#0033ff">i2c_new_device</font></b><font color="#0033ff">()</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386582379263" ID="ID_1218556215" MODIFIED="1386582389360">
 <richcontent TYPE="NODE"><html>
@@ -710,7 +701,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386840068145" POSITION="right" TEXT="I2C /dev entries driver">
+<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386857436844" POSITION="right" TEXT="I2C /dev entries driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386829337309" ID="ID_1976511202" MODIFIED="1386839183142">
 <richcontent TYPE="NODE"><html>
@@ -722,8 +713,7 @@
       drivers/i2c/i2c-dev.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -755,8 +745,7 @@
       static DEFINE_SPINLOCK(i2c_dev_list_lock);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386836240067" ID="ID_1172625597" MODIFIED="1386839338335">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -779,8 +768,7 @@
       maintained by the driver model, and is updated using bus notifications.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
@@ -818,8 +806,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386835326381" ID="ID_1740207201" MODIFIED="1386835556123">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -842,8 +829,7 @@
       information and maybe a PEC flag.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386835179175" ID="ID_574040933" MODIFIED="1386840134028">
 <richcontent TYPE="NODE"><html>
@@ -885,8 +871,7 @@
       &#160;&#160;&#160;&#160;<b><font color="#ff0000">file-&gt;private_data = client;</font></b>&#160;&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386833569738" ID="ID_1929149895" MODIFIED="1386839439798">
 <richcontent TYPE="NODE"><html>
@@ -913,8 +898,7 @@
       &#160;&#160;&#160;&#160;kfree(tmp);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386830633930" ID="ID_1740432312" MODIFIED="1386839458102">
@@ -930,8 +914,7 @@
       /static void __exit i2c_dev_exit(void)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386830880774" ID="ID_502347838" MODIFIED="1386839481281" TEXT="module load/unload record keeping">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -952,8 +935,7 @@
       };&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386836069521" ID="ID_1983209210" MODIFIED="1386836069521" TEXT=""/>
 <node CREATED="1386833130738" ID="ID_1528090967" MODIFIED="1386833215147">
 <richcontent TYPE="NODE"><html>
@@ -1023,8 +1005,7 @@
       &#160;&#160;&#160;&#160;i2c_for_each_dev(NULL, <b><font color="#0000ff">i2cdev_attach_adapter</font></b>);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386830017418" ID="ID_807878740" MODIFIED="1386838641386">
@@ -1040,8 +1021,7 @@
       <font color="#000000">/i2cdev_detach_adapter(dev)</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386836167677" ID="ID_1740528936" MODIFIED="1386836167677" TEXT=""/>
 <node CREATED="1386830109864" ID="ID_1735859262" MODIFIED="1386839565196">
@@ -1076,6 +1056,238 @@
     </p>
     <p>
       &#160;&#160;&#160;&#160;res = <b><font color="#ff0000">device_create_file</font></b>(i2c_dev-&gt;dev, &amp;dev_attr_name);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1386857439121" POSITION="right" TEXT="Multiplexed I2C bus driver">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386850674077" ID="ID_42903251" MODIFIED="1386850709650" TEXT="drivers/i2c/i2c-mux.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1386850714158" ID="ID_874812311" MODIFIED="1386851638853">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* multiplexer per channel data */
+    </p>
+    <p>
+      struct <b><font color="#6600ff">i2c_mux_priv</font></b>&#160;{&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_adapter adap;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_algorithm algo;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_adapter *parent;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void *mux_priv; /* the mux chip/device */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u32&#160;&#160;chan_id;&#160;&#160;&#160;/* the channel id */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*select)(struct i2c_adapter *, void *mux_priv, u32 chan_id);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*deselect)(struct i2c_adapter *, void *mux_priv, u32 chan_id);
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1386854508061" ID="ID_163076454" MODIFIED="1386857064433">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>i2c_add_mux_adapter() </b>
+    </p>
+    <p>
+      <b>/i2c_del_mux_adapter()</b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386856715585" ID="ID_1327146270" MODIFIED="1386856715585" TEXT=""/>
+<node CREATED="1386854616665" ID="ID_363442124" MODIFIED="1386857101946">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;&#160;&#160;&#160;struct <b><font color="#6600ff">i2c_mux_priv</font></b>&#160;*priv;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv = kzalloc(sizeof(struct i2c_mux_priv), GFP_KERNEL);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Set up private adapter data */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;parent = parent;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;mux_priv = mux_priv;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;chan_id = chan_id;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;select = select;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;deselect = deselect;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Need to do algo dynamically because we don't know ahead
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;* of time what sort of physical adapter we'll be dealing with.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;*/
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (parent-&gt;algo-&gt;master_xfer)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;priv-&gt;algo.master_xfer = <b><font color="#0000ff">i2c_mux_master_xfer</font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (parent-&gt;algo-&gt;smbus_xfer)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;priv-&gt;algo.smbus_xfer = i2c_mux_smbus_xfer;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;algo.functionality = i2c_mux_functionality;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Now fill out new adapter structure */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;snprintf(priv-&gt;adap.name, sizeof(priv-&gt;adap.name),
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;i2c-%d-mux (chan_id %d)&quot;, i2c_adapter_id(parent), chan_id);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;adap.owner = THIS_MODULE;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;adap.algo = &amp;priv-&gt;algo;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;adap.algo_data = priv;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;adap.dev.parent = &amp;parent-&gt;dev;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (force_nr) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;priv-&gt;adap.nr = force_nr;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ret = i2c_add_numbered_adapter(&amp;priv-&gt;adap);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;} else {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ret = <b><font color="#ff0000">i2c_add_adapter</font></b>(&amp;priv-&gt;adap);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386851293001" ID="ID_661246046" MODIFIED="1386851700350">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>i2c_mux_master_xfer(adap, msgs, num) </b>
+    </p>
+    <p>
+      <b>/i2c_mux_smbus_xfer(...)</b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386851337343" ID="ID_482211681" MODIFIED="1386851337343" TEXT=""/>
+<node CREATED="1386851348356" ID="ID_1909430479" MODIFIED="1386851538269">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      i2c_mux_master_xfer(adap, msgs, num)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct <b><font color="#6600ff">i2c_mux_priv</font></b>&#160;*priv = adap-&gt;algo_data;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_adapter *parent = priv-&gt;parent;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Switch to the right mux port and perform the transfer. */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;<b><font color="#ff0000">select</font></b>(parent, priv-&gt;mux_priv, priv-&gt;chan_id);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;parent-&gt;algo-&gt;<b><font color="#ff0000">master_xfer</font></b>(parent, msgs, num);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;priv-&gt;<b><font color="#ff0000">deselect</font></b>(parent, priv-&gt;mux_priv, priv-&gt;chan_id);
     </p>
   </body>
 </html>
