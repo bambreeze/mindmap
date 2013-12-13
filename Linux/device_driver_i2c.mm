@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1386561895481" ID="ID_829416847" MODIFIED="1386837813117" TEXT="i2c subsystem">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386857434514" POSITION="right" TEXT="I2C core device driver">
+<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386903307172" POSITION="right" TEXT="I2C core driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386837756259" ID="ID_1367330475" MODIFIED="1386837765965" TEXT="include/linux/i2c.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -701,7 +701,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386857436844" POSITION="right" TEXT="I2C /dev entries driver">
+<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386903304452" POSITION="right" TEXT="I2C /dev entries driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386829337309" ID="ID_1976511202" MODIFIED="1386839183142">
 <richcontent TYPE="NODE"><html>
@@ -1062,7 +1062,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1386857439121" POSITION="right" TEXT="Multiplexed I2C bus driver">
+<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1386903302448" POSITION="right" TEXT="Multiplexed I2C bus driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386850674077" ID="ID_42903251" MODIFIED="1386850709650" TEXT="drivers/i2c/i2c-mux.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -1111,8 +1111,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1386854508061" ID="ID_163076454" MODIFIED="1386857064433">
 <richcontent TYPE="NODE"><html>
@@ -1127,8 +1126,7 @@
       <b>/i2c_del_mux_adapter()</b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386856715585" ID="ID_1327146270" MODIFIED="1386856715585" TEXT=""/>
 <node CREATED="1386854616665" ID="ID_363442124" MODIFIED="1386857101946">
 <richcontent TYPE="NODE"><html>
@@ -1239,8 +1237,7 @@
       &#160;&#160;&#160;&#160;}
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1386851293001" ID="ID_661246046" MODIFIED="1386851700350">
@@ -1256,8 +1253,7 @@
       <b>/i2c_mux_smbus_xfer(...)</b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386851337343" ID="ID_482211681" MODIFIED="1386851337343" TEXT=""/>
 <node CREATED="1386851348356" ID="ID_1909430479" MODIFIED="1386851538269">
 <richcontent TYPE="NODE"><html>
@@ -1288,6 +1284,179 @@
     </p>
     <p>
       &#160;&#160;&#160;&#160;priv-&gt;<b><font color="#ff0000">deselect</font></b>(parent, priv-&gt;mux_priv, priv-&gt;chan_id);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1386901114779" ID="ID_1662636845" MODIFIED="1386901146773" POSITION="right" TEXT="I2C stub driver">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386901148610" ID="ID_686456387" MODIFIED="1386901161933" TEXT="drivers/i2c/i2c-stub.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1386901164242" ID="ID_1677742688" MODIFIED="1386903257977" TEXT="I2C/SMBus chip emulator">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386901230209" ID="ID_1108453791" MODIFIED="1386902588812">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static struct stub_chip *<b><font color="#6600ff">stub_chips</font></b>;
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1386901232713" ID="ID_1239105113" MODIFIED="1386903208670">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <font color="#000000">stub_chip</font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u8 pointer;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u16 words[256];&#160;&#160;&#160;&#160;&#160;/* Byte operations use the LSB as per SMBus specification */
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386902840514" ID="ID_1140028937" MODIFIED="1386902867705">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static struct i2c_adapter <b><font color="#6600ff">stub_adapter</font></b>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.owner&#160;&#160;&#160;&#160;&#160;&#160;= THIS_MODULE,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.class&#160;&#160;&#160;&#160;&#160;&#160;= I2C_CLASS_HWMON | I2C_CLASS_SPD,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.algo&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &amp;<b><font color="#6600ff">smbus_algorithm</font></b>,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.name&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &quot;SMBus stub driver&quot;,
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1386902741260" ID="ID_725264904" MODIFIED="1386903053051">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static const struct i2c_algorithm <b><font color="#6600ff">smbus_algorithm</font></b>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.functionality&#160;&#160;= <font color="#000000">stub_func</font>,&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.smbus_xfer = <b><font color="#0000ff">stub_xfer</font></b>,&#160;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1386902564894" ID="ID_866725830" MODIFIED="1386902665322">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      stub_xfer()
+    </p>
+  </body>
+</html>
+</richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386902604741" ID="ID_267085311" MODIFIED="1386902604741" TEXT=""/>
+<node CREATED="1386902240507" ID="ID_1564537113" MODIFIED="1386902644340">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      stub_xfer(adap, addr, flags,&#160;read_write, command, size, data)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct stub_chip *chip = NULL;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;chip = <b><font color="#6600ff">stub_chips</font></b>&#160;&#160;+ i;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;chip-&gt;pointer = command;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386902954069" ID="ID_350629315" MODIFIED="1386903107571">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static int __init i2c_stub_init(void)
+    </p>
+    <p>
+      /static void __exit i2c_stub_exit(void)
+    </p>
+  </body>
+</html>
+</richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386903118218" ID="ID_402866461" MODIFIED="1386903194823">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static int __init i2c_stub_init(void)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Allocate memory for all chips at once */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#6600ff">stub_chips</font></b>&#160;= kzalloc(i * sizeof(struct stub_chip), GFP_KERNEL);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ret = i2c_add_adapter(&amp;<b><font color="#6600ff">stub_adapter</font></b>);
     </p>
   </body>
 </html>
