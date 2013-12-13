@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1386561895481" ID="ID_829416847" MODIFIED="1386837813117" TEXT="i2c subsystem">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386903307172" POSITION="right" TEXT="I2C core driver">
+<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386927831110" POSITION="right" TEXT="I2C core driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386837756259" ID="ID_1367330475" MODIFIED="1386837765965" TEXT="include/linux/i2c.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -701,7 +701,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386903304452" POSITION="right" TEXT="I2C /dev entries driver">
+<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386927828891" POSITION="right" TEXT="I2C /dev entries driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386829337309" ID="ID_1976511202" MODIFIED="1386839183142">
 <richcontent TYPE="NODE"><html>
@@ -1062,7 +1062,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1386903302448" POSITION="right" TEXT="Multiplexed I2C bus driver">
+<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1386927827085" POSITION="right" TEXT="Multiplexed I2C bus driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386850674077" ID="ID_42903251" MODIFIED="1386850709650" TEXT="drivers/i2c/i2c-mux.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -1290,7 +1290,293 @@
 </node>
 </node>
 </node>
-<node CREATED="1386901114779" ID="ID_1662636845" MODIFIED="1386901146773" POSITION="right" TEXT="I2C stub driver">
+<node CREATED="1386920727348" ID="ID_223580320" MODIFIED="1386926264773" POSITION="right" TEXT="SMBus extensions to the I2C protocol">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386920745776" ID="ID_639602991" MODIFIED="1386920760586" TEXT="drivers/i2c/i2c-smbus.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1386920763216" ID="ID_695622774" MODIFIED="1386921424734">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><font color="#6600ff">i2c_smbus_alert</font></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;alert_edge_triggered:1;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;irq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct work_struct&#160;&#160;alert;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_client&#160;&#160;&#160;*ara;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Alert response address */&#160;&#160;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386920799509" ID="ID_97272624" MODIFIED="1386923633436">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><font color="#000000">alert_data</font></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short&#160;&#160;&#160;&#160;&#160;&#160;addr;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u8&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;flag:1;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386920895763" ID="ID_435325719" MODIFIED="1386925437274">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static struct i2c_driver <b><font color="#6600ff">smbalert_driver</font></b>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.driver = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.name&#160;&#160;&#160;= &quot;smbus_alert&quot;,&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.probe&#160;&#160;&#160;&#160;&#160;&#160;= <b><font color="#0000ff">smbalert_probe</font></b>,&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.remove&#160;&#160;&#160;&#160;&#160;= smbalert_remove,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.id_table&#160;&#160;&#160;= <b>smbalert_ids</b>,&#160;&#160;&#160;
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      <b><font color="#ff0000">module_i2c_driver</font></b>(<b><font color="#6600ff">smbalert_driver</font></b>)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386920887171" ID="ID_1301056453" MODIFIED="1386921294813">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static const struct i2c_device_id <b><font color="#000000">smbalert_ids</font></b>[] = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;{ &quot;smbus_alert&quot;, 0 },
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;{ /* LIST END */ }
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      MODULE_DEVICE_TABLE(i2c, smbalert_ids);
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+<node CREATED="1386925451770" ID="ID_1790636665" MODIFIED="1386925465914" TEXT="Setup SMBus alert support">
+<node CREATED="1386925274699" ID="ID_1676351521" MODIFIED="1386925383375">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      i2c_setup_smbus_alert()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;i2c_new_device()
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1386925450090" ID="ID_617250352" MODIFIED="1386925499313" TEXT="Handle an SMBus alert">
+<node CREATED="1386925373776" ID="ID_1744431559" MODIFIED="1386925390198">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      i2c_handle_smbus_alert()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;schedule_work(&amp;alert-&gt;alert);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1386921376443" ID="ID_168385861" MODIFIED="1386922083662">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      smbalert_probe(ara, id)
+    </p>
+    <p>
+      /smbalert_remove(ara)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1386922104972" ID="ID_1355266874" MODIFIED="1386922104972" TEXT=""/>
+<node CREATED="1386921561791" ID="ID_248409127" MODIFIED="1386922045434">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      smbalert_probe(ara, id)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;alert-&gt;alert_edge_triggered = setup-&gt;alert_edge_triggered;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;alert-&gt;irq = setup-&gt;irq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;INIT_WORK(&amp;alert-&gt;alert, <b><font color="#0000ff">smbus_alert</font></b>);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;alert-&gt;ara = ara;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;devm_request_irq(&amp;ara-&gt;dev, setup-&gt;irq, <b><font color="#0000ff">smbalert_irq</font></b>, 0, &quot;smbus_alert&quot;, alert);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;i2c_set_clientdata(ara, alert);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386922198285" ID="ID_1451765340" MODIFIED="1386922215125" TEXT="smbalert_irq(int irq, void *d)">
+<node CREATED="1386922634059" ID="ID_1038505360" MODIFIED="1386922634059" TEXT=""/>
+<node CREATED="1386922494856" ID="ID_1820243204" MODIFIED="1386923313466">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      smbalert_irq(int irq, void *d)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_smbus_alert *alert = d;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#ff0000">disable_irq_nosync</font></b>(irq);
+    </p>
+    <p>
+      &#160;&#160;&#160; <b><font color="#ff0000">schedule_work</font></b>(&amp;alert-&gt;alert);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386922788809" ID="ID_1981824037" MODIFIED="1386922937847" TEXT="smbus_alert(work)">
+<node CREATED="1386923358831" ID="ID_1072436545" MODIFIED="1386923358831" TEXT=""/>
+<node CREATED="1386922810572" ID="ID_1418180784" MODIFIED="1386923322642">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static void smbus_alert(struct work_struct *work)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;status = i2c_smbus_read_byte(ara);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Notify driver for the device which issued the alert */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;device_for_each_child(&amp;ara-&gt;adapter-&gt;dev, &amp;data,<b><font color="#0000ff">smbus_do_alert</font></b>);&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#ff0000">enable_irq</font></b>(alert-&gt;irq);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386923375180" ID="ID_1024924005" MODIFIED="1386923522880" TEXT="smbus_do_alert(dev, addrp)">
+<node CREATED="1386923558547" ID="ID_874899733" MODIFIED="1386923558547" TEXT=""/>
+<node CREATED="1386923511990" ID="ID_591570992" MODIFIED="1386923591013">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      smbus_do_alert(dev, addrp)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;device_lock(dev);&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#ff0000">client-&gt;driver-&gt;alert</font></b>(client, data-&gt;flag);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;device_unlock(dev);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1386901114779" ID="ID_1662636845" MODIFIED="1386927859137" POSITION="right" TEXT="I2C stub driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386901148610" ID="ID_686456387" MODIFIED="1386901161933" TEXT="drivers/i2c/i2c-stub.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
