@@ -1,25 +1,441 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1386561895481" ID="ID_829416847" MODIFIED="1386837813117" TEXT="i2c subsystem">
+<node CREATED="1386561895481" ID="ID_829416847" MODIFIED="1387031067492" TEXT="i2c subsystem">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1386927831110" POSITION="right" TEXT="I2C core driver">
+<node CREATED="1387030241997" ID="ID_1551463806" MODIFIED="1387031134434" POSITION="right" TEXT="I2C overview">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386837756259" ID="ID_1367330475" MODIFIED="1386837765965" TEXT="include/linux/i2c.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1386566681040" ID="ID_959187503" MODIFIED="1386837385018" TEXT="drivers/i2c/i2c-core.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1386566717182" ID="ID_208470217" MODIFIED="1386837990454">
+<node CREATED="1387030294070" ID="ID_1214907439" MODIFIED="1387030904283">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      struct <b><font color="#6600ff">i2c_devinfo</font></b>&#160;{
+      I2C (pronounce: I squared C) is a protocol developed by Philips. It is a slow two-wire protocol (variable speed, up to 400 kHz), with a high speed extension (3.4 MHz). SMBus (System Management Bus) is based on the I2C protocol, and is mostly a subset of I2C protocols and signaling.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1387030324190" ID="ID_465593156" MODIFIED="1387031134439">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="driver/i2c/i2c_layers.png" />
+  </body>
+</html>
+</richcontent>
+<node CREATED="1387030950083" ID="ID_4189981" MODIFIED="1387030981973">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Terminology
+    </p>
+    <p>
+      ===========
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      When we talk about I2C, we use the following terms:
+    </p>
+    <p>
+      &#160;&#160;Bus&#160;&#160;&#160;&#160;-&gt; Algorithm
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Adapter
+    </p>
+    <p>
+      &#160;&#160;Device -&gt; Driver
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Client
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      An Algorithm driver contains general code that can be used for a whole class
+    </p>
+    <p>
+      of I2C adapters. Each specific adapter driver either depends on one algorithm
+    </p>
+    <p>
+      driver, or includes its own implementation.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      A Driver driver (yes, this sounds ridiculous, sorry) contains the general
+    </p>
+    <p>
+      code to access some type of device. Each detected device gets its own
+    </p>
+    <p>
+      data in the Client structure. Usually, Driver and Client are more closely
+    </p>
+    <p>
+      integrated than Algorithm and Adapter.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      For a given configuration, you will need a driver for your I2C bus, and
+    </p>
+    <p>
+      drivers for your I2C devices (usually one driver for each device).
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1387030933357" ID="ID_27829827" MODIFIED="1387031134440" TEXT="references">
+<node CREATED="1387030492673" ID="ID_1733078940" MODIFIED="1387030534372" TEXT="&lt;Linux&gt;/Documentation/i2c/*">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1387030541996" ID="ID_1205514936" MODIFIED="1387030577737" TEXT="https://i2c.wiki.kernel.org/index.php/Main_Page">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1387030626138" ID="ID_1914125047" MODIFIED="1387030739540" TEXT="http://lm-sensors.org/wiki/I2CTools">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1387030582090" ID="ID_1115248634" MODIFIED="1387030674947" TEXT="http://smbus.org">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+</node>
+<node CREATED="1386561935229" ID="ID_1458744004" MODIFIED="1387031134468" POSITION="right" TEXT="I2C core driver">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386837756259" ID="ID_1367330475" MODIFIED="1386837765965" TEXT="include/linux/i2c.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1387024097734" ID="ID_598102674" MODIFIED="1387031134474">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* represent an I2C slave device */
+    </p>
+    <p>
+      struct <font color="#6600ff"><b>i2c_client</b></font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short flags;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* div., see below&#160;&#160;&#160;&#160;&#160;&#160;*/&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short <font color="#ff0000"><b>addr</b></font>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* chip address - NOTE: 7bit&#160;&#160;&#160;&#160;*/&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char name[I2C_NAME_SIZE];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_adapter *<font color="#ff0000"><b>adapter</b></font>;&#160;&#160;&#160;&#160;/* the adapter we sit on&#160;&#160;&#160;&#160;*/
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_driver *<font color="#ff0000"><b>driver</b></font>;&#160;&#160;/* and our access routines&#160;&#160;*/
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct device <font color="#ff0000"><b>dev</b></font>;&#160;&#160;&#160;&#160;&#160;&#160;/* the device structure&#160;&#160;&#160;&#160;&#160;*/
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int irq;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* irq issued by device&#160;&#160;&#160;&#160;&#160;*/
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head <font color="#ff0000"><b>detected</b></font>;
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      #define to_i2c_client(d) container_of(d, struct i2c_client, dev)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1387023218310" ID="ID_589735197" MODIFIED="1387026287550">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* represent an I2C device driver */
+    </p>
+    <p>
+      struct <font color="#6600ff"><b>i2c_driver</b></font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int class;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<font color="#000000">struct device_driver</font><font color="#ff0000"><b>&#160;driver;&#160;</b></font>&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<font color="#000000">const struct i2c_device_id</font><font color="#ff0000"><b>&#160;*id_table;</b></font>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;const unsigned short *address_list;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<font color="#000000">struct list_head</font><font color="#ff0000"><b>&#160;clients;</b></font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Standard driver model interfaces */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*probe)(struct i2c_client *, const struct i2c_device_id *);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*remove)(struct i2c_client *);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void (*shutdown)(struct i2c_client *);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*suspend)(struct i2c_client *, pm_message_t mesg);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*resume)(struct i2c_client *);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* a ioctl like command that can be used to perform specific functions with the device. */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*command)(struct i2c_client *client, unsigned int cmd, void *arg);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Device detection callback for automatic device creation */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*detect)(struct i2c_client *, struct i2c_board_info *);
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      #define to_i2c_driver(d) container_of(d, struct i2c_driver, driver)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1387026672707" ID="ID_1819296979" MODIFIED="1387031134477">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <font color="#6600ff"><b>i2c_adapter</b></font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct module *owner;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int class;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* classes to allow probing for */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;const struct i2c_algorithm *<font color="#ff0000"><b>algo</b></font>; /* the algorithm to access the bus */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void *algo_data;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* data fields that are valid for all devices&#160;&#160;&#160;*/
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rt_mutex bus_lock;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int timeout;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* in jiffies */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int retries;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct device <font color="#ff0000"><b>dev</b></font>;&#160;&#160;&#160;&#160;&#160;&#160;/* the adapter device */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int nr;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char name[48];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct completion dev_released;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct mutex userspace_clients_lock;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head <font color="#ff0000"><b>userspace_clients</b></font>;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct i2c_bus_recovery_info *bus_recovery_info;
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      #define to_i2c_adapter(d) container_of(d, struct i2c_adapter, dev)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1387026304982" ID="ID_1810925000" MODIFIED="1387026666148">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <font color="#6600ff"><b>i2c_algorithm</b></font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*<font color="#ff0000"><b>master_xfer</b></font>)(struct i2c_adapter *adap, struct i2c_msg *msgs, int num);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*smbus_xfer) (struct i2c_adapter *adap, u16 addr,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;unsigned short flags, char read_write,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;u8 command, int size, union i2c_smbus_data *data);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* To determine what the adapter supports */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u32 (*functionality) (struct i2c_adapter *);
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1387025752429" ID="ID_1812933240" MODIFIED="1387031134479">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* template for device creation */
+    </p>
+    <p>
+      struct <font color="#6600ff"><b>i2c_board_info</b></font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;type[I2C_NAME_SIZE];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short&#160;&#160;flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short&#160;&#160;addr;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*platform_data;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct dev_archdata *archdata;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct device_node *of_node;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct acpi_dev_node acpi_node;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int&#160;&#160;&#160;&#160;&#160;irq;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1387026131699" ID="ID_1132906319" MODIFIED="1387026140639">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      i2c_board_info is used to build tables of information listing I2C devices
+    </p>
+    <p>
+      that are present.&#160;&#160;This information is used to grow the driver model tree.
+    </p>
+    <p>
+      For mainboards this is done statically using i2c_register_board_info();
+    </p>
+    <p>
+      bus numbers identify adapters that aren't yet available.&#160;&#160;For add-on boards,
+    </p>
+    <p>
+      i2c_new_device() does this dynamically with the adapter already known.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1386566681040" ID="ID_959187503" MODIFIED="1386837385018" TEXT="drivers/i2c/i2c-core.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1386566717182" ID="ID_208470217" MODIFIED="1387027033120">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <font color="#6600ff"><b>i2c_devinfo</b></font>&#160;{
     </p>
     <p>
       &#160;&#160;&#160;&#160;struct list_head&#160;&#160;&#160;&#160;list;
@@ -28,13 +444,14 @@
       &#160;&#160;&#160;&#160;int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;busnum;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct i2c_board_info&#160;&#160;&#160;board_info;
+      &#160;&#160;&#160;&#160;struct i2c_board_info&#160;&#160;&#160;<font color="#6600ff"><b>board_info</b></font>;
     </p>
     <p>
       };
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node CREATED="1386566110083" ID="ID_21007906" MODIFIED="1386838061969" TEXT="drivers/i2c/i2c-boardinfo.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -58,7 +475,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1386566915437" ID="ID_838152003" MODIFIED="1386839868955" TEXT="i2c_register_board_info(busnum, info, len)">
+<node CREATED="1386566915437" ID="ID_838152003" MODIFIED="1387031134485" TEXT="i2c_register_board_info(busnum, info, len)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386567065213" ID="ID_1525751910" MODIFIED="1386837649610" TEXT="statically declare I2C devices, and collect pre-declarations of I2C devices ">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -134,7 +551,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1386579472153" ID="ID_1881982904" MODIFIED="1386839864831">
+<node CREATED="1386579472153" ID="ID_1881982904" MODIFIED="1387031134492">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -245,7 +662,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386645387898" ID="ID_424344602" MODIFIED="1386839863729">
+<node CREATED="1386645387898" ID="ID_424344602" MODIFIED="1387031134497">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -300,7 +717,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386577955597" ID="ID_1854986455" MODIFIED="1386839866202">
+<node CREATED="1386577955597" ID="ID_1854986455" MODIFIED="1387031134502">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -318,7 +735,7 @@
 <node CREATED="1386578054468" ID="ID_1266605784" MODIFIED="1386578085299" TEXT="declare i2c adapter, use dynamic bus number">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1386565761564" ID="ID_306080231" MODIFIED="1386838403045">
+<node CREATED="1386565761564" ID="ID_306080231" MODIFIED="1387025477377">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -331,13 +748,13 @@
       &#160;&#160;&#160;&#160;i2c_register_adapter()
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;adap-&gt;dev.bus = &amp;<b><font color="#6600ff">i2c_bus_type</font></b>;
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;adap-&gt;dev.bus = &amp;<font color="#6600ff"><b>i2c_bus_type</b></font>;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;adap-&gt;dev.type = &amp;<b><font color="#6600ff">i2c_adapter_type</font></b>;
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;adap-&gt;dev.type = &amp;<font color="#6600ff"><b>i2c_adapter_type</b></font>;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;res = <b><font color="#cc0033">device_register</font></b>(&amp;adap-&gt;dev);
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;res = <font color="#cc0033"><b>device_register</b></font>(&amp;adap-&gt;dev);
     </p>
     <p>
       
@@ -346,7 +763,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;i2c_scan_static_board_info()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* create pre-declared device nodes */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><font color="#0033ff">i2c_new_device</font></b><font color="#0033ff">()</font>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#0033ff"><b>i2c_new_device</b>()</font>
     </p>
     <p>
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;bus_for_each_drv(&amp;i2c_bus_type...);&#160;&#160;/* Notify drivers */
@@ -373,13 +790,17 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;driver-&gt;detect();
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><font color="#0033ff">i2c_new_device</font></b><font color="#0033ff">()</font>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#0033ff"><b>i2c_new_device</b>() </font>
+    </p>
+    <p>
+      <font color="#0033ff">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </font><font color="#000000">list_add_tail(&amp;client-&gt;detected, &amp;driver-&gt;clients);</font>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1386562121189" ID="ID_558056265" MODIFIED="1386838952979">
+<node CREATED="1386562121189" ID="ID_558056265" MODIFIED="1387031134508">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -461,7 +882,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386581425609" ID="ID_26770044" MODIFIED="1386653585287">
+<node CREATED="1386581425609" ID="ID_26770044" MODIFIED="1387031134516">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -494,7 +915,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1386581997451" ID="ID_152995318" MODIFIED="1386839009664">
+<node CREATED="1386581997451" ID="ID_152995318" MODIFIED="1387025489893">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -507,10 +928,10 @@
       &#160;&#160;&#160;&#160;driver-&gt;driver.owner = owner;&#160;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;driver-&gt;driver.bus = &amp;<b><font color="#6600ff">i2c_bus_type</font></b>;
+      &#160;&#160;&#160;&#160;driver-&gt;driver.bus = &amp;<font color="#6600ff"><b>i2c_bus_type</b></font>;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;res = <b><font color="#cc0033">driver_register</font></b>(&amp;driver-&gt;driver);
+      &#160;&#160;&#160;&#160;res = <font color="#cc0033"><b>driver_register</b></font>(&amp;driver-&gt;driver);
     </p>
     <p>
       
@@ -540,10 +961,14 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;driver-&gt;detect();&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* custom detection function */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><font color="#0033ff">i2c_new_device</font></b><font color="#0033ff">()</font>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#0033ff"><b>i2c_new_device</b>() </font>
+    </p>
+    <p>
+      <font color="#0033ff">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </font><font color="#000000">list_add_tail(&amp;client-&gt;detected, &amp;driver-&gt;clients);</font>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node CREATED="1386582379263" ID="ID_1218556215" MODIFIED="1386582389360">
 <richcontent TYPE="NODE"><html>
@@ -561,9 +986,9 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386657018156" ID="ID_1527151415" MODIFIED="1386839170038" TEXT="I2C protocal">
+<node CREATED="1386657018156" ID="ID_1527151415" MODIFIED="1387031134518" TEXT="I2C protocal">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386654215775" ID="ID_1457201976" MODIFIED="1386654305076" TEXT="i2c_transfer(adap, msgs, num)">
+<node CREATED="1386654215775" ID="ID_1457201976" MODIFIED="1387031134520" TEXT="i2c_transfer(adap, msgs, num)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386654251901" ID="ID_975855689" MODIFIED="1386654272450" TEXT="execute a single or combined I2C message">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -584,7 +1009,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386654483788" ID="ID_1370962570" MODIFIED="1386654719294">
+<node CREATED="1386654483788" ID="ID_1370962570" MODIFIED="1387031134522">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -618,7 +1043,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386655331556" ID="ID_272063657" MODIFIED="1386839150855" TEXT="i2c_default_probe(adap, addr)">
+<node CREATED="1386655331556" ID="ID_272063657" MODIFIED="1387031134524" TEXT="i2c_default_probe(adap, addr)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386655527453" ID="ID_218357009" MODIFIED="1386655680232">
 <richcontent TYPE="NODE"><html>
@@ -637,9 +1062,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1386657032364" ID="ID_1403878210" MODIFIED="1386839172527" TEXT="SMBus protocal">
+<node CREATED="1386657032364" ID="ID_1403878210" MODIFIED="1387031134527" TEXT="SMBus protocal">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386660307384" ID="ID_780106523" MODIFIED="1386660352647" TEXT="i2c_smbus_xfer()">
+<node CREATED="1386660307384" ID="ID_780106523" MODIFIED="1387031134529" TEXT="i2c_smbus_xfer()">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386660346311" ID="ID_1584297160" MODIFIED="1386660355278" TEXT="execute SMBus protocol operations">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -701,7 +1126,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1386927828891" POSITION="right" TEXT="I2C /dev entries driver">
+<node CREATED="1386829299952" ID="ID_1463825158" MODIFIED="1387031134542" POSITION="right" TEXT="I2C /dev entries driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386829337309" ID="ID_1976511202" MODIFIED="1386839183142">
 <richcontent TYPE="NODE"><html>
@@ -717,7 +1142,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1386829432282" ID="ID_1381432606" MODIFIED="1386839263882">
+<node CREATED="1386829432282" ID="ID_1381432606" MODIFIED="1387031134544">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -772,7 +1197,7 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1386830934405" ID="ID_1087586178" MODIFIED="1386839404793">
+<node CREATED="1386830934405" ID="ID_1087586178" MODIFIED="1387031134552">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -901,7 +1326,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386830633930" ID="ID_1740432312" MODIFIED="1386839458102">
+<node CREATED="1386830633930" ID="ID_1740432312" MODIFIED="1387031134558">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -919,7 +1344,7 @@
 <node CREATED="1386830880774" ID="ID_502347838" MODIFIED="1386839481281" TEXT="module load/unload record keeping">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1386832610735" ID="ID_952454595" MODIFIED="1386836141826">
+<node CREATED="1386832610735" ID="ID_952454595" MODIFIED="1387031134561">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1008,7 +1433,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386830017418" ID="ID_807878740" MODIFIED="1386838641386">
+<node CREATED="1386830017418" ID="ID_807878740" MODIFIED="1387031134564">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1062,7 +1487,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1386927827085" POSITION="right" TEXT="Multiplexed I2C bus driver">
+<node CREATED="1386850370989" ID="ID_60097188" MODIFIED="1387031134571" POSITION="right" TEXT="I2C Multiplexed bus driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386850674077" ID="ID_42903251" MODIFIED="1386850709650" TEXT="drivers/i2c/i2c-mux.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -1113,7 +1538,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1386854508061" ID="ID_163076454" MODIFIED="1386857064433">
+<node CREATED="1386854508061" ID="ID_163076454" MODIFIED="1387031134579">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1240,7 +1665,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386851293001" ID="ID_661246046" MODIFIED="1386851700350">
+<node CREATED="1386851293001" ID="ID_661246046" MODIFIED="1387031134582">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1290,13 +1715,180 @@
 </node>
 </node>
 </node>
-<node CREATED="1386920727348" ID="ID_223580320" MODIFIED="1386926264773" POSITION="right" TEXT="SMBus extensions to the I2C protocol">
+<node CREATED="1386901114779" ID="ID_1662636845" MODIFIED="1387031134590" POSITION="right" TEXT="I2C stub driver">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386901148610" ID="ID_686456387" MODIFIED="1386901161933" TEXT="drivers/i2c/i2c-stub.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1386901164242" ID="ID_1677742688" MODIFIED="1387031134594" TEXT="I2C/SMBus chip emulator">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386901230209" ID="ID_1108453791" MODIFIED="1386902588812">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static struct stub_chip *<b><font color="#6600ff">stub_chips</font></b>;
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1386901232713" ID="ID_1239105113" MODIFIED="1386903208670">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <font color="#000000">stub_chip</font>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u8 pointer;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;u16 words[256];&#160;&#160;&#160;&#160;&#160;/* Byte operations use the LSB as per SMBus specification */
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1386902840514" ID="ID_1140028937" MODIFIED="1386902867705">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static struct i2c_adapter <b><font color="#6600ff">stub_adapter</font></b>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.owner&#160;&#160;&#160;&#160;&#160;&#160;= THIS_MODULE,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.class&#160;&#160;&#160;&#160;&#160;&#160;= I2C_CLASS_HWMON | I2C_CLASS_SPD,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.algo&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &amp;<b><font color="#6600ff">smbus_algorithm</font></b>,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.name&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &quot;SMBus stub driver&quot;,
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1386902741260" ID="ID_725264904" MODIFIED="1386903053051">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static const struct i2c_algorithm <b><font color="#6600ff">smbus_algorithm</font></b>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.functionality&#160;&#160;= <font color="#000000">stub_func</font>,&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.smbus_xfer = <b><font color="#0000ff">stub_xfer</font></b>,&#160;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1386902564894" ID="ID_866725830" MODIFIED="1387031134596">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      stub_xfer()
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386902604741" ID="ID_267085311" MODIFIED="1386902604741" TEXT=""/>
+<node CREATED="1386902240507" ID="ID_1564537113" MODIFIED="1386902644340">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      stub_xfer(adap, addr, flags,&#160;read_write, command, size, data)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct stub_chip *chip = NULL;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;chip = <b><font color="#6600ff">stub_chips</font></b>&#160;&#160;+ i;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;chip-&gt;pointer = command;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1386902954069" ID="ID_350629315" MODIFIED="1387031134599">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static int __init i2c_stub_init(void)
+    </p>
+    <p>
+      /static void __exit i2c_stub_exit(void)
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1386903118218" ID="ID_402866461" MODIFIED="1386903194823">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static int __init i2c_stub_init(void)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* Allocate memory for all chips at once */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#6600ff">stub_chips</font></b>&#160;= kzalloc(i * sizeof(struct stub_chip), GFP_KERNEL);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ret = i2c_add_adapter(&amp;<b><font color="#6600ff">stub_adapter</font></b>);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1386920727348" ID="ID_223580320" MODIFIED="1387031134608" POSITION="right" TEXT="SMBus extensions to the I2C protocol">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1386920745776" ID="ID_639602991" MODIFIED="1386920760586" TEXT="drivers/i2c/i2c-smbus.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1386920763216" ID="ID_695622774" MODIFIED="1386921424734">
+<node CREATED="1386920763216" ID="ID_695622774" MODIFIED="1387031134609">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1321,8 +1913,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386920799509" ID="ID_97272624" MODIFIED="1386923633436">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1342,11 +1933,10 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1386920895763" ID="ID_435325719" MODIFIED="1386925437274">
+<node CREATED="1386920895763" ID="ID_435325719" MODIFIED="1387031134611">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1380,8 +1970,7 @@
       <b><font color="#ff0000">module_i2c_driver</font></b>(<b><font color="#6600ff">smbalert_driver</font></b>)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386920887171" ID="ID_1301056453" MODIFIED="1386921294813">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1404,12 +1993,11 @@
       MODULE_DEVICE_TABLE(i2c, smbalert_ids);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 </node>
-<node CREATED="1386925451770" ID="ID_1790636665" MODIFIED="1386925465914" TEXT="Setup SMBus alert support">
+<node CREATED="1386925451770" ID="ID_1790636665" MODIFIED="1387031134613" TEXT="Setup SMBus alert support">
 <node CREATED="1386925274699" ID="ID_1676351521" MODIFIED="1386925383375">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1426,7 +2014,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386925450090" ID="ID_617250352" MODIFIED="1386925499313" TEXT="Handle an SMBus alert">
+<node CREATED="1386925450090" ID="ID_617250352" MODIFIED="1387031134614" TEXT="Handle an SMBus alert">
 <node CREATED="1386925373776" ID="ID_1744431559" MODIFIED="1386925390198">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1443,7 +2031,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1386921376443" ID="ID_168385861" MODIFIED="1386922083662">
+<node CREATED="1386921376443" ID="ID_168385861" MODIFIED="1387031134618">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1456,8 +2044,7 @@
       /smbalert_remove(ara)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1386922104972" ID="ID_1355266874" MODIFIED="1386922104972" TEXT=""/>
 <node CREATED="1386921561791" ID="ID_248409127" MODIFIED="1386922045434">
 <richcontent TYPE="NODE"><html>
@@ -1493,11 +2080,10 @@
       &#160;&#160;&#160;&#160;i2c_set_clientdata(ara, alert);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1386922198285" ID="ID_1451765340" MODIFIED="1386922215125" TEXT="smbalert_irq(int irq, void *d)">
+<node CREATED="1386922198285" ID="ID_1451765340" MODIFIED="1387031134620" TEXT="smbalert_irq(int irq, void *d)">
 <node CREATED="1386922634059" ID="ID_1038505360" MODIFIED="1386922634059" TEXT=""/>
 <node CREATED="1386922494856" ID="ID_1820243204" MODIFIED="1386923313466">
 <richcontent TYPE="NODE"><html>
@@ -1518,11 +2104,10 @@
       &#160;&#160;&#160; <b><font color="#ff0000">schedule_work</font></b>(&amp;alert-&gt;alert);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1386922788809" ID="ID_1981824037" MODIFIED="1386922937847" TEXT="smbus_alert(work)">
+<node CREATED="1386922788809" ID="ID_1981824037" MODIFIED="1387031134623" TEXT="smbus_alert(work)">
 <node CREATED="1386923358831" ID="ID_1072436545" MODIFIED="1386923358831" TEXT=""/>
 <node CREATED="1386922810572" ID="ID_1418180784" MODIFIED="1386923322642">
 <richcontent TYPE="NODE"><html>
@@ -1546,11 +2131,10 @@
       &#160;&#160;&#160;&#160;<b><font color="#ff0000">enable_irq</font></b>(alert-&gt;irq);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1386923375180" ID="ID_1024924005" MODIFIED="1386923522880" TEXT="smbus_do_alert(dev, addrp)">
+<node CREATED="1386923375180" ID="ID_1024924005" MODIFIED="1387031134626" TEXT="smbus_do_alert(dev, addrp)">
 <node CREATED="1386923558547" ID="ID_874899733" MODIFIED="1386923558547" TEXT=""/>
 <node CREATED="1386923511990" ID="ID_591570992" MODIFIED="1386923591013">
 <richcontent TYPE="NODE"><html>
@@ -1571,182 +2155,7 @@
       &#160;&#160;&#160;&#160;device_unlock(dev);
     </p>
   </body>
-</html>
-</richcontent>
-</node>
-</node>
-</node>
-<node CREATED="1386901114779" ID="ID_1662636845" MODIFIED="1386927859137" POSITION="right" TEXT="I2C stub driver">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386901148610" ID="ID_686456387" MODIFIED="1386901161933" TEXT="drivers/i2c/i2c-stub.c">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1386901164242" ID="ID_1677742688" MODIFIED="1386903257977" TEXT="I2C/SMBus chip emulator">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386901230209" ID="ID_1108453791" MODIFIED="1386902588812">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static struct stub_chip *<b><font color="#6600ff">stub_chips</font></b>;
-    </p>
-  </body>
 </html></richcontent>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1386901232713" ID="ID_1239105113" MODIFIED="1386903208670">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <font color="#000000">stub_chip</font>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;u8 pointer;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;u16 words[256];&#160;&#160;&#160;&#160;&#160;/* Byte operations use the LSB as per SMBus specification */
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node CREATED="1386902840514" ID="ID_1140028937" MODIFIED="1386902867705">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static struct i2c_adapter <b><font color="#6600ff">stub_adapter</font></b>&#160;= {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;.owner&#160;&#160;&#160;&#160;&#160;&#160;= THIS_MODULE,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;.class&#160;&#160;&#160;&#160;&#160;&#160;= I2C_CLASS_HWMON | I2C_CLASS_SPD,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;.algo&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &amp;<b><font color="#6600ff">smbus_algorithm</font></b>,
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;.name&#160;&#160;&#160;&#160;&#160;&#160;&#160;= &quot;SMBus stub driver&quot;,
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node CREATED="1386902741260" ID="ID_725264904" MODIFIED="1386903053051">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static const struct i2c_algorithm <b><font color="#6600ff">smbus_algorithm</font></b>&#160;= {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;.functionality&#160;&#160;= <font color="#000000">stub_func</font>,&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;.smbus_xfer = <b><font color="#0000ff">stub_xfer</font></b>,&#160;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node CREATED="1386902564894" ID="ID_866725830" MODIFIED="1386902665322">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      stub_xfer()
-    </p>
-  </body>
-</html>
-</richcontent>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386902604741" ID="ID_267085311" MODIFIED="1386902604741" TEXT=""/>
-<node CREATED="1386902240507" ID="ID_1564537113" MODIFIED="1386902644340">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      stub_xfer(adap, addr, flags,&#160;read_write, command, size, data)
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct stub_chip *chip = NULL;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;chip = <b><font color="#6600ff">stub_chips</font></b>&#160;&#160;+ i;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;chip-&gt;pointer = command;
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node CREATED="1386902954069" ID="ID_350629315" MODIFIED="1386903107571">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static int __init i2c_stub_init(void)
-    </p>
-    <p>
-      /static void __exit i2c_stub_exit(void)
-    </p>
-  </body>
-</html>
-</richcontent>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1386903118218" ID="ID_402866461" MODIFIED="1386903194823">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static int __init i2c_stub_init(void)
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* Allocate memory for all chips at once */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;<b><font color="#6600ff">stub_chips</font></b>&#160;= kzalloc(i * sizeof(struct stub_chip), GFP_KERNEL);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;ret = i2c_add_adapter(&amp;<b><font color="#6600ff">stub_adapter</font></b>);
-    </p>
-  </body>
-</html>
-</richcontent>
 </node>
 </node>
 </node>
