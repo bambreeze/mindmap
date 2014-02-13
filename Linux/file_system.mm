@@ -19,7 +19,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1366189248236" FOLDED="true" ID="ID_1806333498" MODIFIED="1392197574887" POSITION="right" TEXT="The Common File Model">
+<node CREATED="1366189248236" FOLDED="true" ID="ID_1806333498" MODIFIED="1392275947580" POSITION="right" TEXT="The Common File Model">
 <node CREATED="1390808647367" ID="ID_200050510" MODIFIED="1390808688107">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -42,14 +42,14 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1366189506952" FOLDED="true" ID="ID_1566163540" MODIFIED="1392197574885" TEXT="superblock object">
+<node CREATED="1366189506952" ID="ID_1566163540" MODIFIED="1392271590304" TEXT="superblock object">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1369637845942" ID="ID_349538503" MODIFIED="1369637848179" TEXT="Stores information concerning a mounted filesystem. For disk-based filesystems, this object usually corresponds to a filesystem control block stored on disk."/>
 <node CREATED="1369709722854" ID="ID_524176037" MODIFIED="1390460509440" TEXT="include/linux/fs.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1369709745280" ID="ID_425894147" MODIFIED="1392195900578">
+<node CREATED="1369709745280" ID="ID_425894147" MODIFIED="1392271800380">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -77,7 +77,7 @@
       &#160;&#160;&#160;&#160;struct list_head <font color="#0033cc">s_files</font>;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;const struct super_operations *s_op;
+      &#160;&#160;&#160;&#160;const struct super_operations *<font color="#ff6600">s_op</font>;
     </p>
     <p>
       &#160;&#160;&#160;&#160;void *<font color="#ff6600">s_fs_info</font>; /* Filesystem private info */
@@ -92,6 +92,7 @@
 </html>
 </richcontent>
 <arrowlink COLOR="#ff6600" DESTINATION="ID_1924931812" ENDARROW="Default" ENDINCLINATION="1515;0;" ID="Arrow_ID_1719256538" STARTARROW="None" STARTINCLINATION="1515;0;"/>
+<arrowlink COLOR="#ff6600" DESTINATION="ID_924113963" ENDARROW="Default" ENDINCLINATION="1101;0;" ID="Arrow_ID_1474680875" STARTARROW="None" STARTINCLINATION="1101;0;"/>
 <arrowlink COLOR="#0000ff" DESTINATION="ID_1409554322" ENDARROW="Default" ENDINCLINATION="316;0;" ID="Arrow_ID_421093846" STARTARROW="None" STARTINCLINATION="316;0;"/>
 </node>
 <node CREATED="1390460887973" ID="ID_1057163362" MODIFIED="1392193249893" TEXT="fs/super.c">
@@ -346,7 +347,7 @@
 <node CREATED="1392195627068" ID="ID_502109639" MODIFIED="1392197593406" TEXT="Layouts of an Ext2 partition and of an Ext2 block group">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1391846743251" ID="ID_424384855" MODIFIED="1391846766060">
+<node CREATED="1391846743251" ID="ID_424384855" MODIFIED="1392275305023">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -355,14 +356,15 @@
     <img src="kernel/fs/ext2-layouts.jpg" />
   </body>
 </html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1391847080876" FOLDED="true" ID="ID_1315735517" MODIFIED="1392197622753" TEXT="Super Block">
+<node CREATED="1391847080876" FOLDED="true" ID="ID_1315735517" MODIFIED="1392274756980" TEXT="Super Block">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1391847425869" ID="ID_1215890267" MODIFIED="1391847452433" TEXT="fs/ext2/ext2.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1391847454143" FOLDED="true" ID="ID_171018086" MODIFIED="1392197574887">
+<node CREATED="1391847454143" FOLDED="true" ID="ID_171018086" MODIFIED="1392272126933">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -445,8 +447,81 @@
   </body>
 </html></richcontent>
 </node>
+<node CREATED="1392271880167" ID="ID_160407700" MODIFIED="1392271904305" TEXT="fs/ext2/super.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1391847746567" FOLDED="true" ID="ID_891006467" MODIFIED="1392197607646" TEXT="Blocks Group Descriptor">
+<node CREATED="1392271652740" ID="ID_924113963" MODIFIED="1392272714320">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static const struct <i><b>super_operations</b></i>&#160;<i><font color="#6600ff"><b>ext2_sops</b></font></i>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.alloc_inode&#160;&#160;&#160;&#160;= <i><b>ext2_alloc_inode</b></i>,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.destroy_inode&#160;&#160;= ext2_destroy_inode,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.write_inode&#160;&#160;&#160;&#160;= ext2_write_inode,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1392272101091" ID="ID_606554033" MODIFIED="1392272101091" TEXT=""/>
+<node CREATED="1392271964840" ID="ID_1070220996" MODIFIED="1392272051063">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static struct inode *<i><b>ext2_alloc_inode</b></i>(struct super_block *sb)
+    </p>
+    <p>
+      {&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160; <i><b>struct ext2_inode_info *ei;</b></i>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ei = (struct ext2_inode_info *)<i><b>kmem_cache_alloc</b></i>(ext2_inode_cachep, GFP_KERNEL);
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if (!ei)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return NULL;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ei-&gt;i_block_alloc_info = NULL;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ei-&gt;vfs_inode.i_version = 1;
+    </p>
+    <p>
+      &#160;&#160;&#160; <i><b>return &amp;ei-&gt;vfs_inode;</b></i>
+    </p>
+    <p>
+      }&#160;&#160;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1391847746567" FOLDED="true" ID="ID_891006467" MODIFIED="1392274751231" TEXT="Blocks Group Descriptor">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1391847777035" ID="ID_993193935" MODIFIED="1391847798038" TEXT="fs/ext2/ext2.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -496,13 +571,13 @@
 </node>
 <node CREATED="1392191766927" ID="ID_829881109" MODIFIED="1392191834891" TEXT="They&apos;re always cached in RAM."/>
 </node>
-<node CREATED="1391848584238" FOLDED="true" ID="ID_125976382" MODIFIED="1392197574888" TEXT="inode">
+<node CREATED="1391848584238" ID="ID_125976382" MODIFIED="1392275030640" TEXT="inode">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1391847777035" ID="ID_701450684" MODIFIED="1391847798038" TEXT="fs/ext2/ext2.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1391848594729" FOLDED="true" ID="ID_1113220723" MODIFIED="1392197574888">
+<node CREATED="1391848594729" ID="ID_1113220723" MODIFIED="1392273390345">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -596,10 +671,9 @@
 </node>
 <node CREATED="1392191858862" ID="ID_797108993" MODIFIED="1392191868699" TEXT="They&apos;re dynamic cached in RAM."/>
 </node>
-<node CREATED="1391849111548" ID="ID_1052189794" MODIFIED="1392191561850" TEXT="All inodes have the same size: 128 bytes."/>
-</node>
-<node CREATED="1391849964587" FOLDED="true" ID="ID_965204423" MODIFIED="1392197698297" TEXT="File Types Vs. Disk Blocks">
-<node CREATED="1391850038444" ID="ID_1178286778" MODIFIED="1391850634224">
+<node CREATED="1391849111548" ID="ID_1052189794" MODIFIED="1392275912537" TEXT="All inodes have the same size: 128 bytes."/>
+<node CREATED="1391849964587" ID="ID_965204423" MODIFIED="1392270729061" TEXT="File Types Vs. Disk Blocks">
+<node CREATED="1391850038444" FOLDED="true" ID="ID_1178286778" MODIFIED="1392275728708">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -610,8 +684,37 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1392275095565" ID="ID_1338251099" MODIFIED="1392275634255" TEXT="fs/ext2/file.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1391850291085" ID="ID_245446588" MODIFIED="1391850640820">
+<node CREATED="1392275593676" ID="ID_1684740040" MODIFIED="1392275624816">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const struct inode_operations <i><b>ext2_file_inode_operations</b></i>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.setattr&#160;&#160;&#160;&#160;= ext2_setattr,&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.get_acl&#160;&#160;&#160;&#160;= ext2_get_acl,&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.fiemap&#160;&#160;&#160;&#160;&#160;= ext2_fiemap,
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1391850291085" FOLDED="true" ID="ID_245446588" MODIFIED="1392275727558">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -622,8 +725,64 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1392275667587" ID="ID_796676072" MODIFIED="1392275674985" TEXT="fs/ext2/namei.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1391850651077" ID="ID_868870268" MODIFIED="1391850712354">
+<node CREATED="1392275677712" ID="ID_1765061878" MODIFIED="1392275725988">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const struct inode_operations <i><b>ext2_dir_inode_operations</b></i>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.create&#160;&#160;&#160;&#160;&#160;= ext2_create,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.lookup&#160;&#160;&#160;&#160;&#160;= ext2_lookup,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.link&#160;&#160;&#160;&#160;&#160;&#160;&#160;= ext2_link,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.unlink&#160;&#160;&#160;&#160;&#160;= ext2_unlink,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.symlink&#160;&#160;&#160;&#160;= ext2_symlink,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.mkdir&#160;&#160;&#160;&#160;&#160;&#160;= ext2_mkdir,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.rmdir&#160;&#160;&#160;&#160;&#160;&#160;= ext2_rmdir,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.mknod&#160;&#160;&#160;&#160;&#160;&#160;= ext2_mknod,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.rename&#160;&#160;&#160;&#160;&#160;= ext2_rename,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.setattr&#160;&#160;&#160;&#160;= ext2_setattr,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.get_acl&#160;&#160;&#160;&#160;= ext2_get_acl,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.tmpfile&#160;&#160;&#160;&#160;= ext2_tmpfile,
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1391850651077" FOLDED="true" ID="ID_868870268" MODIFIED="1392275858266">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -634,6 +793,186 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1392275766461" ID="ID_1730765357" MODIFIED="1392275781912" TEXT="fs/ext2/symlink.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1392275783390" ID="ID_1088996281" MODIFIED="1392275834653">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const struct inode_operations <i><b>ext2_symlink_inode_operations</b></i>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.readlink&#160;&#160;&#160;= generic_readlink,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.follow_link&#160;&#160;&#160;&#160;= page_follow_link_light,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.put_link&#160;&#160;&#160;= page_put_link,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.setattr&#160;&#160;&#160;&#160;= ext2_setattr,
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1392275786326" ID="ID_1857921724" MODIFIED="1392275823744">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const struct inode_operations <i><b>ext2_fast_symlink_inode_operations</b></i>&#160; = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.readlink&#160;&#160;&#160;= generic_readlink,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.follow_link&#160;&#160;&#160;&#160;= ext2_follow_link,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.setattr&#160;&#160;&#160;&#160;= ext2_setattr,
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392275083129" ID="ID_1821568784" MODIFIED="1392275421939" TEXT="File">
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1392275095565" ID="ID_613126620" MODIFIED="1392275117116" TEXT="fs/ext2/file.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1392275119884" ID="ID_1449411037" MODIFIED="1392275210037">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const struct file_operations <i><b>ext2_file_operations</b></i>&#160;= {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.llseek&#160;&#160;&#160;&#160;&#160;= generic_file_llseek,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.read&#160;&#160;&#160;&#160;&#160;&#160;= do_sync_read,&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;.write&#160;&#160;&#160;&#160;&#160;&#160;= do_sync_write,&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...&#160;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1392260388458" ID="ID_843916933" MODIFIED="1392260392078" TEXT="Creating the Ext2 Filesystem">
+<node CREATED="1392260394342" ID="ID_66919459" MODIFIED="1392270701670" TEXT="format it so that the disk driver can read and write blocks on it. ">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1392260426701" FOLDED="true" ID="ID_1665032576" MODIFIED="1392270721542" TEXT="create a filesystem, which means setting up the data structures.">
+<icon BUILTIN="full-2"/>
+<node CREATED="1392261192603" ID="ID_1135311498" MODIFIED="1392270420614">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <i><b>mke2fs</b></i>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1392269945767" ID="ID_1087383176" MODIFIED="1392270560556" TEXT="default options:">
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1392261577141" ID="ID_1727663025" MODIFIED="1392270080118">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;&#160;&#160;&#160;Block size: 1,024 bytes (default value for a small filesystem)
+    </p>
+    <p>
+      &#160;&#160;&#160; Fragment size: block size (block fragmentation is not implemented)
+    </p>
+    <p>
+      &#160;&#160;&#160; Number of allocated inodes: 1 inode for each 8,192 bytes
+    </p>
+    <p>
+      &#160;&#160;&#160; Percentage of reserved blocks: 5 percent
+    </p>
+  </body>
+</html>
+</richcontent>
+<font ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1392261240767" ID="ID_612251895" MODIFIED="1392261539450" TEXT="Initializes the superblock and the group descriptors.">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1392261330464" ID="ID_1513893094" MODIFIED="1392261541928" TEXT="Optionally, checks whether the partition contains defective blocks; if so, it creates a list of defective blocks.">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1392261459336" ID="ID_1155158935" MODIFIED="1392261543950" TEXT="For each block group, reserves all the disk blocks needed to store the superblock, the group descriptors, the inode table, and the two bitmaps.">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1392261472247" ID="ID_1540010115" MODIFIED="1392261545879" TEXT="Initializes the inode bitmap and the data map bitmap of each block group to 0.">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1392261488232" ID="ID_1753097283" MODIFIED="1392261548072" TEXT="Initializes the inode table of each block group.">
+<icon BUILTIN="full-5"/>
+</node>
+<node CREATED="1392261498224" ID="ID_421372869" MODIFIED="1392261550469" TEXT="Creates the /root directory.">
+<icon BUILTIN="full-6"/>
+</node>
+<node CREATED="1392261514548" ID="ID_151351027" MODIFIED="1392261553031" TEXT="Creates the lost+found directory, which is used by e2fsck to link the lost and found defective blocks.">
+<icon BUILTIN="full-7"/>
+</node>
+<node CREATED="1392261525635" ID="ID_1029021921" MODIFIED="1392261556412" TEXT="Updates the inode bitmap and the data block bitmap of the block group in which the two previous directories have been created.">
+<icon BUILTIN="full-8"/>
+</node>
+<node CREATED="1392261533434" ID="ID_1495302522" MODIFIED="1392261559197" TEXT="Groups the defective blocks (if any) in the lost+found directory.">
+<icon BUILTIN="full-9"/>
+</node>
+</node>
+<node CREATED="1392270387188" ID="ID_1829571225" MODIFIED="1392270655414" TEXT="Ext2 block allocation for a floppy disk">
+<node CREATED="1392270645557" ID="ID_496055575" MODIFIED="1392270645557" TEXT=""/>
+<node CREATED="1392270290866" ID="ID_1438462216" MODIFIED="1392270305479">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/fs/ext2-block-floppy.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
 </node>
 </node>
 </node>
@@ -833,8 +1172,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1390466308341" FOLDED="true" ID="ID_1895733499" MODIFIED="1392197478046" POSITION="right" TEXT="Mounting Filesystem">
-<node CREATED="1390466320756" FOLDED="true" ID="ID_1467198402" MODIFIED="1392197574890" TEXT="Mounting a Generic Filesystem">
+<node CREATED="1390466308341" FOLDED="true" ID="ID_1895733499" MODIFIED="1392275280889" POSITION="right" TEXT="Mounting Filesystem">
+<node CREATED="1390466320756" ID="ID_1467198402" MODIFIED="1392271167603" TEXT="Mounting a Generic Filesystem">
 <node CREATED="1390529852805" ID="ID_1289092885" MODIFIED="1390539601224" TEXT="fs/mount.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -947,7 +1286,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1390466786651" ID="ID_312799230" MODIFIED="1392196478232">
+<node CREATED="1390466786651" ID="ID_312799230" MODIFIED="1392271561658">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1002,7 +1341,16 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <i><font color="#ff0000"><b>ext2_fill_super();</b></font></i>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <i><font color="#ff0000"><b>ext2_fill_super</b></font><font color="#000000">(struct super_block *sb, void *data, int silent); </font></i>
+    </p>
+    <p>
+      <i><font color="#000000">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...</font></i>
+    </p>
+    <p>
+      <i><font color="#ff0000"><b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </b></font></i><font color="#000000">sb-&gt;s_op = &amp;</font><i><font color="#0000ff"><b>ext2_sops</b></font></i><font color="#000000">; </font>
+    </p>
+    <p>
+      <font color="#000000">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...</font>
     </p>
     <p>
       <i><font color="#0000ff"><b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </b></font></i>...
