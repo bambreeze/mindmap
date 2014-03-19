@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395233017615" TEXT="Process Management">
-<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1395233019089" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1395234245462" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1393234017837" TEXT="The process data structures are stored in the 2-page (8 KB) memory area"/>
 <node CREATED="1358849568031" ID="ID_1241600752" MODIFIED="1358849630809">
 <richcontent TYPE="NODE"><html>
@@ -766,8 +766,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1395044741770">
 <richcontent TYPE="NODE"><html>
@@ -800,8 +799,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1395233017611" TEXT="Semaphores">
 <node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395233017611">
@@ -812,8 +810,7 @@
   <body>
     <img src="kernel/ipc/ipc-semaphore.jpg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1395045296221" ID="ID_1695713584" MODIFIED="1395045322206" TEXT="include/linux/sem.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -867,8 +864,7 @@
       };&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <arrowlink COLOR="#ff0000" DESTINATION="ID_435606653" ENDARROW="Default" ENDINCLINATION="591;0;" ID="Arrow_ID_938195588" STARTARROW="None" STARTINCLINATION="591;0;"/>
 </node>
 <node CREATED="1395045467963" ID="ID_447454264" MODIFIED="1395045515937" TEXT="ipc/sem.c">
@@ -915,8 +911,7 @@
       } ____cacheline_aligned_in_smp;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395045635952" ID="ID_1642530783" MODIFIED="1395046042230">
 <richcontent TYPE="NODE"><html>
@@ -958,8 +953,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395045683646" ID="ID_435606653" MODIFIED="1395046082601">
 <richcontent TYPE="NODE"><html>
@@ -1013,8 +1007,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395045757262" ID="ID_876619445" MODIFIED="1395045792926">
 <richcontent TYPE="NODE"><html>
@@ -1047,8 +1040,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -1087,8 +1079,7 @@
   <body>
     <img src="kernel/ipc/ipc-message-queue.jpg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1395042319785" ID="ID_1164296285" MODIFIED="1395042338581" TEXT="include/linux/msg.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -1224,8 +1215,7 @@
   <body>
     <img src="kernel/ipc/ipc-shared-memory.jpg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1395048394074" ID="ID_767020341" MODIFIED="1395048452957" TEXT="include/linux/shm.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -1285,8 +1275,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -1423,6 +1412,105 @@
 </node>
 <node CREATED="1395221333234" FOLDED="true" ID="ID_659484319" MODIFIED="1395233017615" TEXT="exec()">
 <node CREATED="1395221337557" ID="ID_1133910105" MODIFIED="1395221342936" TEXT="replace the execution context of a process with a new context described by an executable file"/>
+</node>
+</node>
+<node CREATED="1395234348679" ID="ID_1852362964" MODIFIED="1395234656394" POSITION="right" TEXT="System Startup">
+<node CREATED="1395234389151" ID="ID_1041282017" MODIFIED="1395234563806">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      In operating systems, the term denotes bringing at least a portion of the <b><font color="#0000ff"><i>operating system into main memory </i></font></b>and having the <b><font color="#0000ff"><i>processor execute</i></font></b>&#160;it. It also denotes the <b><font color="#0000ff"><i>initialization of kernel data structures</i></font></b>, the <b><font color="#0000ff"><i>creation of some user processes</i></font></b>, and the transfer of control to one of them.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395234358616" FOLDED="true" ID="ID_444486857" MODIFIED="1395237296083" TEXT="Prehistoric Age: the BIOS">
+<icon BUILTIN="full-1"/>
+<node CREATED="1395236880474" ID="ID_893492909" MODIFIED="1395236948079">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      After <b><font color="#0000ff"><i>RESET</i></font></b>&#160;is asserted, some registers of the processor (including <tt>cs</tt>&#160;&#160;and <tt>eip</tt>) are set to fixed values, and the code found at <b><font color="#0000ff"><i>physical address <tt>0xfffffff0</tt></i></font></b>&#160;is executed. This address is mapped by the hardware to a certain read-only, persistent memory chip that is often called Read-Only Memory (ROM). The set of programs stored in ROM is traditionally called the <span class="docEmphasis">Basic Input/Output System</span>&#160;(<b><span class="docEmphasis"><font color="#0000ff"><i>BIOS</i></font></span></b>) in the 80 x 86 architecture.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395237012657" ID="ID_95853591" MODIFIED="1395237275390">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Executes a series of tests on the computer hardware to establish which devices are present and whether they are working properly. This phase is often called <span class="docEmphasis">Power-On Self-Test</span>&#160;(<b><span class="docEmphasis"><font color="#0000ff"><i>POST</i></font></span></b>)
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1395237035184" ID="ID_101670701" MODIFIED="1395237277886">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Initializes the hardware devices</i></font></b>.&#160;
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1395237065946" ID="ID_635442741" MODIFIED="1395237280281">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Searches for an operating system to boot.</i></font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1395237101465" ID="ID_928798782" MODIFIED="1395237282775">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As soon as a valid device is found, it <b><font color="#0000ff"><i>copies</i></font></b>&#160;the contents of its <b><font color="#0000ff"><i>first sector</i></font></b>&#160;into RAM, starting from <b><font color="#0000ff"><i>physical address</i></font></b>&#160;<b><font color="#0000ff"><tt><i>0x00007c00</i></tt></font></b>, and then jumps into that address and <b><font color="#0000ff"><i>executes the code</i></font></b>&#160;just loaded.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-4"/>
+</node>
+</node>
+<node CREATED="1395234571062" ID="ID_1263029943" MODIFIED="1395234638518" TEXT="Ancient Age: the Boot Loader">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1395234586278" ID="ID_538273730" MODIFIED="1395234640536" TEXT="Middle Ages: the setup( ) Function">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1395234599902" ID="ID_149885112" MODIFIED="1395234643061" TEXT="Renaissance: the startup_32( ) Functions">
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1395234613485" ID="ID_149894661" MODIFIED="1395234645202" TEXT="Modern Age: the start_kernel( ) Function">
+<icon BUILTIN="full-5"/>
 </node>
 </node>
 </node>
