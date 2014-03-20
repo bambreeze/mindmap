@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395233017615" TEXT="Process Management">
-<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1395234245462" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395327608489" TEXT="Process Management">
+<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1395327612149" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1393234017837" TEXT="The process data structures are stored in the 2-page (8 KB) memory area"/>
 <node CREATED="1358849568031" ID="ID_1241600752" MODIFIED="1358849630809">
 <richcontent TYPE="NODE"><html>
@@ -13,7 +13,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1315906535124" ID="ID_632220490" MODIFIED="1395233027500">
+<node CREATED="1315906535124" FOLDED="true" ID="ID_632220490" MODIFIED="1395327608470">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -51,7 +51,7 @@
 <arrowlink COLOR="#b0b0b0" DESTINATION="ID_1707237907" ENDARROW="Default" ENDINCLINATION="288;0;" ID="Arrow_ID_1054171908" STARTARROW="None" STARTINCLINATION="288;0;"/>
 </node>
 </node>
-<node CREATED="1315906710224" FOLDED="true" ID="ID_1707237907" MODIFIED="1395233044675">
+<node CREATED="1315906710224" FOLDED="true" ID="ID_1707237907" MODIFIED="1395327608474">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -66,7 +66,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1315914103874" ID="ID_398479359" MODIFIED="1395233035839" TEXT="volatile long state;">
+<node CREATED="1315914103874" FOLDED="true" ID="ID_398479359" MODIFIED="1395327608470" TEXT="volatile long state;">
 <node CREATED="1315914353433" ID="ID_1933197825" MODIFIED="1315914364977" TEXT="TASK_RUNNING"/>
 <node CREATED="1315914365862" ID="ID_1415384225" MODIFIED="1315914375212" TEXT="TASK_INTERRUPTIBLE"/>
 <node CREATED="1315914376062" ID="ID_1275568405" MODIFIED="1315914386584" TEXT="TASK_UNINTERRUPTIBLE"/>
@@ -75,7 +75,7 @@
 <node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1316831863401" TEXT="void * stack;"/>
 <node CREATED="1316842437493" ID="ID_18418388" MODIFIED="1316842444704" TEXT="atomic_t usage;"/>
 <node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1315918219425" TEXT="unsigned int flags;"/>
-<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1395233017601" TEXT="struct list_head tasks;">
+<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1395327608471" TEXT="struct list_head tasks;">
 <node CREATED="1316843734093" ID="ID_803741408" MODIFIED="1316843763407">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -122,12 +122,12 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1316917878242" FOLDED="true" ID="ID_1660815912" MODIFIED="1395233043003" TEXT="struct task_struct *real_parent;">
+<node CREATED="1316917878242" FOLDED="true" ID="ID_1660815912" MODIFIED="1395327608471" TEXT="struct task_struct *real_parent;">
 <node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1358327427523" TEXT="Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists.">
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1316920096768" FOLDED="true" ID="ID_1869882986" MODIFIED="1395233017601" TEXT="struct task_struct *parent;">
+<node CREATED="1316920096768" FOLDED="true" ID="ID_1869882986" MODIFIED="1395327608471" TEXT="struct task_struct *parent;">
 <node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1358327440185" TEXT="Points to the current parent of P ">
 <icon BUILTIN="messagebox_warning"/>
 </node>
@@ -135,17 +135,17 @@
 <node CREATED="1316920113462" ID="ID_1642509929" MODIFIED="1316920123737" TEXT="struct list_head children;"/>
 <node CREATED="1316920125217" ID="ID_1281826325" MODIFIED="1316920134265" TEXT="struct list_head sibling;"/>
 <node CREATED="1316928408514" ID="ID_1880307065" MODIFIED="1316928415120" TEXT="pid_t pid;"/>
-<node CREATED="1316928416665" FOLDED="true" ID="ID_60895847" MODIFIED="1395233017602" TEXT="pid_t tgid;">
+<node CREATED="1316928416665" FOLDED="true" ID="ID_60895847" MODIFIED="1395327608471" TEXT="pid_t tgid;">
 <node CREATED="1316928466599" ID="ID_579056398" MODIFIED="1358327457211" TEXT="PID of the thread group leader of P">
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1316920339866" FOLDED="true" ID="ID_4315816" MODIFIED="1395233017602" TEXT="struct task_struct *group_leader;">
+<node CREATED="1316920339866" FOLDED="true" ID="ID_4315816" MODIFIED="1395327608471" TEXT="struct task_struct *group_leader;">
 <node CREATED="1316920358624" ID="ID_1174745410" MODIFIED="1358327475630" TEXT="Process descriptor pointer of the group leader of P">
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1395233017603" TEXT="struct pid_link pids[PIDTYPE_MAX];">
+<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1395327608472" TEXT="struct pid_link pids[PIDTYPE_MAX];">
 <node CREATED="1393232863003" ID="ID_819099011" MODIFIED="1393232869723" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -185,7 +185,7 @@
 <icon BUILTIN="attach"/>
 </node>
 <node CREATED="1316928699044" ID="ID_1729999827" MODIFIED="1316932589085" TEXT="struct hlist_node node;"/>
-<node CREATED="1316931912268" FOLDED="true" ID="ID_28056775" MODIFIED="1395233017602">
+<node CREATED="1316931912268" FOLDED="true" ID="ID_28056775" MODIFIED="1395327608472">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -201,14 +201,14 @@
 <arrowlink DESTINATION="ID_1729999827" ENDARROW="Default" ENDINCLINATION="251;0;" ID="Arrow_ID_375258231" STARTARROW="None" STARTINCLINATION="251;0;"/>
 </node>
 <node CREATED="1316928813011" ID="ID_640516611" MODIFIED="1316928814767" TEXT="..."/>
-<node CREATED="1316932018473" FOLDED="true" ID="ID_1149046420" MODIFIED="1395233017602" TEXT="struct upid numbers[1];">
+<node CREATED="1316932018473" FOLDED="true" ID="ID_1149046420" MODIFIED="1395327608471" TEXT="struct upid numbers[1];">
 <node CREATED="1316932051355" ID="ID_1051743616" MODIFIED="1358327592195" TEXT="int nr; // The PID number"/>
 <node CREATED="1316932056544" ID="ID_513109031" MODIFIED="1316932085118" TEXT="struct pid_namespace *ns;"/>
 <node CREATED="1316932086156" ID="ID_373966593" MODIFIED="1358327611217" TEXT="struct hlist_node pid_chain; // The links to the next and previous elements in the hash chain list"/>
 </node>
 </node>
 </node>
-<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1395233017603" TEXT="struct thread_struct thread;">
+<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1395327608472" TEXT="struct thread_struct thread;">
 <node CREATED="1393231927959" ID="ID_94896969" MODIFIED="1393231936526" TEXT="arch/x86/include/asm/processor.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -247,7 +247,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1365579578563" FOLDED="true" ID="ID_1019245271" MODIFIED="1395233017603" TEXT="struct signal_struct *signal;">
+<node CREATED="1365579578563" FOLDED="true" ID="ID_1019245271" MODIFIED="1395327608472" TEXT="struct signal_struct *signal;">
 <node CREATED="1365579746517" ID="ID_1869627772" MODIFIED="1393232221786" TEXT="include/linux/sched.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -280,12 +280,12 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1395233017605" TEXT="struct sighand_struct *sighand;">
+<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1395327608473" TEXT="struct sighand_struct *sighand;">
 <node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1393232241842" TEXT="include/linux/sched.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1395233017604">
+<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1395327608473">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -303,7 +303,7 @@
   </body>
 </html></richcontent>
 <node CREATED="1366168611255" ID="ID_682990093" MODIFIED="1366168655978" TEXT="include/arch/x86/include/asm/signal.h"/>
-<node CREATED="1366168658355" FOLDED="true" ID="ID_1469689717" MODIFIED="1395233017604">
+<node CREATED="1366168658355" FOLDED="true" ID="ID_1469689717" MODIFIED="1395327608473">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -344,7 +344,7 @@
 <node CREATED="1315920856358" ID="ID_1577581463" MODIFIED="1315920858319" TEXT="..."/>
 </node>
 </node>
-<node CREATED="1315920793500" FOLDED="true" ID="ID_563320112" MODIFIED="1395233017609" POSITION="right" TEXT="Process Switch">
+<node CREATED="1315920793500" FOLDED="true" ID="ID_563320112" MODIFIED="1395327608477" POSITION="right" TEXT="Process Switch">
 <node CREATED="1315920831165" ID="ID_879189016" MODIFIED="1315920845616" TEXT="TSS - Task State Segment"/>
 <node CREATED="1315920998117" ID="ID_668222248" MODIFIED="1315921047181">
 <richcontent TYPE="NODE"><html>
@@ -376,14 +376,14 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1395233017609" TEXT="Interrupts and Exceptions">
-<node CREATED="1316769068729" FOLDED="true" ID="ID_1349911850" MODIFIED="1395233017607" TEXT="Definition">
-<node CREATED="1316766926536" FOLDED="true" ID="ID_1498465646" MODIFIED="1395233017606" TEXT="Interrupts (Asynchronous)">
+<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1395327608477" TEXT="Interrupts and Exceptions">
+<node CREATED="1316769068729" FOLDED="true" ID="ID_1349911850" MODIFIED="1395327608475" TEXT="Definition">
+<node CREATED="1316766926536" FOLDED="true" ID="ID_1498465646" MODIFIED="1395327608475" TEXT="Interrupts (Asynchronous)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
 <node CREATED="1316767079731" ID="ID_175788121" MODIFIED="1316767126790" TEXT="Nonmaskable Interrupts (NMI)"/>
 </node>
-<node CREATED="1316766930802" FOLDED="true" ID="ID_651855405" MODIFIED="1395233017606" TEXT="Exceptions (Synchronous)">
-<node CREATED="1316767173412" FOLDED="true" ID="ID_1388644566" MODIFIED="1395233017606" TEXT="Processor-detected Exception">
+<node CREATED="1316766930802" FOLDED="true" ID="ID_651855405" MODIFIED="1395327608475" TEXT="Exceptions (Synchronous)">
+<node CREATED="1316767173412" FOLDED="true" ID="ID_1388644566" MODIFIED="1395327608475" TEXT="Processor-detected Exception">
 <node CREATED="1316767223778" ID="ID_1182658758" MODIFIED="1316767227854" TEXT="Faults"/>
 <node CREATED="1316767228862" ID="ID_286073273" MODIFIED="1316767232877" TEXT="Traps"/>
 <node CREATED="1316767233772" ID="ID_828699720" MODIFIED="1316767236317" TEXT="Aborts"/>
@@ -391,7 +391,7 @@
 <node CREATED="1316767192526" ID="ID_834789161" MODIFIED="1316767208364" TEXT="Programmed Exception"/>
 </node>
 </node>
-<node CREATED="1316767346119" FOLDED="true" ID="ID_74815681" MODIFIED="1395233017608">
+<node CREATED="1316767346119" FOLDED="true" ID="ID_74815681" MODIFIED="1395327608476">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -405,20 +405,20 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1316767858652" FOLDED="true" ID="ID_718436077" MODIFIED="1395233017607" TEXT="Intel (Hardware)">
+<node CREATED="1316767858652" FOLDED="true" ID="ID_718436077" MODIFIED="1395327608475" TEXT="Intel (Hardware)">
 <node CREATED="1316767411047" ID="ID_386560905" MODIFIED="1316767511372" TEXT="Interrupt Gate - to handle interupts"/>
 <node CREATED="1316769115937" ID="ID_1207589129" MODIFIED="1316769119350" TEXT="Trap Gate - to handle exceptions"/>
 <node CREATED="1316767397291" ID="ID_1442372959" MODIFIED="1316769842422" TEXT="Task Gate - to handle &quot;Double fault &quot; exception"/>
 </node>
-<node CREATED="1316767884430" FOLDED="true" ID="ID_803462473" MODIFIED="1395233017607" TEXT="Linux (Software)">
+<node CREATED="1316767884430" FOLDED="true" ID="ID_803462473" MODIFIED="1395327608476" TEXT="Linux (Software)">
 <node CREATED="1316767902774" ID="ID_36241942" MODIFIED="1316767910011" TEXT="Interrupt Gate"/>
 <node CREATED="1316767936127" ID="ID_1262195787" MODIFIED="1316768073413" TEXT="Trap Gate"/>
 <node CREATED="1316767946474" ID="ID_596476977" MODIFIED="1316769846629" TEXT="Task Gate"/>
 <node CREATED="1316767916716" ID="ID_393487179" MODIFIED="1316769963421" TEXT="System Gate - to handle system call"/>
 <node CREATED="1316767922350" ID="ID_534098991" MODIFIED="1316770038515" TEXT="System Interrupt Gate - to handle &quot;Breakpoint&quot; exception"/>
 </node>
-<node CREATED="1316768346318" FOLDED="true" ID="ID_1506973519" MODIFIED="1395233017608" TEXT="Initializing IDT">
-<node CREATED="1316768368803" FOLDED="true" ID="ID_1225375667" MODIFIED="1395233017607">
+<node CREATED="1316768346318" FOLDED="true" ID="ID_1506973519" MODIFIED="1395327608476" TEXT="Initializing IDT">
+<node CREATED="1316768368803" FOLDED="true" ID="ID_1225375667" MODIFIED="1395327608476">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -467,7 +467,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1316769432442" FOLDED="true" ID="ID_487968707" MODIFIED="1395233017608" TEXT="Exception Handling">
+<node CREATED="1316769432442" FOLDED="true" ID="ID_487968707" MODIFIED="1395327608477" TEXT="Exception Handling">
 <node CREATED="1316769461577" ID="ID_899493299" MODIFIED="1316769499319" TEXT="Save the contents of most registers in the Kernel Mode stack (this part is coded in assembly language).">
 <icon BUILTIN="full-1"/>
 </node>
@@ -508,7 +508,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316769506966" FOLDED="true" ID="ID_1652292667" MODIFIED="1395233017608" TEXT="Interrupt Handling">
+<node CREATED="1316769506966" FOLDED="true" ID="ID_1652292667" MODIFIED="1395327608477" TEXT="Interrupt Handling">
 <node CREATED="1316769521668" ID="ID_50319059" MODIFIED="1316769620312" TEXT="Save the IRQ value and the register&apos;s contents on the Kernel Mode stack.">
 <icon BUILTIN="full-1"/>
 </node>
@@ -524,9 +524,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1395233017613" POSITION="right" TEXT="Process Communication">
-<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1395233017611" TEXT="Pipes and FIFOs (named pipes)">
-<node CREATED="1394692670453" FOLDED="true" ID="ID_1377888996" MODIFIED="1395233017609" TEXT="compose">
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1395327608481" POSITION="right" TEXT="Process Communication">
+<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1395327608479" TEXT="Pipes and FIFOs (named pipes)">
+<node CREATED="1394692670453" FOLDED="true" ID="ID_1377888996" MODIFIED="1395327608478" TEXT="compose">
 <node CREATED="1394692688493" ID="ID_1129761090" MODIFIED="1394692790674">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -539,7 +539,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1394692720555" FOLDED="true" ID="ID_1152752042" MODIFIED="1395233017609">
+<node CREATED="1394692720555" FOLDED="true" ID="ID_1152752042" MODIFIED="1395327608478">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -554,12 +554,12 @@
 <node CREATED="1394692743203" ID="ID_530105720" MODIFIED="1394692746367" TEXT="writing"/>
 </node>
 </node>
-<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1395233017611" TEXT="The pipefs special filesystem">
+<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1395327608479" TEXT="The pipefs special filesystem">
 <node CREATED="1394691860955" ID="ID_1473907831" MODIFIED="1394691903602" TEXT="include/linux/pipe_fs_i.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1394691908513" FOLDED="true" ID="ID_1650822936" MODIFIED="1395233017610">
+<node CREATED="1394691908513" FOLDED="true" ID="ID_1650822936" MODIFIED="1395327608478">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -612,7 +612,7 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1394691985343" FOLDED="true" ID="ID_476786956" MODIFIED="1395233017610">
+<node CREATED="1394691985343" FOLDED="true" ID="ID_476786956" MODIFIED="1395327608478">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -801,8 +801,8 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1395233017611" TEXT="Semaphores">
-<node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395233017611">
+<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1395327608480" TEXT="Semaphores">
+<node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395327608480">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1044,8 +1044,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1395233017612" TEXT="Messages">
-<node CREATED="1394784671796" FOLDED="true" ID="ID_742765223" MODIFIED="1395233017612" TEXT="compose">
+<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1395327608480" TEXT="Messages">
+<node CREATED="1394784671796" FOLDED="true" ID="ID_742765223" MODIFIED="1395327608480" TEXT="compose">
 <node CREATED="1394784681207" ID="ID_518594583" MODIFIED="1394784707690">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1071,7 +1071,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1395043470647" FOLDED="true" ID="ID_1299941336" MODIFIED="1395233017612">
+<node CREATED="1395043470647" FOLDED="true" ID="ID_1299941336" MODIFIED="1395327608480">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1206,8 +1206,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1395233017612" TEXT="Shared memory regions">
-<node CREATED="1395047974244" FOLDED="true" ID="ID_1761056915" MODIFIED="1395233017612">
+<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1395327608481" TEXT="Shared memory regions">
+<node CREATED="1395047974244" FOLDED="true" ID="ID_1761056915" MODIFIED="1395327608481">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1281,7 +1281,7 @@
 </node>
 <node CREATED="1394608032169" ID="ID_1896979205" MODIFIED="1394608041287" TEXT="Sockets"/>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1395233017613" POSITION="right" TEXT="System Call">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1395327608482" POSITION="right" TEXT="System Call">
 <node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358931159125">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1317,8 +1317,8 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1358755437681" FOLDED="true" ID="ID_175528966" MODIFIED="1395233017613" TEXT="__kernel_vsyscall">
-<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1395233017613" TEXT="int $0x80">
+<node CREATED="1358755437681" FOLDED="true" ID="ID_175528966" MODIFIED="1395327608482" TEXT="__kernel_vsyscall">
+<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1395327608481" TEXT="int $0x80">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
 <richcontent TYPE="NODE"><html>
@@ -1360,7 +1360,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1395233017613" TEXT="sysenter">
+<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1395327608481" TEXT="sysenter">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
 <richcontent TYPE="NODE"><html>
@@ -1387,34 +1387,34 @@
 </node>
 </node>
 </node>
-<node CREATED="1395124636979" FOLDED="true" ID="ID_468506188" MODIFIED="1395233017615" POSITION="right" TEXT="Program ExZecution">
-<node CREATED="1395124649748" FOLDED="true" ID="ID_1916206700" MODIFIED="1395233017614" TEXT="executable file">
+<node CREATED="1395124636979" FOLDED="true" ID="ID_468506188" MODIFIED="1395327608483" POSITION="right" TEXT="Program ExZecution">
+<node CREATED="1395124649748" FOLDED="true" ID="ID_1916206700" MODIFIED="1395327608482" TEXT="executable file">
 <node CREATED="1395124664348" ID="ID_478705659" MODIFIED="1395124687357" TEXT="object code"/>
 <node CREATED="1395124688411" ID="ID_1804443584" MODIFIED="1395124699036" TEXT="data"/>
 </node>
-<node CREATED="1395132767300" FOLDED="true" ID="ID_855536174" MODIFIED="1395233017614" TEXT="libraries">
+<node CREATED="1395132767300" FOLDED="true" ID="ID_855536174" MODIFIED="1395327608482" TEXT="libraries">
 <node CREATED="1395132802739" ID="ID_980444735" MODIFIED="1395132819262" TEXT="static libraries"/>
 <node CREATED="1395132776460" ID="ID_487934157" MODIFIED="1395132801883" TEXT="shared libraries"/>
 </node>
-<node CREATED="1395133028431" FOLDED="true" ID="ID_666568877" MODIFIED="1395233017614" TEXT="Program Segments">
-<node CREATED="1395133060646" FOLDED="true" ID="ID_1837976359" MODIFIED="1395233017614" TEXT="Text segment(ELF)">
+<node CREATED="1395133028431" FOLDED="true" ID="ID_666568877" MODIFIED="1395327608483" TEXT="Program Segments">
+<node CREATED="1395133060646" FOLDED="true" ID="ID_1837976359" MODIFIED="1395327608482" TEXT="Text segment(ELF)">
 <node CREATED="1395133081238" ID="ID_392463521" MODIFIED="1395133089646" TEXT="Includes the program&apos;s executable code."/>
 </node>
-<node CREATED="1395133091549" FOLDED="true" ID="ID_30950379" MODIFIED="1395233017614" TEXT="Initialized data segment">
+<node CREATED="1395133091549" FOLDED="true" ID="ID_30950379" MODIFIED="1395327608482" TEXT="Initialized data segment">
 <node CREATED="1395133112221" ID="ID_409161118" MODIFIED="1395133120872" TEXT="Contains the initialized datathat is, the static variables and the global variables whose initial values are stored in the executable file (because the program must know their values at startup)."/>
 </node>
-<node CREATED="1395133123093" FOLDED="true" ID="ID_387757498" MODIFIED="1395233017614" TEXT="Uninitialized data segment (bss)">
+<node CREATED="1395133123093" FOLDED="true" ID="ID_387757498" MODIFIED="1395327608482" TEXT="Uninitialized data segment (bss)">
 <node CREATED="1395133134517" ID="ID_715672963" MODIFIED="1395133144623" TEXT="Contains the uninitialized datathat is, all global variables whose initial values are not stored in the executable file (because the program sets the values before referencing them); it is historically called a bss segment."/>
 </node>
-<node CREATED="1395133152732" FOLDED="true" ID="ID_677290223" MODIFIED="1395233017614" TEXT="Stack segment">
+<node CREATED="1395133152732" FOLDED="true" ID="ID_677290223" MODIFIED="1395327608483" TEXT="Stack segment">
 <node CREATED="1395133164428" ID="ID_928905832" MODIFIED="1395133166852" TEXT="Contains the program stack, which includes the return addresses, parameters, and local variables of the functions being executed."/>
 </node>
 </node>
-<node CREATED="1395221333234" FOLDED="true" ID="ID_659484319" MODIFIED="1395233017615" TEXT="exec()">
+<node CREATED="1395221333234" FOLDED="true" ID="ID_659484319" MODIFIED="1395327608483" TEXT="exec()">
 <node CREATED="1395221337557" ID="ID_1133910105" MODIFIED="1395221342936" TEXT="replace the execution context of a process with a new context described by an executable file"/>
 </node>
 </node>
-<node CREATED="1395234348679" ID="ID_1852362964" MODIFIED="1395234656394" POSITION="right" TEXT="System Startup">
+<node CREATED="1395234348679" FOLDED="true" ID="ID_1852362964" MODIFIED="1395327608489" POSITION="right" TEXT="System Startup">
 <node CREATED="1395234389151" ID="ID_1041282017" MODIFIED="1395234563806">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1428,7 +1428,7 @@
 </html>
 </richcontent>
 </node>
-<node CREATED="1395234358616" FOLDED="true" ID="ID_444486857" MODIFIED="1395237296083" TEXT="Prehistoric Age: the BIOS">
+<node CREATED="1395234358616" FOLDED="true" ID="ID_444486857" MODIFIED="1395327608483" TEXT="Prehistoric Age: the BIOS">
 <icon BUILTIN="full-1"/>
 <node CREATED="1395236880474" ID="ID_893492909" MODIFIED="1395236948079">
 <richcontent TYPE="NODE"><html>
@@ -1500,17 +1500,608 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
-<node CREATED="1395234571062" ID="ID_1263029943" MODIFIED="1395234638518" TEXT="Ancient Age: the Boot Loader">
+<node CREATED="1395234571062" FOLDED="true" ID="ID_1263029943" MODIFIED="1395327608484" TEXT="Ancient Age: the Boot Loader">
+<icon BUILTIN="full-2"/>
+<node CREATED="1395320718869" ID="ID_785163258" MODIFIED="1395320775021">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <span class="docEmphasis">boot loader</span>&#160;is the program invoked by the BIOS to <b><font color="#0000ff"><i>load the image of an operating system kernel into RAM</i></font></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395320777370" FOLDED="true" ID="ID_1855298211" MODIFIED="1395327608484">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>MBR</i></font></b>(Master Boot Record)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1395322561969" ID="ID_1023833752" MODIFIED="1395322564857" TEXT="The first sector of the hard disk"/>
+<node CREATED="1395322602879" FOLDED="true" ID="ID_887275313" MODIFIED="1395327608484" TEXT="consist">
+<node CREATED="1395321140599" ID="ID_608907478" MODIFIED="1395321474636">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff">partition table</font>
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1395321495680" FOLDED="true" ID="ID_1167652212" MODIFIED="1395327608484">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>LILO</i></font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1395322653510" ID="ID_940817652" MODIFIED="1395322663708" TEXT="small program, which loads the first sector of the partition containing the operating system to be started."/>
+<node CREATED="1395321792588" ID="ID_1962373931" MODIFIED="1395322371389">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Invokes a BIOS procedure to <b><font color="#0000ff"><i>display</i></font></b>&#160;a &quot;Loading&quot; message.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1395321838391" ID="ID_1060432070" MODIFIED="1395322373663">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Invokes a BIOS procedure to load an initial portion of the kernel image from disk: <b><font color="#0000ff"><i>the first 512 bytes</i></font></b>&#160;of the kernel image are put in RAM at <b><font color="#0000ff"><i>address <tt>0x00090000</tt></i></font></b>, while the code of the <b><font color="#0000ff"><tt><i>setup( )</i></tt><i>&#160;function</i></font></b>&#160;(see below) is put in RAM starting from <b><font color="#0000ff"><i>address <tt>0x00090200</tt></i></font></b>.
+    </p>
+  </body>
+</html></richcontent>
 <icon BUILTIN="full-2"/>
 </node>
-<node CREATED="1395234586278" ID="ID_538273730" MODIFIED="1395234640536" TEXT="Middle Ages: the setup( ) Function">
+<node CREATED="1395321858239" ID="ID_953103829" MODIFIED="1395322446507">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Invokes a BIOS procedure to load the rest of <b><font color="#0000ff"><i>the kernel image</i></font></b>&#160; from disk and puts the image in RAM starting from either low address <tt>0x00010000</tt>&#160;(for small kernel images compiled with <tt>make zImage</tt>) or high <b><font color="#0000ff"><i>address <tt>0x00100000</tt></i></font></b>&#160;&#160;(for big kernel images compiled with <tt>make bzImage</tt>).
+    </p>
+  </body>
+</html></richcontent>
 <icon BUILTIN="full-3"/>
 </node>
-<node CREATED="1395234599902" ID="ID_149885112" MODIFIED="1395234643061" TEXT="Renaissance: the startup_32( ) Functions">
+<node CREATED="1395321893012" ID="ID_540136507" MODIFIED="1395322462275">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Jumps to the <tt>setup( )</tt>&#160;code.</i></font></b>
+    </p>
+  </body>
+</html></richcontent>
 <icon BUILTIN="full-4"/>
 </node>
-<node CREATED="1395234613485" ID="ID_149894661" MODIFIED="1395234645202" TEXT="Modern Age: the start_kernel( ) Function">
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1395234586278" FOLDED="true" ID="ID_538273730" MODIFIED="1395327608487" TEXT="Middle Ages: the setup( ) Function">
+<icon BUILTIN="full-3"/>
+<node CREATED="1395322820801" ID="ID_455354932" MODIFIED="1395322882485">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The code of the <tt>setup( )</tt>&#160;assembly language function has been placed by the linker at <b><font color="#0000ff"><i>offset <tt>0x200</tt></i></font></b>&#160;of the kernel image file.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395322929631" FOLDED="true" ID="ID_1234746309" MODIFIED="1395327608485">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>initialize the hardware devices</i></font></b>&#160;in the computer and <b><font color="#0000ff"><i>set up the environment</i></font></b>&#160;for the execution of the kernel program.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1395327166302" ID="ID_707152137" MODIFIED="1395327386638" TEXT="...">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1395327169686" ID="ID_1761406114" MODIFIED="1395327390068">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Sets up a provisional <b><font color="#0000ff"><i>Interrupt Descriptor Table (IDT) </i></font></b>and a provisional<b><font color="#0000ff"><i>&#160;Global Descriptor Table (GDT)</i></font></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1395327236065" ID="ID_1747506810" MODIFIED="1395327392910">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Resets the floating-point unit (<b><font color="#0000ff"><i>FPU</i></font></b><a name="IDX-APP-A-0025">
+</a>&#160;), if any.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1395327250817" ID="ID_115218434" MODIFIED="1395327395431">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Reprograms the <b><font color="#0000ff"><i>Programmable Interrupt Controllers (PIC)</i></font></b>&#160; to mask all interrupts, except IRQ2 which is the cascading interrupt between the two PICs.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1395327310752" ID="ID_214018150" MODIFIED="1395327398216">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#ff0000"><i>Switches the CPU from Real Mode to Protected Mode</i></font></b>&#160;by setting the <tt>PE</tt>&#160;bit in the <tt>cr0</tt><a name="IDX-APP-A-0026">
+</a>&#160;status register. The <tt>PG</tt>&#160;bit in the <tt>cr0</tt>&#160;register is cleared, so paging is still disabled.
+    </p>
+  </body>
+</html>
+</richcontent>
 <icon BUILTIN="full-5"/>
+</node>
+<node CREATED="1395327355743" ID="ID_1567324057" MODIFIED="1395327401130">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Jumps to the <tt>startup_32( )</tt>&#160;</i></font></b>assembly language function.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-6"/>
+</node>
+</node>
+</node>
+<node CREATED="1395234599902" FOLDED="true" ID="ID_149885112" MODIFIED="1395327608488" TEXT="Renaissance: the startup_32( ) Functions">
+<icon BUILTIN="full-4"/>
+<node CREATED="1395323316914" ID="ID_1987996880" MODIFIED="1395323350869" TEXT="arch/i386/boot/compressed/head.S">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395323356865" ID="ID_1634402747" MODIFIED="1395323417243">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      After <tt>setup( )</tt>&#160;terminates, the function has been moved to <b><font color="#0000ff"><i>physical address <tt>0x00100000</tt></i></font></b><tt>.</tt>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395323649363" ID="ID_511339312" MODIFIED="1395323874148">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Initializes the <b><font color="#0000ff"><i>segmentation registers</i></font></b>&#160;and a provisional <b><font color="#0000ff"><i>stack</i></font></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1395323705170" ID="ID_762588453" MODIFIED="1395323901770">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Clears all bits in the <b><font color="#0000ff"><tt><i>eflags</i></tt></font></b><a name="IDX-APP-A-0030">
+</a>&#160;register.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1395323722057" ID="ID_590187609" MODIFIED="1395323938316">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Fills the area of <b><font color="#0000ff"><i>uninitialized data</i></font></b>&#160;of the kernel identified by the <tt>_edata</tt>&#160;&#160;and <tt>_end</tt>&#160;symbols with <b><font color="#0000ff"><i>zeros</i></font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1395323738841" ID="ID_1881495906" MODIFIED="1395323972545">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Invokes the <tt>decompress_kernel( )</tt>&#160;function to <b><font color="#0000ff"><i>decompress the kernel image</i></font></b>. The &quot;Uncompressing Linux...&quot; message is displayed first. After the kernel image is decompressed, the &quot;O K, booting the kernel.&quot; message is shown.The decompressed image is then moved into its final position, which starts at <b><font color="#0000ff"><i>physical address <tt>0x00100000</tt></i></font></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1395323822919" FOLDED="true" ID="ID_138157557" MODIFIED="1395327608488">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Jumps to physical address <tt>0x00100000</tt>.</i></font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-5"/>
+<node CREATED="1395323992545" ID="ID_1017497524" MODIFIED="1395324030373" TEXT="arch/i386/kernel/head.S">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395324031912" ID="ID_1253009883" MODIFIED="1395326307525">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Initializes the <b><font color="#0000ff"><i>segmentation registers</i></font></b>&#160;with their final values.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1395325751353" ID="ID_606328734" MODIFIED="1395326309447">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Fills the <b><font color="#0000ff"><i>bss</i></font></b>&#160;segment of the kernel with zeros.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1395325815768" ID="ID_1515250331" MODIFIED="1395326311205">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Initializes the provisional kernel <b><font color="#0000ff"><i>Page Tables</i></font></b>&#160;contained in <tt>swapper_pg_dir</tt>&#160;&#160;and <tt>pg0</tt>&#160;to identically <b><font color="#0000ff"><i>map the linear addresses to the same physical addresses</i></font></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1395326056798" ID="ID_1627420757" MODIFIED="1395327467106">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Stores the address of the <b><font color="#0000ff"><i>Page Global Directory</i></font></b>&#160;in the <tt>cr3</tt><a name="IDX-APP-A-0032">
+</a>&#160;register, and <b><font color="#ff0000"><i>enables paging</i></font></b>&#160;by setting the <tt>PG</tt>&#160;bit in the <tt>cr0</tt>&#160;&#160;register.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1395326110569" ID="ID_201567461" MODIFIED="1395326314560">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Sets up the Kernel Mode stack for <b><font color="#0000ff"><i>process 0</i></font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-5"/>
+</node>
+<node CREATED="1395326142265" ID="ID_1106093258" MODIFIED="1395326316581">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Once again, the function clears all bits in the <b><font color="#0000ff"><tt><i>eflags</i></tt></font></b>&#160;register.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-6"/>
+</node>
+<node CREATED="1395326167088" ID="ID_364390457" MODIFIED="1395326318365">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Invokes <tt>setup_idt( )</tt>&#160;to fill the <b><font color="#0000ff"><i>IDT</i></font></b>&#160;with null interrupt handlers
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-7"/>
+</node>
+<node CREATED="1395326202766" ID="ID_945239356" MODIFIED="1395326320227">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Puts the system parameters obtained from the BIOS and the parameters passed to the operating system into the first page frame
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-8"/>
+</node>
+<node CREATED="1395326215959" ID="ID_696067506" MODIFIED="1395326322175" TEXT="Identifies the model of the processor.">
+<icon BUILTIN="full-9"/>
+</node>
+<node CREATED="1395326219215" ID="ID_148824914" MODIFIED="1395326328183">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Loads the <tt>gdtr</tt><a name="IDX-APP-A-0033">
+</a>&#160;and <font color="#000000"><tt>idtr</tt></font><a name="IDX-APP-A-0034">
+</a>&#160;registers with the addresses of the <b><font color="#0000ff"><i>GDT and IDT tables</i></font></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+<icon BUILTIN="full-0"/>
+</node>
+<node CREATED="1395326273037" ID="ID_1538765706" MODIFIED="1395326330969">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Jumps to the <tt>start_kernel( )</tt>&#160;function.</i></font></b>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+<icon BUILTIN="full-1"/>
+</node>
+</node>
+</node>
+<node CREATED="1395234613485" FOLDED="true" ID="ID_149894661" MODIFIED="1395327608489" TEXT="Modern Age: the start_kernel( ) Function">
+<icon BUILTIN="full-5"/>
+<node CREATED="1395326507021" ID="ID_551609078" MODIFIED="1395326530586" TEXT="completes the initialization of the Linux kernel"/>
+<node CREATED="1395326531765" ID="ID_494212039" MODIFIED="1395326878912">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <b><font color="#0000ff"><i>scheduler</i></font></b>&#160;is initialized by invoking the <tt>sched_init( )</tt>&#160;function
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1395326615909" ID="ID_1955004433" MODIFIED="1395326881011">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <b><font color="#0000ff"><i>memory zones</i></font></b>&#160;are initialized by invoking the <tt>build_all_zonelists( )</tt>&#160;&#160;function
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1395326650396" ID="ID_314458243" MODIFIED="1395326883025">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <b><font color="#0000ff"><i>Buddy system</i></font></b>&#160;allocators are initialized by invoking the <tt>page_alloc_init( )</tt>&#160;and <tt>mem_init( )</tt>&#160;functions
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1395326709391" ID="ID_838226712" MODIFIED="1395326884799">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The final initialization of the <b><font color="#0000ff"><i>IDT</i></font></b>&#160;is performed by invoking <tt>trap_init( )</tt>&#160;and <tt>init_IRQ( )</tt>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1395326735213" ID="ID_100375682" MODIFIED="1395326886497">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <tt>TASKLET_SOFTIRQ</tt>&#160;and <tt>HI_SOFTIRQ</tt>&#160;are initialized by invoking the <tt>softirq_init( )</tt>&#160;function
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-5"/>
+</node>
+<node CREATED="1395326766542" ID="ID_1135245398" MODIFIED="1395326888205">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The system date and time are initialized by the <tt>time_init( )</tt>&#160;function
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-6"/>
+</node>
+<node CREATED="1395326795123" ID="ID_1823862165" MODIFIED="1395326889865">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <b><font color="#0000ff"><i>slab allocator</i></font></b>&#160;is initialized by the <tt>kmem_cache_init( )</tt>&#160;function
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-7"/>
+</node>
+<node CREATED="1395326810362" ID="ID_82714523" MODIFIED="1395326891543">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The speed of the CPU clock is determined by invoking the <tt>calibrate_delay( )</tt>&#160;&#160;function
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-8"/>
+</node>
+<node CREATED="1395326842033" ID="ID_137025801" MODIFIED="1395326893515">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The kernel thread for <b><font color="#0000ff"><i>process 1</i></font></b>&#160;is created by invoking the <tt>kernel_thread( )</tt>&#160;&#160;function. In turn, this kernel thread creates the other kernel threads<a name="IDX-APP-A-0043">
+</a>&#160;and executes the <b><font color="#0000ff"><i>/sbin/init</i></font></b>&#160;program
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-9"/>
+</node>
+</node>
+<node CREATED="1395326922531" ID="ID_1318650655" MODIFIED="1395326972236">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Besides the <b><font color="#0000ff"><i>&quot;Linux version 2.6.11...&quot; message</i></font></b>, which is displayed right after the beginning of <tt>start_kernel( )</tt>, many other messages are displayed in this last phase, both by the <span class="docEmphasis">init</span>&#160;program and by the kernel threads. At the end, the familiar <b><font color="#0000ff"><i>login prompt </i></font></b>appears on the console (or in the graphical screen, if the X Window System<a name="IDX-APP-A-0044">
+</a>&#160;is launched at startup), telling the user that the Linux kernel is up and running.
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
