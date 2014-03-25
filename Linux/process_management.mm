@@ -3,17 +3,18 @@
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
 <node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1395371903381" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1393234017837" TEXT="The process data structures are stored in the 2-page (8 KB) memory area"/>
-<node CREATED="1358849568031" ID="ID_1241600752" MODIFIED="1358849630809">
+<node CREATED="1358849568031" ID="ID_1241600752" MODIFIED="1395756890423">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
-    <img src="kernel/thread_stack.png" />
+    <img src="kernel/process/thread_stack.png" />
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node CREATED="1315906535124" FOLDED="true" ID="ID_632220490" MODIFIED="1395371901157">
+<node CREATED="1315906535124" ID="ID_632220490" MODIFIED="1395756927961">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -51,7 +52,7 @@
 <arrowlink COLOR="#b0b0b0" DESTINATION="ID_1707237907" ENDARROW="Default" ENDINCLINATION="288;0;" ID="Arrow_ID_1054171908" STARTARROW="None" STARTINCLINATION="288;0;"/>
 </node>
 </node>
-<node CREATED="1315906710224" FOLDED="true" ID="ID_1707237907" MODIFIED="1395371901160">
+<node CREATED="1315906710224" FOLDED="true" ID="ID_1707237907" MODIFIED="1395756939210">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1308,7 +1309,7 @@
 <node CREATED="1395221337557" ID="ID_1133910105" MODIFIED="1395221342936" TEXT="replace the execution context of a process with a new context described by an executable file"/>
 </node>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1395371901167" POSITION="right" TEXT="System Call">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1395737547691" POSITION="right" TEXT="System Call">
 <node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358931159125">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1334,13 +1335,13 @@
 </html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1358478009557">
+<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1395737542602">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
-    <img src="kernel/invoking_system_call.png" />
+    <img src="kernel/system-call/invoking_system_call.png" />
   </body>
 </html></richcontent>
 </node>
@@ -1459,8 +1460,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395370442185" FOLDED="true" ID="ID_234623858" MODIFIED="1395371901167">
 <richcontent TYPE="NODE"><html>
@@ -1472,8 +1472,7 @@
       <b><i>insmod</i></b>&#160;- link a module into the running kernel
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1395371425221" ID="ID_361541725" MODIFIED="1395371592910" TEXT="/lib/modules">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
@@ -1487,8 +1486,7 @@
       <b><font color="#000000"><i>modprobe</i></font></b>&#160;- Linking Modules on Demand
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395371320391" ID="ID_266005901" MODIFIED="1395371625118">
 <richcontent TYPE="NODE"><html>
@@ -1500,8 +1498,7 @@
       <b><font color="#000000"><i>depmod</i></font></b>&#160;- executed at system startup, writes all module dependencies to a file named modules.dep
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1395370464153" ID="ID_40621702" MODIFIED="1395370526049">
@@ -1514,8 +1511,7 @@
       <b><i>rmmod</i></b>&#160;- unlink a module
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

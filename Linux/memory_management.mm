@@ -1,16 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1312871447541" ID="ID_1614623172" LINK="Linux%20Device%20Drivers.mm" MODIFIED="1358153567222">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Memory Management
-    </p>
-  </body>
-</html></richcontent>
+<node CREATED="1395737843000" ID="ID_1328512352" MODIFIED="1395737940167" TEXT="Memory_Management">
 <node CREATED="1358148343488" ID="ID_1273041049" MODIFIED="1358148515025" POSITION="right">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -24,7 +14,7 @@
 </html></richcontent>
 <font NAME="Courier New" SIZE="12"/>
 </node>
-<node CREATED="1312871528809" ID="ID_1912367240" MODIFIED="1358323728299" POSITION="right" TEXT="Address">
+<node CREATED="1312871528809" ID="ID_1912367240" MODIFIED="1395737731083" POSITION="right" TEXT="Address">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1312871674270" ID="ID_1849209624" MODIFIED="1358148759541" TEXT="Physical addresses">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -36,7 +26,7 @@
 <node CREATED="1312871699476" ID="ID_1001023281" MODIFIED="1312871701920" TEXT="Kernel logical addresses"/>
 <node CREATED="1312871686391" ID="ID_406867064" MODIFIED="1312871688664" TEXT="Bus addresses"/>
 </node>
-<node CREATED="1312871846067" ID="ID_460105401" MODIFIED="1358155017187" POSITION="right" TEXT="kmalloc(size, flags)/kfree(addr)">
+<node CREATED="1312871846067" FOLDED="true" ID="ID_460105401" MODIFIED="1395737719588" POSITION="right" TEXT="kmalloc(size, flags)/kfree(addr)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="button_ok"/>
 <node CREATED="1312873575475" ID="ID_1238007881" MODIFIED="1358154503220">
@@ -167,7 +157,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1312871908829" ID="ID_1506915144" MODIFIED="1358153403284" POSITION="right" TEXT="vmalloc(size)/vfree(addr)">
+<node CREATED="1312871908829" FOLDED="true" ID="ID_1506915144" MODIFIED="1395737719588" POSITION="right" TEXT="vmalloc(size)/vfree(addr)">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1312873560668" ID="ID_1752255251" MODIFIED="1358154503221">
 <richcontent TYPE="NODE"><html>
@@ -189,20 +179,21 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1358324355641" ID="ID_1942651027" MODIFIED="1358324460066" POSITION="right" TEXT="zoned page frame allocator">
+<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1395756477210" POSITION="right" TEXT="zoned page frame allocator">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1358324530149" ID="ID_505710013" MODIFIED="1358324927575">
+<node CREATED="1395756408193" ID="ID_1456950804" MODIFIED="1395756429196">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
-    <img src="../../../../图片/选区_002.png" />
+    <img src="kernel/mm/zoned_page_frame_allocator.png" />
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node CREATED="1313652215544" ID="ID_583946685" MODIFIED="1313652219818" TEXT="Per-CPU">
-<node CREATED="1313652331271" ID="ID_1228374438" MODIFIED="1313652334308" TEXT="static">
+<node CREATED="1313652215544" FOLDED="true" ID="ID_583946685" MODIFIED="1395737719589" TEXT="Per-CPU">
+<node CREATED="1313652331271" FOLDED="true" ID="ID_1228374438" MODIFIED="1395737719588" TEXT="static">
 <node CREATED="1313652237551" ID="ID_160468348" MODIFIED="1313652251421">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -220,7 +211,7 @@
 </node>
 <node CREATED="1313652266671" ID="ID_519897146" MODIFIED="1313652781978" TEXT="get_cpu_var(name)/per_cpu(name, cpu)&#xa;put_cpu_var(name)"/>
 </node>
-<node CREATED="1313652340838" ID="ID_1807251563" MODIFIED="1313652343583" TEXT="dynamic">
+<node CREATED="1313652340838" FOLDED="true" ID="ID_1807251563" MODIFIED="1395737719589" TEXT="dynamic">
 <node CREATED="1313652366878" ID="ID_609828717" MODIFIED="1313652800702">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -253,15 +244,15 @@
 </node>
 </node>
 </node>
-<node CREATED="1312872066748" ID="ID_761493369" MODIFIED="1358324384834" TEXT="slab">
-<node CREATED="1313636644910" ID="ID_1877097628" MODIFIED="1358153819157" TEXT="cache">
-<node CREATED="1313636652221" ID="ID_493262911" MODIFIED="1313636657533" TEXT="slab">
+<node CREATED="1312872066748" FOLDED="true" ID="ID_761493369" MODIFIED="1395737719591" TEXT="slab">
+<node CREATED="1313636644910" FOLDED="true" ID="ID_1877097628" MODIFIED="1395737719591" TEXT="cache">
+<node CREATED="1313636652221" FOLDED="true" ID="ID_493262911" MODIFIED="1395737719590" TEXT="slab">
 <node CREATED="1313636671621" ID="ID_634943318" MODIFIED="1313636675741" TEXT="object"/>
 <node CREATED="1313636676669" ID="ID_208485622" MODIFIED="1313636683696" TEXT="..."/>
 <node CREATED="1313636684542" ID="ID_1101922759" MODIFIED="1313636687213" TEXT="object"/>
 </node>
 <node CREATED="1313636657909" ID="ID_40530479" MODIFIED="1313636667728" TEXT="..."/>
-<node CREATED="1313636662678" ID="ID_191862281" MODIFIED="1313636663894" TEXT="slab">
+<node CREATED="1313636662678" FOLDED="true" ID="ID_191862281" MODIFIED="1395737719590" TEXT="slab">
 <node CREATED="1313636698918" ID="ID_1596765319" MODIFIED="1313636701352" TEXT="object"/>
 <node CREATED="1313636702125" ID="ID_840600984" MODIFIED="1313636703117" TEXT="..."/>
 <node CREATED="1313636703789" ID="ID_197678332" MODIFIED="1313636705637" TEXT="object"/>
@@ -323,14 +314,25 @@
 </node>
 </node>
 </node>
-<node CREATED="1358153120946" ID="ID_347001048" MODIFIED="1358153124216" POSITION="right" TEXT="node">
-<node CREATED="1358153133791" ID="ID_885654250" MODIFIED="1358155026511" TEXT="struct pg_data_t">
+<node CREATED="1358153120946" FOLDED="true" ID="ID_347001048" MODIFIED="1395756719713" POSITION="right" TEXT="node">
+<node CREATED="1358153133791" FOLDED="true" ID="ID_885654250" MODIFIED="1395756718112" TEXT="struct pg_data_t">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358153150033" ID="ID_22636036" MODIFIED="1358153160330" TEXT="include/linux/mmzone.h"/>
+<node CREATED="1395756532194" ID="ID_1348528155" MODIFIED="1395756654005">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/mm_page.jpeg" />
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1312871499746" ID="ID_31477366" MODIFIED="1358153282621" POSITION="right" TEXT="zone">
-<node CREATED="1313632101765" ID="ID_1280280664" MODIFIED="1358155028913" TEXT="struct zone">
+</node>
+<node CREATED="1312871499746" FOLDED="true" ID="ID_31477366" MODIFIED="1395756550258" POSITION="right" TEXT="zone">
+<node CREATED="1313632101765" ID="ID_1280280664" MODIFIED="1395756547054" TEXT="struct zone">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358153222199" ID="ID_991092797" MODIFIED="1358153228720" TEXT="include/linux/mmzone.h"/>
 </node>
@@ -340,7 +342,7 @@
 <node CREATED="1312871608435" ID="ID_1971100943" MODIFIED="1358155081539" TEXT="Normal memory (ZONE_NORMAL)">
 <icon BUILTIN="full-2"/>
 </node>
-<node CREATED="1312871615980" ID="ID_938071096" MODIFIED="1358155086854" TEXT="High memory (ZONE_HIGHMEM)">
+<node CREATED="1312871615980" FOLDED="true" ID="ID_938071096" MODIFIED="1395737719592" TEXT="High memory (ZONE_HIGHMEM)">
 <icon BUILTIN="full-3"/>
 <node CREATED="1313631301221" ID="ID_1852945336" MODIFIED="1358153958370" TEXT="This zone contains &#x201c;high memory,&#x201d; which are pages &#xa;not permanently mapped into the kernel&#x2019;s address space.">
 <icon BUILTIN="messagebox_warning"/>
@@ -348,8 +350,8 @@
 </node>
 <node CREATED="1313631678334" ID="ID_1410813905" MODIFIED="1358155061518" TEXT="The kernel uses the zones to&#xa0;group pages of similar properties.&#xa;Note that the zones do not  have any physical relevance but are simply logical groupings used by the kernel to keep  track of pages."/>
 </node>
-<node CREATED="1312872585307" ID="ID_1972336281" MODIFIED="1358146212738" POSITION="right" TEXT="page">
-<node CREATED="1313631389302" ID="ID_946213315" MODIFIED="1358151658908" TEXT="struct page">
+<node CREATED="1312872585307" FOLDED="true" ID="ID_1972336281" MODIFIED="1395737719598" POSITION="right" TEXT="page">
+<node CREATED="1313631389302" FOLDED="true" ID="ID_946213315" MODIFIED="1395737719593" TEXT="struct page">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358151860651" ID="ID_102780468" MODIFIED="1358152215835" TEXT="include/linux/mm_types.h">
 <font NAME="SansSerif" SIZE="12"/>
@@ -392,7 +394,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1355734730406" ID="ID_365226592" MODIFIED="1358152620434" TEXT="alloc_pages(gfp_mask, order)/alloc_page(gfp_mask)&#xa;__free_pages(page, order)/__free_page(page)">
+<node CREATED="1355734730406" FOLDED="true" ID="ID_365226592" MODIFIED="1395737719593" TEXT="alloc_pages(gfp_mask, order)/alloc_page(gfp_mask)&#xa;__free_pages(page, order)/__free_page(page)">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1355735437498" ID="ID_796911350" MODIFIED="1355735446119" TEXT="mm/mempolicy.c"/>
 <node CREATED="1355734931170" ID="ID_337663512" MODIFIED="1358152633553">
@@ -412,7 +414,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1355735133119" ID="ID_587331535" MODIFIED="1358152566962" TEXT="__get_free_pages(gfp_mask, order)/__get_free_page(gfp_mask)/get_zeroed_page(gfp_mask)&#xa;free_pages(addr, order)/free_page(addr)">
+<node CREATED="1355735133119" FOLDED="true" ID="ID_587331535" MODIFIED="1395737719595" TEXT="__get_free_pages(gfp_mask, order)/__get_free_page(gfp_mask)/get_zeroed_page(gfp_mask)&#xa;free_pages(addr, order)/free_page(addr)">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1355735330265" ID="ID_293453969" MODIFIED="1355735341015" TEXT="mm/page_alloc.c"/>
 <node CREATED="1355735496874" ID="ID_631351050" MODIFIED="1358152591362">
@@ -432,7 +434,7 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
-<node CREATED="1312872685043" ID="ID_362844691" MODIFIED="1313636950789" TEXT="page_address(page)/vir_to_page(addr)">
+<node CREATED="1312872685043" FOLDED="true" ID="ID_362844691" MODIFIED="1395737719598" TEXT="page_address(page)/vir_to_page(addr)">
 <node CREATED="1313633075838" ID="ID_370746362" MODIFIED="1358154924850">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -449,7 +451,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1312872700511" ID="ID_1202294272" MODIFIED="1313646296291" TEXT="kmap(page)/kunmap(page)">
+<node CREATED="1312872700511" FOLDED="true" ID="ID_1202294272" MODIFIED="1395737719598" TEXT="kmap(page)/kunmap(page)">
 <arrowlink DESTINATION="ID_938071096" ENDARROW="Default" ENDINCLINATION="173;0;" ID="Arrow_ID_150644429" STARTARROW="None" STARTINCLINATION="173;0;"/>
 <node CREATED="1313646171399" ID="ID_1918980860" MODIFIED="1358154999680">
 <richcontent TYPE="NODE"><html>
@@ -468,8 +470,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1312872830109" ID="ID_11445334" MODIFIED="1358325199465" POSITION="right" TEXT="memory descriptor">
-<node CREATED="1358303192333" ID="ID_777735884" MODIFIED="1358303206957" TEXT="struct mm_struct">
+<node CREATED="1312872830109" FOLDED="true" ID="ID_11445334" MODIFIED="1395737719599" POSITION="right" TEXT="memory descriptor">
+<node CREATED="1358303192333" FOLDED="true" ID="ID_777735884" MODIFIED="1395737719599" TEXT="struct mm_struct">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1358303510290" TEXT="include/linux/mm_types.h"/>
 <node CREATED="1358303519968" ID="ID_1815091434" MODIFIED="1358306465440">
@@ -513,7 +515,6 @@
     </p>
   </body>
 </html></richcontent>
-<arrowlink DESTINATION="ID_1029444362" ENDARROW="Default" ENDINCLINATION="292;0;" ID="Arrow_ID_628622807" STARTARROW="None" STARTINCLINATION="292;0;"/>
 </node>
 <node CREATED="1358304586374" ID="ID_1296864918" MODIFIED="1358304596070" TEXT="The mmap and mm_rb fields are different data structures that contain the same thing: all the memory areas in this address space. The former stores them in a linked list, whereas the latter stores them in a red-black tree. A red-black tree is a type of binary tree; like all binary trees, searching for a given element is an O(log n) operation. ">
 <icon BUILTIN="messagebox_warning"/>
@@ -523,8 +524,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1358304712817" ID="ID_1319173337" MODIFIED="1358304719130" POSITION="right" TEXT="memory area">
-<node CREATED="1312872790371" ID="ID_354933782" MODIFIED="1358304730140" TEXT="struct vm_area_struct">
+<node CREATED="1358304712817" FOLDED="true" ID="ID_1319173337" MODIFIED="1395738303489" POSITION="right" TEXT="memory area">
+<node CREATED="1312872790371" FOLDED="true" ID="ID_354933782" MODIFIED="1395737719599" TEXT="struct vm_area_struct">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358306236953" ID="ID_379944355" MODIFIED="1358306244431" TEXT="include/linux/mm_types.h"/>
 <node CREATED="1358306250874" ID="ID_1029444362" MODIFIED="1358306962940">
@@ -597,9 +598,9 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1312872821909" ID="ID_1486450980" MODIFIED="1312872828048" TEXT="struct vm_operations_struct">
+<node CREATED="1312872821909" FOLDED="true" ID="ID_1486450980" MODIFIED="1395737719600" TEXT="struct vm_operations_struct">
 <node CREATED="1358322149966" ID="ID_528647959" MODIFIED="1358322155613" TEXT="include/linux/mm.h"/>
-<node CREATED="1358322156214" ID="ID_1045103683" MODIFIED="1358323922853">
+<node CREATED="1358322156214" FOLDED="true" ID="ID_1045103683" MODIFIED="1395737719599">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -694,7 +695,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1312873123709" ID="ID_1667007813" MODIFIED="1312873130632" TEXT="mmap">
+<node CREATED="1312873123709" FOLDED="true" ID="ID_1667007813" MODIFIED="1395737719600" TEXT="mmap">
 <node CREATED="1312873189873" ID="ID_1560832887" MODIFIED="1313646511381">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -715,8 +716,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1358324000021" ID="ID_1644107989" MODIFIED="1358324010114" POSITION="right" TEXT="process address space">
-<node CREATED="1358324019184" ID="ID_946038574" MODIFIED="1358324025996" TEXT="create">
+<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1395738302647" POSITION="right" TEXT="process address space">
+<node CREATED="1358324019184" FOLDED="true" ID="ID_946038574" MODIFIED="1395737719601" TEXT="create">
 <node CREATED="1358324083115" ID="ID_1948357843" MODIFIED="1358324083115" TEXT=""/>
 <node CREATED="1358323292025" ID="ID_17931463" MODIFIED="1358323351927">
 <richcontent TYPE="NODE"><html>
@@ -770,7 +771,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1358324027155" ID="ID_580095057" MODIFIED="1358324029414" TEXT="delete">
+<node CREATED="1358324027155" FOLDED="true" ID="ID_580095057" MODIFIED="1395737719601" TEXT="delete">
 <node CREATED="1358324092331" ID="ID_1996889249" MODIFIED="1358324092331" TEXT=""/>
 <node CREATED="1358323551149" ID="ID_529718830" MODIFIED="1358323604808">
 <richcontent TYPE="NODE"><html>

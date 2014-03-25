@@ -13,7 +13,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1395234358616" FOLDED="true" ID="ID_444486857" MODIFIED="1395371915246" POSITION="right" TEXT="Prehistoric Age: the BIOS">
+<node CREATED="1395234358616" FOLDED="true" ID="ID_444486857" MODIFIED="1395734473751" POSITION="right" TEXT="Prehistoric Age: the BIOS">
 <icon BUILTIN="full-1"/>
 <node CREATED="1395236880474" ID="ID_893492909" MODIFIED="1395236948079">
 <richcontent TYPE="NODE"><html>
@@ -80,7 +80,7 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
-<node CREATED="1395234571062" FOLDED="true" ID="ID_1263029943" MODIFIED="1395371915247" POSITION="right" TEXT="Ancient Age: the Boot Loader">
+<node CREATED="1395234571062" FOLDED="true" ID="ID_1263029943" MODIFIED="1395734471507" POSITION="right" TEXT="Ancient Age: the Boot Loader">
 <icon BUILTIN="full-2"/>
 <node CREATED="1395320718869" ID="ID_785163258" MODIFIED="1395320775021">
 <richcontent TYPE="NODE"><html>
@@ -94,7 +94,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1395320777370" FOLDED="true" ID="ID_1855298211" MODIFIED="1395371915246">
+<node CREATED="1395320777370" ID="ID_1855298211" MODIFIED="1395734463138">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -106,7 +106,7 @@
   </body>
 </html></richcontent>
 <node CREATED="1395322561969" ID="ID_1023833752" MODIFIED="1395322564857" TEXT="The first sector of the hard disk"/>
-<node CREATED="1395322602879" FOLDED="true" ID="ID_887275313" MODIFIED="1395371915246" TEXT="consist">
+<node CREATED="1395322602879" ID="ID_887275313" MODIFIED="1395734464885" TEXT="consist">
 <node CREATED="1395321140599" ID="ID_608907478" MODIFIED="1395321474636">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -120,7 +120,7 @@
 </html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1395321495680" FOLDED="true" ID="ID_1167652212" MODIFIED="1395371915246">
+<node CREATED="1395321495680" FOLDED="true" ID="ID_1167652212" MODIFIED="1395734469755">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -188,8 +188,12 @@
 </node>
 </node>
 </node>
-<node CREATED="1395234586278" FOLDED="true" ID="ID_538273730" MODIFIED="1395371915250" POSITION="right" TEXT="Middle Ages: the setup( ) Function">
+<node CREATED="1395234586278" FOLDED="true" ID="ID_538273730" MODIFIED="1395737081271" POSITION="right" TEXT="Middle Ages: the setup( ) Function">
 <icon BUILTIN="full-3"/>
+<node CREATED="1395735716025" ID="ID_970882262" MODIFIED="1395737068041" TEXT="arch/x86/boot/arch/x86/boot/header.S">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
 <node CREATED="1395322820801" ID="ID_455354932" MODIFIED="1395322882485">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -202,7 +206,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1395322929631" FOLDED="true" ID="ID_1234746309" MODIFIED="1395371915247">
+<node CREATED="1395322929631" FOLDED="true" ID="ID_1234746309" MODIFIED="1395734457977">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -285,9 +289,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1395234599902" FOLDED="true" ID="ID_149885112" MODIFIED="1395371915251" POSITION="right" TEXT="Renaissance: the startup_32( ) Functions">
+<node CREATED="1395234599902" FOLDED="true" ID="ID_149885112" MODIFIED="1395737082885" POSITION="right" TEXT="Renaissance: the startup_32( ) Functions">
 <icon BUILTIN="full-4"/>
-<node CREATED="1395323316914" ID="ID_1987996880" MODIFIED="1395323350869" TEXT="arch/i386/boot/compressed/head.S">
+<node CREATED="1395323316914" ID="ID_1987996880" MODIFIED="1395732762767" TEXT="arch/x86/boot/compressed/head_32.S">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -356,7 +360,7 @@
 </html></richcontent>
 <icon BUILTIN="full-4"/>
 </node>
-<node CREATED="1395323822919" FOLDED="true" ID="ID_138157557" MODIFIED="1395371915251">
+<node CREATED="1395323822919" FOLDED="true" ID="ID_138157557" MODIFIED="1395734200743">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -368,7 +372,7 @@
   </body>
 </html></richcontent>
 <icon BUILTIN="full-5"/>
-<node CREATED="1395323992545" ID="ID_1017497524" MODIFIED="1395324030373" TEXT="arch/i386/kernel/head.S">
+<node CREATED="1395323992545" ID="ID_1017497524" MODIFIED="1395733098480" TEXT="arch/x86/kernel/head_32.S">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -512,9 +516,45 @@
 </node>
 </node>
 </node>
-<node CREATED="1395234613485" FOLDED="true" ID="ID_149894661" MODIFIED="1395371915251" POSITION="right" TEXT="Modern Age: the start_kernel( ) Function">
+<node CREATED="1395234613485" FOLDED="true" ID="ID_149894661" MODIFIED="1395736764502" POSITION="right" TEXT="Modern Age: the start_kernel( ) Function">
 <icon BUILTIN="full-5"/>
-<node CREATED="1395326507021" ID="ID_551609078" MODIFIED="1395326530586" TEXT="completes the initialization of the Linux kernel"/>
+<node CREATED="1395733441620" ID="ID_1119478410" MODIFIED="1395733979503" TEXT="init/main.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395326507021" FOLDED="true" ID="ID_551609078" MODIFIED="1395734244065" TEXT="completes the initialization of the Linux kernel">
+<node CREATED="1395734114051" ID="ID_662555231" MODIFIED="1395734114051" TEXT=""/>
+<node CREATED="1395733984014" ID="ID_418204844" MODIFIED="1395734175574">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      startup_32&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/head_32.S
+    </p>
+    <p>
+      &#160;&#160;initial_code
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;i386_start_kernel &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/head32.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;start_kernel()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// init/main.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;setup_arch(&amp;command_line)&#160;&#160;&#160;// arch/x86/kernel/setup.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;paging_init() &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/mm/init_32.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pagetable_init()
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
 <node CREATED="1395326531765" ID="ID_494212039" MODIFIED="1395326878912">
 <richcontent TYPE="NODE"><html>
   <head>
