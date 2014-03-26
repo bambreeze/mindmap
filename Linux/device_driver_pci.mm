@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1388324069364" ID="ID_1067822762" MODIFIED="1389103901216" TEXT="pci subsystem">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1388324202817" FOLDED="true" ID="ID_837080186" MODIFIED="1389103915234" POSITION="right" TEXT="pci overview">
+<node CREATED="1388324202817" ID="ID_837080186" MODIFIED="1395823717055" POSITION="right" TEXT="pci overview">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1389074556149" ID="ID_1937441276" MODIFIED="1389074572234">
 <richcontent TYPE="NODE"><html>
@@ -14,8 +14,7 @@
       <i><b><font color="#0000ff">PCI (Peripheral Component Interconnect)</font></b></i>, is a local computer bus for attaching hardware devices in a computer.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1389074471767" ID="ID_650772737" MODIFIED="1389074485893">
 <richcontent TYPE="NODE"><html>
@@ -25,8 +24,7 @@
   <body>
     <img src="driver/pci/pci-system-block-diagram.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1388382109422" FOLDED="true" ID="ID_883886368" MODIFIED="1389103896772" TEXT="reference">
 <node CREATED="1388382118958" ID="ID_1207389878" MODIFIED="1389064618641" TEXT="http://www.pcisig.com"/>
@@ -34,7 +32,9 @@
 <node CREATED="1388386113329" ID="ID_266613301" MODIFIED="1388386440803" TEXT="http://mj.ucw.cz/sw/pciutils/"/>
 </node>
 </node>
-<node CREATED="1388478271706" FOLDED="true" ID="ID_120834750" MODIFIED="1389103912054" POSITION="right" TEXT="pci configuration space">
+<node CREATED="1395826912067" ID="ID_1760452867" MODIFIED="1395826945753" POSITION="right" TEXT="PCI Addressing">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1388478271706" ID="ID_120834750" MODIFIED="1395827493795" TEXT="pci configuration space">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1389073224551" ID="ID_37768988" MODIFIED="1389073754527">
 <richcontent TYPE="NODE"><html>
@@ -70,7 +70,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1389064867813" FOLDED="true" ID="ID_28093240" MODIFIED="1389103896773" TEXT="access method">
+<node CREATED="1389064867813" FOLDED="true" ID="ID_28093240" MODIFIED="1395827193700" TEXT="access method">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388478287826" ID="ID_1638706613" MODIFIED="1388478295858" TEXT="BIOS"/>
 <node CREATED="1388478297038" FOLDED="true" ID="ID_467494694" MODIFIED="1389103896772">
@@ -123,73 +123,81 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;raw_spin_unlock_irqrestore(&amp;pci_lock, flags);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1388478305789" ID="ID_684714180" MODIFIED="1388478309297" TEXT="MMConfig"/>
 </node>
 </node>
+<node CREATED="1312613931259" ID="ID_809897383" MODIFIED="1312613935713" TEXT="memory space"/>
+<node CREATED="1312613936537" ID="ID_652408319" MODIFIED="1312613939786" TEXT="I/O space"/>
+<node CREATED="1312614075680" ID="ID_1076269082" MODIFIED="1312614091726" TEXT="domain:bus:device:function"/>
+</node>
 <node CREATED="1388324207605" ID="ID_1599119370" MODIFIED="1389103917007" POSITION="right" TEXT="pci driver framework">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1389079786034" FOLDED="true" ID="ID_1986937783" MODIFIED="1389103896774" TEXT="pci data structure">
+<node CREATED="1389079786034" ID="ID_1986937783" MODIFIED="1395827521586" TEXT="pci data structure">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1388924206034" ID="ID_1589488744" MODIFIED="1388924240022" TEXT="include/linux/pci.h">
+<node CREATED="1388924206034" ID="ID_1589488744" MODIFIED="1395827391951" TEXT="include/linux/pci.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1389075831942" FOLDED="true" ID="ID_1869968781" MODIFIED="1389103896773">
+<node CREATED="1312614189145" ID="ID_651174919" MODIFIED="1312614196843" TEXT="pci_device_id"/>
+<node CREATED="1312614268938" FOLDED="true" ID="ID_1601962007" MODIFIED="1395827359120" TEXT="pci_driver">
+<node CREATED="1312614356506" MODIFIED="1312614376802" TEXT="id_table"/>
+<node CREATED="1312614378123" MODIFIED="1312614404517" TEXT="probe()"/>
+<node CREATED="1312614386089" MODIFIED="1312614391107" TEXT="remove()"/>
+<node CREATED="1312614392268" MODIFIED="1312614395863" TEXT="suspend()"/>
+<node CREATED="1312614411384" MODIFIED="1312614416315" TEXT="resume()"/>
+<node CREATED="1388924270099" ID="ID_1490526976" MODIFIED="1388924435681">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b><font color="#6600ff">struct pci_bus</font></b>&#160;{
+      struct <b><font color="#6600ff">pci_driver</font></b>&#160;{
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct list_head node;&#160;&#160;&#160;&#160;&#160;&#160;/* node in list of buses */
+      &#160;&#160;&#160;&#160;struct list_head node;&#160;&#160;&#160;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct pci_bus&#160;&#160;*parent;&#160;&#160;&#160;&#160;/* parent bus this bridge is on */
+      &#160;&#160;&#160;&#160;const char *name;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct list_head children;&#160;&#160;/* list of child buses */
+      &#160;&#160;&#160;&#160;const struct pci_device_id *id_table;&#160;&#160;&#160;/* must be non-NULL for probe to be called */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct list_head devices;&#160;&#160;&#160;/* list of devices on this bus */
+      &#160;&#160;&#160;&#160;int&#160;&#160;(*probe)&#160;&#160;(struct pci_dev *dev, const struct pci_device_id *id);&#160;&#160;&#160;/* New device inserted */
     </p>
     <p>
-      &#160;&#160;&#160; <b><font color="#6600ff">struct pci_ops&#160;&#160;*ops</font></b>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* configuration access functions */
+      &#160;&#160;&#160;&#160;void (*remove) (struct pci_dev *dev);/*Device removed */&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;unsigned char&#160;&#160;&#160;number;&#160;&#160;&#160;&#160;&#160;/* bus number */
+      &#160;&#160;&#160;&#160;int&#160;&#160;(*suspend) (struct pci_dev *dev, pm_message_t state);&#160;&#160;/* Device suspended */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;...
+      &#160;&#160;&#160;&#160;int&#160;&#160;(*suspend_late) (struct pci_dev *dev, pm_message_t state);
     </p>
     <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1389076115736" ID="ID_223626463" MODIFIED="1389076201188">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      /* Low-level architecture-dependent routines */
+      &#160;&#160;&#160;&#160;int&#160;&#160;(*resume_early) (struct pci_dev *dev);
     </p>
     <p>
-      <b><font color="#6600ff">struct pci_ops</font></b>&#160;{
+      &#160;&#160;&#160;&#160;int&#160;&#160;(*resume) (struct pci_dev *dev);&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Device woken up */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int (*read)(struct pci_bus *bus, unsigned int devfn, int where, int size, u32 *val);
+      &#160;&#160;&#160;&#160;void (*shutdown) (struct pci_dev *dev);
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int (*write)(struct pci_bus *bus, unsigned int devfn, int where, int size, u32 val);
+      &#160;&#160;&#160;&#160;int (*sriov_configure) (struct pci_dev *dev, int num_vfs); /* PF pdev */&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;const struct pci_error_handlers *err_handler;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#ff0000">struct device_driver&#160;&#160;&#160;&#160;driver;</font></b>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct pci_dynids dynids;
     </p>
     <p>
       };
@@ -198,6 +206,7 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1312614440037" FOLDED="true" ID="ID_531686178" MODIFIED="1395827364715" TEXT="pci_dev">
 <node CREATED="1388924243570" ID="ID_1199106003" MODIFIED="1388990139542">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -258,56 +267,61 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1388924270099" ID="ID_1490526976" MODIFIED="1388924435681">
+</node>
+<node CREATED="1312614475923" ID="ID_1303162592" MODIFIED="1312614479537" TEXT="pci_ops"/>
+<node CREATED="1395827371480" FOLDED="true" ID="ID_1910617392" MODIFIED="1395827383739" TEXT="pci_bus">
+<node CREATED="1389075831942" FOLDED="true" ID="ID_1869968781" MODIFIED="1389103896773">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      struct <b><font color="#6600ff">pci_driver</font></b>&#160;{
+      <b><font color="#6600ff">struct pci_bus</font></b>&#160;{
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct list_head node;&#160;&#160;&#160;
+      &#160;&#160;&#160;&#160;struct list_head node;&#160;&#160;&#160;&#160;&#160;&#160;/* node in list of buses */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;const char *name;
+      &#160;&#160;&#160;&#160;struct pci_bus&#160;&#160;*parent;&#160;&#160;&#160;&#160;/* parent bus this bridge is on */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;const struct pci_device_id *id_table;&#160;&#160;&#160;/* must be non-NULL for probe to be called */
+      &#160;&#160;&#160;&#160;struct list_head children;&#160;&#160;/* list of child buses */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int&#160;&#160;(*probe)&#160;&#160;(struct pci_dev *dev, const struct pci_device_id *id);&#160;&#160;&#160;/* New device inserted */
+      &#160;&#160;&#160;&#160;struct list_head devices;&#160;&#160;&#160;/* list of devices on this bus */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;void (*remove) (struct pci_dev *dev);/*Device removed */&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+      &#160;&#160;&#160; <b><font color="#6600ff">struct pci_ops&#160;&#160;*ops</font></b>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* configuration access functions */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int&#160;&#160;(*suspend) (struct pci_dev *dev, pm_message_t state);&#160;&#160;/* Device suspended */
+      &#160;&#160;&#160;&#160;unsigned char&#160;&#160;&#160;number;&#160;&#160;&#160;&#160;&#160;/* bus number */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int&#160;&#160;(*suspend_late) (struct pci_dev *dev, pm_message_t state);
+      &#160;&#160;&#160;&#160;...
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int&#160;&#160;(*resume_early) (struct pci_dev *dev);
+      };
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1389076115736" ID="ID_223626463" MODIFIED="1389076201188">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* Low-level architecture-dependent routines */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int&#160;&#160;(*resume) (struct pci_dev *dev);&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Device woken up */
+      <b><font color="#6600ff">struct pci_ops</font></b>&#160;{
     </p>
     <p>
-      &#160;&#160;&#160;&#160;void (*shutdown) (struct pci_dev *dev);
+      &#160;&#160;&#160;&#160;int (*read)(struct pci_bus *bus, unsigned int devfn, int where, int size, u32 *val);
     </p>
     <p>
-      &#160;&#160;&#160;&#160;int (*sriov_configure) (struct pci_dev *dev, int num_vfs); /* PF pdev */&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;const struct pci_error_handlers *err_handler;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;<b><font color="#ff0000">struct device_driver&#160;&#160;&#160;&#160;driver;</font></b>
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct pci_dynids dynids;
+      &#160;&#160;&#160;&#160;int (*write)(struct pci_bus *bus, unsigned int devfn, int where, int size, u32 val);
     </p>
     <p>
       };
@@ -316,7 +330,15 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1388411829776" FOLDED="true" ID="ID_1385341233" MODIFIED="1389103896776" TEXT="pci core driver">
+</node>
+</node>
+<node CREATED="1312614109614" ID="ID_238954140" MODIFIED="1395827523723" TEXT="registration">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1312614203592" MODIFIED="1312614246400" TEXT="MODULE_DEVICE_TABLE(pci, xxx)"/>
+<node CREATED="1312614293627" MODIFIED="1312614297519" TEXT="pci_register_driver()"/>
+<node CREATED="1312614309728" ID="ID_711314704" MODIFIED="1312614312541" TEXT="pci_unregister_driver()"/>
+</node>
+<node CREATED="1388411829776" FOLDED="true" ID="ID_1385341233" MODIFIED="1395827483216" TEXT="pci core driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388977279495" ID="ID_470509874" MODIFIED="1389077168872" TEXT="pci core driver init sequence">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -528,8 +550,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return <b><font color="#ff0000">driver_register</font></b>(&amp;drv-&gt;driver); &#160;&#160;&#160;&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1388411988046" ID="ID_1989112939" MODIFIED="1389076828072">
 <richcontent TYPE="NODE"><html>
@@ -544,8 +565,7 @@
       arch/x86/pci/direct.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -639,8 +659,7 @@
       arch_initcall(pci_arch_init);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-3"/>
 </node>
 <node CREATED="1389078034763" ID="ID_594822531" MODIFIED="1389078433779">
@@ -656,8 +675,7 @@
       arch/x86/pci/common.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -710,8 +728,7 @@
       subsys_initcall(pci_subsys_init);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-4"/>
 <node CREATED="1389078525810" ID="ID_1151370043" MODIFIED="1389078551200">
 <richcontent TYPE="NODE"><html>
@@ -732,8 +749,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1389078557193" ID="ID_233198634" MODIFIED="1389078698395">
 <richcontent TYPE="NODE"><html>
@@ -751,14 +767,13 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><font color="#ff0000">raw_pci_ops-&gt;read</font></b>()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1388916970494" FOLDED="true" ID="ID_1823279685" MODIFIED="1389103896776" TEXT="pci device driver">
+<node CREATED="1388916970494" FOLDED="true" ID="ID_1823279685" MODIFIED="1395827512246" TEXT="pci device driver">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1388916984002" FOLDED="true" ID="ID_1991188208" MODIFIED="1389103896776" TEXT="pci device initialization">
+<node CREATED="1388916984002" FOLDED="true" ID="ID_1991188208" MODIFIED="1395827462511" TEXT="pci device initialization">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388992202611" ID="ID_1665185478" MODIFIED="1388992206887" TEXT="Once the driver knows about a PCI device and takes ownership, the driver generally needs to perform the following initialization."/>
 <node CREATED="1388916991233" ID="ID_1113452624" MODIFIED="1388917002934">
@@ -795,7 +810,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1388916985938" FOLDED="true" ID="ID_1943303080" MODIFIED="1389103896776" TEXT="pci device shutdown">
+<node CREATED="1388916985938" FOLDED="true" ID="ID_1943303080" MODIFIED="1395827461639" TEXT="pci device shutdown">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388992091172" ID="ID_1429789260" MODIFIED="1388992095865" TEXT="When a PCI device driver is being unloaded, most of the following steps need to be performed."/>
 <node CREATED="1388917006649" ID="ID_1844707702" MODIFIED="1388917017357">
@@ -831,7 +846,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1388483615351" FOLDED="true" ID="ID_414142096" MODIFIED="1389103901215" POSITION="right" TEXT="pci utilities">
+<node CREATED="1388483615351" FOLDED="true" ID="ID_414142096" MODIFIED="1395827517325" POSITION="right" TEXT="pci utilities">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1388483864882" ID="ID_235388851" MODIFIED="1388485076659" TEXT="lspci - displays detailed information about all PCI buses and devices in the system"/>
 <node CREATED="1388483869130" ID="ID_1157526048" MODIFIED="1388485105178" TEXT="setpci - allows reading from and writing to PCI device configuration registers."/>
