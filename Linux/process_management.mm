@@ -1,9 +1,20 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1395371903381" POSITION="right" TEXT="Process Descriptor">
-<node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1393234017837" TEXT="The process data structures are stored in the 2-page (8 KB) memory area"/>
-<node CREATED="1358849568031" ID="ID_1241600752" MODIFIED="1395756890423">
+<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1398846761855" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The process data structures are stored in the <font color="#0000ff"><b><i>2-page (8 KB)</i></b></font>&#160; memory area
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358849568031" FOLDED="true" ID="ID_1241600752" MODIFIED="1398838847381">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -12,8 +23,53 @@
     <img src="kernel/process/thread_stack.png" />
   </body>
 </html></richcontent>
+<node CREATED="1398826906494" ID="ID_563990978" MODIFIED="1398831377217">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* how to get the current stack pointer from C */
+    </p>
+    <p>
+      register unsigned long current_stack_pointer asm(&quot;<font color="#0000ff"><i><b>esp</b></i></font>&quot;) __used;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /* how to get the thread information struct from C */
+    </p>
+    <p>
+      static inline struct thread_info *<font color="#0000ff"><i><b>current_thread_info</b></i></font>(void)
+    </p>
+    <p>
+      {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;return (struct thread_info *)&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(current_stack_pointer &amp; ~(THREAD_SIZE - 1));
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      #define get_current() (current_thread_info()-&gt;task)
+    </p>
+    <p>
+      #define <font color="#ff0000"><i><b>current</b></i></font>&#160;get_current()
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node CREATED="1315906535124" ID="ID_632220490" MODIFIED="1395756927961">
+</node>
+<node CREATED="1315906535124" ID="ID_632220490" MODIFIED="1398827071378">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -28,7 +84,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1315919137906" ID="ID_650907153" MODIFIED="1393234248985">
+<node CREATED="1315919137906" ID="ID_650907153" MODIFIED="1398828057770">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -51,7 +107,7 @@
 <arrowlink COLOR="#b0b0b0" DESTINATION="ID_1707237907" ENDARROW="Default" ENDINCLINATION="288;0;" ID="Arrow_ID_1054171908" STARTARROW="None" STARTINCLINATION="288;0;"/>
 </node>
 </node>
-<node CREATED="1315906710224" FOLDED="true" ID="ID_1707237907" MODIFIED="1395756939210">
+<node CREATED="1315906710224" ID="ID_1707237907" MODIFIED="1398836317928">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -66,16 +122,145 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1315914103874" FOLDED="true" ID="ID_398479359" MODIFIED="1395371901157" TEXT="volatile long state;">
-<node CREATED="1315914353433" ID="ID_1933197825" MODIFIED="1315914364977" TEXT="TASK_RUNNING"/>
-<node CREATED="1315914365862" ID="ID_1415384225" MODIFIED="1315914375212" TEXT="TASK_INTERRUPTIBLE"/>
-<node CREATED="1315914376062" ID="ID_1275568405" MODIFIED="1315914386584" TEXT="TASK_UNINTERRUPTIBLE"/>
-<node CREATED="1315914414290" ID="ID_1327507856" MODIFIED="1315914416204" TEXT="..."/>
+<node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1398833108602">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      void * <font color="#0000ff"><i><b>stack</b></i></font>;
+    </p>
+  </body>
+</html></richcontent>
+<arrowlink DESTINATION="ID_650907153" ENDARROW="Default" ENDINCLINATION="297;0;" ID="Arrow_ID_693488617" STARTARROW="None" STARTINCLINATION="297;0;"/>
 </node>
-<node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1316831863401" TEXT="void * stack;"/>
-<node CREATED="1316842437493" ID="ID_18418388" MODIFIED="1316842444704" TEXT="atomic_t usage;"/>
-<node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1315918219425" TEXT="unsigned int flags;"/>
-<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1395371901157" TEXT="struct list_head tasks;">
+<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1398848129875">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      volatile long state;
+    </p>
+    <p>
+      int exit_state;
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1398838675735" ID="ID_326758892" MODIFIED="1398838698556">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /*
+    </p>
+    <p>
+      &#160;* Task state bitmask. NOTE! These bits are also
+    </p>
+    <p>
+      &#160;* encoded in fs/proc/array.c: get_task_state().
+    </p>
+    <p>
+      &#160;*
+    </p>
+    <p>
+      &#160;* We have two separate sets of flags: task-&gt;state
+    </p>
+    <p>
+      &#160;* is about runnability, while task-&gt;exit_state are
+    </p>
+    <p>
+      &#160;* about the task exiting. Confusing, but this way
+    </p>
+    <p>
+      &#160;* modifying one set can't modify the other one by
+    </p>
+    <p>
+      &#160;* mistake.
+    </p>
+    <p>
+      &#160;*/
+    </p>
+    <p>
+      #define TASK_RUNNING&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0
+    </p>
+    <p>
+      #define TASK_INTERRUPTIBLE&#160;&#160;1
+    </p>
+    <p>
+      #define TASK_UNINTERRUPTIBLE&#160;&#160;&#160;&#160;2
+    </p>
+    <p>
+      #define __TASK_STOPPED&#160;&#160;&#160;&#160;&#160;&#160;4
+    </p>
+    <p>
+      #define __TASK_TRACED&#160;&#160;&#160;&#160;&#160;&#160;&#160;8
+    </p>
+    <p>
+      /* in tsk-&gt;exit_state */
+    </p>
+    <p>
+      #define EXIT_ZOMBIE&#160;&#160;&#160;&#160;&#160;16
+    </p>
+    <p>
+      #define EXIT_DEAD&#160;&#160;&#160;&#160;&#160;&#160;&#160;32
+    </p>
+    <p>
+      /* in tsk-&gt;state again */
+    </p>
+    <p>
+      #define TASK_DEAD&#160;&#160;&#160;&#160;&#160;&#160;&#160;64&#160;
+    </p>
+    <p>
+      #define TASK_WAKEKILL&#160;&#160;&#160;&#160;&#160;&#160;&#160;128
+    </p>
+    <p>
+      #define TASK_WAKING&#160;&#160;&#160;&#160;&#160;256
+    </p>
+    <p>
+      #define TASK_PARKED&#160;&#160;&#160;&#160;&#160;512
+    </p>
+    <p>
+      #define TASK_STATE_MAX&#160;&#160;&#160;&#160;&#160;&#160;1024
+    </p>
+    <p>
+      &#160;&#160;&#160;
+    </p>
+    <p>
+      #define TASK_STATE_TO_CHAR_STR &quot;RSDTtZXxKWP&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1398833005312" ID="ID_1677865818" MODIFIED="1398833036961">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/process/process-state.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1316843584303" ID="ID_1772179729" MODIFIED="1398839739651">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct list_head tasks;
+    </p>
+  </body>
+</html>
+</richcontent>
 <node CREATED="1316843734093" ID="ID_803741408" MODIFIED="1316843763407">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -88,7 +273,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316843916945" ID="ID_27378462" MODIFIED="1316917741413">
+<node CREATED="1316843916945" ID="ID_27378462" MODIFIED="1398836033095">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -97,16 +282,16 @@
     <p>
       <b>init_task</b>&#160;- Initial task structure
     </p>
-    <p>
-      struct task_struct init_task = INIT_TASK(init_task);
-    </p>
-    <p>
-      (arch/x86/kernel/init_task.c)
-    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+<node CREATED="1398835951861" ID="ID_712481122" MODIFIED="1398835977845" TEXT="arch/x86/kernel/init_task.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1316917476163" ID="ID_686524080" MODIFIED="1316917781400">
+<node CREATED="1398835996859" ID="ID_334993240" MODIFIED="1398836000187" TEXT="struct task_struct init_task = INIT_TASK(init_task);"/>
+</node>
+<node CREATED="1316917476163" ID="ID_686524080" MODIFIED="1398836021528">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -115,37 +300,55 @@
     <p>
       <b>for_each_process(p)</b>&#160;- scans the whole process list
     </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1398848160104">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
     <p>
-      (include/linux/sched.h)
+      struct task_struct *real_parent;
+    </p>
+    <p>
+      struct task_struct *parent;
+    </p>
+    <p>
+      struct list_head children;
+    </p>
+    <p>
+      struct list_head sibling;
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1398838272680" TEXT="&quot;real_parent&quot; - Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists."/>
+<node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1398838289493" TEXT="&quot;parent&quot; - Points to the current parent of P "/>
 </node>
-</node>
-<node CREATED="1316917878242" FOLDED="true" ID="ID_1660815912" MODIFIED="1395371901157" TEXT="struct task_struct *real_parent;">
-<node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1358327427523" TEXT="Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists.">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-<node CREATED="1316920096768" FOLDED="true" ID="ID_1869882986" MODIFIED="1395371901157" TEXT="struct task_struct *parent;">
-<node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1358327440185" TEXT="Points to the current parent of P ">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-<node CREATED="1316920113462" ID="ID_1642509929" MODIFIED="1316920123737" TEXT="struct list_head children;"/>
-<node CREATED="1316920125217" ID="ID_1281826325" MODIFIED="1316920134265" TEXT="struct list_head sibling;"/>
-<node CREATED="1316928408514" ID="ID_1880307065" MODIFIED="1316928415120" TEXT="pid_t pid;"/>
-<node CREATED="1316928416665" FOLDED="true" ID="ID_60895847" MODIFIED="1395371901158" TEXT="pid_t tgid;">
-<node CREATED="1316928466599" ID="ID_579056398" MODIFIED="1358327457211" TEXT="PID of the thread group leader of P">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-<node CREATED="1316920339866" FOLDED="true" ID="ID_4315816" MODIFIED="1395371901158" TEXT="struct task_struct *group_leader;">
-<node CREATED="1316920358624" ID="ID_1174745410" MODIFIED="1358327475630" TEXT="Process descriptor pointer of the group leader of P">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1395371901158" TEXT="struct pid_link pids[PIDTYPE_MAX];">
+<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1398848220140">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      pid_t pid;
+    </p>
+    <p>
+      pid_t tgid;&#160;&#160;/* PID of the thread group leader of P */
+    </p>
+    <p>
+      struct task_struct *group_leader;&#160;&#160;/* Process descriptor pointer of the group leader of P */
+    </p>
+    <p>
+      struct pid_link pids[PIDTYPE_MAX];
+    </p>
+  </body>
+</html>
+</richcontent>
 <node CREATED="1393232863003" ID="ID_819099011" MODIFIED="1393232869723" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -180,12 +383,8 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1393232763007" ID="ID_1920833569" MODIFIED="1393232778937" TEXT="include/linux/pid.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
 <node CREATED="1316928699044" ID="ID_1729999827" MODIFIED="1316932589085" TEXT="struct hlist_node node;"/>
-<node CREATED="1316931912268" FOLDED="true" ID="ID_28056775" MODIFIED="1395371901158">
+<node CREATED="1316931912268" ID="ID_28056775" MODIFIED="1398846797474">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -201,14 +400,149 @@
 <arrowlink DESTINATION="ID_1729999827" ENDARROW="Default" ENDINCLINATION="251;0;" ID="Arrow_ID_375258231" STARTARROW="None" STARTINCLINATION="251;0;"/>
 </node>
 <node CREATED="1316928813011" ID="ID_640516611" MODIFIED="1316928814767" TEXT="..."/>
-<node CREATED="1316932018473" FOLDED="true" ID="ID_1149046420" MODIFIED="1395371901158" TEXT="struct upid numbers[1];">
+<node CREATED="1316932018473" ID="ID_1149046420" MODIFIED="1398847933844" TEXT="struct upid numbers[1];">
 <node CREATED="1316932051355" ID="ID_1051743616" MODIFIED="1358327592195" TEXT="int nr; // The PID number"/>
 <node CREATED="1316932056544" ID="ID_513109031" MODIFIED="1316932085118" TEXT="struct pid_namespace *ns;"/>
 <node CREATED="1316932086156" ID="ID_373966593" MODIFIED="1358327611217" TEXT="struct hlist_node pid_chain; // The links to the next and previous elements in the hash chain list"/>
 </node>
 </node>
 </node>
-<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1395371901158" TEXT="struct thread_struct thread;">
+<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1398848232388">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct signal_struct *signal;
+    </p>
+    <p>
+      struct sighand_struct *sighand;
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1393232241842" TEXT="include/linux/sched.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1398847367261">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct signal_struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int nr_threads;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wait_queue_head_t wait_chldexit;&#160;&#160;&#160;/* The processes sleeping in a wait4() system call */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct task_struct *curr_target;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct sigpending shared_pending; /* Data structure storing the shared pending signals */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1365580739916" ID="ID_462838517" MODIFIED="1398847523537">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct sighand_struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct k_sigaction action[_NSIG];&#160;&#160;&#160;&#160;/* The actions to be performed upon delivering the signals */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wait_queue_head_t&#160;&#160;&#160;signalfd_wqh;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1366168611255" ID="ID_682990093" MODIFIED="1398847580252" TEXT="include/linux/signal.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1366168658355" ID="ID_1469689717" MODIFIED="1398847694395">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /*&#160;&#160;Type of a signal handler.&#160;&#160;*/
+    </p>
+    <p>
+      typedef void (*__sighandler_t)(int);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      struct sigaction {&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;sa_flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;__sighandler_t&#160;&#160;sa_handler;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;sigset_t&#160;&#160;&#160;&#160;sa_mask;&#160;&#160;&#160;&#160;/* mask last for extensibility */
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      struct k_sigaction {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct sigaction sa;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1398848297114" TEXT="struct thread_struct thread;">
 <node CREATED="1393231927959" ID="ID_94896969" MODIFIED="1393231936526" TEXT="arch/x86/include/asm/processor.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -247,104 +581,215 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1365579578563" FOLDED="true" ID="ID_1019245271" MODIFIED="1395371901158" TEXT="struct signal_struct *signal;">
-<node CREATED="1365579746517" ID="ID_1869627772" MODIFIED="1393232221786" TEXT="include/linux/sched.h">
+<node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1398848264425">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      unsigned int flags;
+    </p>
+    <p>
+      atomic_t usage;
+    </p>
+    <p>
+      struct mm_struct *mm, *active_mm;
+    </p>
+    <p>
+      ...
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1398846714130" POSITION="right" TEXT="Process Creation/Execution/Termination">
+<node CREATED="1398840513254" ID="ID_509227697" MODIFIED="1398842872065">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Process creation&#160;in Unix is unique. Most operating systems implement a spawn&#160;mechanism to<i><b>&#160;<font color="#0000ff">create&#160;a new process in a new address space, read in an executable, and begin executing it</font></b></i><font color="#0000ff">.</font>&#160;Unix takes the unusual approach of separating these steps into two distinct functions: fork()and exec().
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1398840885045" FOLDED="true" ID="ID_1909904793" MODIFIED="1398844976964">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The first, <font color="#ff0000"><i><b>fork()</b></i></font>, creates a child process that is a copy of the current task. It <font color="#0000ff"><i><b>differs</b></i></font>&#160;from the parent only in its <i><b>PID</b></i>&#160;(which is unique), its <i><b>PPID</b></i>&#160;(parent&#8217;s PID, which is set to the original process), and certain <i><b>resources and statistics</b></i>, such as pending signals, which are not inherited.
+    </p>
+    <p>
+      In Linux, fork()<font color="#0000ff">&#160;</font>is implemented through the use of <font color="#0000ff"><i><b>copy-on-write</b></i></font>&#160; pages. Copy-on-write (or COW) is a technique to delay or altogether <i><b>prevent copying of the data</b></i>. Rather than duplicate the process address space, the parent and the child can share a single copy.
+    </p>
+    <p>
+      The only <font color="#0000ff"><i><b>overhead</b></i></font>&#160;incurred by fork() is the duplication of the parent&#8217;s <i><b>page tables</b></i>&#160;and the creation of a unique <i><b>process descriptor</b></i>&#160;for the child.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1398840297436" ID="ID_126426966" MODIFIED="1398840304498" TEXT="kernel/fork.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1365581158381">
+<node CREATED="1398840246603" ID="ID_342069179" MODIFIED="1398840252962">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
+      fork()
     </p>
     <p>
-      atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
+      &#160;&#160;do_fork()
     </p>
     <p>
-      int nr_threads;
+      &#160;&#160;&#160;&#160;copy_process()
     </p>
     <p>
-      wait_queue_head_t wait_chldexit; /* The processes sleeping in a wait4() system call */
-    </p>
-    <p>
-      struct task_struct *curr_target;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
-    </p>
-    <p>
-      struct sigpending shared_pending; /* Data structure storing the shared pending signals */
+      &#160;&#160;&#160;&#160;&#160;&#160;dup_task_struct()
     </p>
   </body>
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1395371901159" TEXT="struct sighand_struct *sighand;">
-<node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1393232241842" TEXT="include/linux/sched.h">
+<node CREATED="1398841090698" FOLDED="true" ID="ID_1452378122" MODIFIED="1398844971477">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The second function,<font color="#ff0000"><i><b>exec()</b></i></font>, loads a new executable into the <i><b>address space</b></i>&#160;and begins executing it. In another world, it replace the execution context of a process with a new context described by an executable file.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1395124649748" ID="ID_1916206700" MODIFIED="1398841580141" TEXT="executable file">
+<node CREATED="1395124664348" ID="ID_478705659" MODIFIED="1395124687357" TEXT="object code"/>
+<node CREATED="1395124688411" ID="ID_1804443584" MODIFIED="1395124699036" TEXT="data"/>
+</node>
+<node CREATED="1395132767300" ID="ID_855536174" MODIFIED="1398841582239" TEXT="libraries">
+<node CREATED="1395132802739" ID="ID_980444735" MODIFIED="1395132819262" TEXT="static libraries"/>
+<node CREATED="1395132776460" ID="ID_487934157" MODIFIED="1395132801883" TEXT="shared libraries"/>
+</node>
+<node CREATED="1395133028431" ID="ID_666568877" MODIFIED="1398841583721" TEXT="Program Segments">
+<node CREATED="1395133060646" FOLDED="true" ID="ID_1837976359" MODIFIED="1398841879158" TEXT="Text segment(ELF)">
+<node CREATED="1395133081238" ID="ID_392463521" MODIFIED="1395133089646" TEXT="Includes the program&apos;s executable code."/>
+</node>
+<node CREATED="1395133091549" FOLDED="true" ID="ID_30950379" MODIFIED="1398841868755" TEXT="Initialized data segment">
+<node CREATED="1395133112221" ID="ID_409161118" MODIFIED="1395133120872" TEXT="Contains the initialized datathat is, the static variables and the global variables whose initial values are stored in the executable file (because the program must know their values at startup)."/>
+</node>
+<node CREATED="1395133123093" FOLDED="true" ID="ID_387757498" MODIFIED="1398841866478" TEXT="Uninitialized data segment (bss)">
+<node CREATED="1395133134517" ID="ID_715672963" MODIFIED="1395133144623" TEXT="Contains the uninitialized datathat is, all global variables whose initial values are not stored in the executable file (because the program sets the values before referencing them); it is historically called a bss segment."/>
+</node>
+<node CREATED="1395133152732" FOLDED="true" ID="ID_677290223" MODIFIED="1398841878164" TEXT="Stack segment">
+<node CREATED="1395133164428" ID="ID_928905832" MODIFIED="1395133166852" TEXT="Contains the program stack, which includes the return addresses, parameters, and local variables of the functions being executed."/>
+</node>
+</node>
+</node>
+<node CREATED="1398844464389" FOLDED="true" ID="ID_388121085" MODIFIED="1398844977907">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      When a process terminates, the kernel <i><b>releases the resources</b></i>&#160; owned by the process and <i><b>notifies the child&#8217;s parent</b></i>&#160;of its demise. Processes ultimately die forcefully or intentionally via <font color="#ff0000"><i><b>exit()</b></i></font>, and parents glean information about their deceased children via the <font color="#ff0000"><i><b>wait()</b></i></font>&#160; family of system calls.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1398844773298" ID="ID_1320983370" MODIFIED="1398844806483" TEXT="kernel/exit.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1395371901159">
+<node CREATED="1398844809006" ID="ID_884154903" MODIFIED="1398844907720">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
+      exit()
     </p>
     <p>
-      struct k_sigaction action[_NSIG];&#160;&#160;/* The actions to be performed upon delivering the signals */
+      &#160;&#160;do_exit()
     </p>
     <p>
-      spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
+      &#160;&#160;&#160;&#160;exit_notify()
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1366168611255" ID="ID_682990093" MODIFIED="1366168655978" TEXT="include/arch/x86/include/asm/signal.h"/>
-<node CREATED="1366168658355" FOLDED="true" ID="ID_1469689717" MODIFIED="1395371901159">
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1398846710092" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      __sighandler_t sa_handler;
-    </p>
-    <p>
-      unsigned long sa_flags;
-    </p>
-    <p>
-      __sigrestore_t sa_restorer;
-    </p>
-    <p>
-      sigset_t sa_mask;
+      In <font color="#0000ff"><i><b>user-space</b></i></font>, executing <font color="#0000ff"><i><b>user code</b></i></font>&#160;in a process
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1366168813462" ID="ID_1425755890" MODIFIED="1366168820289">
+</html>
+</richcontent>
+</node>
+<node CREATED="1398837047848" ID="ID_153365591" MODIFIED="1398837229473">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      /* Type of a signal handler.&#160;&#160;*/
-    </p>
-    <p>
-      typedef void (*__sighandler_t)(int);
+      In <font color="#0000ff"><i><b>kernel-space</b></i></font>, in <font color="#0000ff"><i><b>process context</b></i></font>, executing on behalf of a specific process
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
+<node CREATED="1398837072884" ID="ID_1220407681" MODIFIED="1398837259079">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      In <font color="#0000ff"><i><b>kernel-space</b></i></font>, in <font color="#0000ff"><i><b>interrupt context</b></i></font>, not associated with a process, handling an interrupt
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1398845651802" ID="ID_57271949" MODIFIED="1398846022052">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The significant difference between <i><b>kernel threads</b></i>&#160;and normal processes is that kernel threads do not have an address space. (Their mm pointer, which points at their address space, is NULL.) For example, when idle, it turns out that the kernel is executing an <i><b>idle process</b></i>&#160; in <i><b>process context</b></i>&#160;in the <i><b>kernel</b></i>.
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
-</node>
-</node>
-<node CREATED="1315920856358" ID="ID_1577581463" MODIFIED="1315920858319" TEXT="..."/>
-</node>
-</node>
-<node CREATED="1315920793500" FOLDED="true" ID="ID_563320112" MODIFIED="1395371901162" POSITION="right" TEXT="Process Switch">
+<node CREATED="1315920793500" FOLDED="true" ID="ID_563320112" MODIFIED="1398846717771" POSITION="right" TEXT="Process Switch">
 <node CREATED="1315920831165" ID="ID_879189016" MODIFIED="1315920845616" TEXT="TSS - Task State Segment"/>
 <node CREATED="1315920998117" ID="ID_668222248" MODIFIED="1315921047181">
 <richcontent TYPE="NODE"><html>
@@ -376,7 +821,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1395371901162" TEXT="Interrupts and Exceptions">
+<node CREATED="1316766906971" ID="ID_645308379" MODIFIED="1398846485075" TEXT="Interrupts and Exceptions">
 <node CREATED="1316769068729" FOLDED="true" ID="ID_1349911850" MODIFIED="1395371901160" TEXT="Definition">
 <node CREATED="1316766926536" FOLDED="true" ID="ID_1498465646" MODIFIED="1395371901160" TEXT="Interrupts (Asynchronous)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
@@ -508,7 +953,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316769506966" FOLDED="true" ID="ID_1652292667" MODIFIED="1395371901162" TEXT="Interrupt Handling">
+<node CREATED="1316769506966" FOLDED="true" ID="ID_1652292667" MODIFIED="1398846502790" TEXT="Interrupt Handling">
 <node CREATED="1316769521668" ID="ID_50319059" MODIFIED="1316769620312" TEXT="Save the IRQ value and the register&apos;s contents on the Kernel Mode stack.">
 <icon BUILTIN="full-1"/>
 </node>
@@ -524,7 +969,465 @@
 </node>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1395371901165" POSITION="right" TEXT="Process Communication">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1398836825592" POSITION="right" TEXT="System Call">
+<node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358931159125">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>System Calls</b>&#160;is an explicit request to the kernel made via a software interrupt
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1358931246216">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1395844951627">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/syscall/invoking_system_call.png" />
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358755437681" ID="ID_175528966" MODIFIED="1395844966215" TEXT="__kernel_vsyscall">
+<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1395844978573" TEXT="int $0x80">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      start_kernel()&#160;&#160;&#160;&#160;// init/main.c
+    </p>
+    <p>
+      &#160;&#160;trap_init()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/traps.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;set_system_trap_gate(SYSCALL_VECTOR, &amp;system_call);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358755781853" ID="ID_884374445" MODIFIED="1358931016215">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      system_call&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/entry_32.S
+    </p>
+    <p>
+      &#160;&#160;SAVE_ALL
+    </p>
+    <p>
+      &#160;&#160;call *sys_call_table(,%eax,4)
+    </p>
+    <p>
+      &#160;&#160;restore_all
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1395844980081" TEXT="sysenter">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      enable_sep_cpu()
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_CS_MSR&#160;&#160;&#160;= __KERNEL_CS
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_EIP_MSR&#160;&#160;= sysenter_entry()
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_ESP_MSR = local TSS
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1358931054084" TEXT="sysenter_entry()  // similar to system_call"/>
+</node>
+</node>
+</node>
+<node CREATED="1312768316117" FOLDED="true" ID="ID_122872356" MODIFIED="1398846556629" POSITION="right" TEXT="Interrupts">
+<node CREATED="1312768359020" ID="ID_907850260" MODIFIED="1313486893044">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /proc/interrupts &amp; /proc/stat
+    </p>
+    <p>
+      /proc/irq/&lt;pid&gt;/*
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1312768426413" ID="ID_697921072" MODIFIED="1313485844845" TEXT="request_irq()/free_irq()"/>
+<node CREATED="1312768486781" FOLDED="true" ID="ID_324711695" MODIFIED="1398846521237" TEXT="Single Interrupt">
+<node CREATED="1312768587640" ID="ID_1318501354" MODIFIED="1313485790216" TEXT="enable_irq()/disable_irq()/disable_irq_nosync()">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1312768614741" FOLDED="true" ID="ID_1921753393" MODIFIED="1395826563396" TEXT="All Interrupts">
+<node CREATED="1312768643397" ID="ID_1028915712" MODIFIED="1312768659624" TEXT="local_irq_save()/local_irq_restore()">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1312768661941" ID="ID_74154049" MODIFIED="1312768675952" TEXT="local_irq_disable()/local_irq_enable()"/>
+</node>
+<node CREATED="1312768870057" ID="ID_1414900085" MODIFIED="1395844892974" TEXT="Bottom Halves">
+<node CREATED="1312768891469" ID="ID_1724781127" MODIFIED="1313486687059" TEXT="softirq (no sleep, interrupt context)"/>
+<node CREATED="1312768901317" FOLDED="true" ID="ID_1118359740" MODIFIED="1395826563397">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      tasklet
+    </p>
+    <p>
+      (no sleep, interrupt context)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1312769252277" FOLDED="true" ID="ID_1088231767" MODIFIED="1395826563397" TEXT="struct tasklet_struct">
+<node CREATED="1312768938044" FOLDED="true" ID="ID_1114904354" MODIFIED="1395826563396" TEXT="static">
+<node CREATED="1312768948629" ID="ID_529211850" MODIFIED="1313485340188">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      DECLARE_TASKLET(name, func, data)
+    </p>
+    <p>
+      DECLARE_TASKLET_DISABLED(name, func, data)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1312768978605" FOLDED="true" ID="ID_1031552416" MODIFIED="1395826563396" TEXT="dynamic">
+<node CREATED="1312768996110" ID="ID_448875376" MODIFIED="1313474513449" TEXT="tasklet_init(t, tasklet_handler, dev)"/>
+</node>
+</node>
+<node CREATED="1312769016773" ID="ID_1212964925" MODIFIED="1313474621336" TEXT="tasklet_schedule(&amp;my_tasklet)/tasklet_hi_schedule(&amp;my_tasklet)">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1312769066637" ID="ID_1910418896" MODIFIED="1313485389349">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      tasklet_enable()/tasklet_disable()/tasklet_disable_nosync()
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1312769101999" ID="ID_727297827" MODIFIED="1312769103841" TEXT="tasklet_kill()"/>
+</node>
+<node CREATED="1312768910909" FOLDED="true" ID="ID_794097156" MODIFIED="1395826563398">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      workqueue
+    </p>
+    <p>
+      (sleep, process context)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1312769212872" FOLDED="true" ID="ID_891040841" MODIFIED="1395826563397">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct workqueue_struct
+    </p>
+    <p>
+      (struct cpu_workqueue_struct)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1312769347389" ID="ID_1107461994" MODIFIED="1312769354568" TEXT="create_workqueue()"/>
+<node CREATED="1312769364861" MODIFIED="1312769367225" TEXT="create_singlethread_workqueue()"/>
+<node CREATED="1312769374116" ID="ID_1091106294" MODIFIED="1312769376656" TEXT="destroy_workqueue()"/>
+<node CREATED="1312769460406" ID="ID_1122862524" MODIFIED="1312769496856" TEXT="queue_work()/queue_delayed_work()"/>
+<node CREATED="1312769583956" ID="ID_655962899" MODIFIED="1312769586112" TEXT="flush_workqueue()"/>
+</node>
+<node CREATED="1312769222053" FOLDED="true" ID="ID_1043283881" MODIFIED="1395826563398" TEXT="struct work_struct">
+<node CREATED="1312769385645" FOLDED="true" ID="ID_1344136187" MODIFIED="1395826563397" TEXT="static">
+<node CREATED="1312769418805" ID="ID_1725697565" MODIFIED="1313481470917" TEXT="DECLARE_WORK(name, func)"/>
+</node>
+<node CREATED="1312769388292" FOLDED="true" ID="ID_1343775588" MODIFIED="1395826563397" TEXT="dynamic">
+<node CREATED="1312769427535" ID="ID_476087168" MODIFIED="1313485057764" TEXT="INIT_WORK(work, func)"/>
+</node>
+</node>
+<node CREATED="1312769631892" ID="ID_947177218" MODIFIED="1313485614588" TEXT="schedule_work(&amp;work)/schedule_delayed_work(&amp;work, delay)">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1312769574845" ID="ID_147766562" MODIFIED="1313486073228" TEXT="cancel_delayed_work()"/>
+<node CREATED="1312769658141" ID="ID_819983672" MODIFIED="1312769660345" TEXT="flush_scheduled_work()"/>
+</node>
+<node CREATED="1313486628806" ID="ID_589613468" MODIFIED="1313567943031" TEXT="In short, normal driver writers have two choices. First, do you need a schedulable  entity to perform your deferred work&#x2014;fundamentally, do you need to sleep for any reason? Then work queues are your only option. Otherwise, tasklets are preferred. Only if  scalability becomes a concern do you investigate softirqs.">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1398846757529" POSITION="right" TEXT="Concurrency">
+<node CREATED="1312693202397" FOLDED="true" ID="ID_59832097" MODIFIED="1395826073053">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Semaphore
+    </p>
+    <p>
+      (long, sleep, process context)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1312693302454" FOLDED="true" ID="ID_740546722" MODIFIED="1395826073052" TEXT="semaphore">
+<node CREATED="1312693512550" ID="ID_1849881313" MODIFIED="1313548907626" TEXT="static DECLARE_SEMAPHORE_GENERIC(name, count)"/>
+<node CREATED="1312693518316" ID="ID_967799322" MODIFIED="1313548984342" TEXT="sema_init(sem, count)"/>
+</node>
+<node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1313549756423" TEXT="rw_semaphore/completion"/>
+<node CREATED="1312693386730" FOLDED="true" ID="ID_1970555050" MODIFIED="1395826073053" TEXT="mutex">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1312693396454" FOLDED="true" ID="ID_551072747" MODIFIED="1395826073052" TEXT="static">
+<node CREATED="1312693416715" ID="ID_1495494447" MODIFIED="1313549066546">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      static DECLARE_MUTEX(name)
+    </p>
+    <p>
+      static DECLARE_MUTEX_LOCKED(name)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1312693431973" FOLDED="true" ID="ID_1008579193" MODIFIED="1395826073053" TEXT="dynamic">
+<node CREATED="1312693459388" ID="ID_1482323652" MODIFIED="1313549087545">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      init_MUTEX(sem)
+    </p>
+    <p>
+      init_MUTEX_LOCKED(sem)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1312693740526" FOLDED="true" ID="ID_1969698129" MODIFIED="1395826073053" TEXT="usage">
+<node CREATED="1312693800962" FOLDED="true" ID="ID_314690552" MODIFIED="1395826073053">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>down_interruptible</b>(&amp;my_sem)
+    </p>
+    <p>
+      up(&amp;my_sem)
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+<node CREATED="1313549941186" ID="ID_249606607" MODIFIED="1313550157146">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;If the&#160;&#160;semaphore is unavailable, it places the calling process
+    </p>
+    <p>
+      &#160;to sleep in the TASK_INTERRUPTIBLE state.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1312693813435" ID="ID_1097964744" MODIFIED="1313549173430" TEXT="down()/down_trylock()">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+</node>
+<node CREATED="1313547549956" ID="ID_1312026970" MODIFIED="1313547728842" TEXT="In cases where  the sleep time might be long or you potentially need to sleep while holding the lock, the  semaphore is a solution.">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1312693651083" FOLDED="true" ID="ID_771001210" MODIFIED="1395826073055">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      spinlock
+    </p>
+    <p>
+      (short, no sleep, interrupt context)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1312693951073" FOLDED="true" ID="ID_341396860" MODIFIED="1395826073055" TEXT="spinlock">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1312693968931" FOLDED="true" ID="ID_1387000666" MODIFIED="1395826073054" TEXT="static">
+<node CREATED="1312694017006" ID="ID_515272272" MODIFIED="1312694024756" TEXT="spinlock_t my_lock = SPIN_LOCK_UNLOCKED;"/>
+</node>
+<node CREATED="1312694027908" FOLDED="true" ID="ID_1810418454" MODIFIED="1395826073054" TEXT="dynamic">
+<node CREATED="1312694044309" ID="ID_1719388903" MODIFIED="1312694050626" TEXT="spin_lock_init()"/>
+</node>
+<node CREATED="1312694066185" FOLDED="true" ID="ID_1463723135" MODIFIED="1395826073055" TEXT="usage">
+<node CREATED="1312694134224" FOLDED="true" ID="ID_1244850060" MODIFIED="1395826073054">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      spin_lock_irqsave(&amp;my_lock, flags)
+    </p>
+    <p>
+      spin_unlock_irqrestore(&amp;my_lock, flags)
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+<node CREATED="1313545973967" ID="ID_1004456907" MODIFIED="1313547149761">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Saves current state of local interrupts,
+    </p>
+    <p>
+      disables local interrupts, and acquires given lock
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1312694076678" ID="ID_1206402908" MODIFIED="1313544314222" TEXT="spin_lock()/spin_unlock()"/>
+<node CREATED="1312694144427" FOLDED="true" ID="ID_256904747" MODIFIED="1395826073054" TEXT="spin_lock_irq()/spin_unlock_irq()">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1313545927769" ID="ID_1701566236" MODIFIED="1313545955406" TEXT="Disables local interrupts and acquires given lock">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1312694154453" FOLDED="true" ID="ID_1565147892" MODIFIED="1395826073054" TEXT="spin_lock_bh()/spin_unlock_bh()">
+<node CREATED="1313546092211" ID="ID_376102253" MODIFIED="1313546945688" TEXT="Disables all bottom halves and acquires given lock">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1312694398791" ID="ID_1972092235" MODIFIED="1313544335595" TEXT="spin_trylock()/spin_trylock_bh()"/>
+</node>
+</node>
+<node CREATED="1312694058445" ID="ID_795613481" MODIFIED="1313551561036" TEXT="rwlock/seqlock/RCU/BKL"/>
+<node CREATED="1313547693964" ID="ID_648267487" MODIFIED="1313547836980" TEXT="Spin locks provide a quick and simple lock. The spinning behavior is optimal for short  hold times and code that cannot sleep (interrupt handlers, for example). ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1313552079457" FOLDED="true" ID="ID_545884410" MODIFIED="1395826073055" TEXT="Preemption Disabling">
+<node CREATED="1313552107043" ID="ID_56290824" MODIFIED="1313552164925">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      preempt_disable()
+    </p>
+    <p>
+      preempt_enable()
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1313553755558" FOLDED="true" ID="ID_1124259971" MODIFIED="1395826073055" TEXT="Barriers">
+<node CREATED="1313553803570" ID="ID_786162832" MODIFIED="1313553924469" TEXT="mb()/rmb()/wmb()"/>
+<node CREATED="1313553929661" ID="ID_1928322973" MODIFIED="1313553940804" TEXT="read_barrier_depends()"/>
+<node CREATED="1313553952421" ID="ID_1581681392" MODIFIED="1313553956243" TEXT="barrier()"/>
+</node>
+<node CREATED="1313544533216" ID="ID_1459520210" MODIFIED="1313547660645" TEXT="You should protect data and not code">
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1313503319379" ID="ID_947159726" MODIFIED="1313544686256" TEXT="The tricky part is identifying the actual shared data and the corresponding critical sections.&#xa;This is why designing locking into your code from the  get-go, and not as an after thought&#xa; is of paramount importance.">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+<node CREATED="1313550639680" ID="ID_1180693157" MODIFIED="1395826431485">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/process/spin-lock-usage.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1398846751979" POSITION="right" TEXT="Process Communication">
 <node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1395371901163" TEXT="Pipes and FIFOs (named pipes)">
 <node CREATED="1394692670453" FOLDED="true" ID="ID_1377888996" MODIFIED="1395371901162" TEXT="compose">
 <node CREATED="1394692688493" ID="ID_1129761090" MODIFIED="1394692790674">
@@ -1280,728 +2183,6 @@
 </node>
 </node>
 <node CREATED="1394608032169" ID="ID_1896979205" MODIFIED="1394608041287" TEXT="Sockets"/>
-</node>
-<node CREATED="1395124636979" FOLDED="true" ID="ID_468506188" MODIFIED="1395371901166" POSITION="right" TEXT="Program ExZecution">
-<node CREATED="1395124649748" FOLDED="true" ID="ID_1916206700" MODIFIED="1395371901165" TEXT="executable file">
-<node CREATED="1395124664348" ID="ID_478705659" MODIFIED="1395124687357" TEXT="object code"/>
-<node CREATED="1395124688411" ID="ID_1804443584" MODIFIED="1395124699036" TEXT="data"/>
-</node>
-<node CREATED="1395132767300" FOLDED="true" ID="ID_855536174" MODIFIED="1395371901165" TEXT="libraries">
-<node CREATED="1395132802739" ID="ID_980444735" MODIFIED="1395132819262" TEXT="static libraries"/>
-<node CREATED="1395132776460" ID="ID_487934157" MODIFIED="1395132801883" TEXT="shared libraries"/>
-</node>
-<node CREATED="1395133028431" FOLDED="true" ID="ID_666568877" MODIFIED="1395371901166" TEXT="Program Segments">
-<node CREATED="1395133060646" FOLDED="true" ID="ID_1837976359" MODIFIED="1395371901165" TEXT="Text segment(ELF)">
-<node CREATED="1395133081238" ID="ID_392463521" MODIFIED="1395133089646" TEXT="Includes the program&apos;s executable code."/>
-</node>
-<node CREATED="1395133091549" FOLDED="true" ID="ID_30950379" MODIFIED="1395371901165" TEXT="Initialized data segment">
-<node CREATED="1395133112221" ID="ID_409161118" MODIFIED="1395133120872" TEXT="Contains the initialized datathat is, the static variables and the global variables whose initial values are stored in the executable file (because the program must know their values at startup)."/>
-</node>
-<node CREATED="1395133123093" FOLDED="true" ID="ID_387757498" MODIFIED="1395371901165" TEXT="Uninitialized data segment (bss)">
-<node CREATED="1395133134517" ID="ID_715672963" MODIFIED="1395133144623" TEXT="Contains the uninitialized datathat is, all global variables whose initial values are not stored in the executable file (because the program sets the values before referencing them); it is historically called a bss segment."/>
-</node>
-<node CREATED="1395133152732" FOLDED="true" ID="ID_677290223" MODIFIED="1395371901166" TEXT="Stack segment">
-<node CREATED="1395133164428" ID="ID_928905832" MODIFIED="1395133166852" TEXT="Contains the program stack, which includes the return addresses, parameters, and local variables of the functions being executed."/>
-</node>
-</node>
-<node CREATED="1395221333234" FOLDED="true" ID="ID_659484319" MODIFIED="1395371901166" TEXT="exec()">
-<node CREATED="1395221337557" ID="ID_1133910105" MODIFIED="1395221342936" TEXT="replace the execution context of a process with a new context described by an executable file"/>
-</node>
-</node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1395737547691" POSITION="right" TEXT="System Call">
-<node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358931159125">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>System Calls</b>&#160;is an explicit request to the kernel made via a software interrupt
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1358931246216">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service
-    </p>
-  </body>
-</html></richcontent>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1395737542602">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <img src="kernel/system-call/invoking_system_call.png" />
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358755437681" FOLDED="true" ID="ID_175528966" MODIFIED="1395371901166" TEXT="__kernel_vsyscall">
-<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1395371901166" TEXT="int $0x80">
-<icon BUILTIN="button_cancel"/>
-<node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      start_kernel()&#160;&#160;&#160;&#160;// init/main.c
-    </p>
-    <p>
-      &#160;&#160;trap_init()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/traps.c
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;set_system_trap_gate(SYSCALL_VECTOR, &amp;system_call);
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358755781853" ID="ID_884374445" MODIFIED="1358931016215">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      system_call&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/entry_32.S
-    </p>
-    <p>
-      &#160;&#160;SAVE_ALL
-    </p>
-    <p>
-      &#160;&#160;call *sys_call_table(,%eax,4)
-    </p>
-    <p>
-      &#160;&#160;restore_all
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1395371901166" TEXT="sysenter">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      enable_sep_cpu()
-    </p>
-    <p>
-      &#160;&#160;SYSENTER_CS_MSR&#160;&#160;&#160;= __KERNEL_CS
-    </p>
-    <p>
-      &#160;&#160;SYSENTER_EIP_MSR&#160;&#160;= sysenter_entry()
-    </p>
-    <p>
-      &#160;&#160;SYSENTER_ESP_MSR = local TSS
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1358931054084" TEXT="sysenter_entry()  // similar to system_call"/>
-</node>
-</node>
-</node>
-<node CREATED="1395370144693" FOLDED="true" ID="ID_1250662614" MODIFIED="1395826526103" POSITION="right" TEXT="Modules">
-<node CREATED="1395370155744" ID="ID_1160538326" MODIFIED="1395370183920" TEXT="include/linux/module.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395370185391" ID="ID_826768995" MODIFIED="1395370277986">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <b><i>module</i></b>
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;enum module_state state;&#160;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* Member of list of modules */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct list_head <b><font color="#0000ff"><i>list</i></font></b>;&#160;&#160;&#160;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* Unique handle for this module */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;char name[MODULE_NAME_LEN];&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395826469380" ID="ID_1215982136" MODIFIED="1395826522669" TEXT="Hello World!">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1312597499356" ID="ID_1569495753" MODIFIED="1312597506907" TEXT="Edit">
-<node CREATED="1312597528995" MODIFIED="1312597533216" TEXT="init"/>
-<node CREATED="1312597534889" MODIFIED="1312597537575" TEXT="exit"/>
-</node>
-<node CREATED="1312597508819" ID="ID_1290602893" MODIFIED="1312600044941" TEXT="Build"/>
-<node CREATED="1312597514093" ID="ID_70255829" MODIFIED="1312597515661" TEXT="Run">
-<node CREATED="1395370442185" FOLDED="true" ID="ID_234623858" MODIFIED="1395371901167">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><i>insmod</i></b>&#160;- link a module into the running kernel
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1395371425221" ID="ID_361541725" MODIFIED="1395371592910" TEXT="/lib/modules">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1395371255536" ID="ID_703417671" MODIFIED="1395371633576">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><font color="#000000"><i>modprobe</i></font></b>&#160;- Linking Modules on Demand
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395371320391" ID="ID_266005901" MODIFIED="1395371625118">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><font color="#000000"><i>depmod</i></font></b>&#160;- executed at system startup, writes all module dependencies to a file named modules.dep
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1395370464153" ID="ID_40621702" MODIFIED="1395370526049">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><i>rmmod</i></b>&#160;- unlink a module
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1312597517485" ID="ID_922891249" MODIFIED="1312600053426" TEXT="Debug">
-<node CREATED="1312597614008" MODIFIED="1312597621940" TEXT="printk"/>
-<node CREATED="1312597623157" MODIFIED="1312597626808" TEXT="/proc"/>
-<node CREATED="1312597627306" MODIFIED="1312597631092" TEXT="strace"/>
-</node>
-</node>
-</node>
-<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1395825996238" POSITION="right" TEXT="Data Types">
-<node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1312691492652" TEXT="Standard C Types"/>
-<node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1395825974513" TEXT="Linux Types">
-<node CREATED="1312691629475" MODIFIED="1312691637595" TEXT="&lt;linux/types.h&gt;"/>
-<node CREATED="1312691640129" MODIFIED="1312691742800" TEXT="u8 - kernel space"/>
-<node CREATED="1312691755425" MODIFIED="1312691763234" TEXT="__8 - user space"/>
-<node CREATED="1312691769346" MODIFIED="1312691835978" TEXT="uint8_t - c99">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1312691616837" TEXT="Typedef Types"/>
-</node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1395826435405" POSITION="right" TEXT="Concurrency">
-<node CREATED="1312693202397" FOLDED="true" ID="ID_59832097" MODIFIED="1395826073053">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Semaphore
-    </p>
-    <p>
-      (long, sleep, process context)
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1312693302454" FOLDED="true" ID="ID_740546722" MODIFIED="1395826073052" TEXT="semaphore">
-<node CREATED="1312693512550" ID="ID_1849881313" MODIFIED="1313548907626" TEXT="static DECLARE_SEMAPHORE_GENERIC(name, count)"/>
-<node CREATED="1312693518316" ID="ID_967799322" MODIFIED="1313548984342" TEXT="sema_init(sem, count)"/>
-</node>
-<node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1313549756423" TEXT="rw_semaphore/completion"/>
-<node CREATED="1312693386730" FOLDED="true" ID="ID_1970555050" MODIFIED="1395826073053" TEXT="mutex">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1312693396454" FOLDED="true" ID="ID_551072747" MODIFIED="1395826073052" TEXT="static">
-<node CREATED="1312693416715" ID="ID_1495494447" MODIFIED="1313549066546">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      static DECLARE_MUTEX(name)
-    </p>
-    <p>
-      static DECLARE_MUTEX_LOCKED(name)
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1312693431973" FOLDED="true" ID="ID_1008579193" MODIFIED="1395826073053" TEXT="dynamic">
-<node CREATED="1312693459388" ID="ID_1482323652" MODIFIED="1313549087545">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      init_MUTEX(sem)
-    </p>
-    <p>
-      init_MUTEX_LOCKED(sem)
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1312693740526" FOLDED="true" ID="ID_1969698129" MODIFIED="1395826073053" TEXT="usage">
-<node CREATED="1312693800962" FOLDED="true" ID="ID_314690552" MODIFIED="1395826073053">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>down_interruptible</b>(&amp;my_sem)
-    </p>
-    <p>
-      up(&amp;my_sem)
-    </p>
-  </body>
-</html></richcontent>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="button_ok"/>
-<node CREATED="1313549941186" ID="ID_249606607" MODIFIED="1313550157146">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#160;If the&#160;&#160;semaphore is unavailable, it places the calling process
-    </p>
-    <p>
-      &#160;to sleep in the TASK_INTERRUPTIBLE state.
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312693813435" ID="ID_1097964744" MODIFIED="1313549173430" TEXT="down()/down_trylock()">
-<icon BUILTIN="button_cancel"/>
-</node>
-</node>
-</node>
-<node CREATED="1313547549956" ID="ID_1312026970" MODIFIED="1313547728842" TEXT="In cases where  the sleep time might be long or you potentially need to sleep while holding the lock, the  semaphore is a solution.">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312693651083" FOLDED="true" ID="ID_771001210" MODIFIED="1395826073055">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      spinlock
-    </p>
-    <p>
-      (short, no sleep, interrupt context)
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1312693951073" FOLDED="true" ID="ID_341396860" MODIFIED="1395826073055" TEXT="spinlock">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1312693968931" FOLDED="true" ID="ID_1387000666" MODIFIED="1395826073054" TEXT="static">
-<node CREATED="1312694017006" ID="ID_515272272" MODIFIED="1312694024756" TEXT="spinlock_t my_lock = SPIN_LOCK_UNLOCKED;"/>
-</node>
-<node CREATED="1312694027908" FOLDED="true" ID="ID_1810418454" MODIFIED="1395826073054" TEXT="dynamic">
-<node CREATED="1312694044309" ID="ID_1719388903" MODIFIED="1312694050626" TEXT="spin_lock_init()"/>
-</node>
-<node CREATED="1312694066185" FOLDED="true" ID="ID_1463723135" MODIFIED="1395826073055" TEXT="usage">
-<node CREATED="1312694134224" FOLDED="true" ID="ID_1244850060" MODIFIED="1395826073054">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      spin_lock_irqsave(&amp;my_lock, flags)
-    </p>
-    <p>
-      spin_unlock_irqrestore(&amp;my_lock, flags)
-    </p>
-  </body>
-</html></richcontent>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="button_ok"/>
-<node CREATED="1313545973967" ID="ID_1004456907" MODIFIED="1313547149761">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Saves current state of local interrupts,
-    </p>
-    <p>
-      disables local interrupts, and acquires given lock
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312694076678" ID="ID_1206402908" MODIFIED="1313544314222" TEXT="spin_lock()/spin_unlock()"/>
-<node CREATED="1312694144427" FOLDED="true" ID="ID_256904747" MODIFIED="1395826073054" TEXT="spin_lock_irq()/spin_unlock_irq()">
-<icon BUILTIN="button_cancel"/>
-<node CREATED="1313545927769" ID="ID_1701566236" MODIFIED="1313545955406" TEXT="Disables local interrupts and acquires given lock">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312694154453" FOLDED="true" ID="ID_1565147892" MODIFIED="1395826073054" TEXT="spin_lock_bh()/spin_unlock_bh()">
-<node CREATED="1313546092211" ID="ID_376102253" MODIFIED="1313546945688" TEXT="Disables all bottom halves and acquires given lock">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312694398791" ID="ID_1972092235" MODIFIED="1313544335595" TEXT="spin_trylock()/spin_trylock_bh()"/>
-</node>
-</node>
-<node CREATED="1312694058445" ID="ID_795613481" MODIFIED="1313551561036" TEXT="rwlock/seqlock/RCU/BKL"/>
-<node CREATED="1313547693964" ID="ID_648267487" MODIFIED="1313547836980" TEXT="Spin locks provide a quick and simple lock. The spinning behavior is optimal for short  hold times and code that cannot sleep (interrupt handlers, for example). ">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1313552079457" FOLDED="true" ID="ID_545884410" MODIFIED="1395826073055" TEXT="Preemption Disabling">
-<node CREATED="1313552107043" ID="ID_56290824" MODIFIED="1313552164925">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      preempt_disable()
-    </p>
-    <p>
-      preempt_enable()
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1313553755558" FOLDED="true" ID="ID_1124259971" MODIFIED="1395826073055" TEXT="Barriers">
-<node CREATED="1313553803570" ID="ID_786162832" MODIFIED="1313553924469" TEXT="mb()/rmb()/wmb()"/>
-<node CREATED="1313553929661" ID="ID_1928322973" MODIFIED="1313553940804" TEXT="read_barrier_depends()"/>
-<node CREATED="1313553952421" ID="ID_1581681392" MODIFIED="1313553956243" TEXT="barrier()"/>
-</node>
-<node CREATED="1313544533216" ID="ID_1459520210" MODIFIED="1313547660645" TEXT="You should protect data and not code">
-<font NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="messagebox_warning"/>
-</node>
-<node CREATED="1313503319379" ID="ID_947159726" MODIFIED="1313544686256" TEXT="The tricky part is identifying the actual shared data and the corresponding critical sections.&#xa;This is why designing locking into your code from the  get-go, and not as an after thought&#xa; is of paramount importance.">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-<node CREATED="1313550639680" ID="ID_1180693157" MODIFIED="1395826431485">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <img src="kernel/process/spin-lock-usage.png" />
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node CREATED="1395826578792" FOLDED="true" ID="ID_921166443" MODIFIED="1395826607930" POSITION="right" TEXT="Time/Interrupt">
-<node CREATED="1312767433335" FOLDED="true" ID="ID_1342802873" MODIFIED="1395826563395" TEXT="Timekeeping">
-<node CREATED="1313568702623" FOLDED="true" ID="ID_1200914499" MODIFIED="1395826563394" TEXT="jiffies">
-<node CREATED="1312767441597" FOLDED="true" ID="ID_651095464" MODIFIED="1395826563394">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      extern unsigned long volatile jiffies;
-    </p>
-    <p>
-      extern u64 jiffies_64;
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1313581730626" ID="ID_1289200853" MODIFIED="1313581803015" TEXT="The volatile keyword  instructs the compiler to reload the variable &#xa;on each access from main memory and  never alias the variable&#x2019;s&#xa; value in a register, guaranteeing it works as expected.">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312767450789" FOLDED="true" ID="ID_1346993751" MODIFIED="1395826563394" TEXT="HZ - the tick rate">
-<node CREATED="1313569598805" FOLDED="true" ID="ID_493492883" MODIFIED="1395826563394" TEXT="(seconds * HZ)">
-<node CREATED="1313569638453" ID="ID_60411693" MODIFIED="1313569655261" TEXT="converts from seconds to  a unit of jiffies">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1313569607643" FOLDED="true" ID="ID_588824114" MODIFIED="1395826563394" TEXT="(jiffies / HZ)">
-<node CREATED="1313569650254" ID="ID_337942877" MODIFIED="1313569659318" TEXT=" converts from jiffies to seconds">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-</node>
-<node CREATED="1312767512485" FOLDED="true" ID="ID_945179317" MODIFIED="1395826563394" TEXT="time_after(unknown, known)/time_after_eq(unknown, known)">
-<node CREATED="1313567873966" ID="ID_1904233480" MODIFIED="1313567909234">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      It returns true if time unknown is after time known;
-    </p>
-    <p>
-      otherwise, it returns false.
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312767533428" ID="ID_467608897" MODIFIED="1312767556896" TEXT="time_before()/time_before_eq()"/>
-</node>
-<node CREATED="1313568743726" FOLDED="true" ID="ID_1763092405" MODIFIED="1395826563395" TEXT="time">
-<node CREATED="1313574133366" ID="ID_1050807941" MODIFIED="1313575007253" TEXT="struct timespec xtime;"/>
-<node CREATED="1312767668597" ID="ID_1244320065" MODIFIED="1313575007254" TEXT="struct timespec current_kernel_time(void)">
-<arrowlink DESTINATION="ID_1050807941" ENDARROW="Default" ENDINCLINATION="110;0;" ID="Arrow_ID_1278350752" STARTARROW="None" STARTINCLINATION="110;0;"/>
-</node>
-<node CREATED="1312767646877" ID="ID_1888919992" MODIFIED="1312767651553" TEXT="do_gettimeofday(struct timeval *tv)"/>
-</node>
-</node>
-<node CREATED="1312767709333" FOLDED="true" ID="ID_1074813071" MODIFIED="1395826563395" TEXT="Delays">
-<node CREATED="1312767846189" ID="ID_1842872236" MODIFIED="1313587666213">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      set_current_state(TASK_INTERRUPTIBLE)
-    </p>
-    <p>
-      schedule_timeout (delay)
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312767763375" ID="ID_1945743865" MODIFIED="1313587697009" TEXT="wait_event_interruptible_timeout()">
-<icon BUILTIN="button_cancel"/>
-</node>
-<node CREATED="1312767988445" ID="ID_1114074656" MODIFIED="1312768000881" TEXT="ndelay()/udelay()/mdelay()"/>
-<node CREATED="1312768009332" MODIFIED="1312768031105" TEXT="msleep()/msleep_interruptible()/ssleep()"/>
-</node>
-<node CREATED="1312768068205" FOLDED="true" ID="ID_1595010064" MODIFIED="1395826563396" TEXT="Timers">
-<node CREATED="1313575800694" FOLDED="true" ID="ID_1400341731" MODIFIED="1395826563395" TEXT="init">
-<node CREATED="1312768132044" ID="ID_1394350005" MODIFIED="1313575720928" TEXT="struct timer_list my_timer;"/>
-<node CREATED="1312768150028" FOLDED="true" ID="ID_90408511" MODIFIED="1395826563395" TEXT="static">
-<node CREATED="1312768175926" ID="ID_327647491" MODIFIED="1312768833864" TEXT="TIMER_INITIALIZER()"/>
-</node>
-<node CREATED="1312768193949" FOLDED="true" ID="ID_94934256" MODIFIED="1395826563395" TEXT="dynamic">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1312768215869" ID="ID_311491922" MODIFIED="1313575756424" TEXT="init_timer(&amp;my_timer)"/>
-</node>
-</node>
-<node CREATED="1313575996528" FOLDED="true" ID="ID_812757674" MODIFIED="1395826563396" TEXT="...Now you fill out the remaining values as required...">
-<icon BUILTIN="pencil"/>
-<node CREATED="1313576152758" ID="ID_411815182" MODIFIED="1313576165448" TEXT="my_timer.expires = jiffies + delay;    /* timer expires in delay ticks */ &#xa;my_timer.data = 0;                     /* zero is passed to the timer handler */ &#xa;my_timer.function = my_function;       /* function to run when timer expires */"/>
-</node>
-<node CREATED="1312768237740" ID="ID_1014429417" MODIFIED="1313576318136" TEXT="add_timer(&amp;my_timer)">
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312768241333" ID="ID_632285293" MODIFIED="1313576252173" TEXT="mod_timer(&amp;my_timer, jiffies + new_delay)"/>
-<node CREATED="1312768246013" FOLDED="true" ID="ID_486847998" MODIFIED="1395826563396" TEXT="del_timer(&amp;my_timer)/del_timer_sync(&amp;my_timer)">
-<node CREATED="1313576447614" ID="ID_1092799931" MODIFIED="1313576492621" TEXT=" Note that you do not need  to call this for timers that have expired &#xa;because they are automatically deactivated.">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-</node>
-<node CREATED="1312768316117" FOLDED="true" ID="ID_122872356" MODIFIED="1395826563398" TEXT="Interrupts">
-<node CREATED="1312768359020" ID="ID_907850260" MODIFIED="1313486893044">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      /proc/interrupts &amp; /proc/stat
-    </p>
-    <p>
-      /proc/irq/&lt;pid&gt;/*
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312768426413" ID="ID_697921072" MODIFIED="1313485844845" TEXT="request_irq()/free_irq()"/>
-<node CREATED="1312768486781" FOLDED="true" ID="ID_324711695" MODIFIED="1395826563396" TEXT="Single Interrupt">
-<node CREATED="1312768587640" ID="ID_1318501354" MODIFIED="1313485790216" TEXT="enable_irq()/disable_irq()/disable_irq_nosync()">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node CREATED="1312768614741" FOLDED="true" ID="ID_1921753393" MODIFIED="1395826563396" TEXT="All Interrupts">
-<node CREATED="1312768643397" ID="ID_1028915712" MODIFIED="1312768659624" TEXT="local_irq_save()/local_irq_restore()">
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312768661941" ID="ID_74154049" MODIFIED="1312768675952" TEXT="local_irq_disable()/local_irq_enable()"/>
-</node>
-<node CREATED="1312768870057" FOLDED="true" ID="ID_1414900085" MODIFIED="1395826563398" TEXT="Bottom Halves">
-<node CREATED="1312768891469" ID="ID_1724781127" MODIFIED="1313486687059" TEXT="softirq (no sleep, interrupt context)"/>
-<node CREATED="1312768901317" FOLDED="true" ID="ID_1118359740" MODIFIED="1395826563397">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      tasklet
-    </p>
-    <p>
-      (no sleep, interrupt context)
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1312769252277" FOLDED="true" ID="ID_1088231767" MODIFIED="1395826563397" TEXT="struct tasklet_struct">
-<node CREATED="1312768938044" FOLDED="true" ID="ID_1114904354" MODIFIED="1395826563396" TEXT="static">
-<node CREATED="1312768948629" ID="ID_529211850" MODIFIED="1313485340188">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      DECLARE_TASKLET(name, func, data)
-    </p>
-    <p>
-      DECLARE_TASKLET_DISABLED(name, func, data)
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1312768978605" FOLDED="true" ID="ID_1031552416" MODIFIED="1395826563396" TEXT="dynamic">
-<node CREATED="1312768996110" ID="ID_448875376" MODIFIED="1313474513449" TEXT="tasklet_init(t, tasklet_handler, dev)"/>
-</node>
-</node>
-<node CREATED="1312769016773" ID="ID_1212964925" MODIFIED="1313474621336" TEXT="tasklet_schedule(&amp;my_tasklet)/tasklet_hi_schedule(&amp;my_tasklet)">
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312769066637" ID="ID_1910418896" MODIFIED="1313485389349">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      tasklet_enable()/tasklet_disable()/tasklet_disable_nosync()
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1312769101999" ID="ID_727297827" MODIFIED="1312769103841" TEXT="tasklet_kill()"/>
-</node>
-<node CREATED="1312768910909" FOLDED="true" ID="ID_794097156" MODIFIED="1395826563398">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      workqueue
-    </p>
-    <p>
-      (sleep, process context)
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1312769212872" FOLDED="true" ID="ID_891040841" MODIFIED="1395826563397">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct workqueue_struct
-    </p>
-    <p>
-      (struct cpu_workqueue_struct)
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1312769347389" ID="ID_1107461994" MODIFIED="1312769354568" TEXT="create_workqueue()"/>
-<node CREATED="1312769364861" MODIFIED="1312769367225" TEXT="create_singlethread_workqueue()"/>
-<node CREATED="1312769374116" ID="ID_1091106294" MODIFIED="1312769376656" TEXT="destroy_workqueue()"/>
-<node CREATED="1312769460406" ID="ID_1122862524" MODIFIED="1312769496856" TEXT="queue_work()/queue_delayed_work()"/>
-<node CREATED="1312769583956" ID="ID_655962899" MODIFIED="1312769586112" TEXT="flush_workqueue()"/>
-</node>
-<node CREATED="1312769222053" FOLDED="true" ID="ID_1043283881" MODIFIED="1395826563398" TEXT="struct work_struct">
-<node CREATED="1312769385645" FOLDED="true" ID="ID_1344136187" MODIFIED="1395826563397" TEXT="static">
-<node CREATED="1312769418805" ID="ID_1725697565" MODIFIED="1313481470917" TEXT="DECLARE_WORK(name, func)"/>
-</node>
-<node CREATED="1312769388292" FOLDED="true" ID="ID_1343775588" MODIFIED="1395826563397" TEXT="dynamic">
-<node CREATED="1312769427535" ID="ID_476087168" MODIFIED="1313485057764" TEXT="INIT_WORK(work, func)"/>
-</node>
-</node>
-<node CREATED="1312769631892" ID="ID_947177218" MODIFIED="1313485614588" TEXT="schedule_work(&amp;work)/schedule_delayed_work(&amp;work, delay)">
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312769574845" ID="ID_147766562" MODIFIED="1313486073228" TEXT="cancel_delayed_work()"/>
-<node CREATED="1312769658141" ID="ID_819983672" MODIFIED="1312769660345" TEXT="flush_scheduled_work()"/>
-</node>
-<node CREATED="1313486628806" ID="ID_589613468" MODIFIED="1313567943031" TEXT="In short, normal driver writers have two choices. First, do you need a schedulable  entity to perform your deferred work&#x2014;fundamentally, do you need to sleep for any reason? Then work queues are your only option. Otherwise, tasklets are preferred. Only if  scalability becomes a concern do you investigate softirqs.">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-</node>
 </node>
 </node>
 </map>
