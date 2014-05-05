@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1398846761855" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1399282089432" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -14,7 +14,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1358849568031" FOLDED="true" ID="ID_1241600752" MODIFIED="1398838847381">
+<node CREATED="1358849568031" FOLDED="true" ID="ID_1241600752" MODIFIED="1399193348923">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -135,7 +135,7 @@
 </html></richcontent>
 <arrowlink DESTINATION="ID_650907153" ENDARROW="Default" ENDINCLINATION="297;0;" ID="Arrow_ID_693488617" STARTARROW="None" STARTINCLINATION="297;0;"/>
 </node>
-<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1398848129875">
+<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1399193389674">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -328,7 +328,7 @@
 <node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1398838272680" TEXT="&quot;real_parent&quot; - Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists."/>
 <node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1398838289493" TEXT="&quot;parent&quot; - Points to the current parent of P "/>
 </node>
-<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1398848220140">
+<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1399193408566">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -407,7 +407,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1398848232388">
+<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1399193415140">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -542,7 +542,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1398848297114" TEXT="struct thread_struct thread;">
+<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1399193422339" TEXT="struct thread_struct thread;">
 <node CREATED="1393231927959" ID="ID_94896969" MODIFIED="1393231936526" TEXT="arch/x86/include/asm/processor.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -605,7 +605,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1398846714130" POSITION="right" TEXT="Process Creation/Execution/Termination">
+<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1399282091337" POSITION="right" TEXT="Process Creation/Execution/Termination">
 <node CREATED="1398840513254" ID="ID_509227697" MODIFIED="1398842872065">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -619,7 +619,7 @@
 </html>
 </richcontent>
 </node>
-<node CREATED="1398840885045" FOLDED="true" ID="ID_1909904793" MODIFIED="1398844976964">
+<node CREATED="1398840885045" FOLDED="true" ID="ID_1909904793" MODIFIED="1399210038160">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -663,7 +663,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1398841090698" FOLDED="true" ID="ID_1452378122" MODIFIED="1398844971477">
+<node CREATED="1398841090698" FOLDED="true" ID="ID_1452378122" MODIFIED="1399192649903">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -698,7 +698,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398844464389" FOLDED="true" ID="ID_388121085" MODIFIED="1398844977907">
+<node CREATED="1398844464389" FOLDED="true" ID="ID_388121085" MODIFIED="1399192647046">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -735,7 +735,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1398846710092" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1399282170736" POSITION="right" TEXT="Process Contexts">
 <node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -746,10 +746,9 @@
       In <font color="#0000ff"><i><b>user-space</b></i></font>, executing <font color="#0000ff"><i><b>user code</b></i></font>&#160;in a process
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node CREATED="1398837047848" ID="ID_153365591" MODIFIED="1398837229473">
+<node CREATED="1398837047848" FOLDED="true" ID="ID_153365591" MODIFIED="1399282099788">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -759,10 +758,35 @@
       In <font color="#0000ff"><i><b>kernel-space</b></i></font>, in <font color="#0000ff"><i><b>process context</b></i></font>, executing on behalf of a specific process
     </p>
   </body>
+</html></richcontent>
+<node CREATED="1399274133538" ID="ID_859285725" MODIFIED="1399274168629">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Process context is the mode of operation the kernel is in while it is executing on behalf of a process&#8212;for example, executing a <font color="#0000ff"><i><b>system call</b></i></font>&#160;or running a <font color="#0000ff"><i><b>kernel thread</b></i></font>.
+    </p>
+  </body>
 </html>
 </richcontent>
 </node>
-<node CREATED="1398837072884" ID="ID_1220407681" MODIFIED="1398837259079">
+<node CREATED="1399274205491" ID="ID_1832524809" MODIFIED="1399274258591">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      In process context, the <font color="#0000ff"><i><b>current</b></i></font>&#160;macro points to the associated task. Furthermore, because a process is coupled to the kernel in process context, process context can <font color="#0000ff"><i><b>sleep</b></i></font>&#160;or otherwise invoke the <font color="#0000ff"><i><b>scheduler</b></i></font>.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1398837072884" FOLDED="true" ID="ID_1220407681" MODIFIED="1399282103568">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -772,8 +796,8 @@
       In <font color="#0000ff"><i><b>kernel-space</b></i></font>, in <font color="#0000ff"><i><b>interrupt context</b></i></font>, not associated with a process, handling an interrupt
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
+<node CREATED="1399274379116" ID="ID_1180042969" MODIFIED="1399274390940" TEXT="Interrupt context cannot sleep&#x2014;how would it ever reschedule?"/>
 </node>
 <node CREATED="1398845651802" ID="ID_57271949" MODIFIED="1398846022052">
 <richcontent TYPE="NODE"><html>
@@ -785,192 +809,124 @@
       The significant difference between <i><b>kernel threads</b></i>&#160;and normal processes is that kernel threads do not have an address space. (Their mm pointer, which points at their address space, is NULL.) For example, when idle, it turns out that the kernel is executing an <i><b>idle process</b></i>&#160; in <i><b>process context</b></i>&#160;in the <i><b>kernel</b></i>.
     </p>
   </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1399282175521" POSITION="right" TEXT="Process Scheduling">
+<node CREATED="1399183810902" ID="ID_1735785535" MODIFIED="1399183830546" TEXT="policy">
+<node CREATED="1399183831062" FOLDED="true" ID="ID_135059142" MODIFIED="1399196819273" TEXT="process priority">
+<node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1399184105962" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)"/>
+<node CREATED="1399184750088" ID="ID_1570252583" MODIFIED="1399195944140">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>nice value</b></i></font>, a number from &#8211;20 to +19 with a default of 0. Larger nice values correspond to a lower priority&#8212;you are being &#8220;nice&#8221; to the other processes on the system. By default, this means the &#8211;20 to +19 nice range maps directly onto the priority space from 100 to 139.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1399184811160" ID="ID_836725979" MODIFIED="1399184835233">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>real-time priority</b></i></font>, the values are configurable, but by default range from 0 to 99, inclusive. Opposite from nice values, higher real-time priority values correspond to a greater priority.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+<node CREATED="1399184165108" FOLDED="true" ID="ID_153398619" MODIFIED="1399196830641" TEXT="timeslice">
+<node CREATED="1399184640091" ID="ID_1374000925" MODIFIED="1399184658403" TEXT="The timeslice is the numeric value that represents how long a task can run until it is preempted."/>
+<node CREATED="1399184169718" ID="ID_1912944811" MODIFIED="1399184568190" TEXT="When a process&apos;s timeslice runs out, the process is considered expired. A process with no timeslice is not eligible to run until all other processes have exhausted their timeslices (that is, they all have zero timeslice remaining). At that point, the timeslices for all processes are recalculated. "/>
+</node>
+</node>
+<node CREATED="1399185207855" ID="ID_649071505" MODIFIED="1399185212702" TEXT="algorithm">
+<node CREATED="1399185571913" ID="ID_1282925095" MODIFIED="1399185579819" TEXT="kernel/sched/core.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399189298444" ID="ID_25979844" MODIFIED="1399192433482">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>schedule()</b></i></font>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;__schedule()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pick_next_task()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#0000ff"><i><b>context_switch()&#160; </b></i></font><i><font color="#000000">/* context switch */</font></i>
+    </p>
+    <p>
+      <font color="#0000ff"><i><b>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</b></i></font><b><font color="#000000">switch_mm()</font><font color="#0000ff"><i>&#160; &#160;</i></font></b><i><font color="#000000">/* switch the virtual memory mapping */ </font></i>
+    </p>
+    <p>
+      <font color="#000000"><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </i><b>switch_to()</b></font><b><font color="#0000ff"><i>&#160; </i></font></b><i><font color="#000000">&#160;&#160;&#160;&#160;/* switch the processor state, including stack and registers */</font></i>
+    </p>
+  </body>
 </html>
 </richcontent>
 </node>
+<node CREATED="1399196188846" ID="ID_1207348297" MODIFIED="1399196256135" TEXT="Normal Scheduling Policies">
+<node CREATED="1399189020892" ID="ID_951127327" MODIFIED="1399189295905" TEXT="kernel/sched/fair.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1315920793500" FOLDED="true" ID="ID_563320112" MODIFIED="1398846717771" POSITION="right" TEXT="Process Switch">
-<node CREATED="1315920831165" ID="ID_879189016" MODIFIED="1315920845616" TEXT="TSS - Task State Segment"/>
-<node CREATED="1315920998117" ID="ID_668222248" MODIFIED="1315921047181">
+<node CREATED="1399196223565" ID="ID_1633010073" MODIFIED="1399196800391" TEXT="SCHED_NORMAL - Completely Fair Scheduler (CFS)"/>
+</node>
+<node CREATED="1399195098576" ID="ID_1767980307" MODIFIED="1399196213472" TEXT="Real-Time Scheduling Policies">
+<node CREATED="1399195026459" ID="ID_1824177182" MODIFIED="1399195550017" TEXT="kernel/sched/rt.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399195431461" ID="ID_1136354332" MODIFIED="1399196160630" TEXT="SCHED_FIFO - a simple first-in, first-out scheduling algorithm without timeslices."/>
+<node CREATED="1399195449116" ID="ID_1253013825" MODIFIED="1399196174491" TEXT="SCHED_RR - each process can run only until it exhausts a predetermined timeslice."/>
+</node>
+</node>
+<node CREATED="1399193905072" ID="ID_740199658" MODIFIED="1399196840045" TEXT="preemption">
+<node CREATED="1399193968337" ID="ID_526264413" MODIFIED="1399194095868">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>switch_to(prev, next, last) </b>
-    </p>
-    <p>
-      arch/x86/include/asm/system.h
+      check <font color="#0000ff"><i><b>need_resched</b></i></font>&#160;flag
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node CREATED="1315921056117" ID="ID_802013820" MODIFIED="1315921241970">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>__switch_to(struct task_struct *prev_p, struct task_struct *next_p) </b>
-    </p>
-    <p>
-      arch/x86/kernel/process_32.c
-    </p>
-  </body>
-</html></richcontent>
+<node CREATED="1399193998293" ID="ID_1527914031" MODIFIED="1399194303808" TEXT="user preemption">
+<node CREATED="1399194022607" ID="ID_1711230004" MODIFIED="1399194040679" TEXT="When returning to user-space from a system call"/>
+<node CREATED="1399194024624" ID="ID_541810858" MODIFIED="1399194063388" TEXT="When returning to user-space from an interrupt handler"/>
 </node>
-<node CREATED="1316766906971" ID="ID_645308379" MODIFIED="1398846485075" TEXT="Interrupts and Exceptions">
-<node CREATED="1316769068729" FOLDED="true" ID="ID_1349911850" MODIFIED="1395371901160" TEXT="Definition">
-<node CREATED="1316766926536" FOLDED="true" ID="ID_1498465646" MODIFIED="1395371901160" TEXT="Interrupts (Asynchronous)">
-<node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
-<node CREATED="1316767079731" ID="ID_175788121" MODIFIED="1316767126790" TEXT="Nonmaskable Interrupts (NMI)"/>
-</node>
-<node CREATED="1316766930802" FOLDED="true" ID="ID_651855405" MODIFIED="1395371901160" TEXT="Exceptions (Synchronous)">
-<node CREATED="1316767173412" FOLDED="true" ID="ID_1388644566" MODIFIED="1395371901160" TEXT="Processor-detected Exception">
-<node CREATED="1316767223778" ID="ID_1182658758" MODIFIED="1316767227854" TEXT="Faults"/>
-<node CREATED="1316767228862" ID="ID_286073273" MODIFIED="1316767232877" TEXT="Traps"/>
-<node CREATED="1316767233772" ID="ID_828699720" MODIFIED="1316767236317" TEXT="Aborts"/>
-</node>
-<node CREATED="1316767192526" ID="ID_834789161" MODIFIED="1316767208364" TEXT="Programmed Exception"/>
-</node>
-</node>
-<node CREATED="1316767346119" FOLDED="true" ID="ID_74815681" MODIFIED="1395371901161">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      IDT - Interrupt Descriptor Table
-    </p>
-    <p>
-      (referred by IDTR register)
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1316767858652" FOLDED="true" ID="ID_718436077" MODIFIED="1395371901161" TEXT="Intel (Hardware)">
-<node CREATED="1316767411047" ID="ID_386560905" MODIFIED="1316767511372" TEXT="Interrupt Gate - to handle interupts"/>
-<node CREATED="1316769115937" ID="ID_1207589129" MODIFIED="1316769119350" TEXT="Trap Gate - to handle exceptions"/>
-<node CREATED="1316767397291" ID="ID_1442372959" MODIFIED="1316769842422" TEXT="Task Gate - to handle &quot;Double fault &quot; exception"/>
-</node>
-<node CREATED="1316767884430" FOLDED="true" ID="ID_803462473" MODIFIED="1395371901161" TEXT="Linux (Software)">
-<node CREATED="1316767902774" ID="ID_36241942" MODIFIED="1316767910011" TEXT="Interrupt Gate"/>
-<node CREATED="1316767936127" ID="ID_1262195787" MODIFIED="1316768073413" TEXT="Trap Gate"/>
-<node CREATED="1316767946474" ID="ID_596476977" MODIFIED="1316769846629" TEXT="Task Gate"/>
-<node CREATED="1316767916716" ID="ID_393487179" MODIFIED="1316769963421" TEXT="System Gate - to handle system call"/>
-<node CREATED="1316767922350" ID="ID_534098991" MODIFIED="1316770038515" TEXT="System Interrupt Gate - to handle &quot;Breakpoint&quot; exception"/>
-</node>
-<node CREATED="1316768346318" FOLDED="true" ID="ID_1506973519" MODIFIED="1395371901161" TEXT="Initializing IDT">
-<node CREATED="1316768368803" FOLDED="true" ID="ID_1225375667" MODIFIED="1395371901161">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>setup_idt()</b>
-    </p>
-    <p>
-      arch/x86/boot/pm.c
-    </p>
-  </body>
-</html></richcontent>
-<font NAME="SansSerif" SIZE="12"/>
-<node CREATED="1316768632029" ID="ID_211395724" MODIFIED="1316768669162" TEXT="Preliminary Initializtion of the IDT"/>
-</node>
-<node CREATED="1316768672155" ID="ID_107618297" MODIFIED="1316768755978">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>trap_init()</b>
-    </p>
-    <p>
-      arch/x86/kernel/traps.c
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1316768903176" ID="ID_1890823974" MODIFIED="1316768984999">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>init_IRQ() </b>
-    </p>
-    <p>
-      arch/x86/kernel/irqinit.c
-    </p>
-  </body>
-</html></richcontent>
+<node CREATED="1399194070467" ID="ID_1714746634" MODIFIED="1399194304906" TEXT="kernel preemption">
+<node CREATED="1399194205793" ID="ID_1001253478" MODIFIED="1399194212095" TEXT="When an interrupt handler exits, before returning to kernel-space"/>
+<node CREATED="1399194212659" ID="ID_883852873" MODIFIED="1399194221355" TEXT="When kernel code becomes preemptible again"/>
+<node CREATED="1399194221943" ID="ID_1486209620" MODIFIED="1399194242025" TEXT="If a task in the kernel explicitly calls schedule()"/>
+<node CREATED="1399194242576" ID="ID_1060683438" MODIFIED="1399194252258" TEXT="If a task in the kernel blocks (which results in a call to schedule())"/>
 </node>
 </node>
 </node>
-<node CREATED="1316769432442" FOLDED="true" ID="ID_487968707" MODIFIED="1395371901161" TEXT="Exception Handling">
-<node CREATED="1316769461577" ID="ID_899493299" MODIFIED="1316769499319" TEXT="Save the contents of most registers in the Kernel Mode stack (this part is coded in assembly language).">
-<icon BUILTIN="full-1"/>
-</node>
-<node CREATED="1316769467579" ID="ID_428606971" MODIFIED="1316769502209" TEXT="Handle the exception by means of a high-level C function.">
-<icon BUILTIN="full-2"/>
-</node>
-<node CREATED="1316769479178" ID="ID_512337282" MODIFIED="1316769504581" TEXT="Exit from the handler by means of the ret_from_exception( ) function.">
-<icon BUILTIN="full-3"/>
-</node>
-</node>
-<node CREATED="1316769211434" ID="ID_998639606" MODIFIED="1316769683205">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>struct irq_desc - interrupt descriptor</b>
-    </p>
-    <p>
-      include/linux/irqdesc.h
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1316769293384" ID="ID_1080578207" MODIFIED="1316769683134">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>struct irqaction - per interrupt action descriptor</b>
-    </p>
-    <p>
-      include/linux/interrupt.h
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1316769506966" FOLDED="true" ID="ID_1652292667" MODIFIED="1398846502790" TEXT="Interrupt Handling">
-<node CREATED="1316769521668" ID="ID_50319059" MODIFIED="1316769620312" TEXT="Save the IRQ value and the register&apos;s contents on the Kernel Mode stack.">
-<icon BUILTIN="full-1"/>
-</node>
-<node CREATED="1316769582287" ID="ID_687786211" MODIFIED="1316769622497" TEXT="Send an acknowledgment to the PIC that is servicing the IRQ line, thus allowing it to issue further interrupts.">
-<icon BUILTIN="full-2"/>
-</node>
-<node CREATED="1316769592704" ID="ID_131982960" MODIFIED="1316769624960" TEXT="Execute the interrupt service routines (ISRs) associated with all the devices that share the IRQ.">
-<icon BUILTIN="full-3"/>
-</node>
-<node CREATED="1316769604940" ID="ID_1157336210" MODIFIED="1316769627496" TEXT="Terminate by jumping to the ret_from_intr( ) address.">
-<icon BUILTIN="full-4"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1398836825592" POSITION="right" TEXT="System Call">
-<node CREATED="1358477815733" ID="ID_538922577" MODIFIED="1358931159125">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1399282118267" POSITION="right" TEXT="System Call">
+<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399258577435">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -981,19 +937,33 @@
     </p>
   </body>
 </html></richcontent>
-</node>
-<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1358931246216">
+<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1399258341561">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service
+      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1399258230564" ID="ID_1791705159" MODIFIED="1399258306937">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>C library</b>&#160;implements the main API on Unix systems, including the standard C library and the system call interface.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1395844951627">
 <richcontent TYPE="NODE"><html>
@@ -1075,38 +1045,261 @@
 </node>
 </node>
 </node>
-<node CREATED="1312768316117" FOLDED="true" ID="ID_122872356" MODIFIED="1398846556629" POSITION="right" TEXT="Interrupts">
-<node CREATED="1312768359020" ID="ID_907850260" MODIFIED="1313486893044">
+<node CREATED="1316766906971" ID="ID_645308379" MODIFIED="1399277542559" POSITION="right" TEXT="Interrupts and Exceptions">
+<node CREATED="1316769068729" ID="ID_1349911850" MODIFIED="1399282234467" TEXT="Definition">
+<node CREATED="1316766926536" FOLDED="true" ID="ID_1498465646" MODIFIED="1399281904673" TEXT="Interrupts (Asynchronous, generated by hardware)">
+<node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
+<node CREATED="1316767079731" ID="ID_175788121" MODIFIED="1316767126790" TEXT="Nonmaskable Interrupts (NMI)"/>
+</node>
+<node CREATED="1316766930802" FOLDED="true" ID="ID_651855405" MODIFIED="1399281901898" TEXT="Exceptions (Synchronous, generated by the processor)">
+<node CREATED="1316767173412" ID="ID_1388644566" MODIFIED="1399258490970" TEXT="Processor-detected Exception">
+<node CREATED="1316767223778" ID="ID_1182658758" MODIFIED="1316767227854" TEXT="Faults"/>
+<node CREATED="1316767228862" ID="ID_286073273" MODIFIED="1316767232877" TEXT="Traps"/>
+<node CREATED="1316767233772" ID="ID_828699720" MODIFIED="1316767236317" TEXT="Aborts"/>
+</node>
+<node CREATED="1316767192526" ID="ID_834789161" MODIFIED="1316767208364" TEXT="Programmed Exception"/>
+</node>
+</node>
+<node CREATED="1399281369123" FOLDED="true" ID="ID_115032626" MODIFIED="1399282247158" TEXT="Data Structure">
+<node CREATED="1316767346119" FOLDED="true" ID="ID_74815681" MODIFIED="1399282032474">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      /proc/interrupts &amp; /proc/stat
+      IDT - Interrupt Descriptor Table
     </p>
     <p>
-      /proc/irq/&lt;pid&gt;/*
+      (referred by IDTR register)
     </p>
   </body>
 </html></richcontent>
-<icon BUILTIN="button_ok"/>
+<node CREATED="1316767858652" ID="ID_718436077" MODIFIED="1399281389294" TEXT="Intel (Hardware)">
+<node CREATED="1316767411047" ID="ID_386560905" MODIFIED="1316767511372" TEXT="Interrupt Gate - to handle interupts"/>
+<node CREATED="1316769115937" ID="ID_1207589129" MODIFIED="1316769119350" TEXT="Trap Gate - to handle exceptions"/>
+<node CREATED="1316767397291" ID="ID_1442372959" MODIFIED="1316769842422" TEXT="Task Gate - to handle &quot;Double fault &quot; exception"/>
 </node>
-<node CREATED="1312768426413" ID="ID_697921072" MODIFIED="1313485844845" TEXT="request_irq()/free_irq()"/>
-<node CREATED="1312768486781" FOLDED="true" ID="ID_324711695" MODIFIED="1398846521237" TEXT="Single Interrupt">
-<node CREATED="1312768587640" ID="ID_1318501354" MODIFIED="1313485790216" TEXT="enable_irq()/disable_irq()/disable_irq_nosync()">
-<icon BUILTIN="button_ok"/>
+<node CREATED="1316767884430" ID="ID_803462473" MODIFIED="1399281401844" TEXT="Linux (Software)">
+<node CREATED="1316767902774" ID="ID_36241942" MODIFIED="1316767910011" TEXT="Interrupt Gate"/>
+<node CREATED="1316767936127" ID="ID_1262195787" MODIFIED="1316768073413" TEXT="Trap Gate"/>
+<node CREATED="1316767946474" ID="ID_596476977" MODIFIED="1316769846629" TEXT="Task Gate"/>
+<node CREATED="1316767916716" ID="ID_393487179" MODIFIED="1316769963421" TEXT="System Gate - to handle system call"/>
+<node CREATED="1316767922350" ID="ID_534098991" MODIFIED="1316770038515" TEXT="System Interrupt Gate - to handle &quot;Breakpoint&quot; exception"/>
+</node>
+<node CREATED="1316768346318" ID="ID_1506973519" MODIFIED="1399259543736" TEXT="Initializing IDT">
+<node CREATED="1316768368803" FOLDED="true" ID="ID_1225375667" MODIFIED="1399281430190">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>setup_idt()</b>
+    </p>
+    <p>
+      arch/x86/boot/pm.c
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+<node CREATED="1316768632029" ID="ID_211395724" MODIFIED="1316768669162" TEXT="Preliminary Initializtion of the IDT"/>
+</node>
+<node CREATED="1316768672155" ID="ID_107618297" MODIFIED="1316768755978">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>trap_init()</b>
+    </p>
+    <p>
+      arch/x86/kernel/traps.c
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1316768903176" ID="ID_1890823974" MODIFIED="1316768984999">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>init_IRQ() </b>
+    </p>
+    <p>
+      arch/x86/kernel/irqinit.c
+    </p>
+  </body>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1312768614741" FOLDED="true" ID="ID_1921753393" MODIFIED="1395826563396" TEXT="All Interrupts">
-<node CREATED="1312768643397" ID="ID_1028915712" MODIFIED="1312768659624" TEXT="local_irq_save()/local_irq_restore()">
-<icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1312768661941" ID="ID_74154049" MODIFIED="1312768675952" TEXT="local_irq_disable()/local_irq_enable()"/>
+<node CREATED="1399281553278" ID="ID_1981360328" MODIFIED="1399282037153" TEXT="Interrupt Descriptor">
+<node CREATED="1399281487167" ID="ID_317807738" MODIFIED="1399281512002" TEXT="include/linux/irqdesc.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399281571405" ID="ID_1219974683" MODIFIED="1399281804129">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><b>irq_desc</b></i>&#160;{&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct irqaction&#160;&#160;&#160;&#160;*<font color="#0000ff"><i><b>action</b></i></font>; &#160;&#160;&#160;/* IRQ action list */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      } ____cacheline_internodealigned_in_smp;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1399281812697" ID="ID_820749576" MODIFIED="1399282038495" TEXT="Per interrupt Action Description">
+<node CREATED="1399281854570" ID="ID_1481700631" MODIFIED="1399281870785" TEXT="include/linux/interrupt.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399281873428" ID="ID_605190251" MODIFIED="1399281993616">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><b>irqaction</b></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;irq_handler_t&#160;&#160;&#160;&#160;&#160;&#160; <font color="#0000ff"><i><b>handler</b></i></font>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;*dev_id;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct irqaction&#160;&#160;&#160;&#160;*next;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;irq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      } ____cacheline_internodealigned_in_smp;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1399269281861" FOLDED="true" ID="ID_934874925" MODIFIED="1399282212963" TEXT="Registering an Interrupt Handler">
+<node CREATED="1399269616811" ID="ID_614596620" MODIFIED="1399269622852" TEXT="kernel/irq/manage.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1312768426413" ID="ID_697921072" MODIFIED="1399269564946" TEXT="request_irq(irq, handler, flags, dev_name, dev_id)"/>
+<node CREATED="1399269297956" ID="ID_1219313595" MODIFIED="1399269575663" TEXT="free_irq(irq, dev_id)"/>
+</node>
+<node CREATED="1399277872423" FOLDED="true" ID="ID_341071095" MODIFIED="1399282221674" TEXT="Implementing Interrupt Handlers">
+<node CREATED="1399278445305" ID="ID_1825523158" MODIFIED="1399278448918" TEXT="The path that an interrupt takes from hardware and on through the kernel."/>
+<node CREATED="1399277900300" ID="ID_800520903" MODIFIED="1399277917256">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/interrupt/interrupt-path.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1316769506966" ID="ID_1652292667" MODIFIED="1399259696255" TEXT="Interrupt Handling">
+<node CREATED="1316769521668" ID="ID_50319059" MODIFIED="1316769620312" TEXT="Save the IRQ value and the register&apos;s contents on the Kernel Mode stack.">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1316769582287" ID="ID_687786211" MODIFIED="1316769622497" TEXT="Send an acknowledgment to the PIC that is servicing the IRQ line, thus allowing it to issue further interrupts.">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1316769592704" ID="ID_131982960" MODIFIED="1316769624960" TEXT="Execute the interrupt service routines (ISRs) associated with all the devices that share the IRQ.">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1316769604940" ID="ID_1157336210" MODIFIED="1316769627496" TEXT="Terminate by jumping to the ret_from_intr( ) address.">
+<icon BUILTIN="full-4"/>
+</node>
+</node>
+<node CREATED="1316769432442" ID="ID_487968707" MODIFIED="1399277893546" TEXT="Exception Handling">
+<node CREATED="1316769461577" ID="ID_899493299" MODIFIED="1316769499319" TEXT="Save the contents of most registers in the Kernel Mode stack (this part is coded in assembly language).">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1316769467579" ID="ID_428606971" MODIFIED="1316769502209" TEXT="Handle the exception by means of a high-level C function.">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1316769479178" ID="ID_512337282" MODIFIED="1316769504581" TEXT="Exit from the handler by means of the ret_from_exception( ) function.">
+<icon BUILTIN="full-3"/>
+</node>
+</node>
+</node>
+<node CREATED="1399279539676" FOLDED="true" ID="ID_409908878" MODIFIED="1399282256364" TEXT="Interrupt Control">
+<node CREATED="1312768486781" ID="ID_324711695" MODIFIED="1399259662284" TEXT="Single Interrupt">
+<node CREATED="1399269616811" ID="ID_1201693733" MODIFIED="1399279930898" TEXT="kernel/irq/manage.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1312768587640" ID="ID_1318501354" MODIFIED="1399279915788" TEXT="enable_irq(irq)"/>
+<node CREATED="1399279819427" ID="ID_742629331" MODIFIED="1399279956805" TEXT="disable_irq(irq)/disable_irq_nosync(irq)"/>
+</node>
+<node CREATED="1312768614741" ID="ID_1921753393" MODIFIED="1399259664616" TEXT="All Interrupts">
+<node CREATED="1399280082101" ID="ID_153406523" MODIFIED="1399280086612" TEXT="unsigned long flags;"/>
+<node CREATED="1312768643397" ID="ID_1028915712" MODIFIED="1399280253296" TEXT="local_irq_save(flags)">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1399280089517" ID="ID_1611468258" MODIFIED="1399280256759" TEXT="local_irq_restore(flags)">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+</node>
+<node CREATED="1399280952340" ID="ID_1179258026" MODIFIED="1399280953652" TEXT="Status of the Interrupt System">
+<node CREATED="1399280956488" ID="ID_995402415" MODIFIED="1399280975296" TEXT="in_interrupt()">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1399280976999" ID="ID_1381654401" MODIFIED="1399281033915" TEXT="check the kernel&apos;s current context">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1399279709582" ID="ID_1487734066" MODIFIED="1399279981991" TEXT="Show Interrupts">
+<node CREATED="1312768359020" ID="ID_907850260" MODIFIED="1399280189447">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /proc/interrupts
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399280157720" ID="ID_1214356135" MODIFIED="1399280193126" TEXT="/proc/irq/&lt;pid&gt;/*"/>
+<node CREATED="1399280158616" ID="ID_1296974895" MODIFIED="1399280174063" TEXT="/proc/stat"/>
+</node>
 </node>
 <node CREATED="1312768870057" ID="ID_1414900085" MODIFIED="1395844892974" TEXT="Bottom Halves">
 <node CREATED="1312768891469" ID="ID_1724781127" MODIFIED="1313486687059" TEXT="softirq (no sleep, interrupt context)"/>
-<node CREATED="1312768901317" FOLDED="true" ID="ID_1118359740" MODIFIED="1395826563397">
+<node CREATED="1312768901317" FOLDED="true" ID="ID_1118359740" MODIFIED="1399282268454">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1159,7 +1352,7 @@
 </node>
 <node CREATED="1312769101999" ID="ID_727297827" MODIFIED="1312769103841" TEXT="tasklet_kill()"/>
 </node>
-<node CREATED="1312768910909" FOLDED="true" ID="ID_794097156" MODIFIED="1395826563398">
+<node CREATED="1312768910909" FOLDED="true" ID="ID_794097156" MODIFIED="1399259744995">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1173,7 +1366,7 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1312769212872" FOLDED="true" ID="ID_891040841" MODIFIED="1395826563397">
+<node CREATED="1312769212872" FOLDED="true" ID="ID_891040841" MODIFIED="1399259739195">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1193,7 +1386,7 @@
 <node CREATED="1312769460406" ID="ID_1122862524" MODIFIED="1312769496856" TEXT="queue_work()/queue_delayed_work()"/>
 <node CREATED="1312769583956" ID="ID_655962899" MODIFIED="1312769586112" TEXT="flush_workqueue()"/>
 </node>
-<node CREATED="1312769222053" FOLDED="true" ID="ID_1043283881" MODIFIED="1395826563398" TEXT="struct work_struct">
+<node CREATED="1312769222053" FOLDED="true" ID="ID_1043283881" MODIFIED="1399259741366" TEXT="struct work_struct">
 <node CREATED="1312769385645" FOLDED="true" ID="ID_1344136187" MODIFIED="1395826563397" TEXT="static">
 <node CREATED="1312769418805" ID="ID_1725697565" MODIFIED="1313481470917" TEXT="DECLARE_WORK(name, func)"/>
 </node>
@@ -1207,12 +1400,12 @@
 <node CREATED="1312769574845" ID="ID_147766562" MODIFIED="1313486073228" TEXT="cancel_delayed_work()"/>
 <node CREATED="1312769658141" ID="ID_819983672" MODIFIED="1312769660345" TEXT="flush_scheduled_work()"/>
 </node>
-<node CREATED="1313486628806" ID="ID_589613468" MODIFIED="1313567943031" TEXT="In short, normal driver writers have two choices. First, do you need a schedulable  entity to perform your deferred work&#x2014;fundamentally, do you need to sleep for any reason? Then work queues are your only option. Otherwise, tasklets are preferred. Only if  scalability becomes a concern do you investigate softirqs.">
+<node CREATED="1313486628806" ID="ID_589613468" MODIFIED="1399269150141" TEXT="In short, normal driver writers have two choices. First, do you need a schedulable entity to perform your deferred work&#x2014;fundamentally, do you need to sleep for any reason? Then work queues are your only option. Otherwise, tasklets are preferred. Only if  scalability becomes a concern do you investigate softirqs. The bottom half runs with all interrupts enabled.">
 <icon BUILTIN="idea"/>
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1398846757529" POSITION="right" TEXT="Concurrency">
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1399282127936" POSITION="right" TEXT="Concurrency">
 <node CREATED="1312693202397" FOLDED="true" ID="ID_59832097" MODIFIED="1395826073053">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1409,12 +1602,12 @@
 <node CREATED="1313553929661" ID="ID_1928322973" MODIFIED="1313553940804" TEXT="read_barrier_depends()"/>
 <node CREATED="1313553952421" ID="ID_1581681392" MODIFIED="1313553956243" TEXT="barrier()"/>
 </node>
-<node CREATED="1313544533216" ID="ID_1459520210" MODIFIED="1313547660645" TEXT="You should protect data and not code">
+<node CREATED="1313544533216" ID="ID_1459520210" MODIFIED="1399279506891" TEXT="You should protect data and not code">
 <font NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="idea"/>
 </node>
-<node CREATED="1313503319379" ID="ID_947159726" MODIFIED="1313544686256" TEXT="The tricky part is identifying the actual shared data and the corresponding critical sections.&#xa;This is why designing locking into your code from the  get-go, and not as an after thought&#xa; is of paramount importance.">
-<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1313503319379" ID="ID_947159726" MODIFIED="1399279516545" TEXT="The tricky part is identifying the actual shared data and the corresponding critical sections.&#xa;This is why designing locking into your code from the  get-go, and not as an after thought&#xa; is of paramount importance.">
+<icon BUILTIN="idea"/>
 </node>
 <node CREATED="1313550639680" ID="ID_1180693157" MODIFIED="1395826431485">
 <richcontent TYPE="NODE"><html>
@@ -1426,8 +1619,9 @@
   </body>
 </html></richcontent>
 </node>
+<node CREATED="1399279489632" ID="ID_667810782" MODIFIED="1399279501249" TEXT="The lock provides protection against concurrent access from another processor, whereas disabling interrupts provides protection against concurrent access from a possible interrupt handler."/>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1398846751979" POSITION="right" TEXT="Process Communication">
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1399193546661" POSITION="right" TEXT="Process Communication">
 <node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1395371901163" TEXT="Pipes and FIFOs (named pipes)">
 <node CREATED="1394692670453" FOLDED="true" ID="ID_1377888996" MODIFIED="1395371901162" TEXT="compose">
 <node CREATED="1394692688493" ID="ID_1129761090" MODIFIED="1394692790674">
