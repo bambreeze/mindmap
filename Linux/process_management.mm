@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1399620822853" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1399963947105" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -605,7 +605,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1399620820198" POSITION="right" TEXT="Process Creation/Execution/Termination">
+<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1399963948277" POSITION="right" TEXT="Process Creation/Execution/Termination">
 <node CREATED="1398840513254" ID="ID_509227697" MODIFIED="1398842872065">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -735,7 +735,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1399620818184" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1399963949355" POSITION="right" TEXT="Process Contexts">
 <node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -812,7 +812,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1399626276445" POSITION="right" TEXT="Process Scheduling">
+<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1399963951083" POSITION="right" TEXT="Process Scheduling">
 <node CREATED="1399183810902" ID="ID_1735785535" MODIFIED="1399183830546" TEXT="policy">
 <node CREATED="1399183831062" FOLDED="true" ID="ID_135059142" MODIFIED="1399196819273" TEXT="process priority">
 <node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1399184105962" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)"/>
@@ -925,40 +925,41 @@
 </node>
 </node>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1399620812091" POSITION="right" TEXT="System Call">
-<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399258577435">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1399963985721" POSITION="right" TEXT="System Call">
+<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399962878636">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>System Calls</b>&#160;is an explicit request to the kernel made via a software interrupt
+      <font color="#0000ff"><i><b>System Calls</b></i></font>&#160;is an explicit request to the kernel made via a software interrupt
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1399258341561">
+</html>
+</richcontent>
+<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1399962864198">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>POSIX APIs</b>&#160;is a function definition that specifies how to obtain a given service.
+      <font color="#0000ff"><i><b>POSIX APIs</b></i></font>&#160;is a function definition that specifies how to obtain a given service.
     </p>
   </body>
 </html>
 </richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node CREATED="1399258230564" ID="ID_1791705159" MODIFIED="1399258306937">
+<node CREATED="1399258230564" ID="ID_1791705159" MODIFIED="1399962876015">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>C library</b>&#160;implements the main API on Unix systems, including the standard C library and the system call interface.
+      <font color="#0000ff"><i><b>C library</b></i></font>&#160;implements the main API on Unix systems, including the standard C library and the system call interface.
     </p>
   </body>
 </html>
@@ -976,7 +977,7 @@
 </html></richcontent>
 </node>
 <node CREATED="1358755437681" ID="ID_175528966" MODIFIED="1395844966215" TEXT="__kernel_vsyscall">
-<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1395844978573" TEXT="int $0x80">
+<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1399962942876" TEXT="int $0x80">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
 <richcontent TYPE="NODE"><html>
@@ -1018,7 +1019,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1395844980081" TEXT="sysenter">
+<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1399962940038" TEXT="sysenter">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
 <richcontent TYPE="NODE"><html>
@@ -1041,11 +1042,11 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1358931054084" TEXT="sysenter_entry()  // similar to system_call"/>
+<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1399962937767" TEXT="sysenter_entry()  // similar to system_call"/>
 </node>
 </node>
 </node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1399623268279" POSITION="right" TEXT="Interrupts and Exceptions">
+<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1399963984197" POSITION="right" TEXT="Interrupts and Exceptions">
 <node CREATED="1316769068729" ID="ID_1349911850" MODIFIED="1399620625601" TEXT="Definition">
 <node CREATED="1316766926536" ID="ID_1498465646" MODIFIED="1399620628022" TEXT="Interrupts (Asynchronous, generated by hardware)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
@@ -1586,225 +1587,485 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1399620892467" POSITION="right" TEXT="Concurrency">
-<node CREATED="1312693202397" FOLDED="true" ID="ID_59832097" MODIFIED="1395826073053">
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1399963981304" POSITION="right" TEXT="Concurrency">
+<node CREATED="1399770844089" ID="ID_869416328" MODIFIED="1399962757390" TEXT="Definiton">
+<node CREATED="1399771002871" ID="ID_261412793" MODIFIED="1399771167398">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Semaphore
-    </p>
-    <p>
-      (long, sleep, process context)
+      <i><b>Critical Regions</b></i>&#160;(&#20020;&#30028;&#21306;)- Code paths that access and manipulate shared data.
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1312693302454" FOLDED="true" ID="ID_740546722" MODIFIED="1395826073052" TEXT="semaphore">
-<node CREATED="1312693512550" ID="ID_1849881313" MODIFIED="1313548907626" TEXT="static DECLARE_SEMAPHORE_GENERIC(name, count)"/>
-<node CREATED="1312693518316" ID="ID_967799322" MODIFIED="1313548984342" TEXT="sema_init(sem, count)"/>
+</html>
+</richcontent>
 </node>
-<node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1313549756423" TEXT="rw_semaphore/completion"/>
-<node CREATED="1312693386730" FOLDED="true" ID="ID_1970555050" MODIFIED="1395826073053" TEXT="mutex">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1312693396454" FOLDED="true" ID="ID_551072747" MODIFIED="1395826073052" TEXT="static">
-<node CREATED="1312693416715" ID="ID_1495494447" MODIFIED="1313549066546">
+<node CREATED="1399771282717" ID="ID_80570559" MODIFIED="1399771342329">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      static DECLARE_MUTEX(name)
-    </p>
-    <p>
-      static DECLARE_MUTEX_LOCKED(name)
+      <i><b>Race Conditions</b></i>&#160;(&#31454;&#20105;&#26465;&#20214;) - Two threads of execution to be simultaneously executing within the same critical region.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-</node>
-<node CREATED="1312693431973" FOLDED="true" ID="ID_1008579193" MODIFIED="1395826073053" TEXT="dynamic">
-<node CREATED="1312693459388" ID="ID_1482323652" MODIFIED="1313549087545">
+<node CREATED="1399771369236" ID="ID_457370386" MODIFIED="1399771446526">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      init_MUTEX(sem)
-    </p>
-    <p>
-      init_MUTEX_LOCKED(sem)
+      <i><b>Synchronization</b></i>&#160;(&#21516;&#27493;) - Ensuring that unsafe concurrency is prevented and that race conditions do not occur.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1312693740526" FOLDED="true" ID="ID_1969698129" MODIFIED="1395826073053" TEXT="usage">
-<node CREATED="1312693800962" FOLDED="true" ID="ID_314690552" MODIFIED="1395826073053">
+<node CREATED="1399774809976" ID="ID_737544554" MODIFIED="1399962758879" TEXT="Causes of Concurrency">
+<node CREATED="1399774814459" FOLDED="true" ID="ID_555360005" MODIFIED="1399962761161" TEXT="Interrupts">
+<node CREATED="1399774904899" ID="ID_629482231" MODIFIED="1399774925976" TEXT="An interrupt can occur asynchronously at almost any time, inter- rupting the currently executing code."/>
+</node>
+<node CREATED="1399774840287" FOLDED="true" ID="ID_379851033" MODIFIED="1399774939116" TEXT="Softirqs and tasklets">
+<node CREATED="1399774927838" ID="ID_1840207051" MODIFIED="1399774937669" TEXT="The kernel can raise or schedule a softirq or tasklet at almost any time, interrupting the currently executing code."/>
+</node>
+<node CREATED="1399774865775" FOLDED="true" ID="ID_568242172" MODIFIED="1399774961660" TEXT="Kernel preemption">
+<node CREATED="1399774941611" ID="ID_1883182318" MODIFIED="1399774950611" TEXT="Because the kernel is preemptive, one task in the kernel can preempt another."/>
+</node>
+<node CREATED="1399774876223" FOLDED="true" ID="ID_1886946840" MODIFIED="1399774960940" TEXT="Sleeping and synchronization with user-space">
+<node CREATED="1399774952080" ID="ID_992637458" MODIFIED="1399774960293" TEXT="A task in the kernel can sleep and thus invoke the scheduler, resulting in the running of a new process."/>
+</node>
+<node CREATED="1399774888773" FOLDED="true" ID="ID_403228829" MODIFIED="1399774973596" TEXT="Symmetrical multiprocessing">
+<node CREATED="1399774963046" ID="ID_1971112467" MODIFIED="1399774972951" TEXT="Two or more processors can execute kernel code at exactly the same time."/>
+</node>
+</node>
+<node CREATED="1399778737148" ID="ID_1019982940" MODIFIED="1399962762955" TEXT="Principles of Concurrency">
+<node CREATED="1313544533216" ID="ID_1459520210" MODIFIED="1399778041935">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>down_interruptible</b>(&amp;my_sem)
-    </p>
-    <p>
-      up(&amp;my_sem)
+      You should protect <font color="#0000ff"><i><b>data</b></i></font>&#160;and not code. In short, nearly all <font color="#0000ff"><i><b>global and shared data</b></i></font>&#160;in the kernel requires some form of the synchronization methods.
     </p>
   </body>
 </html></richcontent>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="button_ok"/>
-<node CREATED="1313549941186" ID="ID_249606607" MODIFIED="1313550157146">
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1399779169643" ID="ID_1035081747" MODIFIED="1399779193680">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      &#160;If the&#160;&#160;semaphore is unavailable, it places the calling process
+      The tricky part is identifying the actual shared data and the corresponding critical sections.
     </p>
     <p>
-      &#160;to sleep in the TASK_INTERRUPTIBLE state.
+      This is why <font color="#0000ff"><i><b>designing locking</b></i></font>&#160;into your code <font color="#0000ff"><i><b>from the&#160;&#160;get-go</b></i></font>, and not as an after thought
+    </p>
+    <p>
+      &#160;is of paramount importance.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399779061906" ID="ID_1089098658" MODIFIED="1399779216253">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Implement <font color="#0000ff"><i><b>lock ordering</b></i></font>. Nested locks must always be obtained in <font color="#0000ff"><i><b>the same order</b></i></font>. This prevents the deadly embrace deadlock. Document the lock ordering so others will follow it.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399779253448" ID="ID_565513088" MODIFIED="1399779312650">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The <font color="#0000ff"><i><b>order of unlock</b></i></font>&#160;does not matter with respect to deadlock, although it is common practice to release the locks in an order <font color="#0000ff"><i><b>inverse</b></i></font>&#160;to that in which they were acquired.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399780035561" ID="ID_1498252959" MODIFIED="1399780104384">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>Contention and Scalability</b></i></font>&#160;- Start simple and grow in complexity only as needed. Simplicity is key.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399279489632" ID="ID_667810782" MODIFIED="1399777945026" TEXT="The lock provides protection against concurrent access from another processor, whereas disabling interrupts provides protection against concurrent access from a possible interrupt handler."/>
+</node>
+<node CREATED="1399863589335" FOLDED="true" ID="ID_514438523" MODIFIED="1399962776682" TEXT="Atomicity Versus Ordering">
+<node CREATED="1399863750399" ID="ID_659545168" MODIFIED="1399962741134" TEXT="Atomic Operations">
+<node CREATED="1399863775846" ID="ID_852580041" MODIFIED="1399864312007">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Atomic operations provide instructions that execute atomically&#8212;<font color="#0000ff"><i><b>without interruption</b></i></font>.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399863957407" ID="ID_825463376" MODIFIED="1399864283213">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      atomic_t v = ATOMIC_INIT(0);&#160;&#160;/* define v and initialize it to zero */
+    </p>
+    <p>
+      atomic_inc(&amp;v)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Atomically add one to v. */
+    </p>
+    <p>
+      atomic_dec(&amp;v)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Atomically subtract one from v. */
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399874962165" ID="ID_1594894653" MODIFIED="1399875005574">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      unsigned long word = 0;
+    </p>
+    <p>
+      set_bit(0, &amp;word);&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* bit zero is now set (atomically) */
+    </p>
+    <p>
+      clear_bit(0, &amp;word);&#160;&#160;&#160;&#160;/* bit one is now unset (atomically) */
+    </p>
+    <p>
+      change_bit(0, &amp;word); /* bit zero is flipped; now it is set (atomically) */
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1313553755558" ID="ID_1124259971" MODIFIED="1399962742367" TEXT="Barriers">
+<node CREATED="1399962230356" ID="ID_779585253" MODIFIED="1399962269471">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      It is also possible to instruct the compiler <font color="#0000ff"><i><b>not to reorder</b></i></font><i><b>&#160; </b></i>instructions&#160;around a given point.These instructions are called barriers.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1313553803570" ID="ID_786162832" MODIFIED="1313553924469" TEXT="mb()/rmb()/wmb()"/>
+<node CREATED="1313553929661" ID="ID_1928322973" MODIFIED="1399962718622" TEXT="read_barrier_depends()/barrier()"/>
+</node>
+<node CREATED="1399863598260" ID="ID_1452066092" MODIFIED="1399864334830">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The atomic operations guarantee only atomicity. Ordering is enforced via barrier operations.
+    </p>
+  </body>
+</html>
+</richcontent>
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node CREATED="1312693813435" ID="ID_1097964744" MODIFIED="1313549173430" TEXT="down()/down_trylock()">
-<icon BUILTIN="button_cancel"/>
-</node>
-</node>
-</node>
-<node CREATED="1313547549956" ID="ID_1312026970" MODIFIED="1313547728842" TEXT="In cases where  the sleep time might be long or you potentially need to sleep while holding the lock, the  semaphore is a solution.">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312693651083" FOLDED="true" ID="ID_771001210" MODIFIED="1395826073055">
+<node CREATED="1312693651083" ID="ID_771001210" MODIFIED="1399963232036">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      spinlock
+      <font color="#0000ff"><i><b>spinlock</b></i></font>
     </p>
     <p>
       (short, no sleep, interrupt context)
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1312693951073" FOLDED="true" ID="ID_341396860" MODIFIED="1395826073055" TEXT="spinlock">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1312693968931" FOLDED="true" ID="ID_1387000666" MODIFIED="1395826073054" TEXT="static">
-<node CREATED="1312694017006" ID="ID_515272272" MODIFIED="1312694024756" TEXT="spinlock_t my_lock = SPIN_LOCK_UNLOCKED;"/>
-</node>
-<node CREATED="1312694027908" FOLDED="true" ID="ID_1810418454" MODIFIED="1395826073054" TEXT="dynamic">
-<node CREATED="1312694044309" ID="ID_1719388903" MODIFIED="1312694050626" TEXT="spin_lock_init()"/>
-</node>
-<node CREATED="1312694066185" FOLDED="true" ID="ID_1463723135" MODIFIED="1395826073055" TEXT="usage">
-<node CREATED="1312694134224" FOLDED="true" ID="ID_1244850060" MODIFIED="1395826073054">
+</html>
+</richcontent>
+<node CREATED="1399882867749" ID="ID_1294603505" MODIFIED="1399884828008">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      spin_lock_irqsave(&amp;my_lock, flags)
-    </p>
-    <p>
-      spin_unlock_irqrestore(&amp;my_lock, flags)
+      If a lock is used in an interrupt handler, you must also disable local interrupts (interrupt requests on the current processor) before obtaining the lock.
     </p>
   </body>
-</html></richcontent>
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="button_ok"/>
-<node CREATED="1313545973967" ID="ID_1004456907" MODIFIED="1313547149761">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Saves current state of local interrupts,
-    </p>
-    <p>
-      disables local interrupts, and acquires given lock
-    </p>
-  </body>
-</html></richcontent>
+</html>
+</richcontent>
 <icon BUILTIN="idea"/>
 </node>
+<node CREATED="1399882998986" ID="ID_863261330" MODIFIED="1399883367108">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <i><b>DEFINE_SPINLOCK</b></i>(mr_lock);
+    </p>
+    <p>
+      unsigned long flags;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <i><b>spin_lock_irqsave</b></i>(&amp;mr_lock, flags);
+    </p>
+    <p>
+      /* critical region ... */
+    </p>
+    <p>
+      <i><b>spin_unlock_irqrestore</b></i>(&amp;mr_lock, flags);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1312694066185" ID="ID_1463723135" MODIFIED="1399884384786" TEXT="Methods">
+<node CREATED="1399884299998" FOLDED="true" ID="ID_205414473" MODIFIED="1399960785853" TEXT="spin_lock_init()">
+<node CREATED="1399884447092" ID="ID_902758145" MODIFIED="1399884449435" TEXT="initialize a dynamically created spin lock (a spinlock_t that you do not have a direct reference to, just a pointer)."/>
 </node>
 <node CREATED="1312694076678" ID="ID_1206402908" MODIFIED="1313544314222" TEXT="spin_lock()/spin_unlock()"/>
-<node CREATED="1312694144427" FOLDED="true" ID="ID_256904747" MODIFIED="1395826073054" TEXT="spin_lock_irq()/spin_unlock_irq()">
-<icon BUILTIN="button_cancel"/>
-<node CREATED="1313545927769" ID="ID_1701566236" MODIFIED="1313545955406" TEXT="Disables local interrupts and acquires given lock">
-<icon BUILTIN="idea"/>
+<node CREATED="1312694144427" FOLDED="true" ID="ID_256904747" MODIFIED="1399884427304" TEXT="spin_lock_irq()/spin_unlock_irq()">
+<node CREATED="1313545927769" ID="ID_1701566236" MODIFIED="1399884425653" TEXT="Disables local interrupts and acquires given lock"/>
 </node>
-</node>
-<node CREATED="1312694154453" FOLDED="true" ID="ID_1565147892" MODIFIED="1395826073054" TEXT="spin_lock_bh()/spin_unlock_bh()">
-<node CREATED="1313546092211" ID="ID_376102253" MODIFIED="1313546945688" TEXT="Disables all bottom halves and acquires given lock">
-<icon BUILTIN="idea"/>
-</node>
+<node CREATED="1312694154453" FOLDED="true" ID="ID_1565147892" MODIFIED="1399884420253" TEXT="spin_lock_bh()/spin_unlock_bh()">
+<node CREATED="1313546092211" ID="ID_376102253" MODIFIED="1399884418441" TEXT="Disables all bottom halves and acquires given lock"/>
 </node>
 <node CREATED="1312694398791" ID="ID_1972092235" MODIFIED="1313544335595" TEXT="spin_trylock()/spin_trylock_bh()"/>
+<node CREATED="1399884291287" ID="ID_891121078" MODIFIED="1399884299427" TEXT="spin_is_locked()"/>
 </node>
+<node CREATED="1312694058445" ID="ID_795613481" MODIFIED="1399961062771" TEXT="rwlock/seqlock/RCU/BKL/Preemption Disabling"/>
 </node>
-<node CREATED="1312694058445" ID="ID_795613481" MODIFIED="1313551561036" TEXT="rwlock/seqlock/RCU/BKL"/>
-<node CREATED="1313547693964" ID="ID_648267487" MODIFIED="1313547836980" TEXT="Spin locks provide a quick and simple lock. The spinning behavior is optimal for short  hold times and code that cannot sleep (interrupt handlers, for example). ">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1313552079457" FOLDED="true" ID="ID_545884410" MODIFIED="1395826073055" TEXT="Preemption Disabling">
-<node CREATED="1313552107043" ID="ID_56290824" MODIFIED="1313552164925">
+<node CREATED="1312693202397" ID="ID_59832097" MODIFIED="1399963244299">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      preempt_disable()
+      <font color="#0000ff"><i><b>Semaphore/Mutex</b></i></font>
     </p>
     <p>
-      preempt_enable()
+      (long, sleep, process context)
     </p>
   </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1313553755558" FOLDED="true" ID="ID_1124259971" MODIFIED="1395826073055" TEXT="Barriers">
-<node CREATED="1313553803570" ID="ID_786162832" MODIFIED="1313553924469" TEXT="mb()/rmb()/wmb()"/>
-<node CREATED="1313553929661" ID="ID_1928322973" MODIFIED="1313553940804" TEXT="read_barrier_depends()"/>
-<node CREATED="1313553952421" ID="ID_1581681392" MODIFIED="1313553956243" TEXT="barrier()"/>
-</node>
-<node CREATED="1313544533216" ID="ID_1459520210" MODIFIED="1399279506891" TEXT="You should protect data and not code">
-<font NAME="SansSerif" SIZE="12"/>
+</html>
+</richcontent>
+<node CREATED="1399960489633" FOLDED="true" ID="ID_780238327" MODIFIED="1399961103844" TEXT="Semaphore">
+<node CREATED="1313547549956" ID="ID_1312026970" MODIFIED="1399887351387" TEXT="it attempts to acquire the given semaphore. If the semaphore is unavailable, it places the calling process to sleep in the TASK_INTERRUPTIBLE state. ">
 <icon BUILTIN="idea"/>
 </node>
-<node CREATED="1313503319379" ID="ID_947159726" MODIFIED="1399279516545" TEXT="The tricky part is identifying the actual shared data and the corresponding critical sections.&#xa;This is why designing locking into your code from the  get-go, and not as an after thought&#xa; is of paramount importance.">
-<icon BUILTIN="idea"/>
-</node>
-<node CREATED="1313550639680" ID="ID_1180693157" MODIFIED="1395826431485">
+<node CREATED="1399886943391" ID="ID_818723729" MODIFIED="1399886976365">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
-    <img src="kernel/process/spin-lock-usage.png" />
+    <p>
+      /* define and declare a semaphore, named mr_sem, with a count of one */
+    </p>
+    <p>
+      static <i><b>DECLARE_MUTEX</b></i>(mr_sem);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /* attempt to acquire the semaphore ... */
+    </p>
+    <p>
+      if (<i><b>down_interruptible</b></i>(&amp;mr_sem)) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* signal received, semaphore not acquired ... */
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /* critical region ... */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /* release the given semaphore */
+    </p>
+    <p>
+      <i><b>up</b></i>(&amp;mr_sem);
+    </p>
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1399279489632" ID="ID_667810782" MODIFIED="1399279501249" TEXT="The lock provides protection against concurrent access from another processor, whereas disabling interrupts provides protection against concurrent access from a possible interrupt handler."/>
+<node CREATED="1399886992422" ID="ID_84878958" MODIFIED="1399886996876" TEXT="Methods">
+<node CREATED="1399887075490" FOLDED="true" ID="ID_1540094010" MODIFIED="1399960733849" TEXT="init_MUTEX()">
+<node CREATED="1399887080509" ID="ID_1708315659" MODIFIED="1399887094158" TEXT="Initializes the dynamically created semaphore with a count of one"/>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1399193546661" POSITION="right" TEXT="Process Communication">
-<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1395371901163" TEXT="Pipes and FIFOs (named pipes)">
-<node CREATED="1394692670453" FOLDED="true" ID="ID_1377888996" MODIFIED="1395371901162" TEXT="compose">
+<node CREATED="1399887104828" FOLDED="true" ID="ID_1664883462" MODIFIED="1399887126583" TEXT="init_MUTEX_LOCKED()">
+<node CREATED="1399887116820" ID="ID_1301965510" MODIFIED="1399887125384" TEXT="Initializes the dynamically created semaphore with a count of zero (so it is initially locked)"/>
+</node>
+<node CREATED="1399887245692" FOLDED="true" ID="ID_1756729021" MODIFIED="1399960729761" TEXT="down()">
+<node CREATED="1399887259116" ID="ID_969928806" MODIFIED="1399887262329" TEXT="Tries to acquire the given semaphore and enter uninterruptible sleep if it is contended"/>
+</node>
+<node CREATED="1399887129011" FOLDED="true" ID="ID_1569598130" MODIFIED="1399960731360" TEXT="down_trylock()">
+<node CREATED="1399887174682" ID="ID_282367581" MODIFIED="1399887185924" TEXT="Tries to acquire the given semaphore and immediately return nonzero if it is contended"/>
+</node>
+</node>
+</node>
+<node CREATED="1399960387846" ID="ID_654058928" MODIFIED="1399960994974">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <i><b>DEFINE_MUTEX</b></i>(mr_mutex);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <i><b>mutex_lock</b></i>(&amp;mr_mutex);
+    </p>
+    <p>
+      /* critical region ... */
+    </p>
+    <p>
+      <i><b>mutex_unlock</b></i>(&amp;mr_mutex);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1399960755086" ID="ID_72470446" MODIFIED="1399960760879" TEXT="Methods">
+<node CREATED="1399960761673" FOLDED="true" ID="ID_269283442" MODIFIED="1399960799241" TEXT="mutex_init()">
+<node CREATED="1399960796508" ID="ID_912507473" MODIFIED="1399960798469" TEXT="To dynamically initialize a mutex"/>
+</node>
+<node CREATED="1399960815331" FOLDED="true" ID="ID_19237467" MODIFIED="1399960878418" TEXT="mutex_trylock()">
+<node CREATED="1399960865176" ID="ID_271760694" MODIFIED="1399960877090" TEXT="Tries to acquire the given mutex; returns one if successful and the lock is acquired and zero otherwise"/>
+</node>
+<node CREATED="1399960880255" FOLDED="true" ID="ID_832704228" MODIFIED="1399960901811" TEXT="mutex_is_locked()">
+<node CREATED="1399960890930" ID="ID_1118435493" MODIFIED="1399960900978" TEXT="Returns one if the lock is locked and zero otherwise"/>
+</node>
+</node>
+<node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1399960511566" TEXT="rw_semaphore/completion"/>
+</node>
+</node>
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1399963979308" POSITION="right" TEXT="Process Communication">
+<node CREATED="1399963067948" FOLDED="true" ID="ID_564823100" MODIFIED="1399963080399" TEXT="Data Structure">
+<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1395044667282" TEXT="include/linux/ipc_namespace.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395047483349" ID="ID_1230410566" MODIFIED="1395047518126">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1395044741770">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>ipc_ids</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int in_use;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq_max;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct idr ipcs_idr;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int next_id;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1394607940675" ID="ID_833366660" MODIFIED="1399963027563" TEXT="Pipes and FIFOs (named pipes)">
+<node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1399962986127" TEXT="compose">
 <node CREATED="1394692688493" ID="ID_1129761090" MODIFIED="1394692790674">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1817,7 +2078,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1394692720555" FOLDED="true" ID="ID_1152752042" MODIFIED="1395371901162">
+<node CREATED="1394692720555" ID="ID_1152752042" MODIFIED="1399962992766">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2018,68 +2279,7 @@
 </node>
 <node CREATED="1394608278558" ID="ID_1674073083" MODIFIED="1394692841325" TEXT="producer/consumer interactions among processes."/>
 </node>
-<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1395044667282" TEXT="include/linux/ipc_namespace.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395047483349" ID="ID_1230410566" MODIFIED="1395047518126">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1395044741770">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>ipc_ids</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int in_use;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq_max;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct idr ipcs_idr;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int next_id;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1395371901164" TEXT="Semaphores">
+<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1399963089493" TEXT="Semaphores">
 <node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395371901164">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2322,7 +2522,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1395371901164" TEXT="Messages">
+<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1399963039860" TEXT="Messages">
 <node CREATED="1394784671796" FOLDED="true" ID="ID_742765223" MODIFIED="1395371901164" TEXT="compose">
 <node CREATED="1394784681207" ID="ID_518594583" MODIFIED="1394784707690">
 <richcontent TYPE="NODE"><html>
@@ -2484,7 +2684,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1395371901165" TEXT="Shared memory regions">
+<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1399963044612" TEXT="Shared memory regions">
 <node CREATED="1395047974244" FOLDED="true" ID="ID_1761056915" MODIFIED="1395371901164">
 <richcontent TYPE="NODE"><html>
   <head>
