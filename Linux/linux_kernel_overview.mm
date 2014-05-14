@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1398822468734" ID="ID_1904401005" MODIFIED="1398845877478" TEXT="Linux Kernel">
-<node CREATED="1398837321110" FOLDED="true" ID="ID_1482516283" MODIFIED="1398846200509" POSITION="right" TEXT="overview">
+<node CREATED="1398837321110" FOLDED="true" ID="ID_1482516283" MODIFIED="1400057912597" POSITION="right" TEXT="Overview">
 <node CREATED="1398845853208" ID="ID_1004598899" MODIFIED="1398845856596" TEXT="Relationship between applications, the kernel, and hardware"/>
 <node CREATED="1398837087723" ID="ID_1178870566" MODIFIED="1398837101454">
 <richcontent TYPE="NODE"><html>
@@ -14,11 +14,11 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1398824677150" FOLDED="true" ID="ID_781576596" MODIFIED="1398846202014" POSITION="right" TEXT="obtaining the kernel source">
+<node CREATED="1398824677150" FOLDED="true" ID="ID_781576596" MODIFIED="1400057862177" POSITION="right" TEXT="Obtaining the Kernel Source">
 <node CREATED="1398824698344" ID="ID_1628432107" MODIFIED="1398824706625" TEXT="http://www.kernel.org"/>
 <node CREATED="1398824707422" ID="ID_1112141163" MODIFIED="1398825058862" TEXT="$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"/>
 </node>
-<node CREATED="1398822477296" FOLDED="true" ID="ID_596028313" MODIFIED="1398846203744" POSITION="right" TEXT="kernel source tree">
+<node CREATED="1398822477296" FOLDED="true" ID="ID_596028313" MODIFIED="1400057863611" POSITION="right" TEXT="Kernel Source Tree">
 <node CREATED="1398822557925" ID="ID_1771425983" MODIFIED="1398822699887" TEXT="arch - Architecture-specific source"/>
 <node CREATED="1398822568163" ID="ID_1554657863" MODIFIED="1398822729350" TEXT="block - Block I/O layer"/>
 <node CREATED="1398822570484" ID="ID_559833549" MODIFIED="1398822738515" TEXT="crypto - Crypto API"/>
@@ -41,8 +41,8 @@
 <node CREATED="1398822619972" ID="ID_1596717533" MODIFIED="1398823168494" TEXT="usr - Early user-space code (called initramfs)"/>
 <node CREATED="1398822624214" ID="ID_320286554" MODIFIED="1398823190023" TEXT="virt - Virtualization infrastructure"/>
 </node>
-<node CREATED="1398823268163" FOLDED="true" ID="ID_1171133447" MODIFIED="1398846205442" POSITION="right" TEXT="builing the kernel">
-<node CREATED="1398823298673" FOLDED="true" ID="ID_1512053693" MODIFIED="1398825196182" TEXT="configuring the kernel">
+<node CREATED="1398823268163" FOLDED="true" ID="ID_1171133447" MODIFIED="1400057868147" POSITION="right" TEXT="Builing the Kernel">
+<node CREATED="1398823298673" FOLDED="true" ID="ID_1512053693" MODIFIED="1400054241333" TEXT="configuring the kernel">
 <node CREATED="1398823357998" ID="ID_819521215" MODIFIED="1398824014602" TEXT="$ make config">
 <icon BUILTIN="button_cancel"/>
 </node>
@@ -53,7 +53,7 @@
 <node CREATED="1398823363610" ID="ID_975248570" MODIFIED="1398824006736" TEXT="$ make menuconfig"/>
 <node CREATED="1398823374278" ID="ID_919823161" MODIFIED="1398823799267" TEXT="$ make gconfig"/>
 </node>
-<node CREATED="1398823892661" ID="ID_514813597" MODIFIED="1398825189091" TEXT="build">
+<node CREATED="1398823892661" FOLDED="true" ID="ID_514813597" MODIFIED="1400054215180" TEXT="build">
 <node CREATED="1398823924365" ID="ID_129749977" MODIFIED="1398824046946" TEXT="$ make">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="full-2"/>
@@ -61,7 +61,305 @@
 </node>
 <node CREATED="1398824105885" ID="ID_951009357" MODIFIED="1398824111724" TEXT="installing the new kernel"/>
 </node>
-<node CREATED="1395370144693" FOLDED="true" ID="ID_1250662614" MODIFIED="1398846207371" POSITION="right" TEXT="Modules">
+<node CREATED="1398823196079" FOLDED="true" ID="ID_651691983" MODIFIED="1400057870623" POSITION="right" TEXT="Linux Directory Structure">
+<node CREATED="1400054097453" ID="ID_1080980842" MODIFIED="1400057391354" TEXT="/bin - Essential command binaries, e.g., cat, ls, cp."/>
+<node CREATED="1400054112093" ID="ID_165400969" MODIFIED="1400057043914" TEXT="/boot - Boot loader files, e.g., kernels, initrd."/>
+<node CREATED="1400054114756" ID="ID_840301259" MODIFIED="1400057068942" TEXT="/dev - Essential devices, e.g., /dev/null."/>
+<node CREATED="1400054116813" FOLDED="true" ID="ID_1225834287" MODIFIED="1400057852547" TEXT="/etc - Host-specific system-wide configuration files">
+<node CREATED="1400055172427" ID="ID_377422783" MODIFIED="1400055180344" TEXT="/etc/fstabl"/>
+<node CREATED="1400055180733" ID="ID_1632427144" MODIFIED="1400055193824" TEXT="/etc/inittab"/>
+<node CREATED="1400055201660" ID="ID_1696787214" MODIFIED="1400055213456" TEXT="/etc/init.d"/>
+<node CREATED="1400055213906" ID="ID_1932636609" MODIFIED="1400055224037" TEXT="/etc/profile"/>
+<node CREATED="1400055249102" ID="ID_1743087437" MODIFIED="1400055253823" TEXT="/etc/passwd"/>
+<node CREATED="1400054119725" ID="ID_2311337" MODIFIED="1400056162620" TEXT="/etc/rc &amp; /etc/rc.d &amp; /etc/rc*.d"/>
+</node>
+<node CREATED="1400054141724" ID="ID_479262697" MODIFIED="1400057107970" TEXT="/home - Users&apos; home directories, containing saved files, personal settings, etc."/>
+<node CREATED="1400054144995" ID="ID_961664380" MODIFIED="1400054845149" TEXT="/lib - library and kernel modules"/>
+<node CREATED="1400054154604" ID="ID_1535017833" MODIFIED="1400054869573" TEXT="/mnt - mount files for temperory filesystems"/>
+<node CREATED="1400054171099" ID="ID_1101638794" MODIFIED="1400057407226" TEXT="/proc - Virtual filesystem providing information about processes and kernel information as files."/>
+<node CREATED="1400054174130" ID="ID_1846895950" MODIFIED="1400057416530" TEXT="/root - Home dir for root user"/>
+<node CREATED="1400054176907" ID="ID_766103988" MODIFIED="1400057252886" TEXT="/sbin - Essential system binaries, e.g., init, ip, mount."/>
+<node CREATED="1400054937358" ID="ID_988294979" MODIFIED="1400054940785" TEXT="/sys"/>
+<node CREATED="1400054179699" ID="ID_1565401051" MODIFIED="1400057305406" TEXT="/tmp - Temporary files (see also /var/tmp). Often not preserved between system reboots."/>
+<node CREATED="1400054182315" FOLDED="true" ID="ID_1817685813" MODIFIED="1400057843439" TEXT="/usr - shareable(multi-user) and read-only user data (utilities/applications)">
+<node CREATED="1400054565783" ID="ID_316678022" MODIFIED="1400057512568" TEXT="/usr/bin - Non-essential command binaries (not needed in single user mode); for all users."/>
+<node CREATED="1400054598254" ID="ID_850881022" MODIFIED="1400057533632" TEXT="/usr/include - Standard include files."/>
+<node CREATED="1400055341951" ID="ID_1071555144" MODIFIED="1400057561523" TEXT="/usr/lib - Libraries for the binaries in /usr/bin/ and /usr/sbin/."/>
+<node CREATED="1400054559292" ID="ID_681718573" MODIFIED="1400054624848" TEXT="/usr/local">
+<node CREATED="1400055387742" ID="ID_1096799964" MODIFIED="1400055395418" TEXT="/usr/local/bin"/>
+<node CREATED="1400055395926" ID="ID_896865782" MODIFIED="1400055404681" TEXT="/usr/local/lib"/>
+<node CREATED="1400055405109" ID="ID_590783262" MODIFIED="1400055409793" TEXT="/usr/local/share"/>
+</node>
+<node CREATED="1400054603326" ID="ID_531872851" MODIFIED="1400057578550" TEXT="/usr/sbin - Non-essential system binaries, e.g., daemons for various network-services."/>
+<node CREATED="1400055307070" ID="ID_1432860074" MODIFIED="1400057599986" TEXT="/usr/src - Source code, e.g., the kernel source code with its header files."/>
+</node>
+<node CREATED="1400054184779" FOLDED="true" ID="ID_902704176" MODIFIED="1400057810139" TEXT="/var - variable data files">
+<node CREATED="1400055482472" ID="ID_1036145987" MODIFIED="1400057347674" TEXT="/var/log - Log files. Various logs."/>
+<node CREATED="1400055486282" ID="ID_1458917537" MODIFIED="1400057331259" TEXT="/var/tmp - Temporary files to be preserved between reboots."/>
+</node>
+</node>
+<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1400057882034" POSITION="right" TEXT="Data Types">
+<node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1312691492652" TEXT="Standard C Types"/>
+<node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400052455713" TEXT="Typedef Types"/>
+<node CREATED="1312691530047" ID="ID_139786634" MODIFIED="1395844841293" TEXT="Linux Types">
+<node CREATED="1312691629475" ID="ID_1023963558" MODIFIED="1400052418519" TEXT="&lt;linux/types.h&gt;">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1312691640129" ID="ID_661662396" MODIFIED="1312691742800" TEXT="u8 - kernel space"/>
+<node CREATED="1312691755425" MODIFIED="1312691763234" TEXT="__8 - user space"/>
+<node CREATED="1312691769346" ID="ID_947196705" MODIFIED="1312691835978" TEXT="uint8_t - c99">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1395826578792" FOLDED="true" ID="ID_921166443" MODIFIED="1400057883655" POSITION="right" TEXT="Time Management">
+<node CREATED="1312767433335" ID="ID_1342802873" MODIFIED="1400052042335" TEXT="Timekeeping">
+<node CREATED="1400036784667" ID="ID_1952949495" MODIFIED="1400036972101" TEXT="Tick">
+<node CREATED="1400036905957" ID="ID_1543380264" MODIFIED="1400036966484">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>Tick</b></i></font>&#160;-&#160;Because the kernel knows the preprogrammed tick rate, it knows <font color="#0000ff"><i><b>the time between any two successive timer interrupts</b></i></font>. This period is called a tick and is equal to 1/(tick rate) seconds.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1400036802691" ID="ID_1776182883" MODIFIED="1400037337755">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>Tick Rate</b></i></font>&#160;- The system timer goes off (often called hitting or popping) at a <font color="#0000ff"><i><b>preprogrammed frequency</b></i></font>, called the tick rate. When the system timer goes off, it issues an interrupt that the kernel handles via a special interrupt handler.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1313568702623" ID="ID_1200914499" MODIFIED="1400047042259" TEXT="Jiffies">
+<node CREATED="1400037162269" FOLDED="true" ID="ID_1935548203" MODIFIED="1400052261060">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>Jiffies</b></i></font>&#160;- The global variable jiffies holds <font color="#0000ff"><i><b>the number of ticks </b></i></font>that have occurred since the system booted.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1312767441597" FOLDED="true" ID="ID_651095464" MODIFIED="1400052152900">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      extern unsigned long volatile <font color="#ff0000"><i><b>jiffies</b></i></font>;
+    </p>
+    <p>
+      extern u64 jiffies_64;
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1313581730626" ID="ID_1289200853" MODIFIED="1400052139129" TEXT="The volatile keyword  instructs the compiler to reload the variable &#xa;on each access from main memory and  never alias the variable&#x2019;s&#xa; value in a register, guaranteeing it works as expected.">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1312767512485" FOLDED="true" ID="ID_945179317" MODIFIED="1400052150395" TEXT="time_after(unknown, known)/time_after_eq(unknown, known)">
+<node CREATED="1313567873966" ID="ID_1904233480" MODIFIED="1400045905781">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      It returns true if time unknown is after time known;
+    </p>
+    <p>
+      otherwise, it returns false.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1400045899686" ID="ID_596090572" MODIFIED="1400045901978" TEXT="The unknown parameter is typically jiffies and the known parameter is the value against which you want to compare."/>
+</node>
+<node CREATED="1312767533428" ID="ID_467608897" MODIFIED="1400046231401" TEXT="time_before(unknown, known)/time_before_eq(unknown, known)"/>
+</node>
+<node CREATED="1312767450789" ID="ID_1346993751" MODIFIED="1400052082238">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>HZ&#160;- the tick rate</b></i></font>
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1313569598805" ID="ID_493492883" MODIFIED="1400037298178" TEXT="(seconds * HZ) - converts from seconds to a unit of jiffies"/>
+<node CREATED="1313569607643" ID="ID_588824114" MODIFIED="1400037241605" TEXT="(jiffies / HZ) -  converts from jiffies to seconds"/>
+</node>
+</node>
+<node CREATED="1313568743726" ID="ID_1763092405" MODIFIED="1400047048841" TEXT="Wall Time">
+<node CREATED="1400047000291" ID="ID_1805787748" MODIFIED="1400047058206">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct timespec <font color="#ff0000"><i><b>xtime</b></i></font>;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1312767668597" ID="ID_1244320065" MODIFIED="1400049512902" TEXT="current_kernel_time(void)"/>
+<node CREATED="1312767646877" ID="ID_1888919992" MODIFIED="1400049532223" TEXT="sys_gettimeofday(tv, tz)"/>
+</node>
+</node>
+<node CREATED="1312767709333" ID="ID_1074813071" MODIFIED="1400052043965" TEXT="Delays">
+<node CREATED="1312767988445" ID="ID_1114074656" MODIFIED="1400051297511" TEXT="ndelay()/udelay()/mdelay()"/>
+<node CREATED="1312768009332" ID="ID_1588540429" MODIFIED="1400051306319" TEXT="msleep()/msleep_interruptible()/ssleep()"/>
+<node CREATED="1312767846189" ID="ID_1842872236" MODIFIED="1313587666213">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      set_current_state(TASK_INTERRUPTIBLE)
+    </p>
+    <p>
+      schedule_timeout (delay)
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1312767763375" ID="ID_1945743865" MODIFIED="1313587697009" TEXT="wait_event_interruptible_timeout()">
+<icon BUILTIN="button_cancel"/>
+</node>
+</node>
+<node CREATED="1312768068205" ID="ID_1595010064" MODIFIED="1400052344536" TEXT="Timers">
+<node CREATED="1400050450918" ID="ID_74199820" MODIFIED="1400051878843">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The kernel executes timers in bottom-half context, as <font color="#ff0000"><i><b>softirqs</b></i></font>, after the timer interrupt completes.
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1400050184538" ID="ID_1227922815" MODIFIED="1400051870655">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct timer_list my_timer;
+    </p>
+    <p>
+      <font color="#0000ff"><i><b>init_timer</b></i></font>(&amp;my_timer);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      /* ...Now you fill out the remaining values as required... */
+    </p>
+    <p>
+      my_timer.expires = jiffies + delay;&#160;&#160;&#160;&#160;/* timer expires in delay ticks */
+    </p>
+    <p>
+      my_timer.data = 0;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* zero is passed to the timer handler */
+    </p>
+    <p>
+      my_timer.function = <font color="#0000ff"><i><b>my_function</b></i></font>;&#160;&#160;&#160;&#160;/* function to run when timer expires */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font color="#0000ff"><i><b>add_timer</b></i></font>(&amp;my_timer)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1312768241333" ID="ID_632285293" MODIFIED="1313576252173" TEXT="mod_timer(&amp;my_timer, jiffies + new_delay)"/>
+<node CREATED="1312768246013" FOLDED="true" ID="ID_486847998" MODIFIED="1400050749354" TEXT="del_timer(&amp;my_timer)/del_timer_sync(&amp;my_timer)">
+<node CREATED="1313576447614" ID="ID_1092799931" MODIFIED="1400050383612" TEXT=" Note that you do not need  to call this for timers that have expired &#xa;because they are automatically deactivated.">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node CREATED="1400047464659" ID="ID_310636735" MODIFIED="1400052331747" TEXT="Timer Interrupt Handler">
+<node CREATED="1400047478022" ID="ID_382459014" MODIFIED="1400047491077" TEXT="architecture-dependent routine">
+<node CREATED="1400047505846" ID="ID_33453718" MODIFIED="1400047548621" TEXT="Obtain the xtime_lock lock, which protects access to jiffies_64 and the wall time value,xtime.">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1400047516821" ID="ID_28370288" MODIFIED="1400047552053" TEXT="Acknowledge or reset the system timer as required.">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1400047526588" ID="ID_1113426593" MODIFIED="1400047554831" TEXT="Periodically save the updated wall time to the real time clock.">
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1400047536180" ID="ID_1632631020" MODIFIED="1400047557299" TEXT="Call the architecture-independent timer routine,tick_periodic().">
+<icon BUILTIN="full-4"/>
+</node>
+</node>
+<node CREATED="1400047493149" ID="ID_346033740" MODIFIED="1400047504575" TEXT="architecture-independent routine">
+<node CREATED="1400047559428" ID="ID_1050769193" MODIFIED="1400047722631" TEXT="Increment the jiffies_64 count by one. (This is safe, even on 32-bit architectures, because the xtime_lock lock was previously obtained.)">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1400047570307" ID="ID_1647697094" MODIFIED="1400047725231" TEXT="Update resource usages, such as consumed system and user time, for the currently running process.">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1400047579578" ID="ID_220548118" MODIFIED="1400051977784" TEXT="Run any dynamic timers that have expired">
+<arrowlink DESTINATION="ID_1595010064" ENDARROW="Default" ENDINCLINATION="648;0;" ID="Arrow_ID_1821780361" STARTARROW="None" STARTINCLINATION="648;0;"/>
+<icon BUILTIN="full-3"/>
+</node>
+<node CREATED="1400047589490" ID="ID_933116361" MODIFIED="1400049122121">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Execute <font color="#ff0000"><i><b>scheduler_tick() </b></i></font><font color="#000000">,decrements the currently running process&#8217;s timeslice and sets need_resched if needed.</font>
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="full-4"/>
+</node>
+<node CREATED="1400047603426" ID="ID_233713015" MODIFIED="1400047737292" TEXT="Update the wall time, which is stored in xtime.">
+<icon BUILTIN="full-5"/>
+</node>
+<node CREATED="1400047613162" ID="ID_1581118990" MODIFIED="1400047742466" TEXT="Calculate the infamous load average.">
+<icon BUILTIN="full-6"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1395370144693" FOLDED="true" ID="ID_1250662614" MODIFIED="1400052485761" POSITION="right" TEXT="Modules">
 <node CREATED="1395370155744" ID="ID_1160538326" MODIFIED="1395370183920" TEXT="include/linux/module.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -175,128 +473,5 @@
 </node>
 </node>
 </node>
-<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1398846209648" POSITION="right" TEXT="Data Types">
-<node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1312691492652" TEXT="Standard C Types"/>
-<node CREATED="1312691530047" ID="ID_139786634" MODIFIED="1395844841293" TEXT="Linux Types">
-<node CREATED="1312691629475" MODIFIED="1312691637595" TEXT="&lt;linux/types.h&gt;"/>
-<node CREATED="1312691640129" MODIFIED="1312691742800" TEXT="u8 - kernel space"/>
-<node CREATED="1312691755425" MODIFIED="1312691763234" TEXT="__8 - user space"/>
-<node CREATED="1312691769346" MODIFIED="1312691835978" TEXT="uint8_t - c99">
-<icon BUILTIN="button_ok"/>
-</node>
-</node>
-<node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1312691616837" TEXT="Typedef Types"/>
-</node>
-<node CREATED="1395826578792" FOLDED="true" ID="ID_921166443" MODIFIED="1398846212403" POSITION="right" TEXT="Time">
-<node CREATED="1312767433335" ID="ID_1342802873" MODIFIED="1395844881962" TEXT="Timekeeping">
-<node CREATED="1313568702623" FOLDED="true" ID="ID_1200914499" MODIFIED="1395826563394" TEXT="jiffies">
-<node CREATED="1312767441597" FOLDED="true" ID="ID_651095464" MODIFIED="1395826563394">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      extern unsigned long volatile jiffies;
-    </p>
-    <p>
-      extern u64 jiffies_64;
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1313581730626" ID="ID_1289200853" MODIFIED="1313581803015" TEXT="The volatile keyword  instructs the compiler to reload the variable &#xa;on each access from main memory and  never alias the variable&#x2019;s&#xa; value in a register, guaranteeing it works as expected.">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312767450789" FOLDED="true" ID="ID_1346993751" MODIFIED="1395826563394" TEXT="HZ - the tick rate">
-<node CREATED="1313569598805" FOLDED="true" ID="ID_493492883" MODIFIED="1395826563394" TEXT="(seconds * HZ)">
-<node CREATED="1313569638453" ID="ID_60411693" MODIFIED="1313569655261" TEXT="converts from seconds to  a unit of jiffies">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1313569607643" FOLDED="true" ID="ID_588824114" MODIFIED="1395826563394" TEXT="(jiffies / HZ)">
-<node CREATED="1313569650254" ID="ID_337942877" MODIFIED="1313569659318" TEXT=" converts from jiffies to seconds">
-<icon BUILTIN="idea"/>
-</node>
-</node>
-</node>
-<node CREATED="1312767512485" FOLDED="true" ID="ID_945179317" MODIFIED="1395826563394" TEXT="time_after(unknown, known)/time_after_eq(unknown, known)">
-<node CREATED="1313567873966" ID="ID_1904233480" MODIFIED="1313567909234">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      It returns true if time unknown is after time known;
-    </p>
-    <p>
-      otherwise, it returns false.
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="idea"/>
-</node>
-</node>
-<node CREATED="1312767533428" ID="ID_467608897" MODIFIED="1312767556896" TEXT="time_before()/time_before_eq()"/>
-</node>
-<node CREATED="1313568743726" FOLDED="true" ID="ID_1763092405" MODIFIED="1395826563395" TEXT="time">
-<node CREATED="1313574133366" ID="ID_1050807941" MODIFIED="1313575007253" TEXT="struct timespec xtime;"/>
-<node CREATED="1312767668597" ID="ID_1244320065" MODIFIED="1313575007254" TEXT="struct timespec current_kernel_time(void)">
-<arrowlink DESTINATION="ID_1050807941" ENDARROW="Default" ENDINCLINATION="110;0;" ID="Arrow_ID_1378696591" STARTARROW="None" STARTINCLINATION="110;0;"/>
-</node>
-<node CREATED="1312767646877" ID="ID_1888919992" MODIFIED="1312767651553" TEXT="do_gettimeofday(struct timeval *tv)"/>
-</node>
-</node>
-<node CREATED="1312767709333" FOLDED="true" ID="ID_1074813071" MODIFIED="1395844915733" TEXT="Delays">
-<node CREATED="1312767846189" ID="ID_1842872236" MODIFIED="1313587666213">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      set_current_state(TASK_INTERRUPTIBLE)
-    </p>
-    <p>
-      schedule_timeout (delay)
-    </p>
-  </body>
-</html></richcontent>
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312767763375" ID="ID_1945743865" MODIFIED="1313587697009" TEXT="wait_event_interruptible_timeout()">
-<icon BUILTIN="button_cancel"/>
-</node>
-<node CREATED="1312767988445" ID="ID_1114074656" MODIFIED="1312768000881" TEXT="ndelay()/udelay()/mdelay()"/>
-<node CREATED="1312768009332" MODIFIED="1312768031105" TEXT="msleep()/msleep_interruptible()/ssleep()"/>
-</node>
-<node CREATED="1312768068205" FOLDED="true" ID="ID_1595010064" MODIFIED="1395844913162" TEXT="Timers">
-<node CREATED="1313575800694" ID="ID_1400341731" MODIFIED="1395844908507" TEXT="init">
-<node CREATED="1312768132044" ID="ID_1394350005" MODIFIED="1313575720928" TEXT="struct timer_list my_timer;"/>
-<node CREATED="1312768150028" FOLDED="true" ID="ID_90408511" MODIFIED="1395826563395" TEXT="static">
-<node CREATED="1312768175926" ID="ID_327647491" MODIFIED="1312768833864" TEXT="TIMER_INITIALIZER()"/>
-</node>
-<node CREATED="1312768193949" FOLDED="true" ID="ID_94934256" MODIFIED="1395826563395" TEXT="dynamic">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1312768215869" ID="ID_311491922" MODIFIED="1313575756424" TEXT="init_timer(&amp;my_timer)"/>
-</node>
-</node>
-<node CREATED="1313575996528" FOLDED="true" ID="ID_812757674" MODIFIED="1395826563396" TEXT="...Now you fill out the remaining values as required...">
-<icon BUILTIN="pencil"/>
-<node CREATED="1313576152758" ID="ID_411815182" MODIFIED="1313576165448" TEXT="my_timer.expires = jiffies + delay;    /* timer expires in delay ticks */ &#xa;my_timer.data = 0;                     /* zero is passed to the timer handler */ &#xa;my_timer.function = my_function;       /* function to run when timer expires */"/>
-</node>
-<node CREATED="1312768237740" ID="ID_1014429417" MODIFIED="1313576318136" TEXT="add_timer(&amp;my_timer)">
-<icon BUILTIN="button_ok"/>
-</node>
-<node CREATED="1312768241333" ID="ID_632285293" MODIFIED="1313576252173" TEXT="mod_timer(&amp;my_timer, jiffies + new_delay)"/>
-<node CREATED="1312768246013" FOLDED="true" ID="ID_486847998" MODIFIED="1395826563396" TEXT="del_timer(&amp;my_timer)/del_timer_sync(&amp;my_timer)">
-<node CREATED="1313576447614" ID="ID_1092799931" MODIFIED="1313576492621" TEXT=" Note that you do not need  to call this for timers that have expired &#xa;because they are automatically deactivated.">
-<icon BUILTIN="messagebox_warning"/>
-</node>
-</node>
-</node>
-</node>
-<node CREATED="1398823196079" ID="ID_651691983" MODIFIED="1398846193215" POSITION="right" TEXT="running system directories"/>
 </node>
 </map>
