@@ -61,7 +61,7 @@
 </node>
 <node CREATED="1398824105885" ID="ID_951009357" MODIFIED="1398824111724" TEXT="installing the new kernel"/>
 </node>
-<node CREATED="1398823196079" FOLDED="true" ID="ID_651691983" MODIFIED="1400057870623" POSITION="right" TEXT="Linux Directory Structure">
+<node CREATED="1398823196079" FOLDED="true" ID="ID_651691983" MODIFIED="1400058530816" POSITION="right" TEXT="Linux Directory Structure">
 <node CREATED="1400054097453" ID="ID_1080980842" MODIFIED="1400057391354" TEXT="/bin - Essential command binaries, e.g., cat, ls, cp."/>
 <node CREATED="1400054112093" ID="ID_165400969" MODIFIED="1400057043914" TEXT="/boot - Boot loader files, e.g., kernels, initrd."/>
 <node CREATED="1400054114756" ID="ID_840301259" MODIFIED="1400057068942" TEXT="/dev - Essential devices, e.g., /dev/null."/>
@@ -98,10 +98,10 @@
 <node CREATED="1400055486282" ID="ID_1458917537" MODIFIED="1400057331259" TEXT="/var/tmp - Temporary files to be preserved between reboots."/>
 </node>
 </node>
-<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1400057882034" POSITION="right" TEXT="Data Types">
-<node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1312691492652" TEXT="Standard C Types"/>
-<node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400052455713" TEXT="Typedef Types"/>
-<node CREATED="1312691530047" ID="ID_139786634" MODIFIED="1395844841293" TEXT="Linux Types">
+<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1400665189385" POSITION="right" TEXT="Data Structure">
+<node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1400642361080" TEXT="Standard C Types"/>
+<node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400642367571" TEXT="Typedef Types"/>
+<node CREATED="1312691530047" ID="ID_139786634" MODIFIED="1400642372284" TEXT="Linux Types">
 <node CREATED="1312691629475" ID="ID_1023963558" MODIFIED="1400052418519" TEXT="&lt;linux/types.h&gt;">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -110,6 +110,58 @@
 <node CREATED="1312691755425" MODIFIED="1312691763234" TEXT="__8 - user space"/>
 <node CREATED="1312691769346" ID="ID_947196705" MODIFIED="1312691835978" TEXT="uint8_t - c99">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1313652215544" ID="ID_583946685" MODIFIED="1400665188276" TEXT="Per-CPU">
+<node CREATED="1313652331271" ID="ID_1228374438" MODIFIED="1400642265204" TEXT="static">
+<node CREATED="1313652237551" ID="ID_160468348" MODIFIED="1313652251421">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      DEFINE_PER_CPU(type, name);
+    </p>
+    <p>
+      DECLARE_PER_CPU(type, name);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1313652266671" ID="ID_519897146" MODIFIED="1313652781978" TEXT="get_cpu_var(name)/per_cpu(name, cpu)&#xa;put_cpu_var(name)"/>
+</node>
+<node CREATED="1313652340838" ID="ID_1807251563" MODIFIED="1400642270586" TEXT="dynamic">
+<node CREATED="1313652366878" ID="ID_609828717" MODIFIED="1313652800702">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      alloc_percpu(type)/__alloc_percpu(size_t size, size_t align)
+    </p>
+    <p>
+      free_percpu(const void *)
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1313652399199" ID="ID_945685463" MODIFIED="1313652768318">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      get_cpu_ptr(ptr)/per_cpu_ptr(ptr, cpu)
+    </p>
+    <p>
+      put_cpu_ptr(ptr)
+    </p>
+  </body>
+</html></richcontent>
+</node>
 </node>
 </node>
 </node>
@@ -126,8 +178,7 @@
       <font color="#0000ff"><i><b>Tick</b></i></font>&#160;-&#160;Because the kernel knows the preprogrammed tick rate, it knows <font color="#0000ff"><i><b>the time between any two successive timer interrupts</b></i></font>. This period is called a tick and is equal to 1/(tick rate) seconds.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1400036802691" ID="ID_1776182883" MODIFIED="1400037337755">
 <richcontent TYPE="NODE"><html>
@@ -139,8 +190,7 @@
       <font color="#0000ff"><i><b>Tick Rate</b></i></font>&#160;- The system timer goes off (often called hitting or popping) at a <font color="#0000ff"><i><b>preprogrammed frequency</b></i></font>, called the tick rate. When the system timer goes off, it issues an interrupt that the kernel handles via a special interrupt handler.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1313568702623" ID="ID_1200914499" MODIFIED="1400047042259" TEXT="Jiffies">
@@ -154,8 +204,7 @@
       <font color="#0000ff"><i><b>Jiffies</b></i></font>&#160;- The global variable jiffies holds <font color="#0000ff"><i><b>the number of ticks </b></i></font>that have occurred since the system booted.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1312767441597" FOLDED="true" ID="ID_651095464" MODIFIED="1400052152900">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -204,8 +253,7 @@
       <font color="#0000ff"><i><b>HZ&#160;- the tick rate</b></i></font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1313569598805" ID="ID_493492883" MODIFIED="1400037298178" TEXT="(seconds * HZ) - converts from seconds to a unit of jiffies"/>
 <node CREATED="1313569607643" ID="ID_588824114" MODIFIED="1400037241605" TEXT="(jiffies / HZ) -  converts from jiffies to seconds"/>
 </node>
@@ -221,8 +269,7 @@
       struct timespec <font color="#ff0000"><i><b>xtime</b></i></font>;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312767668597" ID="ID_1244320065" MODIFIED="1400049512902" TEXT="current_kernel_time(void)"/>
 <node CREATED="1312767646877" ID="ID_1888919992" MODIFIED="1400049532223" TEXT="sys_gettimeofday(tv, tz)"/>
@@ -262,8 +309,7 @@
       The kernel executes timers in bottom-half context, as <font color="#ff0000"><i><b>softirqs</b></i></font>, after the timer interrupt completes.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1400050184538" ID="ID_1227922815" MODIFIED="1400051870655">
@@ -300,8 +346,7 @@
       <font color="#0000ff"><i><b>add_timer</b></i></font>(&amp;my_timer)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312768241333" ID="ID_632285293" MODIFIED="1313576252173" TEXT="mod_timer(&amp;my_timer, jiffies + new_delay)"/>
 <node CREATED="1312768246013" FOLDED="true" ID="ID_486847998" MODIFIED="1400050749354" TEXT="del_timer(&amp;my_timer)/del_timer_sync(&amp;my_timer)">
@@ -346,8 +391,7 @@
       Execute <font color="#ff0000"><i><b>scheduler_tick() </b></i></font><font color="#000000">,decrements the currently running process&#8217;s timeslice and sets need_resched if needed.</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-4"/>
 </node>
 <node CREATED="1400047603426" ID="ID_233713015" MODIFIED="1400047737292" TEXT="Update the wall time, which is stored in xtime.">
