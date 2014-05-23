@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1366184501690" ID="ID_106286176" MODIFIED="1392952082312" TEXT="File System">
+<node CREATED="1366184501690" ID="ID_106286176" MODIFIED="1400814934968" TEXT="File System">
 <node CREATED="1369634187531" ID="ID_820278448" MODIFIED="1390808571182" POSITION="right">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -19,7 +19,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1366189248236" ID="ID_1806333498" MODIFIED="1392952084147" POSITION="right" TEXT="The Common File Model">
+<node CREATED="1366189248236" FOLDED="true" ID="ID_1806333498" MODIFIED="1400814934966" POSITION="right" TEXT="The Common File Model">
 <node CREATED="1390808647367" ID="ID_200050510" MODIFIED="1390808688107">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -329,8 +329,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1370239154930" ID="ID_282454318" MODIFIED="1392952086383" POSITION="right" TEXT="Filesystem Types">
-<node CREATED="1366185168265" ID="ID_1445111663" MODIFIED="1392952088124">
+<node CREATED="1370239154930" FOLDED="true" ID="ID_282454318" MODIFIED="1400814934967" POSITION="right" TEXT="Filesystem Types">
+<node CREATED="1366185168265" FOLDED="true" ID="ID_1445111663" MODIFIED="1400814933145">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -926,8 +926,7 @@
       Derive from the offset <span class="docEmphasis">f</span>&#160;the <i><b>file block number</b></i>&#160;the index of the block that contains the character at offset <span class="docEmphasis">f</span>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-1"/>
 </node>
 <node CREATED="1392796677932" ID="ID_422838152" MODIFIED="1392796808621">
@@ -940,8 +939,7 @@
       Translate the file block number to the corresponding <i><b>logical block number</b></i>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-2"/>
 </node>
 <node CREATED="1392797037480" ID="ID_98169533" MODIFIED="1392797056820">
@@ -952,8 +950,7 @@
   <body>
     <img src="kernel/fs/ext2-file-data-blocks.jpg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -1054,8 +1051,7 @@
       The goal of a <span class="docEmphasis"><i><b>journaling filesystem</b></i></span>&#160;is to avoid running time-consuming consistency checks on the whole filesystem by looking instead in a special disk area that contains the most recent disk write operations named <span class="docEmphasis"><i><b>journal</b></i></span>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392949085322" ID="ID_1440452817" MODIFIED="1392949578186">
 <richcontent TYPE="NODE"><html>
@@ -1067,8 +1063,7 @@
       First, a copy of the blocks to be <i><b>written is stored in the journal</b></i>;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-1"/>
 </node>
 <node CREATED="1392949524834" ID="ID_567409617" MODIFIED="1392949590017">
@@ -1081,8 +1076,7 @@
       then, when the I/O data transfer to the journal is completed (in short, data is committed to the journal), the blocks are <i><b>written in the filesystem</b></i>. When the I/O data transfer to the filesystem terminates (data is committed to the filesystem), the copies of the blocks in the journal are discarded.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-2"/>
 </node>
 <node CREATED="1392949631950" FOLDED="true" ID="ID_1190283307" MODIFIED="1392952082305" TEXT="It ensures consistency only at the system call level.">
@@ -1099,8 +1093,7 @@
       Either the copies of the blocks relative to the high-level change are missing from the journal or they are incomplete; in both cases, <i>e2fsck</i>&#160; ignores them.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392950748613" ID="ID_1406962962" MODIFIED="1392950775431">
 <richcontent TYPE="NODE"><html>
@@ -1115,8 +1108,7 @@
       The copies of the blocks are valid, and <i>e2fsck</i>&#160;writes them into the filesystem.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1392950812802" FOLDED="true" ID="ID_2071563" MODIFIED="1392952082305" TEXT="journaling modes">
@@ -1134,7 +1126,7 @@
 <node CREATED="1366188682100" ID="ID_333407511" MODIFIED="1366188750105" TEXT="Network filesystems (NFS)"/>
 <node CREATED="1366188692444" ID="ID_1349695691" MODIFIED="1366188743974" TEXT="Special filesystems (/proc)"/>
 </node>
-<node CREATED="1390462557543" FOLDED="true" ID="ID_1710226371" MODIFIED="1392952082307" POSITION="right">
+<node CREATED="1390462557543" FOLDED="true" ID="ID_1710226371" MODIFIED="1400814934967" POSITION="right">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1327,7 +1319,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1390466308341" FOLDED="true" ID="ID_1895733499" MODIFIED="1392952082311" POSITION="right" TEXT="Mounting Filesystem">
+<node CREATED="1390466308341" FOLDED="true" ID="ID_1895733499" MODIFIED="1400814934967" POSITION="right" TEXT="Mounting Filesystem">
 <node CREATED="1390466320756" FOLDED="true" ID="ID_1467198402" MODIFIED="1392952082308" TEXT="Mounting a Generic Filesystem">
 <node CREATED="1390529852805" ID="ID_1289092885" MODIFIED="1390539601224" TEXT="fs/mount.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -1817,7 +1809,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1390806941757" FOLDED="true" ID="ID_1020061402" MODIFIED="1392952082312" POSITION="right" TEXT="VFS System Calls">
+<node CREATED="1390806941757" FOLDED="true" ID="ID_1020061402" MODIFIED="1400814934968" POSITION="right" TEXT="VFS System Calls">
 <node CREATED="1390808421418" ID="ID_1535044358" MODIFIED="1390808427617" TEXT="$ cp /floppy/TEST /tmp/test">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 </node>

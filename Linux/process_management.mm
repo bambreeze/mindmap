@@ -148,8 +148,7 @@
       int exit_state;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398838675735" ID="ID_326758892" MODIFIED="1398838698556">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -235,8 +234,7 @@
       #define TASK_STATE_TO_CHAR_STR &quot;RSDTtZXxKWP&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1398833005312" ID="ID_1677865818" MODIFIED="1398833036961">
 <richcontent TYPE="NODE"><html>
@@ -259,8 +257,7 @@
       struct list_head tasks;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1316843734093" ID="ID_803741408" MODIFIED="1316843763407">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -283,8 +280,7 @@
       <b>init_task</b>&#160;- Initial task structure
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398835951861" ID="ID_712481122" MODIFIED="1398835977845" TEXT="arch/x86/kernel/init_task.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -301,8 +297,7 @@
       <b>for_each_process(p)</b>&#160;- scans the whole process list
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1398848160104">
@@ -347,8 +342,7 @@
       struct pid_link pids[PIDTYPE_MAX];
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393232863003" ID="ID_819099011" MODIFIED="1393232869723" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -420,8 +414,7 @@
       struct sighand_struct *sighand;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1393232241842" TEXT="include/linux/sched.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -460,8 +453,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1365580739916" ID="ID_462838517" MODIFIED="1398847523537">
 <richcontent TYPE="NODE"><html>
@@ -488,8 +480,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1366168611255" ID="ID_682990093" MODIFIED="1398847580252" TEXT="include/linux/signal.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -537,8 +528,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -600,8 +590,7 @@
       ...
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -616,8 +605,7 @@
       Process creation&#160;in Unix is unique. Most operating systems implement a spawn&#160;mechanism to<i><b>&#160;<font color="#0000ff">create&#160;a new process in a new address space, read in an executable, and begin executing it</font></b></i><font color="#0000ff">.</font>&#160;Unix takes the unusual approach of separating these steps into two distinct functions: fork()and exec().
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1398840885045" FOLDED="true" ID="ID_1909904793" MODIFIED="1399210038160">
 <richcontent TYPE="NODE"><html>
@@ -635,8 +623,7 @@
       The only <font color="#0000ff"><i><b>overhead</b></i></font>&#160;incurred by fork() is the duplication of the parent&#8217;s <i><b>page tables</b></i>&#160;and the creation of a unique <i><b>process descriptor</b></i>&#160;for the child.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398840297436" ID="ID_126426966" MODIFIED="1398840304498" TEXT="kernel/fork.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -673,8 +660,7 @@
       The second function,<font color="#ff0000"><i><b>exec()</b></i></font>, loads a new executable into the <i><b>address space</b></i>&#160;and begins executing it. In another world, it replace the execution context of a process with a new context described by an executable file.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1395124649748" ID="ID_1916206700" MODIFIED="1398841580141" TEXT="executable file">
 <node CREATED="1395124664348" ID="ID_478705659" MODIFIED="1395124687357" TEXT="object code"/>
 <node CREATED="1395124688411" ID="ID_1804443584" MODIFIED="1395124699036" TEXT="data"/>
@@ -708,8 +694,7 @@
       When a process terminates, the kernel <i><b>releases the resources</b></i>&#160; owned by the process and <i><b>notifies the child&#8217;s parent</b></i>&#160;of its demise. Processes ultimately die forcefully or intentionally via <font color="#ff0000"><i><b>exit()</b></i></font>, and parents glean information about their deceased children via the <font color="#ff0000"><i><b>wait()</b></i></font>&#160; family of system calls.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398844773298" ID="ID_1320983370" MODIFIED="1398844806483" TEXT="kernel/exit.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -730,12 +715,11 @@
       &#160;&#160;&#160;&#160;exit_notify()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1399963949355" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1400743915984" POSITION="right" TEXT="Process Contexts">
 <node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -769,8 +753,7 @@
       Process context is the mode of operation the kernel is in while it is executing on behalf of a process&#8212;for example, executing a <font color="#0000ff"><i><b>system call</b></i></font>&#160;or running a <font color="#0000ff"><i><b>kernel thread</b></i></font>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399274205491" ID="ID_1832524809" MODIFIED="1399274258591">
 <richcontent TYPE="NODE"><html>
@@ -782,11 +765,10 @@
       In process context, the <font color="#0000ff"><i><b>current</b></i></font>&#160;macro points to the associated task. Furthermore, because a process is coupled to the kernel in process context, process context can <font color="#0000ff"><i><b>sleep</b></i></font>&#160;or otherwise invoke the <font color="#0000ff"><i><b>scheduler</b></i></font>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1398837072884" FOLDED="true" ID="ID_1220407681" MODIFIED="1399282103568">
+<node CREATED="1398837072884" FOLDED="true" ID="ID_1220407681" MODIFIED="1400743909567">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -799,17 +781,42 @@
 </html></richcontent>
 <node CREATED="1399274379116" ID="ID_1180042969" MODIFIED="1399274390940" TEXT="Interrupt context cannot sleep&#x2014;how would it ever reschedule?"/>
 </node>
-<node CREATED="1398845651802" ID="ID_57271949" MODIFIED="1398846022052">
+<node CREATED="1398845651802" FOLDED="true" ID="ID_57271949" MODIFIED="1400743911618">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      The significant difference between <i><b>kernel threads</b></i>&#160;and normal processes is that kernel threads do not have an address space. (Their mm pointer, which points at their address space, is NULL.) For example, when idle, it turns out that the kernel is executing an <i><b>idle process</b></i>&#160; in <i><b>process context</b></i>&#160;in the <i><b>kernel</b></i>.
+      The significant difference between <b><i>kernel threads</i></b>&#160;and normal processes is that kernel threads do not have an address space. (Their mm pointer, which points at their address space, is NULL.) For example, when idle, it turns out that the kernel is executing an <b><i>idle process </i></b>in <b><i>process context</i></b>&#160;in the <b><i>kernel</i></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1400743393763" ID="ID_391716266" MODIFIED="1400743514373">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Kernel threads do not have a process address space and therefore do not have an associated memory descriptor.Thus, the mm field of a kernel thread&#8217;s process descriptor is NULL. This is the definition of a kernel thread&#8212;processes that have no user context.
     </p>
   </body>
 </html></richcontent>
+</node>
+<node CREATED="1400743825871" ID="ID_112340146" MODIFIED="1400743856648">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      when a kernel thread is scheduled, the kernel notices that mm is NULL and keeps the previous process&#8217;s address space loaded.The kernel then updates the active_mm field of the kernel thread&#8217;s process descriptor to refer to the previous process&#8217;s memory descriptor.The kernel thread can then use the previous process&#8217;s page tables as needed.
+    </p>
+  </body>
+</html></richcontent>
+</node>
 </node>
 </node>
 <node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1399963951083" POSITION="right" TEXT="Process Scheduling">
@@ -826,8 +833,7 @@
       <font color="#0000ff"><i><b>nice value</b></i></font>, a number from &#8211;20 to +19 with a default of 0. Larger nice values correspond to a lower priority&#8212;you are being &#8220;nice&#8221; to the other processes on the system. By default, this means the &#8211;20 to +19 nice range maps directly onto the priority space from 100 to 139.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-1"/>
 </node>
 <node CREATED="1399184811160" ID="ID_836725979" MODIFIED="1399184835233">
@@ -840,8 +846,7 @@
       <font color="#0000ff"><i><b>real-time priority</b></i></font>, the values are configurable, but by default range from 0 to 99, inclusive. Opposite from nice values, higher real-time priority values correspond to a greater priority.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="full-2"/>
 </node>
 </node>
@@ -880,8 +885,7 @@
       <font color="#000000"><i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </i><b>switch_to()</b></font><b><font color="#0000ff"><i>&#160; </i></font></b><i><font color="#000000">&#160;&#160;&#160;&#160;/* switch the processor state, including stack and registers */</font></i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399196188846" ID="ID_1207348297" MODIFIED="1399196256135" TEXT="Normal Scheduling Policies">
 <node CREATED="1399189020892" ID="ID_951127327" MODIFIED="1399189295905" TEXT="kernel/sched/fair.c">
@@ -910,8 +914,7 @@
       check <font color="#0000ff"><i><b>need_resched</b></i></font>&#160;flag
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399193998293" ID="ID_1527914031" MODIFIED="1399194303808" TEXT="user preemption">
 <node CREATED="1399194022607" ID="ID_1711230004" MODIFIED="1399194040679" TEXT="When returning to user-space from a system call"/>
@@ -925,128 +928,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1399963985721" POSITION="right" TEXT="System Call">
-<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399962878636">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#0000ff"><i><b>System Calls</b></i></font>&#160;is an explicit request to the kernel made via a software interrupt
-    </p>
-  </body>
-</html>
-</richcontent>
-<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1399962864198">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#0000ff"><i><b>POSIX APIs</b></i></font>&#160;is a function definition that specifies how to obtain a given service.
-    </p>
-  </body>
-</html>
-</richcontent>
-<font NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1399258230564" ID="ID_1791705159" MODIFIED="1399962876015">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <font color="#0000ff"><i><b>C library</b></i></font>&#160;implements the main API on Unix systems, including the standard C library and the system call interface.
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-</node>
-<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1395844951627">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <img src="kernel/syscall/invoking_system_call.png" />
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358755437681" ID="ID_175528966" MODIFIED="1395844966215" TEXT="__kernel_vsyscall">
-<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1399962942876" TEXT="int $0x80">
-<icon BUILTIN="button_cancel"/>
-<node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      start_kernel()&#160;&#160;&#160;&#160;// init/main.c
-    </p>
-    <p>
-      &#160;&#160;trap_init()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/traps.c
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;set_system_trap_gate(SYSCALL_VECTOR, &amp;system_call);
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358755781853" ID="ID_884374445" MODIFIED="1358931016215">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      system_call&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/entry_32.S
-    </p>
-    <p>
-      &#160;&#160;SAVE_ALL
-    </p>
-    <p>
-      &#160;&#160;call *sys_call_table(,%eax,4)
-    </p>
-    <p>
-      &#160;&#160;restore_all
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1399962940038" TEXT="sysenter">
-<icon BUILTIN="button_ok"/>
-<node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      enable_sep_cpu()
-    </p>
-    <p>
-      &#160;&#160;SYSENTER_CS_MSR&#160;&#160;&#160;= __KERNEL_CS
-    </p>
-    <p>
-      &#160;&#160;SYSENTER_EIP_MSR&#160;&#160;= sysenter_entry()
-    </p>
-    <p>
-      &#160;&#160;SYSENTER_ESP_MSR = local TSS
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1399962937767" TEXT="sysenter_entry()  // similar to system_call"/>
-</node>
-</node>
-</node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1399963984197" POSITION="right" TEXT="Interrupts and Exceptions">
+<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1400828136228" POSITION="right" TEXT="Interrupts and Exceptions">
 <node CREATED="1316769068729" ID="ID_1349911850" MODIFIED="1399620625601" TEXT="Definition">
 <node CREATED="1316766926536" ID="ID_1498465646" MODIFIED="1399620628022" TEXT="Interrupts (Asynchronous, generated by hardware)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
@@ -1162,8 +1044,7 @@
       } ____cacheline_internodealigned_in_smp;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1399281812697" ID="ID_820749576" MODIFIED="1399282038495" TEXT="Per interrupt Action Description">
@@ -1202,8 +1083,7 @@
       } ____cacheline_internodealigned_in_smp;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -1225,8 +1105,7 @@
   <body>
     <img src="kernel/interrupt/interrupt-path.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1316769506966" ID="ID_1652292667" MODIFIED="1399259696255" TEXT="Interrupt Handling">
 <node CREATED="1316769521668" ID="ID_50319059" MODIFIED="1316769620312" TEXT="Save the IRQ value and the register&apos;s contents on the Kernel Mode stack.">
@@ -1272,8 +1151,7 @@
       <i>disable_irq(irq)/disable_irq_nosync(irq);</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1312768614741" ID="ID_1921753393" MODIFIED="1399259664616" TEXT="All Interrupts">
@@ -1296,8 +1174,7 @@
       <i>local_irq_restore(flags);</i>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1399280952340" ID="ID_1179258026" MODIFIED="1399620582235" TEXT="check the kernel&apos;s current context">
@@ -1316,8 +1193,7 @@
       /proc/interrupts
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399280157720" ID="ID_1214356135" MODIFIED="1399280193126" TEXT="/proc/irq/&lt;pid&gt;/*"/>
 <node CREATED="1399280158616" ID="ID_1296974895" MODIFIED="1399280174063" TEXT="/proc/stat"/>
@@ -1341,8 +1217,7 @@
       tasklet (no sleep, interrupt context)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1399605898561" ID="ID_1748249069" MODIFIED="1399605908185" TEXT="include/linux/interrupt.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -1378,8 +1253,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312769252277" FOLDED="true" ID="ID_1088231767" MODIFIED="1399620125374" TEXT="Declaring Your Tasklet">
 <icon BUILTIN="full-1"/>
@@ -1397,8 +1271,7 @@
       DECLARE_TASKLET_DISABLED(name, func, data)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1312768978605" ID="ID_1031552416" MODIFIED="1399606030070" TEXT="dynamic">
@@ -1421,8 +1294,7 @@
       <i><b>tasklet_schedule</b></i>(&amp;my_tasklet)/tasklet_hi_schedule(&amp;my_tasklet)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312769066637" ID="ID_1910418896" MODIFIED="1313485389349">
 <richcontent TYPE="NODE"><html>
@@ -1449,8 +1321,7 @@
       workqueue (sleep, process context)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1399618982324" ID="ID_721205769" MODIFIED="1399619329895">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1464,8 +1335,7 @@
       kernel/workqueue.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -1491,8 +1361,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1312769212872" FOLDED="true" ID="ID_891040841" MODIFIED="1399620085016">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1535,8 +1404,7 @@
       typedef void (*<i><b>work_func_t</b></i>)(struct work_struct *work);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399619663348" FOLDED="true" ID="ID_1703149132" MODIFIED="1399620120470" TEXT="Creating Work">
 <icon BUILTIN="full-1"/>
@@ -1551,8 +1419,7 @@
       <i><b>DECLARE_WORK</b></i>(name, func)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1312769388292" ID="ID_1343775588" MODIFIED="1399619633274" TEXT="dynamic">
@@ -1575,8 +1442,7 @@
       <i><b>schedule_work</b></i>(&amp;work)/schedule_delayed_work(&amp;work, delay)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312769658141" ID="ID_819983672" MODIFIED="1312769660345" TEXT="flush_scheduled_work()"/>
 <node CREATED="1312769574845" ID="ID_147766562" MODIFIED="1313486073228" TEXT="cancel_delayed_work()"/>
@@ -1587,7 +1453,125 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1399963981304" POSITION="right" TEXT="Concurrency">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1400828118904" POSITION="right" TEXT="System Call">
+<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399962878636">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>System Calls</b></i></font>&#160;is an explicit request to the kernel made via a software interrupt
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1358477753900" ID="ID_225623548" MODIFIED="1399962864198">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>POSIX APIs</b></i></font>&#160;is a function definition that specifies how to obtain a given service.
+    </p>
+  </body>
+</html></richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1399258230564" ID="ID_1791705159" MODIFIED="1399962876015">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>C library</b></i></font>&#160;implements the main API on Unix systems, including the standard C library and the system call interface.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1358477980740" ID="ID_94575330" MODIFIED="1395844951627">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/syscall/invoking_system_call.png" />
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358755437681" ID="ID_175528966" MODIFIED="1395844966215" TEXT="__kernel_vsyscall">
+<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1399962942876" TEXT="int $0x80">
+<icon BUILTIN="button_cancel"/>
+<node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      start_kernel()&#160;&#160;&#160;&#160;// init/main.c
+    </p>
+    <p>
+      &#160;&#160;trap_init()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/traps.c
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;set_system_trap_gate(SYSCALL_VECTOR, &amp;system_call);
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358755781853" ID="ID_884374445" MODIFIED="1358931016215">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      system_call&#160;&#160;&#160;&#160;&#160;&#160;&#160;// arch/x86/kernel/entry_32.S
+    </p>
+    <p>
+      &#160;&#160;SAVE_ALL
+    </p>
+    <p>
+      &#160;&#160;call *sys_call_table(,%eax,4)
+    </p>
+    <p>
+      &#160;&#160;restore_all
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1399962940038" TEXT="sysenter">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      enable_sep_cpu()
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_CS_MSR&#160;&#160;&#160;= __KERNEL_CS
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_EIP_MSR&#160;&#160;= sysenter_entry()
+    </p>
+    <p>
+      &#160;&#160;SYSENTER_ESP_MSR = local TSS
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1358924626233" ID="ID_1520347697" MODIFIED="1399962937767" TEXT="sysenter_entry()  // similar to system_call"/>
+</node>
+</node>
+</node>
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1400828116151" POSITION="right" TEXT="Concurrency">
 <node CREATED="1399770844089" ID="ID_869416328" MODIFIED="1399962757390" TEXT="Definiton">
 <node CREATED="1399771002871" ID="ID_261412793" MODIFIED="1399771167398">
 <richcontent TYPE="NODE"><html>
@@ -1599,8 +1583,7 @@
       <i><b>Critical Regions</b></i>&#160;(&#20020;&#30028;&#21306;)- Code paths that access and manipulate shared data.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399771282717" ID="ID_80570559" MODIFIED="1399771342329">
 <richcontent TYPE="NODE"><html>
@@ -1612,8 +1595,7 @@
       <i><b>Race Conditions</b></i>&#160;(&#31454;&#20105;&#26465;&#20214;) - Two threads of execution to be simultaneously executing within the same critical region.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399771369236" ID="ID_457370386" MODIFIED="1399771446526">
 <richcontent TYPE="NODE"><html>
@@ -1625,8 +1607,7 @@
       <i><b>Synchronization</b></i>&#160;(&#21516;&#27493;) - Ensuring that unsafe concurrency is prevented and that race conditions do not occur.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1399774809976" ID="ID_737544554" MODIFIED="1399962758879" TEXT="Causes of Concurrency">
@@ -1676,8 +1657,7 @@
       &#160;is of paramount importance.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399779061906" ID="ID_1089098658" MODIFIED="1399779216253">
 <richcontent TYPE="NODE"><html>
@@ -1689,8 +1669,7 @@
       Implement <font color="#0000ff"><i><b>lock ordering</b></i></font>. Nested locks must always be obtained in <font color="#0000ff"><i><b>the same order</b></i></font>. This prevents the deadly embrace deadlock. Document the lock ordering so others will follow it.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399779253448" ID="ID_565513088" MODIFIED="1399779312650">
 <richcontent TYPE="NODE"><html>
@@ -1702,8 +1681,7 @@
       The <font color="#0000ff"><i><b>order of unlock</b></i></font>&#160;does not matter with respect to deadlock, although it is common practice to release the locks in an order <font color="#0000ff"><i><b>inverse</b></i></font>&#160;to that in which they were acquired.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399780035561" ID="ID_1498252959" MODIFIED="1399780104384">
 <richcontent TYPE="NODE"><html>
@@ -1715,8 +1693,7 @@
       <font color="#0000ff"><i><b>Contention and Scalability</b></i></font>&#160;- Start simple and grow in complexity only as needed. Simplicity is key.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399279489632" ID="ID_667810782" MODIFIED="1399777945026" TEXT="The lock provides protection against concurrent access from another processor, whereas disabling interrupts provides protection against concurrent access from a possible interrupt handler."/>
 </node>
@@ -1732,8 +1709,7 @@
       Atomic operations provide instructions that execute atomically&#8212;<font color="#0000ff"><i><b>without interruption</b></i></font>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399863957407" ID="ID_825463376" MODIFIED="1399864283213">
 <richcontent TYPE="NODE"><html>
@@ -1751,8 +1727,7 @@
       atomic_dec(&amp;v)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Atomically subtract one from v. */
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399874962165" ID="ID_1594894653" MODIFIED="1399875005574">
 <richcontent TYPE="NODE"><html>
@@ -1773,8 +1748,7 @@
       change_bit(0, &amp;word); /* bit zero is flipped; now it is set (atomically) */
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1313553755558" ID="ID_1124259971" MODIFIED="1399962742367" TEXT="Barriers">
@@ -1788,8 +1762,7 @@
       It is also possible to instruct the compiler <font color="#0000ff"><i><b>not to reorder</b></i></font><i><b>&#160; </b></i>instructions&#160;around a given point.These instructions are called barriers.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1313553803570" ID="ID_786162832" MODIFIED="1313553924469" TEXT="mb()/rmb()/wmb()"/>
 <node CREATED="1313553929661" ID="ID_1928322973" MODIFIED="1399962718622" TEXT="read_barrier_depends()/barrier()"/>
@@ -1804,8 +1777,7 @@
       The atomic operations guarantee only atomicity. Ordering is enforced via barrier operations.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -1822,8 +1794,7 @@
       (short, no sleep, interrupt context)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1399882867749" ID="ID_1294603505" MODIFIED="1399884828008">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1834,8 +1805,7 @@
       If a lock is used in an interrupt handler, you must also disable local interrupts (interrupt requests on the current processor) before obtaining the lock.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1399882998986" ID="ID_863261330" MODIFIED="1399883367108">
@@ -1863,8 +1833,7 @@
       <i><b>spin_unlock_irqrestore</b></i>(&amp;mr_lock, flags);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312694066185" ID="ID_1463723135" MODIFIED="1399884384786" TEXT="Methods">
 <node CREATED="1399884299998" FOLDED="true" ID="ID_205414473" MODIFIED="1399960785853" TEXT="spin_lock_init()">
@@ -1895,8 +1864,7 @@
       (long, sleep, process context)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1399960489633" FOLDED="true" ID="ID_780238327" MODIFIED="1399961103844" TEXT="Semaphore">
 <node CREATED="1313547549956" ID="ID_1312026970" MODIFIED="1399887351387" TEXT="it attempts to acquire the given semaphore. If the semaphore is unavailable, it places the calling process to sleep in the TASK_INTERRUPTIBLE state. ">
 <icon BUILTIN="idea"/>
@@ -1983,8 +1951,7 @@
       <i><b>mutex_unlock</b></i>(&amp;mr_mutex);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399960755086" ID="ID_72470446" MODIFIED="1399960760879" TEXT="Methods">
 <node CREATED="1399960761673" FOLDED="true" ID="ID_269283442" MODIFIED="1399960799241" TEXT="mutex_init()">
@@ -2000,7 +1967,7 @@
 <node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1399960511566" TEXT="rw_semaphore/completion"/>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1399963979308" POSITION="right" TEXT="Process Communication">
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1400828117848" POSITION="right" TEXT="Process Communication">
 <node CREATED="1399963067948" FOLDED="true" ID="ID_564823100" MODIFIED="1399963080399" TEXT="Data Structure">
 <node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1395044667282" TEXT="include/linux/ipc_namespace.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>

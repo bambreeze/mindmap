@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1395737843000" ID="ID_1328512352" MODIFIED="1395737940167" TEXT="Memory_Management">
-<node CREATED="1400658562622" FOLDED="true" ID="ID_874481532" MODIFIED="1400663432969" POSITION="right" TEXT="Overview">
+<node CREATED="1400658562622" FOLDED="true" ID="ID_874481532" MODIFIED="1400827638712" POSITION="right" TEXT="Overview">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358148343488" ID="ID_1273041049" MODIFIED="1400660122400">
 <richcontent TYPE="NODE"><html>
@@ -29,7 +29,7 @@
 <node CREATED="1312871699476" ID="ID_1001023281" MODIFIED="1312871701920" TEXT="Kernel logical addresses"/>
 <node CREATED="1312871686391" ID="ID_406867064" MODIFIED="1312871688664" TEXT="Bus addresses"/>
 </node>
-<node CREATED="1400658574070" ID="ID_610874397" MODIFIED="1400658606756">
+<node CREATED="1400658574070" FOLDED="true" ID="ID_610874397" MODIFIED="1400749798314">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -39,9 +39,64 @@
   </body>
 </html>
 </richcontent>
+<node CREATED="1400749566741" ID="ID_740097778" MODIFIED="1400749619844">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/x86-phy-mem-layout.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1400749628451" ID="ID_476393488" MODIFIED="1400749662341">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/x86-kernel-mem-mapping.png" />
+  </body>
+</html>
+</richcontent>
+<node CREATED="1400749709506" ID="ID_1789120319" MODIFIED="1400749722681">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/x86-kernel-vir-mem-layout.png" />
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1400664470233" POSITION="right" TEXT="Zoned Page Frame Allocator">
+<node CREATED="1400749688834" ID="ID_523058001" MODIFIED="1400749703490">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/x86-user-mem-mapping.png" />
+  </body>
+</html>
+</richcontent>
+<node CREATED="1400749727753" ID="ID_622915553" MODIFIED="1400749738809">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/x86-user-vir-mem-layout.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1400828608999" POSITION="right" TEXT="Zoned Page Frame Allocator">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1312872066748" ID="ID_761493369" MODIFIED="1400654136623" TEXT="Slab Layer">
 <font NAME="SansSerif" SIZE="12"/>
@@ -112,9 +167,10 @@
     <img src="kernel/mm/zoned_page_frame_allocator.png" />
   </body>
 </html></richcontent>
-<node CREATED="1358153120946" FOLDED="true" ID="ID_347001048" MODIFIED="1400642701119" TEXT="node">
+</node>
+<node CREATED="1358153120946" FOLDED="true" ID="ID_347001048" MODIFIED="1400747588751" TEXT="node">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1358153133791" FOLDED="true" ID="ID_885654250" MODIFIED="1400642699974" TEXT="struct pg_data_t">
+<node CREATED="1358153133791" FOLDED="true" ID="ID_885654250" MODIFIED="1400747587641" TEXT="struct pg_data_t">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358153150033" ID="ID_22636036" MODIFIED="1400642139656" TEXT="include/linux/mmzone.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -279,15 +335,29 @@
 </node>
 </node>
 </node>
-</node>
-<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1400664471947" POSITION="right" TEXT="Process Address Space">
+<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1400828661730" POSITION="right" TEXT="Process Address Space">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1312872830109" ID="ID_11445334" MODIFIED="1400660249127" TEXT="memory descriptor">
+<node CREATED="1312872830109" ID="ID_11445334" MODIFIED="1400739659945" TEXT="Memory Descriptor">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1400739582261" ID="ID_1851732607" MODIFIED="1400746878651">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The kernel represents a <b><i><font color="#0000ff">process&#8217;s address space</font></i></b>&#160; with a data structure called the memory descriptor.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="idea"/>
+</node>
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1358303519968" ID="ID_1815091434" MODIFIED="1400660335619">
+<node CREATED="1358303519968" FOLDED="true" ID="ID_1815091434" MODIFIED="1400748904134">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -297,49 +367,42 @@
       <font size="3" face="SansSerif">struct <b><i>mm_struct</i></b>&#160;{ </font>
     </p>
     <p>
-      <font size="3" face="SansSerif">&#160;&#160;&#160;&#160;struct vm_area_struct&#160;&#160;*</font><font face="SansSerif" color="#c5491e" size="3">mmap</font><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of memory areas */ </font>
+      <font size="3" face="SansSerif">&#160;&#160;&#160;&#160;struct vm_area_struct&#160;&#160;*</font><b><i><font face="SansSerif" color="#0000ff" size="3">mmap</font></i></b><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of memory areas */ </font>
     </p>
     <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct rb_root </font><font face="SansSerif" color="#da5f22" size="3">mm_rb</font><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* red-black tree of VMAs */ </font>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct rb_root </font><b><i><font face="SansSerif" color="#0000ff" size="3">mm_rb</font></i></b><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* red-black tree of VMAs */ </font>
     </p>
     <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct vm_area_struct&#160;&#160;*mmap_cache;&#160;&#160;&#160;&#160;/* last used memory area */ </font>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;pgd_t&#160;&#160;*</font><b><i><font face="SansSerif" color="#0000ff" size="3">pgd</font></i></b><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* page global directory */ </font>
     </p>
     <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;unsigned long&#160;free_area_cache;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* 1st address space hole */ </font>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;atomic_t&#160;mm_users;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* address space users */ </font>
     </p>
     <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;pgd_t&#160;&#160;*pgd;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* page global directory */ </font>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;atomic_t&#160;mm_count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* primary usage counter */</font>
     </p>
     <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;atomic_t&#160;mm_users;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* address space users */ </font>
-    </p>
-    <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;atomic_t&#160;mm_count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* primary usage counter */ </font>
-    </p>
-    <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;int&#160;map_count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of memory areas */ </font>
-    </p>
-    <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct rw_semaphore&#160;mmap_sem;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* memory area semaphore */ </font>
-    </p>
-    <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;spinlock_t&#160;page_table_lock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* page table lock */ </font>
-    </p>
-    <p>
-      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct list_head&#160;</font><font face="SansSerif" color="#f06018" size="3">mmlist</font><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of all mm_structs */ </font>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct list_head&#160;</font><font face="SansSerif" color="#000000" size="3">mmlist</font><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of all mm_structs */ </font>
     </p>
     <p>
       <font face="SansSerif" size="3">};</font>
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1358304586374" ID="ID_1296864918" MODIFIED="1400660348133" TEXT="The mmap and mm_rb fields are different data structures that contain the same thing: all the memory areas in this address space. The former stores them in a linked list, whereas the latter stores them in a red-black tree. A red-black tree is a type of binary tree; like all binary trees, searching for a given element is an O(log n) operation. "/>
-<node CREATED="1358304323910" ID="ID_284240669" MODIFIED="1400660355577" TEXT="All of the mm_struct structures are strung together in a doubly linked list via the mmlist field. The initial element in the list is the init_mm memory descriptor, which describes the address space of the init process."/>
+</html>
+</richcontent>
+<node CREATED="1358304586374" ID="ID_1296864918" MODIFIED="1400740593039" TEXT="The mmap and mm_rb fields are different data structures that contain the same thing: all the memory areas in this address space. The former stores them in a linked list, whereas the latter stores them in a red-black tree. A red-black tree is a type of binary tree; like all binary trees, searching for a given element is an O(log n) operation. ">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1358304323910" ID="ID_284240669" MODIFIED="1400740599040" TEXT="All of the mm_struct structures are strung together in a doubly linked list via the mmlist field. The initial element in the list is the init_mm memory descriptor, which describes the address space of the init process.">
+<icon BUILTIN="idea"/>
+</node>
 </node>
 <node CREATED="1358324019184" ID="ID_946038574" MODIFIED="1400660225902" TEXT="create">
-<node CREATED="1358324083115" ID="ID_1948357843" MODIFIED="1358324083115" TEXT=""/>
-<node CREATED="1358323292025" ID="ID_17931463" MODIFIED="1358323351927">
+<node CREATED="1358324083115" ID="ID_1948357843" MODIFIED="1400742685615" TEXT="kernel/fork.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1358323292025" ID="ID_17931463" MODIFIED="1400742810313">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -367,7 +430,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;allocate_mm()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// create mm_struct
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;kmem_cache_alloc(mm_cachep, GFP_KERNEL)
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i><font color="#0000ff">kmem_cache_alloc</font><font color="#000000">(mm_cachep, GFP_KERNEL)</font></i></b>
     </p>
     <p>
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;mm_init()
@@ -388,12 +451,16 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;copy_page_range()
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 <node CREATED="1358324027155" ID="ID_580095057" MODIFIED="1400660233862" TEXT="delete">
-<node CREATED="1358324092331" ID="ID_1996889249" MODIFIED="1358324092331" TEXT=""/>
-<node CREATED="1358323551149" ID="ID_529718830" MODIFIED="1358323604808">
+<node CREATED="1358324092331" ID="ID_1996889249" MODIFIED="1400742728758" TEXT="kernel/exit.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1358323551149" ID="ID_529718830" MODIFIED="1400742828151">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -433,51 +500,75 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;free_mm()
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;kmem_cache_free(mm_cachep, mm)
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i><font color="#0000ff">kmem_cache_free</font>(mm_cachep, mm)</i></b>
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1358304712817" ID="ID_1319173337" MODIFIED="1400660509479" TEXT="memory area">
-<node CREATED="1312872790371" FOLDED="true" ID="ID_354933782" MODIFIED="1400660502162" TEXT="struct vm_area_struct">
+<node CREATED="1358304712817" ID="ID_1319173337" MODIFIED="1400740930834" TEXT="Memory Area">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1358306236953" ID="ID_379944355" MODIFIED="1358306244431" TEXT="include/linux/mm_types.h"/>
-<node CREATED="1358306250874" ID="ID_1029444362" MODIFIED="1358306962940">
+<node CREATED="1400738060681" ID="ID_1083593388" MODIFIED="1400746905825">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      unsigned long vm_start;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* VMA start, inclusive */
-    </p>
-    <p>
-      unsigned long vm_end;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* VMA end , exclusive */
-    </p>
-    <p>
-      struct vm_area_struct *<font color="#dd4b2b">vm_next</font>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of VMA's */
-    </p>
-    <p>
-      struct rb_node <font color="#ea4623">vm_rb</font>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* VMA's node in the tree */
-    </p>
-    <p>
-      struct mm_struct *<font color="#e9411c">vm_mm</font>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* associated mm_struct */
-    </p>
-    <p>
-      pgprot_t vm_page_prot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* access permissions */
-    </p>
-    <p>
-      unsigned long vm_flags;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* flags */
-    </p>
-    <p>
-      struct vm_operations_struct *vm_ops;&#160;&#160;/* associated ops */
+      These intervals of <b><i><font color="#0000ff">legal addresses</font></i></b>&#160;which process has permission to access are called <b><i>memory areas</i></b>.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+<icon BUILTIN="idea"/>
 </node>
-<node CREATED="1358321754627" ID="ID_174051389" MODIFIED="1358321828047">
+<node CREATED="1358306236953" ID="ID_379944355" MODIFIED="1400738219947" TEXT="include/linux/mm_types.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1358306250874" ID="ID_1029444362" MODIFIED="1400741026953">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><i>vm_area_struct</i></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long vm_start;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* VMA start, inclusive */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long vm_end;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* VMA end , exclusive */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct vm_area_struct *<b><i><font color="#0000ff">vm_next</font></i></b>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of VMA's */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rb_node <b><i><font color="#0000ff">vm_rb</font></i></b>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* VMA's node in the tree */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct mm_struct *<b><i><font color="#0000ff">vm_mm</font></i></b>;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* associated mm_struct */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;pgprot_t vm_page_prot;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* access permissions */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long vm_flags;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* flags */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct vm_operations_struct *<b><i><font color="#0000ff">vm_ops</font></i></b>;&#160;&#160; /* associated ops */
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1358321754627" ID="ID_174051389" MODIFIED="1400741153067">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -487,71 +578,86 @@
       find_vma()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Look up the first VMA which satisfies&#160;&#160;addr &lt; vm_end,&#160;&#160;NULL if none.
     </p>
     <p>
-      find_vma_intersection()&#160;&#160;// Finding a region that overlaps a given interval
+      find_vma_intersection()&#160;&#160;&#160;&#160;// Finding a region that overlaps a given interval
     </p>
     <p>
-      get_unmapped_area()&#160;&#160;&#160;&#160;// Finding a free interval
+      get_unmapped_area()&#160;&#160;&#160;&#160;&#160;// Finding a free interval
     </p>
     <p>
       insert_vm_struct()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Inserting a region in the memory descriptor list
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node CREATED="1358321851042" ID="ID_531314883" MODIFIED="1358321895769">
+<node CREATED="1358321851042" ID="ID_531314883" MODIFIED="1400828641188">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      do_mmap()&#160;&#160;&#160;&#160;&#160;// Allocating a Linear Address Interval
+      do_mmap()/do_munmap()&#160;&#160;&#160;&#160;&#160;// Allocating/Releasing a Linear Address Interval
     </p>
     <p>
-      do_munmap() // Releasing a Linear Address Interval
+      remap_pfn_range()
+    </p>
+    <p>
+      io_remap_page_range()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// provide user programs with direct access to device memory.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
+<node CREATED="1358322149966" ID="ID_528647959" MODIFIED="1400738338046" TEXT="include/linux/mm.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
 </node>
-<node CREATED="1312872821909" ID="ID_1486450980" MODIFIED="1400660521210" TEXT="struct vm_operations_struct">
-<node CREATED="1358322149966" ID="ID_528647959" MODIFIED="1358322155613" TEXT="include/linux/mm.h"/>
-<node CREATED="1358322156214" FOLDED="true" ID="ID_1045103683" MODIFIED="1395737719599">
+<node CREATED="1358322156214" ID="ID_1045103683" MODIFIED="1400741039129">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      void (*open)();
+      struct <b><i>vm_operations_struct</i></b>&#160;{
     </p>
     <p>
-      void (*close)();
+      &#160;&#160;&#160;&#160;void (*open)();
     </p>
     <p>
-      int (*<b><font color="#e26322">fault</font></b>)();
+      &#160;&#160;&#160;&#160;void (*close)();
     </p>
     <p>
-      int (*page_mkwrite)();
+      &#160;&#160;&#160;&#160;int (*<b><font color="#e26322">fault</font></b>)();
     </p>
     <p>
-      int (*access)();
+      &#160;&#160;&#160;&#160;int (*page_mkwrite)();
     </p>
     <p>
-      int (*set_policy)();
+      &#160;&#160;&#160;&#160;int (*access)();
     </p>
     <p>
-      struct mempolicy *();
+      &#160;&#160;&#160;&#160;int (*set_policy)();
     </p>
     <p>
-      int (*migrate)();
+      &#160;&#160;&#160;&#160;struct mempolicy *();
     </p>
     <p>
-      int (*remap_pages)();
+      &#160;&#160;&#160;&#160;int (*migrate)();
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int (*remap_pages)();
+    </p>
+    <p>
+      };
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1358325560353" ID="ID_1708513540" MODIFIED="1358325560353" TEXT=""/>
+</html>
+</richcontent>
+<node CREATED="1358325560353" ID="ID_1708513540" MODIFIED="1400745126873" TEXT="This function is invoked by the page fault handler when a page that is not present in physical memory is accessed.">
+<icon BUILTIN="idea"/>
+</node>
 <node CREATED="1358322302967" ID="ID_323506488" MODIFIED="1358323956329">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -608,32 +714,110 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1400748678338" ID="ID_897936595" MODIFIED="1400748759226">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/do_page_fault_calltrace.png" />
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
 </node>
-<node CREATED="1312873123709" ID="ID_1667007813" MODIFIED="1400660219372" TEXT="mmap">
-<node CREATED="1312873189873" ID="ID_1560832887" MODIFIED="1313646511381">
+<node CREATED="1400748617876" ID="ID_87683827" MODIFIED="1400748632104">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/process-mm-vma.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1400812420184" FOLDED="true" ID="ID_911805230" MODIFIED="1400827960674" POSITION="right" TEXT="Page Cache">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1400812426598" ID="ID_1384796231" MODIFIED="1400812530275">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      remap_pfn_range()/io_remap_page_range()
-    </p>
-    <p>
-      nopage()
+      The goal of this cache is to <b><i><font color="#0000ff">minimize disk I/O</font></i></b>&#160;by storing data in physical memory that would otherwise require disk access.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+<icon BUILTIN="idea"/>
 </node>
-<node CREATED="1312873158196" ID="ID_854958690" MODIFIED="1358155331113" TEXT="provide user programs with direct access to device memory">
-<icon BUILTIN="messagebox_warning"/>
+<node CREATED="1400812532731" ID="ID_1989918446" MODIFIED="1400813791726" TEXT="include/linux/fs.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1400813793737" ID="ID_1351831361" MODIFIED="1400815510021">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><i>address_space</i></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct inode *host;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* owner: inode, block_device */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct radix_tree_root <b><i><font color="#0000ff">page_tree</font></i></b>;&#160;&#160;&#160;/* radix tree of all pages */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long nrpages;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of total pages */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rb_root i_mmap;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* tree of private and shared mappings */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;const struct address_space_operations *<b><i><font color="#0000ff">a_ops</font></i></b>;&#160;&#160;&#160;/* methods */
+    </p>
+    <p>
+      } __attribute__((aligned(sizeof(long))));
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1400815429825" ID="ID_103145642" MODIFIED="1400815438500" TEXT="Page Writeback">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1400815447265" ID="ID_1113461413" MODIFIED="1400823194077">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      When data in the page cache is newer than the data on the backing store, we call that <b><i><font color="#0000ff">data dirty</font></i></b>.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1400823197513" ID="ID_167726463" MODIFIED="1400825194327" TEXT="When free memory shrinks below a specified threshold">
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1400825159828" ID="ID_1864518031" MODIFIED="1400825197045" TEXT="When dirty data grows older than a specific threshold">
+<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1400825163296" ID="ID_487579021" MODIFIED="1400825199829" TEXT="When a user process invokes the sync() and fsync() system calls">
+<icon BUILTIN="full-3"/>
 </node>
 </node>
 </node>
-<node CREATED="1312871846067" FOLDED="true" ID="ID_460105401" MODIFIED="1400660692945" POSITION="right" TEXT="kmalloc(size, flags)/kfree(addr)">
+<node CREATED="1312871846067" FOLDED="true" ID="ID_460105401" MODIFIED="1400827961908" POSITION="right" TEXT="kmalloc(size, flags)/kfree(addr)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="button_ok"/>
 <node CREATED="1312873575475" ID="ID_1238007881" MODIFIED="1400578706082">
@@ -761,7 +945,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1312871908829" FOLDED="true" ID="ID_1506915144" MODIFIED="1400660654854" POSITION="right" TEXT="vmalloc(size)/vfree(addr)">
+<node CREATED="1312871908829" FOLDED="true" ID="ID_1506915144" MODIFIED="1400827963783" POSITION="right" TEXT="vmalloc(size)/vfree(addr)">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1312873560668" ID="ID_1752255251" MODIFIED="1400578753072">
 <richcontent TYPE="NODE"><html>
