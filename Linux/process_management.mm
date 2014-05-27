@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1399963947105" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1401170310714" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -122,20 +122,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1398833108602">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      void * <font color="#0000ff"><i><b>stack</b></i></font>;
-    </p>
-  </body>
-</html></richcontent>
-<arrowlink DESTINATION="ID_650907153" ENDARROW="Default" ENDINCLINATION="297;0;" ID="Arrow_ID_693488617" STARTARROW="None" STARTINCLINATION="297;0;"/>
-</node>
-<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1399193389674">
+<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1401170904146">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -144,11 +131,9 @@
     <p>
       volatile long state;
     </p>
-    <p>
-      int exit_state;
-    </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1398838675735" ID="ID_326758892" MODIFIED="1398838698556">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -247,6 +232,38 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1398833108602">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      void * <font color="#0000ff"><i><b>stack</b></i></font>;
+    </p>
+  </body>
+</html></richcontent>
+<arrowlink DESTINATION="ID_650907153" ENDARROW="Default" ENDINCLINATION="297;0;" ID="Arrow_ID_693488617" STARTARROW="None" STARTINCLINATION="297;0;"/>
+</node>
+<node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1401170859624">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      atomic_t usage;
+    </p>
+    <p>
+      unsigned int flags;
+    </p>
+    <p>
+      unsigned int ptrace;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node CREATED="1316843584303" ID="ID_1772179729" MODIFIED="1398839739651">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -300,7 +317,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1398848160104">
+<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1401170955444">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -532,7 +549,161 @@
 </node>
 </node>
 </node>
-<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1399193422339" TEXT="struct thread_struct thread;">
+<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1401171585243" TEXT="struct mm_struct *mm, *active_mm;">
+<node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1358303519968" FOLDED="true" ID="ID_1815091434" MODIFIED="1400748904134">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font size="3" face="SansSerif">struct <b><i>mm_struct</i></b>&#160;{ </font>
+    </p>
+    <p>
+      <font size="3" face="SansSerif">&#160;&#160;&#160;&#160;struct vm_area_struct&#160;&#160;*</font><b><i><font face="SansSerif" color="#0000ff" size="3">mmap</font></i></b><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of memory areas */ </font>
+    </p>
+    <p>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct rb_root </font><b><i><font face="SansSerif" color="#0000ff" size="3">mm_rb</font></i></b><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* red-black tree of VMAs */ </font>
+    </p>
+    <p>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;pgd_t&#160;&#160;*</font><b><i><font face="SansSerif" color="#0000ff" size="3">pgd</font></i></b><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* page global directory */ </font>
+    </p>
+    <p>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;atomic_t&#160;mm_users;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* address space users */ </font>
+    </p>
+    <p>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;atomic_t&#160;mm_count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* primary usage counter */</font>
+    </p>
+    <p>
+      <font face="SansSerif" size="3">&#160;&#160;&#160;&#160;struct list_head&#160;</font><font face="SansSerif" color="#000000" size="3">mmlist</font><font face="SansSerif" size="3">;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* list of all mm_structs */ </font>
+    </p>
+    <p>
+      <font face="SansSerif" size="3">};</font>
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1358304586374" ID="ID_1296864918" MODIFIED="1400740593039" TEXT="The mmap and mm_rb fields are different data structures that contain the same thing: all the memory areas in this address space. The former stores them in a linked list, whereas the latter stores them in a red-black tree. A red-black tree is a type of binary tree; like all binary trees, searching for a given element is an O(log n) operation. ">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1358304323910" ID="ID_284240669" MODIFIED="1400740599040" TEXT="All of the mm_struct structures are strung together in a doubly linked list via the mmlist field. The initial element in the list is the init_mm memory descriptor, which describes the address space of the init process.">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node CREATED="1401170387906" FOLDED="true" ID="ID_623807789" MODIFIED="1401172668175">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct fs_struct *fs;
+    </p>
+    <p>
+      struct files_struct *files;
+    </p>
+    <p>
+      struct nsproxy *nsproxy;
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1401171188162" ID="ID_1384807595" MODIFIED="1401171495172" TEXT="include/linux/fs_struct.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1401171367500" ID="ID_362287079" MODIFIED="1401171495177">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><b>fs_struct</b></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct path <b><i><font color="#0000ff">root</font></i></b>, <b><font color="#0000ff"><i>pwd</i></font></b>;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1401170967001" ID="ID_1591417236" MODIFIED="1401170999346" TEXT="include/linux/fdtable.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1401171001610" ID="ID_1598643826" MODIFIED="1401171400606">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><b>files_struct</b></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      &#160;&#160;&#160; struct file&#160;__rcu * <b><i><font color="#0000ff">fd_array</font></i></b>[NR_OPEN_DEFAULT];
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1401172451613" ID="ID_1211025722" MODIFIED="1401172569146" TEXT="include/linux/nsproxy.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1401172571141" ID="ID_1580417921" MODIFIED="1401172664909">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><b>nsproxy</b></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t count;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct uts_namespace *uts_ns;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct ipc_namespace *ipc_ns;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct mnt_namespace *<b><i><font color="#0000ff">mnt_ns</font></i></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct pid_namespace *pid_ns_for_children;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct net &#160;&#160;&#160;&#160;&#160;*net_ns;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1401171511883" TEXT="struct thread_struct thread;">
 <node CREATED="1393231927959" ID="ID_94896969" MODIFIED="1393231936526" TEXT="arch/x86/include/asm/processor.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -571,26 +742,21 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1315917802230" ID="ID_533218755" MODIFIED="1398848264425">
+<node CREATED="1401170923486" ID="ID_506887807" MODIFIED="1401170938444">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      unsigned int flags;
-    </p>
-    <p>
-      atomic_t usage;
-    </p>
-    <p>
-      struct mm_struct *mm, *active_mm;
+      int exit_state;
     </p>
     <p>
       ...
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
@@ -791,8 +957,7 @@
       The significant difference between <b><i>kernel threads</i></b>&#160;and normal processes is that kernel threads do not have an address space. (Their mm pointer, which points at their address space, is NULL.) For example, when idle, it turns out that the kernel is executing an <b><i>idle process </i></b>in <b><i>process context</i></b>&#160;in the <b><i>kernel</i></b>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1400743393763" ID="ID_391716266" MODIFIED="1400743514373">
 <richcontent TYPE="NODE"><html>
   <head>

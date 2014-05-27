@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1395737843000" ID="ID_1328512352" MODIFIED="1395737940167" TEXT="Memory_Management">
-<node CREATED="1400658562622" FOLDED="true" ID="ID_874481532" MODIFIED="1400827638712" POSITION="right" TEXT="Overview">
+<node CREATED="1400658562622" ID="ID_874481532" MODIFIED="1401172808458" POSITION="right" TEXT="Overview">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1358148343488" ID="ID_1273041049" MODIFIED="1400660122400">
 <richcontent TYPE="NODE"><html>
@@ -13,8 +13,7 @@
       <b><font face="SansSerif" color="rgb(51, 51, 51)" size="3">MMU</font></b><font face="SansSerif" color="rgb(51, 51, 51)" size="3">&#160;- the hardware that manages memory and performs </font><b><i><font face="SansSerif" color="#0000ff" size="3">virtual to physical address translations.</font></i></b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="Courier New" SIZE="12"/>
 </node>
 <node CREATED="1312871528809" ID="ID_1912367240" MODIFIED="1400657891032" TEXT="Address">
@@ -37,8 +36,7 @@
   <body>
     <img src="kernel/mm/x86-segmentation-paging.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1400749566741" ID="ID_740097778" MODIFIED="1400749619844">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -47,8 +45,7 @@
   <body>
     <img src="kernel/mm/x86-phy-mem-layout.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1400749628451" ID="ID_476393488" MODIFIED="1400749662341">
 <richcontent TYPE="NODE"><html>
@@ -58,8 +55,7 @@
   <body>
     <img src="kernel/mm/x86-kernel-mem-mapping.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1400749709506" ID="ID_1789120319" MODIFIED="1400749722681">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -68,8 +64,7 @@
   <body>
     <img src="kernel/mm/x86-kernel-vir-mem-layout.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1400749688834" ID="ID_523058001" MODIFIED="1400749703490">
@@ -80,8 +75,7 @@
   <body>
     <img src="kernel/mm/x86-user-mem-mapping.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1400749727753" ID="ID_622915553" MODIFIED="1400749738809">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -90,13 +84,12 @@
   <body>
     <img src="kernel/mm/x86-user-vir-mem-layout.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 </node>
-<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1400828608999" POSITION="right" TEXT="Zoned Page Frame Allocator">
+<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1401172861502" POSITION="right" TEXT="Zoned Page Frame Allocator">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1312872066748" ID="ID_761493369" MODIFIED="1400654136623" TEXT="Slab Layer">
 <font NAME="SansSerif" SIZE="12"/>
@@ -153,8 +146,7 @@
       Of course, the point of the slab layer is to <b><i><font color="#0000ff">refrain from allocating and freeing pages</font></i></b>. In turn, the slab layer invokes the page allocation function only when there does not exist any partial or empty slabs in a given cache. The freeing function is called only when available memory grows low and the system is attempting to free memory, or when a cache is explicitly destroyed.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 </node>
@@ -335,7 +327,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1400828661730" POSITION="right" TEXT="Process Address Space">
+<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1401172838117" POSITION="right" TEXT="Process Address Space">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1312872830109" ID="ID_11445334" MODIFIED="1400739659945" TEXT="Memory Descriptor">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -349,8 +341,7 @@
       The kernel represents a <b><i><font color="#0000ff">process&#8217;s address space</font></i></b>&#160; with a data structure called the memory descriptor.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
@@ -388,8 +379,7 @@
       <font face="SansSerif" size="3">};</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1358304586374" ID="ID_1296864918" MODIFIED="1400740593039" TEXT="The mmap and mm_rb fields are different data structures that contain the same thing: all the memory areas in this address space. The former stores them in a linked list, whereas the latter stores them in a red-black tree. A red-black tree is a type of binary tree; like all binary trees, searching for a given element is an O(log n) operation. ">
 <icon BUILTIN="idea"/>
 </node>
@@ -451,8 +441,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;copy_page_range()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1358324027155" ID="ID_580095057" MODIFIED="1400660233862" TEXT="delete">
@@ -503,8 +492,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i><font color="#0000ff">kmem_cache_free</font>(mm_cachep, mm)</i></b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -520,8 +508,7 @@
       These intervals of <b><i><font color="#0000ff">legal addresses</font></i></b>&#160;which process has permission to access are called <b><i>memory areas</i></b>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1358306236953" ID="ID_379944355" MODIFIED="1400738219947" TEXT="include/linux/mm_types.h">
@@ -565,8 +552,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1358321754627" ID="ID_174051389" MODIFIED="1400741153067">
 <richcontent TYPE="NODE"><html>
@@ -587,8 +573,7 @@
       insert_vm_struct()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Inserting a region in the memory descriptor list
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1358321851042" ID="ID_531314883" MODIFIED="1400828641188">
 <richcontent TYPE="NODE"><html>
@@ -606,8 +591,7 @@
       io_remap_page_range()&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// provide user programs with direct access to device memory.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1358322149966" ID="ID_528647959" MODIFIED="1400738338046" TEXT="include/linux/mm.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -653,8 +637,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1358325560353" ID="ID_1708513540" MODIFIED="1400745126873" TEXT="This function is invoked by the page fault handler when a page that is not present in physical memory is accessed.">
 <icon BUILTIN="idea"/>
 </node>
@@ -722,8 +705,7 @@
   <body>
     <img src="kernel/mm/do_page_fault_calltrace.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -736,11 +718,10 @@
   <body>
     <img src="kernel/mm/process-mm-vma.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1400812420184" FOLDED="true" ID="ID_911805230" MODIFIED="1400827960674" POSITION="right" TEXT="Page Cache">
+<node CREATED="1400812420184" FOLDED="true" ID="ID_911805230" MODIFIED="1401184339095" POSITION="right" TEXT="Page Cache">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1400812426598" ID="ID_1384796231" MODIFIED="1400812530275">
 <richcontent TYPE="NODE"><html>
@@ -752,8 +733,7 @@
       The goal of this cache is to <b><i><font color="#0000ff">minimize disk I/O</font></i></b>&#160;by storing data in physical memory that would otherwise require disk access.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1400812532731" ID="ID_1989918446" MODIFIED="1400813791726" TEXT="include/linux/fs.h">
@@ -788,10 +768,9 @@
       } __attribute__((aligned(sizeof(long))));
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node CREATED="1400815429825" ID="ID_103145642" MODIFIED="1400815438500" TEXT="Page Writeback">
+<node CREATED="1400815429825" ID="ID_103145642" MODIFIED="1401184188983" TEXT="Page Writeback">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1400815447265" ID="ID_1113461413" MODIFIED="1400823194077">
 <richcontent TYPE="NODE"><html>
@@ -803,8 +782,7 @@
       When data in the page cache is newer than the data on the backing store, we call that <b><i><font color="#0000ff">data dirty</font></i></b>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1400823197513" ID="ID_167726463" MODIFIED="1400825194327" TEXT="When free memory shrinks below a specified threshold">
 <icon BUILTIN="full-1"/>
@@ -816,8 +794,95 @@
 <icon BUILTIN="full-3"/>
 </node>
 </node>
+<node CREATED="1401183410916" ID="ID_1738211878" MODIFIED="1401184204248" TEXT="The Block I/O Layer">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1401183094356" ID="ID_36530843" MODIFIED="1401184211082">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The buffer serves as the object that represents a <b><i><font color="#0000ff">disk block in memory</font></i></b>.&#160;
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="idea"/>
 </node>
-<node CREATED="1312871846067" FOLDED="true" ID="ID_460105401" MODIFIED="1400827961908" POSITION="right" TEXT="kmalloc(size, flags)/kfree(addr)">
+<node CREATED="1401183158619" ID="ID_1417610777" MODIFIED="1401184211078" TEXT="include/linux/buffer_head.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1401183197947" ID="ID_1963649194" MODIFIED="1401184294439">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><b>buffer_head</b></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct page *<b><i><font color="#0000ff">b_page</font></i></b>;&#160;&#160;&#160;&#160;/* the page this bh is mapped to */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;char *b_data;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* pointer to data within the page */
+    </p>
+    <p>
+      &#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct block_device *b_bdev;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;sector_t b_blocknr;&#160;&#160;&#160;&#160;&#160;&#160;/* start block number */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t b_size;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* size of mapping */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct address_space *b_assoc_map;/* mapping this buffer is associated with */
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1401183946039" ID="ID_220730770" MODIFIED="1401184270069" TEXT="The buffer_head, representing a block-to-page mapping; the bio, representing in-flight I/O; and the request structure, representing a specific I/O request.">
+<icon BUILTIN="idea"/>
+</node>
+<node CREATED="1401183450501" ID="ID_1278011333" MODIFIED="1401183669215">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/bio-ops.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1401184016559" ID="ID_1360164915" MODIFIED="1401184019546" TEXT="I/O Scheduler Selection">
+<node CREATED="1401184026679" ID="ID_1119386734" MODIFIED="1401184081415">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/io-elevator.png" />
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1312871846067" FOLDED="true" ID="ID_460105401" MODIFIED="1401093844018" POSITION="right" TEXT="kmalloc(size, flags)/kfree(addr)">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="button_ok"/>
 <node CREATED="1312873575475" ID="ID_1238007881" MODIFIED="1400578706082">
