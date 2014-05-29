@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1398822468734" ID="ID_1904401005" MODIFIED="1400828783345" TEXT="Linux Kernel">
-<node CREATED="1398837321110" FOLDED="true" ID="ID_1482516283" MODIFIED="1400828783322" POSITION="right" TEXT="Overview">
+<node CREATED="1398837321110" ID="ID_1482516283" MODIFIED="1401348918230" POSITION="right" TEXT="Overview">
 <node CREATED="1398845853208" ID="ID_1004598899" MODIFIED="1398845856596" TEXT="Relationship between applications, the kernel, and hardware"/>
 <node CREATED="1398837087723" ID="ID_1178870566" MODIFIED="1398837101454">
 <richcontent TYPE="NODE"><html>
@@ -14,11 +14,11 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1398824677150" FOLDED="true" ID="ID_781576596" MODIFIED="1400828783323" POSITION="right" TEXT="Obtaining the Kernel Source">
+<node CREATED="1398824677150" FOLDED="true" ID="ID_781576596" MODIFIED="1401349038607" POSITION="right" TEXT="Obtaining the Kernel Source">
 <node CREATED="1398824698344" ID="ID_1628432107" MODIFIED="1398824706625" TEXT="http://www.kernel.org"/>
 <node CREATED="1398824707422" ID="ID_1112141163" MODIFIED="1398825058862" TEXT="$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git"/>
 </node>
-<node CREATED="1398822477296" FOLDED="true" ID="ID_596028313" MODIFIED="1400828783325" POSITION="right" TEXT="Kernel Source Tree">
+<node CREATED="1398822477296" FOLDED="true" ID="ID_596028313" MODIFIED="1401348970782" POSITION="right" TEXT="Kernel Source Tree">
 <node CREATED="1398822557925" ID="ID_1771425983" MODIFIED="1398822699887" TEXT="arch - Architecture-specific source"/>
 <node CREATED="1398822568163" ID="ID_1554657863" MODIFIED="1398822729350" TEXT="block - Block I/O layer"/>
 <node CREATED="1398822570484" ID="ID_559833549" MODIFIED="1398822738515" TEXT="crypto - Crypto API"/>
@@ -41,8 +41,8 @@
 <node CREATED="1398822619972" ID="ID_1596717533" MODIFIED="1398823168494" TEXT="usr - Early user-space code (called initramfs)"/>
 <node CREATED="1398822624214" ID="ID_320286554" MODIFIED="1398823190023" TEXT="virt - Virtualization infrastructure"/>
 </node>
-<node CREATED="1398823268163" FOLDED="true" ID="ID_1171133447" MODIFIED="1400828783326" POSITION="right" TEXT="Builing the Kernel">
-<node CREATED="1398823298673" FOLDED="true" ID="ID_1512053693" MODIFIED="1400828783325" TEXT="configuring the kernel">
+<node CREATED="1398823268163" FOLDED="true" ID="ID_1171133447" MODIFIED="1401348892799" POSITION="right" TEXT="Builing the Kernel">
+<node CREATED="1398823298673" FOLDED="true" ID="ID_1512053693" MODIFIED="1401348888582" TEXT="configuring the kernel">
 <node CREATED="1398823357998" ID="ID_819521215" MODIFIED="1398824014602" TEXT="$ make config">
 <icon BUILTIN="button_cancel"/>
 </node>
@@ -53,7 +53,7 @@
 <node CREATED="1398823363610" ID="ID_975248570" MODIFIED="1398824006736" TEXT="$ make menuconfig"/>
 <node CREATED="1398823374278" ID="ID_919823161" MODIFIED="1398823799267" TEXT="$ make gconfig"/>
 </node>
-<node CREATED="1398823892661" FOLDED="true" ID="ID_514813597" MODIFIED="1400828783326" TEXT="build">
+<node CREATED="1398823892661" FOLDED="true" ID="ID_514813597" MODIFIED="1401348890486" TEXT="build">
 <node CREATED="1398823924365" ID="ID_129749977" MODIFIED="1398824046946" TEXT="$ make">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="full-2"/>
@@ -61,7 +61,7 @@
 </node>
 <node CREATED="1398824105885" ID="ID_951009357" MODIFIED="1398824111724" TEXT="installing the new kernel"/>
 </node>
-<node CREATED="1398823196079" FOLDED="true" ID="ID_651691983" MODIFIED="1400828783329" POSITION="right" TEXT="Linux Directory Structure">
+<node CREATED="1398823196079" FOLDED="true" ID="ID_651691983" MODIFIED="1401348895512" POSITION="right" TEXT="Linux Directory Structure">
 <node CREATED="1400054097453" ID="ID_1080980842" MODIFIED="1400057391354" TEXT="/bin - Essential command binaries, e.g., cat, ls, cp."/>
 <node CREATED="1400054112093" ID="ID_165400969" MODIFIED="1400057043914" TEXT="/boot - Boot loader files, e.g., kernels, initrd."/>
 <node CREATED="1400054114756" ID="ID_840301259" MODIFIED="1400057068942" TEXT="/dev - Essential devices, e.g., /dev/null."/>
@@ -98,10 +98,10 @@
 <node CREATED="1400055486282" ID="ID_1458917537" MODIFIED="1400057331259" TEXT="/var/tmp - Temporary files to be preserved between reboots."/>
 </node>
 </node>
-<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1400828783331" POSITION="right" TEXT="Data Structure">
+<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1401348903928" POSITION="right" TEXT="Data Structure">
 <node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1400642361080" TEXT="Standard C Types"/>
 <node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400642367571" TEXT="Typedef Types"/>
-<node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1400828783330" TEXT="Linux Types">
+<node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1401348902511" TEXT="Linux Types">
 <node CREATED="1312691629475" ID="ID_1023963558" MODIFIED="1400052418519" TEXT="&lt;linux/types.h&gt;">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -165,9 +165,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826578792" FOLDED="true" ID="ID_921166443" MODIFIED="1400828783343" POSITION="right" TEXT="Time Management">
-<node CREATED="1312767433335" FOLDED="true" ID="ID_1342802873" MODIFIED="1400828783340" TEXT="Timekeeping">
-<node CREATED="1400036784667" FOLDED="true" ID="ID_1952949495" MODIFIED="1400828783331" TEXT="Tick">
+<node CREATED="1395826578792" FOLDED="true" ID="ID_921166443" MODIFIED="1401349033328" POSITION="right" TEXT="Time Management">
+<node CREATED="1312767433335" ID="ID_1342802873" MODIFIED="1401348992933" TEXT="Timekeeping">
+<node CREATED="1400036784667" ID="ID_1952949495" MODIFIED="1401348992938" TEXT="Tick">
 <node CREATED="1400036905957" ID="ID_1543380264" MODIFIED="1400036966484">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -193,8 +193,8 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1313568702623" FOLDED="true" ID="ID_1200914499" MODIFIED="1400828783340" TEXT="Jiffies">
-<node CREATED="1400037162269" FOLDED="true" ID="ID_1935548203" MODIFIED="1400828783332">
+<node CREATED="1313568702623" ID="ID_1200914499" MODIFIED="1401348992941" TEXT="Jiffies">
+<node CREATED="1400037162269" ID="ID_1935548203" MODIFIED="1401348992943">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -205,7 +205,7 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1312767441597" FOLDED="true" ID="ID_651095464" MODIFIED="1400828783332">
+<node CREATED="1312767441597" ID="ID_651095464" MODIFIED="1401348992948">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -223,7 +223,7 @@
 <icon BUILTIN="idea"/>
 </node>
 </node>
-<node CREATED="1312767512485" FOLDED="true" ID="ID_945179317" MODIFIED="1400828783332" TEXT="time_after(unknown, known)/time_after_eq(unknown, known)">
+<node CREATED="1312767512485" ID="ID_945179317" MODIFIED="1401348992950" TEXT="time_after(unknown, known)/time_after_eq(unknown, known)">
 <node CREATED="1313567873966" ID="ID_1904233480" MODIFIED="1400045905781">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -243,7 +243,7 @@
 </node>
 <node CREATED="1312767533428" ID="ID_467608897" MODIFIED="1400046231401" TEXT="time_before(unknown, known)/time_before_eq(unknown, known)"/>
 </node>
-<node CREATED="1312767450789" FOLDED="true" ID="ID_1346993751" MODIFIED="1400828783339">
+<node CREATED="1312767450789" ID="ID_1346993751" MODIFIED="1401348992950">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -258,7 +258,7 @@
 <node CREATED="1313569607643" ID="ID_588824114" MODIFIED="1400037241605" TEXT="(jiffies / HZ) -  converts from jiffies to seconds"/>
 </node>
 </node>
-<node CREATED="1313568743726" FOLDED="true" ID="ID_1763092405" MODIFIED="1400828783340" TEXT="Wall Time">
+<node CREATED="1313568743726" ID="ID_1763092405" MODIFIED="1401348992952" TEXT="Wall Time">
 <node CREATED="1400047000291" ID="ID_1805787748" MODIFIED="1400047058206">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -275,7 +275,7 @@
 <node CREATED="1312767646877" ID="ID_1888919992" MODIFIED="1400049532223" TEXT="sys_gettimeofday(tv, tz)"/>
 </node>
 </node>
-<node CREATED="1312767709333" FOLDED="true" ID="ID_1074813071" MODIFIED="1400828783341" TEXT="Delays">
+<node CREATED="1312767709333" ID="ID_1074813071" MODIFIED="1401348992954" TEXT="Delays">
 <node CREATED="1312767988445" ID="ID_1114074656" MODIFIED="1400051297511" TEXT="ndelay()/udelay()/mdelay()"/>
 <node CREATED="1312768009332" ID="ID_1588540429" MODIFIED="1400051306319" TEXT="msleep()/msleep_interruptible()/ssleep()"/>
 <node CREATED="1312767846189" ID="ID_1842872236" MODIFIED="1313587666213">
@@ -298,7 +298,7 @@
 <icon BUILTIN="button_cancel"/>
 </node>
 </node>
-<node CREATED="1312768068205" FOLDED="true" ID="ID_1595010064" MODIFIED="1400828783341" TEXT="Timers">
+<node CREATED="1312768068205" ID="ID_1595010064" MODIFIED="1401348992958" TEXT="Timers">
 <node CREATED="1400050450918" ID="ID_74199820" MODIFIED="1400051878843">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -349,14 +349,14 @@
 </html></richcontent>
 </node>
 <node CREATED="1312768241333" ID="ID_632285293" MODIFIED="1313576252173" TEXT="mod_timer(&amp;my_timer, jiffies + new_delay)"/>
-<node CREATED="1312768246013" FOLDED="true" ID="ID_486847998" MODIFIED="1400828783341" TEXT="del_timer(&amp;my_timer)/del_timer_sync(&amp;my_timer)">
+<node CREATED="1312768246013" ID="ID_486847998" MODIFIED="1401348992959" TEXT="del_timer(&amp;my_timer)/del_timer_sync(&amp;my_timer)">
 <node CREATED="1313576447614" ID="ID_1092799931" MODIFIED="1400050383612" TEXT=" Note that you do not need  to call this for timers that have expired &#xa;because they are automatically deactivated.">
 <icon BUILTIN="idea"/>
 </node>
 </node>
 </node>
-<node CREATED="1400047464659" FOLDED="true" ID="ID_310636735" MODIFIED="1400828783342" TEXT="Timer Interrupt Handler">
-<node CREATED="1400047478022" FOLDED="true" ID="ID_382459014" MODIFIED="1400828783342" TEXT="architecture-dependent routine">
+<node CREATED="1400047464659" ID="ID_310636735" MODIFIED="1401348992960" TEXT="Timer Interrupt Handler">
+<node CREATED="1400047478022" ID="ID_382459014" MODIFIED="1401348992961" TEXT="architecture-dependent routine">
 <node CREATED="1400047505846" ID="ID_33453718" MODIFIED="1400047548621" TEXT="Obtain the xtime_lock lock, which protects access to jiffies_64 and the wall time value,xtime.">
 <icon BUILTIN="full-1"/>
 </node>
@@ -370,7 +370,7 @@
 <icon BUILTIN="full-4"/>
 </node>
 </node>
-<node CREATED="1400047493149" FOLDED="true" ID="ID_346033740" MODIFIED="1400828783342" TEXT="architecture-independent routine">
+<node CREATED="1400047493149" ID="ID_346033740" MODIFIED="1401348992965" TEXT="architecture-independent routine">
 <node CREATED="1400047559428" ID="ID_1050769193" MODIFIED="1400047722631" TEXT="Increment the jiffies_64 count by one. (This is safe, even on 32-bit architectures, because the xtime_lock lock was previously obtained.)">
 <icon BUILTIN="full-1"/>
 </node>
@@ -400,120 +400,6 @@
 <node CREATED="1400047613162" ID="ID_1581118990" MODIFIED="1400047742466" TEXT="Calculate the infamous load average.">
 <icon BUILTIN="full-6"/>
 </node>
-</node>
-</node>
-</node>
-<node CREATED="1395370144693" FOLDED="true" ID="ID_1250662614" MODIFIED="1400828783345" POSITION="right" TEXT="Modules">
-<node CREATED="1395370155744" ID="ID_1160538326" MODIFIED="1395370183920" TEXT="include/linux/module.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395370185391" ID="ID_826768995" MODIFIED="1395370277986">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <b><i>module</i></b>
-    </p>
-    <p>
-      {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;enum module_state state;&#160;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* Member of list of modules */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct list_head <b><font color="#0000ff"><i>list</i></font></b>;&#160;&#160;&#160;
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* Unique handle for this module */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;char name[MODULE_NAME_LEN];&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395826469380" FOLDED="true" ID="ID_1215982136" MODIFIED="1400828783345" TEXT="Hello World!">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1312597499356" FOLDED="true" ID="ID_1569495753" MODIFIED="1400828783343" TEXT="Edit">
-<node CREATED="1312597528995" MODIFIED="1312597533216" TEXT="init"/>
-<node CREATED="1312597534889" MODIFIED="1312597537575" TEXT="exit"/>
-</node>
-<node CREATED="1312597508819" ID="ID_1290602893" MODIFIED="1312600044941" TEXT="Build"/>
-<node CREATED="1312597514093" FOLDED="true" ID="ID_70255829" MODIFIED="1400828783344" TEXT="Run">
-<node CREATED="1395370442185" FOLDED="true" ID="ID_234623858" MODIFIED="1400828783343">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><i>insmod</i></b>&#160;- link a module into the running kernel
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1395371425221" ID="ID_361541725" MODIFIED="1395371592910" TEXT="/lib/modules">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-</node>
-<node CREATED="1395371255536" ID="ID_703417671" MODIFIED="1395371633576">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><font color="#000000"><i>modprobe</i></font></b>&#160;- Linking Modules on Demand
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395371320391" ID="ID_266005901" MODIFIED="1395371625118">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><font color="#000000"><i>depmod</i></font></b>&#160;- executed at system startup, writes all module dependencies to a file named modules.dep
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1395370464153" ID="ID_40621702" MODIFIED="1395370526049">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b><i>rmmod</i></b>&#160;- unlink a module
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1312597517485" FOLDED="true" ID="ID_922891249" MODIFIED="1400828783344" TEXT="Debug">
-<node CREATED="1312597614008" MODIFIED="1312597621940" TEXT="printk"/>
-<node CREATED="1312597623157" MODIFIED="1312597626808" TEXT="/proc"/>
-<node CREATED="1312597627306" MODIFIED="1312597631092" TEXT="strace"/>
 </node>
 </node>
 </node>

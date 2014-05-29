@@ -54,8 +54,7 @@
       Stores information concerning a <b><i><font color="#0000ff">mounted filesystem</font></i></b>. For disk-based filesystems, this object usually corresponds to a <b><font color="#0000ff"><i>filesystem control block</i></font></b>&#160;stored on disk.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1369709722854" ID="ID_524176037" MODIFIED="1390460509440" TEXT="include/linux/fs.h">
@@ -102,8 +101,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <arrowlink COLOR="#ff6600" DESTINATION="ID_1924931812" ENDARROW="Default" ENDINCLINATION="1515;0;" ID="Arrow_ID_1719256538" STARTARROW="None" STARTINCLINATION="1515;0;"/>
 <arrowlink COLOR="#ff6600" DESTINATION="ID_924113963" ENDARROW="Default" ENDINCLINATION="1101;0;" ID="Arrow_ID_1474680875" STARTARROW="None" STARTINCLINATION="1101;0;"/>
 <arrowlink COLOR="#0000ff" DESTINATION="ID_1409554322" ENDARROW="Default" ENDINCLINATION="316;0;" ID="Arrow_ID_421093846" STARTARROW="None" STARTINCLINATION="316;0;"/>
@@ -125,8 +123,7 @@
       struct list_head <font color="#cc00cc">super_blocks</font>; /* The first element of all superblock objects list */
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401093893725" ID="ID_994060369" MODIFIED="1401094779672">
 <richcontent TYPE="NODE"><html>
@@ -162,8 +159,7 @@
       &#160;&#160;&#160;&#160;...
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -179,8 +175,7 @@
       Stores <b><i><font color="#0000ff">general information</font></i></b>&#160;about a specific file. For disk-based filesystems, this object usually corresponds to a <b><font color="#0000ff"><i>file control block</i></font></b>&#160;stored on disk. Each inode object is associated with an inode number, which uniquely identifies the file within the filesystem.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1369723392961" ID="ID_57843421" MODIFIED="1390461489941" TEXT="include/linux/fs.h">
@@ -218,8 +213,7 @@
       }
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <arrowlink COLOR="#ff9900" DESTINATION="ID_1560357739" ENDARROW="Default" ENDINCLINATION="262;0;" ID="Arrow_ID_333913323" STARTARROW="None" STARTINCLINATION="262;0;"/>
 </node>
 </node>
@@ -235,8 +229,7 @@
       Stores information about the linking of a <b><i><font color="#0000ff">directory entry</font></i></b>&#160; (that is, a particular name of the file) with the corresponding file. Each disk-based filesystem stores this information in its <b><font color="#0000ff"><i>own particular way on disk</i></font></b>.&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1369729796600" ID="ID_370000365" MODIFIED="1390462018634" TEXT="include/linux/dcache.h">
@@ -274,8 +267,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1366189528521" FOLDED="true" ID="ID_1249395069" MODIFIED="1401184393020" TEXT="File Object">
@@ -290,8 +282,7 @@
       Stores information about the interaction&#160;between an<b><i><font color="#0000ff">&#160;open file </font></i></b>and a process. This information exists only in <b><font color="#0000ff"><i>kernel memory </i></font></b>during the period when a process has the file open.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1369636883365" ID="ID_65479377" MODIFIED="1390462325372" TEXT="include/linux/fs.h">
@@ -332,8 +323,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1369639073539" ID="ID_1376766354" MODIFIED="1390462302346" TEXT="include/linux/path.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -357,8 +347,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1369637057651" ID="ID_156016210" MODIFIED="1390462448966">
 <richcontent TYPE="NODE"><html>
@@ -400,8 +389,7 @@
       The Ext2 Filesystem Layout
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1392195627068" FOLDED="true" ID="ID_502109639" MODIFIED="1401174926075" TEXT="Layouts of an Ext2 partition and of an Ext2 block group">
 <font NAME="SansSerif" SIZE="12"/>
@@ -416,8 +404,7 @@
       The first block in each Ext2 partition is never managed by the Ext2 filesystem, because it is reserved for the partition boot sector. The rest of the Ext2 partition is split into block groups.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401173233320" ID="ID_1691356969" MODIFIED="1401173342254" TEXT="Each block in a block group contains one of the following pieces of information">
 <node CREATED="1401173343566" ID="ID_185199652" MODIFIED="1401173367894" TEXT="A copy of the filesystem&apos;s superblock"/>
@@ -481,8 +468,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1391847425869" ID="ID_433791883" MODIFIED="1391847452433" TEXT="fs/ext2/ext2.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -527,8 +513,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392191766927" ID="ID_210501989" MODIFIED="1401156739448" TEXT="They&apos;re always cached in RAM.">
 <icon BUILTIN="idea"/>
@@ -574,8 +559,7 @@
       fs/ext2/super.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -604,8 +588,7 @@
       }&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -655,8 +638,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392191766927" ID="ID_829881109" MODIFIED="1401156739448" TEXT="They&apos;re always cached in RAM.">
 <icon BUILTIN="idea"/>
@@ -696,8 +678,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1391847777035" ID="ID_619749437" MODIFIED="1392191624381" TEXT="fs/ext2/ext2.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -736,8 +717,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1392362909035" ID="ID_921167744" MODIFIED="1392362923619">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -868,8 +848,7 @@
       <b><i><font color="#000000">Regular file</font></i></b>&#160;- When first created, a regular file is <b><font color="#0000ff"><i>empty</i></font></b>&#160; and needs <b><font color="#0000ff"><i>no data blocks</i></font></b>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1392275095565" ID="ID_1338251099" MODIFIED="1392275634255" TEXT="fs/ext2/file.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -976,8 +955,7 @@
       <i><b>Symbolic link, Device file, pipe, and socket</b></i>&#160;-&#160;<b><i><font color="#0000ff">No data blocks</font></i></b>&#160;are required for these kinds of files. All the necessary information is stored in the inode.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1392275766461" ID="ID_1730765357" MODIFIED="1392275781912" TEXT="fs/ext2/symlink.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -1161,7 +1139,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1370239154930" FOLDED="true" ID="ID_282454318" MODIFIED="1401177268845" POSITION="right" TEXT="Filesystem Types">
+<node CREATED="1370239154930" FOLDED="true" ID="ID_282454318" MODIFIED="1401349547300" POSITION="right" TEXT="Filesystem Types">
 <font NAME="SansSerif" SIZE="12"/>
 <node CREATED="1401155226209" ID="ID_840208795" MODIFIED="1401175902316">
 <richcontent TYPE="NODE"><html>
@@ -1260,7 +1238,34 @@
 </node>
 </node>
 <node CREATED="1366188682100" ID="ID_333407511" MODIFIED="1366188750105" TEXT="Network filesystems (NFS)"/>
-<node CREATED="1366188692444" ID="ID_1349695691" MODIFIED="1366188743974" TEXT="Special filesystems (/proc)"/>
+<node CREATED="1366188692444" ID="ID_1349695691" MODIFIED="1366188743974" TEXT="Special filesystems (/proc)">
+<node CREATED="1401243358486" ID="ID_652257902" MODIFIED="1401349531360">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <i><b>Procfs</b></i>&#160;-&#160;presents information about processes and other system information.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1401243366250" ID="ID_482659063" MODIFIED="1401243432624">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <i><b>Sysfs</b></i>&#160;- A filesystem representation of the system&#8217;s device tree.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
 </node>
 <node CREATED="1390462557543" FOLDED="true" ID="ID_1710226371" MODIFIED="1401177297691" POSITION="right">
 <richcontent TYPE="NODE"><html>
@@ -1318,8 +1323,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <arrowlink COLOR="#339900" DESTINATION="ID_425894147" ENDARROW="Default" ENDINCLINATION="402;0;" ID="Arrow_ID_1301444596" STARTARROW="None" STARTINCLINATION="402;0;"/>
 </node>
 <node CREATED="1390458883824" ID="ID_400167546" MODIFIED="1390539474812" TEXT="fs/filesystems.c">
