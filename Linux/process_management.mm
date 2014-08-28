@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1401170310714" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1409038168311" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -132,8 +132,7 @@
       volatile long state;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398838675735" ID="ID_326758892" MODIFIED="1398838698556">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -261,8 +260,7 @@
       unsigned int ptrace;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1316843584303" ID="ID_1772179729" MODIFIED="1398839739651">
 <richcontent TYPE="NODE"><html>
@@ -610,8 +608,7 @@
       struct nsproxy *nsproxy;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1401171188162" ID="ID_1384807595" MODIFIED="1401171495172" TEXT="include/linux/fs_struct.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -635,8 +632,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401170967001" ID="ID_1591417236" MODIFIED="1401170999346" TEXT="include/linux/fdtable.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -661,8 +657,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401172451613" ID="ID_1211025722" MODIFIED="1401172569146" TEXT="include/linux/nsproxy.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -699,8 +694,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1401171511883" TEXT="struct thread_struct thread;">
@@ -755,8 +749,7 @@
       ...
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -2132,8 +2125,8 @@
 <node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1399960511566" TEXT="rw_semaphore/completion"/>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1400828117848" POSITION="right" TEXT="Process Communication">
-<node CREATED="1399963067948" FOLDED="true" ID="ID_564823100" MODIFIED="1399963080399" TEXT="Data Structure">
+<node CREATED="1394607772301" ID="ID_232140513" MODIFIED="1409038169893" POSITION="right" TEXT="Process Communication">
+<node CREATED="1399963067948" FOLDED="true" ID="ID_564823100" MODIFIED="1409040135957" TEXT="Data Structure">
 <node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1395044667282" TEXT="include/linux/ipc_namespace.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -2196,9 +2189,74 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1394607940675" ID="ID_833366660" MODIFIED="1399963027563" TEXT="Pipes and FIFOs (named pipes)">
-<node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1399962986127" TEXT="compose">
-<node CREATED="1394692688493" ID="ID_1129761090" MODIFIED="1394692790674">
+<node CREATED="1394607940675" ID="ID_833366660" MODIFIED="1409214815921">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Pipes/NamedPipes(FIFOs)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1394608278558" FOLDED="true" ID="ID_1674073083" MODIFIED="1409218427161">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>producer/consumer</i></font></b>&#160;interactions among processes.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1409038499715" ID="ID_1032467219" MODIFIED="1409045100988">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#31649;&#36947;&#65292;&#29992;&#26469;&#23454;&#29616;&#31649;&#36947;&#30340;&#25991;&#20214;&#26159;&quot;&#26080;&#24418;&quot;&#30340;&#65292;&#23427;&#24182;&#19981;&#20986;&#29616;&#22312;&#30913;&#30424;&#25110;&#20854;&#20182;&#30340;&#25991;&#20214;&#31995;&#32479;&#23384;&#20648;&#20171;&#36136;&#19978;&#65292;&#32780;&#21482;&#23384;&#22312;&#20110;&#20869;&#23384;&#31354;&#38388;&#65292;&#20854;&#20182;&#36827;&#31243;&#20063;&#26080;&#27861;&#8220;&#25171;&#24320;&#8221;&#25110;&#35775;&#38382;&#36825;&#20010;&#25991;&#20214;&#12290;&#25152;&#20197;&#36825;&#20010;&#25152;&#35859;&#25991;&#20214;&#23454;&#36136;&#19978;&#21482;&#26159;&#19968;&#20010;&#29992;&#20316;&#32531;&#23384;&#21306;&#30340;&#20869;&#23384;&#39029;&#38754;&#65292;&#21482;&#26159;&#25226;&#23427;&#32435;&#20837;&#20102;&#25991;&#20214;&#31995;&#32479;&#30340;&#26426;&#21046;&#65292;&#20511;&#29992;&#20102;&#25991;&#20214;&#31995;&#32479;&#30340;&#21508;&#31181;&#25968;&#25454;&#32467;&#26500;&#21644;&#25805;&#20316;&#21152;&#20197;&#31649;&#29702;&#32780;&#24050;&#12290;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1409039814252" ID="ID_1651532288" MODIFIED="1409039822479">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#21629;&#21517;&#31649;&#36947;&#65288;FIFO&#25991;&#20214;&#65289;&#65292;&#36825;&#37324;&#25152;&#35859;&#8220;&#26377;&#21517;&#8221;&#26159;&#25351;&#36825;&#26679;&#19968;&#20010;&#25991;&#20214;&#24212;&#35813;&#26377;&#20010;&#25991;&#20214;&#21517;&#65292;&#20351;&#24471;&#20219;&#20309;&#36827;&#31243;&#37117;&#21487;&#20197;&#36890;&#36807;&#25991;&#20214;&#21517;&#25110;&#36335;&#24452;&#21517;&#19982;&#36825;&#20010;&#25991;&#20214;&#25346;&#19978;&#38057;&#65307;&#25152;&#35859;&#8220;&#26377;&#24418;&#8221;&#26159;&#25351;&#25991;&#20214;&#30340;inode&#24212;&#35813;&#23384;&#22312;&#20110;&#30913;&#30424;&#25110;&#20854;&#20182;&#25991;&#20214;&#31995;&#32479;&#20171;&#36136;&#19978;&#65292;&#20351;&#24471;&#20219;&#20309;&#36827;&#31243;&#22312;&#20219;&#20309;&#26102;&#38388;&#65288;&#32780;&#19981;&#20165;&#20165;&#26159;&#22312;fork()&#26102;&#65289;&#37117;&#21487;&#20197;&#24314;&#31435;&#65288;&#25110;&#26029;&#24320;&#65289;&#19982;&#36825;&#20010;&#25991;&#20214;&#20043;&#38388;&#30340;&#32852;&#31995;&#12290;&#27880;&#24847;&#65292;&#21629;&#21517;&#31649;&#36947;&#65288;FIFO&#25991;&#20214;&#65289;&#30340;inode&#33410;&#28857;&#22312;&#30913;&#30424;&#19978;&#65292;&#20294;&#37027;&#21482;&#26159;&#19968;&#20010;&#33410;&#28857;&#65292;&#32780;&#25991;&#20214;&#30340;&#25968;&#25454;&#21017;&#21482;&#23384;&#22312;&#20110;&#20869;&#23384;&#32531;&#23384;&#39029;&#38754;&#20013;&#65292;&#19982;&#26222;&#36890;&#31649;&#36947;&#19968;&#26679;&#12290;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1409217174894" ID="ID_948989221" MODIFIED="1409217182968">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#21311;&#21517;&#31649;&#36947;&#30001;pipe&#20989;&#25968;&#21019;&#24314;&#24182;&#25171;&#24320;&#12290;&#21629;&#21517;&#31649;&#36947;&#30001;mkfifo&#20989;&#25968;&#21019;&#24314;&#65292;&#25171;&#24320;&#29992;open&#12290;
+    </p>
+    <p>
+      FIFO&#65288;&#21629;&#21517;&#31649;&#36947;&#65289;&#19982;pipe&#65288;&#21311;&#21517;&#31649;&#36947;&#65289;&#20043;&#38388;&#21807;&#19968;&#30340;&#21306;&#21035;&#22312;&#23427;&#20204;&#21019;&#24314;&#19982;&#25171;&#24320;&#30340;&#26041;&#24335;&#19981;&#21516;&#65292;&#36825;&#20123;&#24037;&#20316;&#23436;&#25104;&#20043;&#21518;&#65292;&#23427;&#20204;&#20855;&#26377;&#30456;&#21516;&#30340;&#35821;&#20041;&#12290;The&#160;&#160;only difference between pipes and FIFOs is the manner in which they are created and opened.&#160;&#160;Once these tasks have been accomplished, I/O on pipes and FIFOs has exactly the same semantics.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1409040182453" TEXT="compose">
+<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1409218435524">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2209,6 +2267,59 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1409131678864" ID="ID_986546591" MODIFIED="1409131733688" TEXT="fs/pipe.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1409131683432" ID="ID_1227160795" MODIFIED="1409131951227">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      SYSCALL_DEFINE1(pipe, int __user *, fildes)
+    </p>
+    <p>
+      &#160;&#160;sys_pipe(int __user *fildes)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;__do_pipe_flags(fd, files, flags)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;create_pipe_files()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i>get_pipe_inode</i></b>()
+    </p>
+    <p>
+      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;inode = new_inode_pseudo(pipe_mnt-&gt;mnt_sb) </i>
+    </p>
+    <p>
+      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pipe = alloc_pipe_info() </i>
+    </p>
+    <p>
+      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pipe = kzalloc(sizeof(struct pipe_inode_info), GFP_KERNEL); </i>
+    </p>
+    <p>
+      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;pipe-&gt;bufs = kzalloc(sizeof(struct pipe_buffer) * PIPE_DEF_BUFFERS, GFP_KERNEL); </i>
+    </p>
+    <p>
+      <i>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;inode-&gt;i_pipe = pipe;</i>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;d_alloc_pseudo() // allocate a dentry
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i>alloc_file</i></b>(...FMODE_WRITE...)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i>alloc_file</i></b>(...FMODE_READ...)
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node CREATED="1394692720555" ID="ID_1152752042" MODIFIED="1399962992766">
 <richcontent TYPE="NODE"><html>
@@ -2225,12 +2336,12 @@
 <node CREATED="1394692743203" ID="ID_530105720" MODIFIED="1394692746367" TEXT="writing"/>
 </node>
 </node>
-<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1395371901163" TEXT="The pipefs special filesystem">
+<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1409218445894" TEXT="The pipefs special filesystem">
 <node CREATED="1394691860955" ID="ID_1473907831" MODIFIED="1394691903602" TEXT="include/linux/pipe_fs_i.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1394691908513" FOLDED="true" ID="ID_1650822936" MODIFIED="1395371901163">
+<node CREATED="1394691908513" ID="ID_1650822936" MODIFIED="1409040536865">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2283,23 +2394,23 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1394691985343" FOLDED="true" ID="ID_476786956" MODIFIED="1395371901162">
+<node CREATED="1394691985343" ID="ID_476786956" MODIFIED="1409040348845">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      struct <font color="#6600ff"><i><b>pipe_buffer</b></i></font>&#160;{
+      struct <b><font color="#6600ff"><i>pipe_buffer</i></font></b>&#160;{
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct page *page;
+      &#160;&#160;&#160;&#160;<b><font color="#6600ff"><i>struct page *page</i></font></b>;
     </p>
     <p>
       &#160;&#160;&#160;&#160;unsigned int offset, len;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;const struct <font color="#6600ff"><i><b>pipe_buf_operations</b></i></font>&#160; *ops;
+      &#160;&#160;&#160;&#160;const struct <b><font color="#6600ff"><i>pipe_buf_operations</i></font></b>&#160; *ops;
     </p>
     <p>
       &#160;&#160;&#160;&#160;unsigned int flags;
@@ -2311,7 +2422,9 @@
       };&#160;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
 <node CREATED="1394692107077" ID="ID_177751331" MODIFIED="1394692212711">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2347,7 +2460,6 @@
     </p>
   </body>
 </html></richcontent>
-</node>
 </node>
 </node>
 <node CREATED="1394692316190" ID="ID_95436366" MODIFIED="1394692338106" TEXT="fs/pipe.c">
@@ -2409,7 +2521,6 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1394608278558" ID="ID_1674073083" MODIFIED="1394692841325" TEXT="producer/consumer interactions among processes."/>
 </node>
 <node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1399963089493" TEXT="Semaphores">
 <node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395371901164">
