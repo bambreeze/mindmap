@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1409038168311" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1409281814274" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -107,7 +107,7 @@
 <arrowlink COLOR="#b0b0b0" DESTINATION="ID_1707237907" ENDARROW="Default" ENDINCLINATION="288;0;" ID="Arrow_ID_1054171908" STARTARROW="None" STARTINCLINATION="288;0;"/>
 </node>
 </node>
-<node CREATED="1315906710224" ID="ID_1707237907" MODIFIED="1398836317928">
+<node CREATED="1315906710224" ID="ID_1707237907" MODIFIED="1409303693373">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -416,7 +416,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1365579658729" FOLDED="true" ID="ID_676626903" MODIFIED="1399193415140">
+<node CREATED="1365579658729" ID="ID_676626903" MODIFIED="1409303646088">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -428,126 +428,20 @@
     <p>
       struct sighand_struct *sighand;
     </p>
-  </body>
-</html></richcontent>
-<node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1393232241842" TEXT="include/linux/sched.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1398847367261">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
     <p>
-      struct signal_struct {
+      sigset_t blocked, real_blocked;
     </p>
     <p>
-      &#160;&#160;&#160;&#160;atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
+      sigset_t saved_sigmask; /* restored if set_restore_sigmask() was used */
     </p>
     <p>
-      &#160;&#160;&#160;&#160;atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int nr_threads;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wait_queue_head_t wait_chldexit;&#160;&#160;&#160;/* The processes sleeping in a wait4() system call */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct task_struct *curr_target;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct sigpending shared_pending; /* Data structure storing the shared pending signals */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
+      struct sigpending pending;
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
-<node CREATED="1365580739916" ID="ID_462838517" MODIFIED="1398847523537">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct sighand_struct {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct k_sigaction action[_NSIG];&#160;&#160;&#160;&#160;/* The actions to be performed upon delivering the signals */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wait_queue_head_t&#160;&#160;&#160;signalfd_wqh;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1366168611255" ID="ID_682990093" MODIFIED="1398847580252" TEXT="include/linux/signal.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1366168658355" ID="ID_1469689717" MODIFIED="1398847694395">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      /*&#160;&#160;Type of a signal handler.&#160;&#160;*/
-    </p>
-    <p>
-      typedef void (*__sighandler_t)(int);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      struct sigaction {&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;sa_flags;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;__sighandler_t&#160;&#160;sa_handler;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;sigset_t&#160;&#160;&#160;&#160;sa_mask;&#160;&#160;&#160;&#160;/* mask last for extensibility */
-    </p>
-    <p>
-      };
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      struct k_sigaction {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct sigaction sa;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1401171585243" TEXT="struct mm_struct *mm, *active_mm;">
+<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1409303656064" TEXT="struct mm_struct *mm, *active_mm;">
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -753,7 +647,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1399963948277" POSITION="right" TEXT="Process Creation/Execution/Termination">
+<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1409281813511" POSITION="right" TEXT="Process Creation/Execution/Termination">
 <node CREATED="1398840513254" ID="ID_509227697" MODIFIED="1398842872065">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -878,7 +772,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1400743915984" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1409281811149" POSITION="right" TEXT="Process Contexts">
 <node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -977,7 +871,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1399963951083" POSITION="right" TEXT="Process Scheduling">
+<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1409281806756" POSITION="right" TEXT="Process Scheduling">
 <node CREATED="1399183810902" ID="ID_1735785535" MODIFIED="1399183830546" TEXT="policy">
 <node CREATED="1399183831062" FOLDED="true" ID="ID_135059142" MODIFIED="1399196819273" TEXT="process priority">
 <node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1399184105962" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)"/>
@@ -1086,7 +980,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1400828136228" POSITION="right" TEXT="Interrupts and Exceptions">
+<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1409281802597" POSITION="right" TEXT="Interrupts and Exceptions">
 <node CREATED="1316769068729" ID="ID_1349911850" MODIFIED="1399620625601" TEXT="Definition">
 <node CREATED="1316766926536" ID="ID_1498465646" MODIFIED="1399620628022" TEXT="Interrupts (Asynchronous, generated by hardware)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
@@ -1611,7 +1505,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1400828118904" POSITION="right" TEXT="System Call">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1409281783344" POSITION="right" TEXT="System Call">
 <node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399962878636">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1729,7 +1623,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1400828116151" POSITION="right" TEXT="Concurrency">
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1409281776596" POSITION="right" TEXT="Concurrency">
 <node CREATED="1399770844089" ID="ID_869416328" MODIFIED="1399962757390" TEXT="Definiton">
 <node CREATED="1399771002871" ID="ID_261412793" MODIFIED="1399771167398">
 <richcontent TYPE="NODE"><html>
@@ -2126,70 +2020,7 @@
 </node>
 </node>
 <node CREATED="1394607772301" ID="ID_232140513" MODIFIED="1409038169893" POSITION="right" TEXT="Process Communication">
-<node CREATED="1399963067948" FOLDED="true" ID="ID_564823100" MODIFIED="1409040135957" TEXT="Data Structure">
-<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1395044667282" TEXT="include/linux/ipc_namespace.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395047483349" ID="ID_1230410566" MODIFIED="1395047518126">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1395044741770">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>ipc_ids</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int in_use;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq_max;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct idr ipcs_idr;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int next_id;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1394607940675" ID="ID_833366660" MODIFIED="1409214815921">
+<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1411119707925">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2201,7 +2032,7 @@
   </body>
 </html>
 </richcontent>
-<node CREATED="1394608278558" FOLDED="true" ID="ID_1674073083" MODIFIED="1409218427161">
+<node CREATED="1394608278558" FOLDED="true" ID="ID_1674073083" MODIFIED="1410333570257">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2256,7 +2087,7 @@
 </node>
 </node>
 <node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1409040182453" TEXT="compose">
-<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1409218435524">
+<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1410333172654">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2336,7 +2167,7 @@
 <node CREATED="1394692743203" ID="ID_530105720" MODIFIED="1394692746367" TEXT="writing"/>
 </node>
 </node>
-<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1409218445894" TEXT="The pipefs special filesystem">
+<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1410333179181" TEXT="The pipefs special filesystem">
 <node CREATED="1394691860955" ID="ID_1473907831" MODIFIED="1394691903602" TEXT="include/linux/pipe_fs_i.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -2521,8 +2352,716 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1410333198083" ID="ID_1422765972" MODIFIED="1410333300707" TEXT="&#x7ba1;&#x9053;&#xff0c;&#x672c;&#x8d28;&#x5c31;&#x662f;&#x5171;&#x4eab;&#x7269;&#x7406;&#x7684;&#x201c;page&#x201d;&#xff0c;&#x9700;&#x8981;&#x7684;&#x65f6;&#x5019;&#x201c;&#x751f;&#x4ea7;&#x8005;&#x201d;&#x6216;&#x8005;&#x201c;&#x6d88;&#x8d39;&#x8005;&#x201d;&#x518d;&#x6620;&#x5c04;&#x540c;&#x4e00;&#x5757;&#x7269;&#x7406;&#x5730;&#x5740;&#xff08;page&#xff09;&#x5230;&#x81ea;&#x5df1;&#x7684;&#x865a;&#x62df;&#x5185;&#x5b58;&#x3002;"/>
 </node>
-<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1399963089493" TEXT="Semaphores">
+<node CREATED="1409303258109" FOLDED="true" ID="ID_447036192" MODIFIED="1411119705271" TEXT="Signal">
+<node CREATED="1409303271084" ID="ID_191823609" MODIFIED="1409304133218">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#19968;&#33324;&#26469;&#35828;&#65292;signal&#26159;&#23545;&#8220;&#20013;&#26029;&#8221;&#36825;&#31181;&#27010;&#24565;&#22312;&#36719;&#20214;&#23618;&#27425;&#19978;&#30340;&#27169;&#25311;&#65288;&#25152;&#20197;&#20134;&#31216;&#8220;&#36719;&#20013;&#26029;&#8221;&#65289;&#65292;&#20854;&#20013;&#20449;&#21495;&#30340;&#21457;&#36865;&#32773;&#30456;&#24403;&#20110;&#20013;&#26029;&#28304;&#65292;&#32780;&#25509;&#25910;&#32773;&#30456;&#24403;&#20110;&#22788;&#29702;&#22120;&#65292;&#25152;&#20197;&#24517;&#39035;&#26159;&#19968;&#20010;&#36827;&#31243;&#12290;&#20449;&#21495;&#21644;&#20013;&#26029;&#19968;&#26679;&#65292;&#37117;&#26159;&#8220;&#24322;&#27493;&#8221;&#30340;&#12290;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1411118418586" TEXT="data structure">
+<node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1409304524041">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      include/linux/sched.h
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1398847367261">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct signal_struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int nr_threads;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wait_queue_head_t wait_chldexit;&#160;&#160;&#160;/* The processes sleeping in a wait4() system call */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct task_struct *curr_target;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct sigpending shared_pending; /* Data structure storing the shared pending signals */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1409304856682">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct sighand_struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct k_sigaction action[_NSIG]</i></font></b>;&#160;&#160;&#160;&#160;/* The actions to be performed upon delivering the signals */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wait_queue_head_t&#160;&#160;&#160;signalfd_wqh;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1366168611255" ID="ID_1270956179" MODIFIED="1409304073945" TEXT="include/linux/signal.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1366168658355" ID="ID_1469689717" MODIFIED="1409304502421">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /*&#160;&#160;Type of a signal handler.&#160;&#160;*/
+    </p>
+    <p>
+      typedef void (*__sighandler_t)(int);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      struct sigaction {&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;sa_flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;__sighandler_t&#160;&#160;<b><font color="#0000ff"><i>sa_handler</i></font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;sigset_t&#160;&#160;&#160;&#160;sa_mask;&#160;&#160;&#160;&#160;/* mask last for extensibility */
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      struct k_sigaction {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct sigaction sa;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1409303791185" ID="ID_275050707" MODIFIED="1410333410391">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct sigpending {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head <b><font color="#000000"><i>list</i></font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;sigset_t signal;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1366168611255" ID="ID_1145813047" MODIFIED="1409304194557" TEXT="include/linux/signal.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1409303924982" ID="ID_424028508" MODIFIED="1409304724634">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct sigqueue {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head <b><font color="#000000"><i>list</i></font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;siginfo_t info;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct user_struct *user;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1366168611255" ID="ID_585150410" MODIFIED="1409304565926" TEXT="include/uapi/asm-generic/siginfo.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1409304184560" ID="ID_222440537" MODIFIED="1409304326417">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      typedef struct siginfo {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int si_signo;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int si_errno;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int si_code;&#160;&#160;// signal source
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;union {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;int _pad[SI_PAD_SIZE];
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* kill() */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;__kernel_pid_t _pid; /* sender's pid */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;__ARCH_SI_UID_T _uid; /* sender's uid */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} _kill;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;} _sifields;
+    </p>
+    <p>
+      } __ARCH_SI_ATTRIBUTES siginfo_t;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1409304872194" ID="ID_1556239518" MODIFIED="1411119072575" TEXT="operation">
+<node CREATED="1409304875825" ID="ID_1277062803" MODIFIED="1410333345431" TEXT="setup signal action">
+<node CREATED="1365580728182" ID="ID_1475758844" MODIFIED="1409304929922">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      kernel/signal.c
+    </p>
+  </body>
+</html>
+</richcontent>
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1409304933688" ID="ID_405456301" MODIFIED="1409305054337">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      sys_signal()
+    </p>
+    <p>
+      &#160;&#160;do_sigaction()
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1409304877946" ID="ID_653617886" MODIFIED="1410333350287" TEXT="send signal">
+<node CREATED="1365580728182" ID="ID_465583667" MODIFIED="1409304929922">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      kernel/signal.c
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1409305068334" ID="ID_1868114363" MODIFIED="1409305170558">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      sys_kill()
+    </p>
+    <p>
+      &#160;&#160;kill_something_info()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;kill_proc_info()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;send_sig_info()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;deliver_signal()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;send_signal()
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1409304879914" ID="ID_25058641" MODIFIED="1410333348765" TEXT="receive signal">
+<node CREATED="1365580728182" ID="ID_1825578398" MODIFIED="1409304929922">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      kernel/signal.c
+    </p>
+  </body>
+</html></richcontent>
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1409305235547" ID="ID_840637216" MODIFIED="1409305309316">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      ret_with_reschedule()
+    </p>
+    <p>
+      &#160;&#160;do_signal()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;handle_signal()
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1410333510985" ID="ID_911970877" MODIFIED="1410333554426" TEXT="&#x4fe1;&#x53f7;&#xff0c;&#x672c;&#x8d28;&#x4e0a;&#x5c31;&#x662f;&#x201c;&#x53d1;&#x9001;&#x8005;&#x201d;&#x628a;&#x5f85;&#x5904;&#x7406;&#x7684;&#x8bf7;&#x6c42;&#x76f4;&#x63a5;&#x6302;&#x63a5;&#x5230;&#x201c;&#x63a5;&#x6536;&#x8005;&#x201d;&#x7684;&#x961f;&#x5217;&#x4e0a;&#x3002;"/>
+</node>
+<node CREATED="1411119668587" ID="ID_1760454121" MODIFIED="1411119687995" TEXT="IPC">
+<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1411119495305" TEXT="include/linux/ipc_namespace.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395047483349" FOLDED="true" ID="ID_1230410566" MODIFIED="1411119638197">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1411119483158" ID="ID_1032073067" MODIFIED="1411119627784" TEXT="idr&#xff0c;&#x201c;Small id to pointer translation service.&#x201d; &#x5b9e;&#x9645;&#x4e0a;&#xff0c;&#x5c31;&#x662f;&#x5c06;&#x4e00;&#x4e2a;&#x6574;&#x6570;ID&#x53f7;&#x548c;&#x4e00;&#x4e2a;&#x6307;&#x9488;&#x5173;&#x8054;&#x5728;&#x4e00;&#x8d77;&#x7684;&#x673a;&#x5236;&#x3002;"/>
+<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1411119480809">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><font color="#660066"><i>ipc_ids</i></font></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int in_use;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq_max;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct idr ipcs_idr;</i></font></b>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int next_id;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1411119393434" TEXT="Messages">
+<node CREATED="1394784671796" ID="ID_742765223" MODIFIED="1410338213417" TEXT="compose">
+<node CREATED="1394784681207" ID="ID_518594583" MODIFIED="1394784707690">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      a fixed-size <font color="#0000ff"><i><b>header</b></i></font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1394784709276" ID="ID_1635755278" MODIFIED="1394784728190">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      a variable-length <font color="#0000ff"><i><b>text</b></i></font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1411118423286" FOLDED="true" ID="ID_1502062810" MODIFIED="1411119364180" TEXT="data structure">
+<node CREATED="1395043470647" FOLDED="true" ID="ID_1299941336" MODIFIED="1411119064403">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/ipc/ipc-message-queue.jpg" />
+  </body>
+</html></richcontent>
+<node CREATED="1395042319785" ID="ID_1164296285" MODIFIED="1395042338581" TEXT="include/linux/msg.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395042341185" ID="ID_746765244" MODIFIED="1411119033750">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* one msq_queue structure for each present queue on the system */
+    </p>
+    <p>
+      struct <b><font color="#660066"><i>msg_queue</i></font></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#6600ff"><i>struct kern_ipc_perm q_perm</i></font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t q_stime;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last msgsnd time */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t q_rtime;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last msgrcv time */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t q_ctime;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last change time */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long q_cbytes;&#160;&#160;&#160;&#160;&#160;/* current number of bytes on queue */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long q_qnum;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of messages in queue */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long q_qbytes;&#160;&#160;&#160;&#160;&#160;/* max number of bytes on queue */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;pid_t q_lspid;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* pid of last msgsnd */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;pid_t q_lrpid;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last receive pid */
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head <b><font color="#0000ff"><i>q_messages</i></font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head q_receivers;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head q_senders;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+<arrowlink COLOR="#0000ff" DESTINATION="ID_1966899340" ENDARROW="Default" ENDINCLINATION="232;0;" ID="Arrow_ID_1865970826" STARTARROW="None" STARTINCLINATION="232;0;"/>
+</node>
+<node CREATED="1395042864264" ID="ID_1966899340" MODIFIED="1395043686061">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /* one msg_msg structure for each message */
+    </p>
+    <p>
+      struct <i><font color="#660066"><b>msg_msg</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct list_head <i><font color="#0000ff"><b>m_list</b></font></i>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;long m_type;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;size_t m_ts;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* message text size */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct msg_msgseg* <i><font color="#ff0000"><b>next</b></font></i>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;void *security;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* the actual message follows immediately */
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+<arrowlink COLOR="#ff0000" DESTINATION="ID_1885995075" ENDARROW="Default" ENDINCLINATION="139;0;" ID="Arrow_ID_57009676" STARTARROW="None" STARTINCLINATION="139;0;"/>
+</node>
+<node CREATED="1395042232396" ID="ID_728043947" MODIFIED="1395042929598" TEXT="ipc/msgutil.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395042267003" ID="ID_1885995075" MODIFIED="1395043680763">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>msg_msgseg</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct msg_msgseg *<i><font color="#ff0000"><b>next</b></font></i>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* the next part of the message follows immediately */
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1411026660064" ID="ID_34983018" MODIFIED="1411026690681">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/ipc/ipc-message-queue2.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1411119076865" FOLDED="true" ID="ID_1321898770" MODIFIED="1411119366773" TEXT="operation">
+<node CREATED="1411119080670" ID="ID_1869855198" MODIFIED="1411119106788" TEXT="msg send"/>
+<node CREATED="1411119093120" ID="ID_1194337764" MODIFIED="1411119101370" TEXT="msg receive"/>
+<node CREATED="1411119108640" ID="ID_1371475236" MODIFIED="1411119115403" TEXT="msg ctrl"/>
+</node>
+<node CREATED="1411119119971" ID="ID_317725713" MODIFIED="1411119338653">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#28040;&#24687;&#65292;&#26412;&#36136;&#19978;&#23601;&#26159;&#27599;&#20010;ID&#23545;&#24212;&#19968;&#20010;&#8220;&#28040;&#24687;&#38431;&#21015;&#8221;&#12290;&#27599;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#30340;&#28040;&#24687;&#65292;&#29992;&#38142;&#34920;&#30340;&#24418;&#24335;&#23384;&#25918;&#12290;
+    </p>
+    <p>
+      &#21457;&#36865;&#32773;&#65292;&#21521;&#36825;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#25554;&#20837;&#28040;&#24687;&#12290;
+    </p>
+    <p>
+      &#25509;&#25910;&#32773;&#65292;&#20174;&#36825;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#21462;&#36208;&#28040;&#24687;&#12290;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1411119712302" TEXT="Shared memory regions">
+<node CREATED="1395047974244" FOLDED="true" ID="ID_1761056915" MODIFIED="1395371901164">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/ipc/ipc-shared-memory.jpg" />
+  </body>
+</html></richcontent>
+<node CREATED="1395048394074" ID="ID_767020341" MODIFIED="1395048452957" TEXT="include/linux/shm.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395048396731" ID="ID_1014351065" MODIFIED="1395048430176">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>shmid_kernel</b></font></i>&#160;/* private to the kernel */
+    </p>
+    <p>
+      {&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct kern_ipc_perm&#160;&#160;&#160;&#160;shm_perm;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct file *&#160;&#160;&#160;&#160;&#160;&#160; <i><font color="#ff0000"><b>shm_file</b></font></i>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_nattch;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned long&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_segsz;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_atim;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_dtim;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_ctim;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;pid_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_cprid;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;pid_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_lprid;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct user_struct&#160;&#160;*mlock_user;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;/* The task created the shm object.&#160;&#160;NULL if the task is dead. */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct task_struct&#160;&#160;*shm_creator;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1411119416619" TEXT="Semaphores">
 <node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395371901164">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2763,240 +3302,6 @@
   </body>
 </html></richcontent>
 </node>
-</node>
-</node>
-<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1399963039860" TEXT="Messages">
-<node CREATED="1394784671796" FOLDED="true" ID="ID_742765223" MODIFIED="1395371901164" TEXT="compose">
-<node CREATED="1394784681207" ID="ID_518594583" MODIFIED="1394784707690">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      a fixed-size <font color="#0000ff"><i><b>header</b></i></font>
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1394784709276" ID="ID_1635755278" MODIFIED="1394784728190">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      a variable-length <font color="#0000ff"><i><b>text</b></i></font>
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1395043470647" FOLDED="true" ID="ID_1299941336" MODIFIED="1395371901164">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <img src="kernel/ipc/ipc-message-queue.jpg" />
-  </body>
-</html></richcontent>
-<node CREATED="1395042319785" ID="ID_1164296285" MODIFIED="1395042338581" TEXT="include/linux/msg.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395042341185" ID="ID_746765244" MODIFIED="1395043673253">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      /* one msq_queue structure for each present queue on the system */
-    </p>
-    <p>
-      struct <i><font color="#660066"><b>msg_queue</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct kern_ipc_perm q_perm;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;time_t q_stime;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last msgsnd time */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;time_t q_rtime;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last msgrcv time */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;time_t q_ctime;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last change time */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned long q_cbytes;&#160;&#160;&#160;&#160;&#160;/* current number of bytes on queue */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned long q_qnum;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* number of messages in queue */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned long q_qbytes;&#160;&#160;&#160;&#160;&#160;/* max number of bytes on queue */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;pid_t q_lspid;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* pid of last msgsnd */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;pid_t q_lrpid;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last receive pid */
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct list_head <i><font color="#0000ff"><b>q_messages</b></font></i>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct list_head q_receivers;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct list_head q_senders;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-<arrowlink COLOR="#0000ff" DESTINATION="ID_1966899340" ENDARROW="Default" ENDINCLINATION="232;0;" ID="Arrow_ID_1865970826" STARTARROW="None" STARTINCLINATION="232;0;"/>
-</node>
-<node CREATED="1395042864264" ID="ID_1966899340" MODIFIED="1395043686061">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      /* one msg_msg structure for each message */
-    </p>
-    <p>
-      struct <i><font color="#660066"><b>msg_msg</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct list_head <i><font color="#0000ff"><b>m_list</b></font></i>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;long m_type;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;size_t m_ts;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* message text size */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct msg_msgseg* <i><font color="#ff0000"><b>next</b></font></i>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;void *security;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* the actual message follows immediately */
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-<arrowlink COLOR="#ff0000" DESTINATION="ID_1885995075" ENDARROW="Default" ENDINCLINATION="139;0;" ID="Arrow_ID_57009676" STARTARROW="None" STARTINCLINATION="139;0;"/>
-</node>
-<node CREATED="1395042232396" ID="ID_728043947" MODIFIED="1395042929598" TEXT="ipc/msgutil.c">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395042267003" ID="ID_1885995075" MODIFIED="1395043680763">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>msg_msgseg</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct msg_msgseg *<i><font color="#ff0000"><b>next</b></font></i>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* the next part of the message follows immediately */
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-</node>
-<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1399963044612" TEXT="Shared memory regions">
-<node CREATED="1395047974244" FOLDED="true" ID="ID_1761056915" MODIFIED="1395371901164">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <img src="kernel/ipc/ipc-shared-memory.jpg" />
-  </body>
-</html></richcontent>
-<node CREATED="1395048394074" ID="ID_767020341" MODIFIED="1395048452957" TEXT="include/linux/shm.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395048396731" ID="ID_1014351065" MODIFIED="1395048430176">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>shmid_kernel</b></font></i>&#160;/* private to the kernel */
-    </p>
-    <p>
-      {&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct kern_ipc_perm&#160;&#160;&#160;&#160;shm_perm;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct file *&#160;&#160;&#160;&#160;&#160;&#160; <i><font color="#ff0000"><b>shm_file</b></font></i>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned long&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_nattch;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned long&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_segsz;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_atim;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_dtim;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;time_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_ctim;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;pid_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_cprid;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;pid_t&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;shm_lprid;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct user_struct&#160;&#160;*mlock_user;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;/* The task created the shm object.&#160;&#160;NULL if the task is dead. */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct task_struct&#160;&#160;*shm_creator;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
 </node>
 </node>
 </node>
