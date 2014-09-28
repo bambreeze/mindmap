@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1409281814274" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" FOLDED="true" ID="ID_266019102" MODIFIED="1411897315759" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -438,8 +438,7 @@
       struct sigpending pending;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1409303656064" TEXT="struct mm_struct *mm, *active_mm;">
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
@@ -2020,7 +2019,71 @@
 </node>
 </node>
 <node CREATED="1394607772301" ID="ID_232140513" MODIFIED="1409038169893" POSITION="right" TEXT="Process Communication">
-<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1411119707925">
+<node CREATED="1411896802001" FOLDED="true" ID="ID_1519744102" MODIFIED="1411897294471" TEXT="common concept">
+<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1411119495305" TEXT="include/linux/ipc_namespace.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395047483349" ID="ID_1230410566" MODIFIED="1411895787503">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1411897264730">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><font color="#660066"><i>ipc_ids</i></font></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int in_use;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq_max;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct idr ipcs_idr;</i></font></b>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int next_id;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1411119483158" ID="ID_1032073067" MODIFIED="1411119627784" TEXT="idr&#xff0c;&#x201c;Small id to pointer translation service.&#x201d; &#x5b9e;&#x9645;&#x4e0a;&#xff0c;&#x5c31;&#x662f;&#x5c06;&#x4e00;&#x4e2a;&#x6574;&#x6570;ID&#x53f7;&#x548c;&#x4e00;&#x4e2a;&#x6307;&#x9488;&#x5173;&#x8054;&#x5728;&#x4e00;&#x8d77;&#x7684;&#x673a;&#x5236;&#x3002;"/>
+</node>
+<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1411897247563">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2030,9 +2093,9 @@
       Pipes/NamedPipes(FIFOs)
     </p>
   </body>
-</html>
-</richcontent>
-<node CREATED="1394608278558" FOLDED="true" ID="ID_1674073083" MODIFIED="1410333570257">
+</html></richcontent>
+<node CREATED="1410333198083" ID="ID_1422765972" MODIFIED="1411897177530" TEXT="&#x7ba1;&#x9053;&#xff0c;&#x672c;&#x8d28;&#x5c31;&#x662f;&#x5171;&#x4eab;&#x7269;&#x7406;&#x7684;&#x201c;page&#x201d;&#xff0c;&#x9700;&#x8981;&#x7684;&#x65f6;&#x5019;&#x201c;&#x751f;&#x4ea7;&#x8005;&#x201d;&#x6216;&#x8005;&#x201c;&#x6d88;&#x8d39;&#x8005;&#x201d;&#x518d;&#x6620;&#x5c04;&#x540c;&#x4e00;&#x5757;&#x7269;&#x7406;&#x5730;&#x5740;&#xff08;page&#xff09;&#x5230;&#x81ea;&#x5df1;&#x7684;&#x865a;&#x62df;&#x5185;&#x5b58;&#x3002;"/>
+<node CREATED="1394608278558" FOLDED="true" ID="ID_1674073083" MODIFIED="1411897246306">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2042,8 +2105,7 @@
       <b><font color="#0000ff"><i>producer/consumer</i></font></b>&#160;interactions among processes.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1409038499715" ID="ID_1032467219" MODIFIED="1409045100988">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2054,8 +2116,7 @@
       &#31649;&#36947;&#65292;&#29992;&#26469;&#23454;&#29616;&#31649;&#36947;&#30340;&#25991;&#20214;&#26159;&quot;&#26080;&#24418;&quot;&#30340;&#65292;&#23427;&#24182;&#19981;&#20986;&#29616;&#22312;&#30913;&#30424;&#25110;&#20854;&#20182;&#30340;&#25991;&#20214;&#31995;&#32479;&#23384;&#20648;&#20171;&#36136;&#19978;&#65292;&#32780;&#21482;&#23384;&#22312;&#20110;&#20869;&#23384;&#31354;&#38388;&#65292;&#20854;&#20182;&#36827;&#31243;&#20063;&#26080;&#27861;&#8220;&#25171;&#24320;&#8221;&#25110;&#35775;&#38382;&#36825;&#20010;&#25991;&#20214;&#12290;&#25152;&#20197;&#36825;&#20010;&#25152;&#35859;&#25991;&#20214;&#23454;&#36136;&#19978;&#21482;&#26159;&#19968;&#20010;&#29992;&#20316;&#32531;&#23384;&#21306;&#30340;&#20869;&#23384;&#39029;&#38754;&#65292;&#21482;&#26159;&#25226;&#23427;&#32435;&#20837;&#20102;&#25991;&#20214;&#31995;&#32479;&#30340;&#26426;&#21046;&#65292;&#20511;&#29992;&#20102;&#25991;&#20214;&#31995;&#32479;&#30340;&#21508;&#31181;&#25968;&#25454;&#32467;&#26500;&#21644;&#25805;&#20316;&#21152;&#20197;&#31649;&#29702;&#32780;&#24050;&#12290;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1409039814252" ID="ID_1651532288" MODIFIED="1409039822479">
 <richcontent TYPE="NODE"><html>
@@ -2082,12 +2143,11 @@
       FIFO&#65288;&#21629;&#21517;&#31649;&#36947;&#65289;&#19982;pipe&#65288;&#21311;&#21517;&#31649;&#36947;&#65289;&#20043;&#38388;&#21807;&#19968;&#30340;&#21306;&#21035;&#22312;&#23427;&#20204;&#21019;&#24314;&#19982;&#25171;&#24320;&#30340;&#26041;&#24335;&#19981;&#21516;&#65292;&#36825;&#20123;&#24037;&#20316;&#23436;&#25104;&#20043;&#21518;&#65292;&#23427;&#20204;&#20855;&#26377;&#30456;&#21516;&#30340;&#35821;&#20041;&#12290;The&#160;&#160;only difference between pipes and FIFOs is the manner in which they are created and opened.&#160;&#160;Once these tasks have been accomplished, I/O on pipes and FIFOs has exactly the same semantics.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1409040182453" TEXT="compose">
-<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1410333172654">
+<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1411896143955">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2148,8 +2208,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<b><i>alloc_file</i></b>(...FMODE_READ...)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1394692720555" ID="ID_1152752042" MODIFIED="1399962992766">
@@ -2167,7 +2226,7 @@
 <node CREATED="1394692743203" ID="ID_530105720" MODIFIED="1394692746367" TEXT="writing"/>
 </node>
 </node>
-<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1410333179181" TEXT="The pipefs special filesystem">
+<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1411897240553" TEXT="The pipefs special filesystem">
 <node CREATED="1394691860955" ID="ID_1473907831" MODIFIED="1394691903602" TEXT="include/linux/pipe_fs_i.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -2253,8 +2312,7 @@
       };&#160;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1394692107077" ID="ID_177751331" MODIFIED="1394692212711">
 <richcontent TYPE="NODE"><html>
@@ -2352,23 +2410,21 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1410333198083" ID="ID_1422765972" MODIFIED="1410333300707" TEXT="&#x7ba1;&#x9053;&#xff0c;&#x672c;&#x8d28;&#x5c31;&#x662f;&#x5171;&#x4eab;&#x7269;&#x7406;&#x7684;&#x201c;page&#x201d;&#xff0c;&#x9700;&#x8981;&#x7684;&#x65f6;&#x5019;&#x201c;&#x751f;&#x4ea7;&#x8005;&#x201d;&#x6216;&#x8005;&#x201c;&#x6d88;&#x8d39;&#x8005;&#x201d;&#x518d;&#x6620;&#x5c04;&#x540c;&#x4e00;&#x5757;&#x7269;&#x7406;&#x5730;&#x5740;&#xff08;page&#xff09;&#x5230;&#x81ea;&#x5df1;&#x7684;&#x865a;&#x62df;&#x5185;&#x5b58;&#x3002;"/>
 </node>
-<node CREATED="1409303258109" FOLDED="true" ID="ID_447036192" MODIFIED="1411119705271" TEXT="Signal">
-<node CREATED="1409303271084" ID="ID_191823609" MODIFIED="1409304133218">
+<node CREATED="1409303258109" FOLDED="true" ID="ID_447036192" MODIFIED="1411897209715" TEXT="Signal">
+<node CREATED="1409303271084" ID="ID_191823609" MODIFIED="1411897163004">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      &#19968;&#33324;&#26469;&#35828;&#65292;signal&#26159;&#23545;&#8220;&#20013;&#26029;&#8221;&#36825;&#31181;&#27010;&#24565;&#22312;&#36719;&#20214;&#23618;&#27425;&#19978;&#30340;&#27169;&#25311;&#65288;&#25152;&#20197;&#20134;&#31216;&#8220;&#36719;&#20013;&#26029;&#8221;&#65289;&#65292;&#20854;&#20013;&#20449;&#21495;&#30340;&#21457;&#36865;&#32773;&#30456;&#24403;&#20110;&#20013;&#26029;&#28304;&#65292;&#32780;&#25509;&#25910;&#32773;&#30456;&#24403;&#20110;&#22788;&#29702;&#22120;&#65292;&#25152;&#20197;&#24517;&#39035;&#26159;&#19968;&#20010;&#36827;&#31243;&#12290;&#20449;&#21495;&#21644;&#20013;&#26029;&#19968;&#26679;&#65292;&#37117;&#26159;&#8220;&#24322;&#27493;&#8221;&#30340;&#12290;
+      &#20449;&#21495;&#65292;&#26412;&#36136;&#19978;&#23601;&#26159;&#8220;&#21457;&#36865;&#32773;&#8221;&#25226;&#24453;&#22788;&#29702;&#30340;&#35831;&#27714;&#30452;&#25509;&#25346;&#25509;&#21040;&#8220;&#25509;&#25910;&#32773;&#8221;&#30340;&#38431;&#21015;&#19978;&#12290;&#19968;&#33324;&#26469;&#35828;&#65292;signal&#26159;&#23545;&#8220;&#20013;&#26029;&#8221;&#36825;&#31181;&#27010;&#24565;&#22312;&#36719;&#20214;&#23618;&#27425;&#19978;&#30340;&#27169;&#25311;&#65288;&#25152;&#20197;&#20134;&#31216;&#8220;&#36719;&#20013;&#26029;&#8221;&#65289;&#65292;&#20854;&#20013;&#20449;&#21495;&#30340;&#21457;&#36865;&#32773;&#30456;&#24403;&#20110;&#20013;&#26029;&#28304;&#65292;&#32780;&#25509;&#25910;&#32773;&#30456;&#24403;&#20110;&#22788;&#29702;&#22120;&#65292;&#25152;&#20197;&#24517;&#39035;&#26159;&#19968;&#20010;&#36827;&#31243;&#12290;&#20449;&#21495;&#21644;&#20013;&#26029;&#19968;&#26679;&#65292;&#37117;&#26159;&#8220;&#24322;&#27493;&#8221;&#30340;&#12290;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
-<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1411118418586" TEXT="data structure">
+<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1411897166806" TEXT="data structure">
 <node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1409304524041">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2612,7 +2668,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1409304872194" ID="ID_1556239518" MODIFIED="1411119072575" TEXT="operation">
+<node CREATED="1409304872194" FOLDED="true" ID="ID_1556239518" MODIFIED="1411897169368" TEXT="operation">
 <node CREATED="1409304875825" ID="ID_1277062803" MODIFIED="1410333345431" TEXT="setup signal action">
 <node CREATED="1365580728182" ID="ID_1475758844" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
@@ -2624,8 +2680,7 @@
       kernel/signal.c
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
@@ -2642,8 +2697,7 @@
       &#160;&#160;do_sigaction()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1409304877946" ID="ID_653617886" MODIFIED="1410333350287" TEXT="send signal">
@@ -2686,8 +2740,7 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;send_signal()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1409304879914" ID="ID_25058641" MODIFIED="1410333348765" TEXT="receive signal">
@@ -2721,78 +2774,32 @@
       &#160;&#160;&#160;&#160;handle_signal()
     </p>
   </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1411119668587" ID="ID_1760454121" MODIFIED="1411896868392" TEXT="IPC">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+<node CREATED="1394608019438" ID="ID_1660392140" MODIFIED="1411895855509" TEXT="Messages">
+<node CREATED="1411896237332" FOLDED="true" ID="ID_1843314913" MODIFIED="1411897211729" TEXT="overview">
+<node CREATED="1411119119971" ID="ID_317725713" MODIFIED="1411896984308">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#28040;&#24687;&#65292;&#26412;&#36136;&#19978;&#23601;&#26159;&#27599;&#20010;ID&#23545;&#24212;&#19968;&#20010;&#8220;&#28040;&#24687;&#38431;&#21015;&#8221;&#65292;&#37324;&#38754;&#30340;&#28040;&#24687;&#37319;&#29992;&#38142;&#34920;&#30340;&#24418;&#24335;&#23384;&#25918;&#12290;
+    </p>
+    <p>
+      &#21457;&#36865;&#32773;&#65292;&#21521;&#36825;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#25554;&#20837;&#28040;&#24687;&#12290;&#25509;&#25910;&#32773;&#65292;&#20174;&#36825;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#21462;&#36208;&#28040;&#24687;&#12290;
+    </p>
+  </body>
 </html>
 </richcontent>
 </node>
-</node>
-</node>
-<node CREATED="1410333510985" ID="ID_911970877" MODIFIED="1410333554426" TEXT="&#x4fe1;&#x53f7;&#xff0c;&#x672c;&#x8d28;&#x4e0a;&#x5c31;&#x662f;&#x201c;&#x53d1;&#x9001;&#x8005;&#x201d;&#x628a;&#x5f85;&#x5904;&#x7406;&#x7684;&#x8bf7;&#x6c42;&#x76f4;&#x63a5;&#x6302;&#x63a5;&#x5230;&#x201c;&#x63a5;&#x6536;&#x8005;&#x201d;&#x7684;&#x961f;&#x5217;&#x4e0a;&#x3002;"/>
-</node>
-<node CREATED="1411119668587" ID="ID_1760454121" MODIFIED="1411119687995" TEXT="IPC">
-<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1411119495305" TEXT="include/linux/ipc_namespace.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395047483349" FOLDED="true" ID="ID_1230410566" MODIFIED="1411119638197">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1411119483158" ID="ID_1032073067" MODIFIED="1411119627784" TEXT="idr&#xff0c;&#x201c;Small id to pointer translation service.&#x201d; &#x5b9e;&#x9645;&#x4e0a;&#xff0c;&#x5c31;&#x662f;&#x5c06;&#x4e00;&#x4e2a;&#x6574;&#x6570;ID&#x53f7;&#x548c;&#x4e00;&#x4e2a;&#x6307;&#x9488;&#x5173;&#x8054;&#x5728;&#x4e00;&#x8d77;&#x7684;&#x673a;&#x5236;&#x3002;"/>
-<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1411119480809">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <b><font color="#660066"><i>ipc_ids</i></font></b>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int in_use;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq_max;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct idr ipcs_idr;</i></font></b>
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int next_id;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1411119393434" TEXT="Messages">
-<node CREATED="1394784671796" ID="ID_742765223" MODIFIED="1410338213417" TEXT="compose">
+<node CREATED="1394784671796" ID="ID_742765223" MODIFIED="1411897050742" TEXT="compose">
 <node CREATED="1394784681207" ID="ID_518594583" MODIFIED="1394784707690">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2818,8 +2825,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1411118423286" FOLDED="true" ID="ID_1502062810" MODIFIED="1411119364180" TEXT="data structure">
-<node CREATED="1395043470647" FOLDED="true" ID="ID_1299941336" MODIFIED="1411119064403">
+<node CREATED="1395043470647" ID="ID_1299941336" MODIFIED="1411895902711">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2828,6 +2834,19 @@
     <img src="kernel/ipc/ipc-message-queue.jpg" />
   </body>
 </html></richcontent>
+</node>
+<node CREATED="1411026660064" ID="ID_34983018" MODIFIED="1411026690681">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/ipc/ipc-message-queue2.png" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1411118423286" FOLDED="true" ID="ID_1502062810" MODIFIED="1411897057796" TEXT="data structure">
 <node CREATED="1395042319785" ID="ID_1164296285" MODIFIED="1395042338581" TEXT="include/linux/msg.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -2888,7 +2907,6 @@
     </p>
   </body>
 </html></richcontent>
-<arrowlink COLOR="#0000ff" DESTINATION="ID_1966899340" ENDARROW="Default" ENDINCLINATION="232;0;" ID="Arrow_ID_1865970826" STARTARROW="None" STARTINCLINATION="232;0;"/>
 </node>
 <node CREATED="1395042864264" ID="ID_1966899340" MODIFIED="1395043686061">
 <richcontent TYPE="NODE"><html>
@@ -2925,7 +2943,6 @@
     </p>
   </body>
 </html></richcontent>
-<arrowlink COLOR="#ff0000" DESTINATION="ID_1885995075" ENDARROW="Default" ENDINCLINATION="139;0;" ID="Arrow_ID_57009676" STARTARROW="None" STARTINCLINATION="139;0;"/>
 </node>
 <node CREATED="1395042232396" ID="ID_728043947" MODIFIED="1395042929598" TEXT="ipc/msgutil.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -2953,43 +2970,16 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1411026660064" ID="ID_34983018" MODIFIED="1411026690681">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <img src="kernel/ipc/ipc-message-queue2.png" />
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1411119076865" FOLDED="true" ID="ID_1321898770" MODIFIED="1411119366773" TEXT="operation">
+<node CREATED="1411119076865" FOLDED="true" ID="ID_1321898770" MODIFIED="1411897060064" TEXT="operation">
 <node CREATED="1411119080670" ID="ID_1869855198" MODIFIED="1411119106788" TEXT="msg send"/>
 <node CREATED="1411119093120" ID="ID_1194337764" MODIFIED="1411119101370" TEXT="msg receive"/>
 <node CREATED="1411119108640" ID="ID_1371475236" MODIFIED="1411119115403" TEXT="msg ctrl"/>
 </node>
-<node CREATED="1411119119971" ID="ID_317725713" MODIFIED="1411119338653">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#28040;&#24687;&#65292;&#26412;&#36136;&#19978;&#23601;&#26159;&#27599;&#20010;ID&#23545;&#24212;&#19968;&#20010;&#8220;&#28040;&#24687;&#38431;&#21015;&#8221;&#12290;&#27599;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#30340;&#28040;&#24687;&#65292;&#29992;&#38142;&#34920;&#30340;&#24418;&#24335;&#23384;&#25918;&#12290;
-    </p>
-    <p>
-      &#21457;&#36865;&#32773;&#65292;&#21521;&#36825;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#25554;&#20837;&#28040;&#24687;&#12290;
-    </p>
-    <p>
-      &#25509;&#25910;&#32773;&#65292;&#20174;&#36825;&#20010;&#28040;&#24687;&#38431;&#21015;&#37324;&#38754;&#21462;&#36208;&#28040;&#24687;&#12290;
-    </p>
-  </body>
-</html></richcontent>
 </node>
-</node>
-<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1411119712302" TEXT="Shared memory regions">
-<node CREATED="1395047974244" FOLDED="true" ID="ID_1761056915" MODIFIED="1395371901164">
+<node CREATED="1394608023737" ID="ID_230625253" MODIFIED="1411897299139" TEXT="Shared memory regions">
+<node CREATED="1411896052711" FOLDED="true" ID="ID_1174668635" MODIFIED="1411897310119" TEXT="overview">
+<node CREATED="1411896363569" ID="ID_1240329312" MODIFIED="1411896647271" TEXT="&#x5171;&#x4eab;&#x5185;&#x5b58;&#xff0c;&#x672c;&#x8d28;&#x4e0a;&#x662f;&#x6bcf;&#x4e2a;&#x8fdb;&#x7a0b;&#xff0c;&#x901a;&#x8fc7;&#x4e00;&#x4e2a;&#x952e;&#x503c;&#xff0c;&#x5c06;&#x201c;&#x5171;&#x4eab;&#x5185;&#x5b58;&#x533a;&#x201d;&#x6620;&#x5c04;&#x5230;&#x5404;&#x81ea;&#x7684;&#x865a;&#x62df;&#x7a7a;&#x95f4;&#x3002;"/>
+<node CREATED="1395047974244" ID="ID_1761056915" MODIFIED="1411896675274">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2998,6 +2988,9 @@
     <img src="kernel/ipc/ipc-shared-memory.jpg" />
   </body>
 </html></richcontent>
+</node>
+</node>
+<node CREATED="1411896041247" FOLDED="true" ID="ID_1648456789" MODIFIED="1411897307717" TEXT="data structure">
 <node CREATED="1395048394074" ID="ID_767020341" MODIFIED="1395048452957" TEXT="include/linux/shm.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -3060,8 +3053,15 @@
 </html></richcontent>
 </node>
 </node>
+<node CREATED="1411896047495" FOLDED="true" ID="ID_1345048409" MODIFIED="1411897309153" TEXT="operation">
+<node CREATED="1411896324737" ID="ID_1263935069" MODIFIED="1411896337271" TEXT="shm get"/>
+<node CREATED="1411896337578" ID="ID_721405858" MODIFIED="1411896344575" TEXT="shm attach"/>
+<node CREATED="1411896345002" ID="ID_972185020" MODIFIED="1411896350094" TEXT="shm detach"/>
+<node CREATED="1411896350785" ID="ID_471388277" MODIFIED="1411896357694" TEXT="shm ctrl"/>
 </node>
-<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1411119416619" TEXT="Semaphores">
+</node>
+<node CREATED="1394607980850" ID="ID_1023591222" MODIFIED="1411896887398" TEXT="Semaphores">
+<node CREATED="1411896893014" FOLDED="true" ID="ID_919488769" MODIFIED="1411897325455" TEXT="overview">
 <node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395371901164">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -3303,6 +3303,9 @@
 </html></richcontent>
 </node>
 </node>
+</node>
+<node CREATED="1411896903094" ID="ID_1205245231" MODIFIED="1411896906067" TEXT="data structure"/>
+<node CREATED="1411896906461" ID="ID_758467113" MODIFIED="1411896908562" TEXT="operation"/>
 </node>
 </node>
 <node CREATED="1394608032169" ID="ID_1896979205" MODIFIED="1394608041287" TEXT="Sockets"/>
