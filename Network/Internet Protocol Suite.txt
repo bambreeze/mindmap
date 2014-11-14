@@ -21,10 +21,9 @@ Key architectural principles
 ----------------------------  
 From lowest to highest, the TCP/IP layers are:
 1) The link layer contains communication technologies for a local network.
-2) The internet layer (IP) connects local networks, thus establishing internetworking.
+2) The internet layer (IP) connects local networks, thus establishing internet working.
 3) The transport layer handles host-to-host communication.
-4) The application layer contains all protocols for specific data communications services on a process-to-process level. 
-For example, HTTP specifies the web browser communication with a web server.
+4) The application layer contains all protocols for specific data communications services on a process-to-process level. For example, HTTP specifies the web browser communication with a web server.
 
 
 References

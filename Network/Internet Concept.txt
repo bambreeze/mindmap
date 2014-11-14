@@ -1,0 +1,43 @@
+终端: 终端由键盘、显示器等输入输出设备组成。
+协议: 协议就是计算机与计算机之间通过网络实现通信时事先达成的一种“约定”。
+分组交换: 分组交换是指将大数据分割为一个个叫做包(Packet)的较小单位进行传输的方法。
+广播(Broadcast): 将消息从1台主机发送给与之相连的所有其他主机。
+多播(Multicast): 将消息发给多个接收主机，不同之处在于多播要限定某一组主机作为接收端。
+MAC－地址转发表
+IP － 路由控制表
+交换机: 连接主机与主机
+路由器: 连接网络与网络
+物理层: 把电信号或者光信号，与二进制的0/1进行转换。
+网络拓扑(Topology): 网络的连接和构成的形态。
+BPDU: Bridge Protocol Data Unit
+RSTP: Rapid Spanning Tree Protocol
+IEEE: The Institute of Electronical and Electronics Engineers, 美国电子和电气工程师协会
+IEEE802.3  Ethernet Working Group (CSMA/CD)
+IEEE802.11 Wireless LAN Working Group
+FDDI: Fiber Distributed Data Interface 分布式光纤数据接口
+FC: Fiber Channel 光纤通道
+
+数据链路层：同一种数据链路的节点之间进行包传递。
+网络层：不同的数据链路的节点。
+
+IP地址：针对每块网卡至少配置一个或一个以上的IP地址。
+MTU：Maximum Transmission Unit , 
+  以太网MTU是1500字节
+  IP的MTU是65535字节
+
+NAT(Network Address Translator): 用于在本地网络中使用私有地址，在连接互联网时转而使用全局IP地址。
+NAPT (Network Address Ports Translator): 除了转换IP地址外，还可以转换TCP、UDP端口号。
+
+端口号：用来识别同一台计算机中进行通信的不同应用程序。
+通过“源IP地址”、“目的IP地址”、“协议号”、“源端口号”、“目的端口号”来识别一个通信。
+
+TCP 通过检验和、序列号、确认应答、重发控制、连接管理以及窗口控制等机制实现可靠性传输。
+
+IGP(Interior Gateway Protocol): 内部网关协议，包括RIP, RIP2, OSPF
+EGP(Exterior Gateway Protocol): 外部网关协议，包括BGP
+
+RIP(Routing Information Protocol)，是距离向量型的一种路由协议，用于LAN。
+OSPF(Open Shortest Path First)，是根据OSI的IS-IS协议而提出的一种链路状态型路由协议。
+BGP(Border Gateway Protocol)，边界网关协议是连接不同组织机构（或者说连接不同自治系统）的一种协议。
+
+MPLS(Multi Protocol Label Switching): 多协议标记交换技术
