@@ -125,10 +125,10 @@
 <node CREATED="1400055486282" ID="ID_1458917537" MODIFIED="1400057331259" TEXT="/var/tmp - Temporary files to be preserved between reboots."/>
 </node>
 </node>
-<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1401348903928" POSITION="right" TEXT="Data Structure">
+<node CREATED="1395825956102" ID="ID_51099828" MODIFIED="1416294516065" POSITION="right" TEXT="Data Structure">
 <node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1400642361080" TEXT="Standard C Types"/>
 <node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400642367571" TEXT="Typedef Types"/>
-<node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1401348902511" TEXT="Linux Types">
+<node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1416294530029" TEXT="Linux Types">
 <node CREATED="1312691629475" ID="ID_1023963558" MODIFIED="1400052418519" TEXT="&lt;linux/types.h&gt;">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -189,6 +189,39 @@
   </body>
 </html></richcontent>
 </node>
+</node>
+</node>
+<node CREATED="1416294532596" FOLDED="true" ID="ID_301118862" MODIFIED="1416294818802" TEXT="Byte Order">
+<node CREATED="1416294570787" ID="ID_885255348" MODIFIED="1416294816770" TEXT="little endian">
+<node CREATED="1416294581970" ID="ID_1072758622" MODIFIED="1416294656890" TEXT="cpu_to_le32/le32_to_cpu">
+<node CREATED="1416294661511" ID="ID_333502565" MODIFIED="1416294691822">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      unsigned long data_reg_lo = 0;
+    </p>
+    <p>
+      u8 local_buf[8] = { 0 };
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      memcpy(local_buf, msg-&gt;buf, msg-&gt;len);
+    </p>
+    <p>
+      data_reg_lo = cpu_to_le32(*((u32 *)local_buf));
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1416294775219" FOLDED="true" ID="ID_669885770" MODIFIED="1416294807586" TEXT="big endian">
+<node CREATED="1416294746084" ID="ID_1696780945" MODIFIED="1416294760888" TEXT="cpu_to_be32/be32_to_cpu"/>
 </node>
 </node>
 </node>

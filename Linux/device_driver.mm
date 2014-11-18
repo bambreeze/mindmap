@@ -1,6 +1,19 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1395825467023" ID="ID_507666999" MODIFIED="1401348714971" TEXT="Device Driver">
+<node CREATED="1416287874772" ID="ID_1351493285" MODIFIED="1416288484444" POSITION="right">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b><font color="#0000ff"><i>Memory mappings</i></font></b>&#160;are used directly in the kernel when implementing device drivers. The input and output areas of peripheral devices can be mapped into virtual address space; reads and writes to these areas are then redirected to the devices by the system, thus greatly simplifying driver implementation.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node CREATED="1395370144693" ID="ID_1250662614" MODIFIED="1401348816060" POSITION="right" TEXT="Modules">
 <node CREATED="1401243282690" ID="ID_304851151" MODIFIED="1401243290603" TEXT="The mechanism by which the Linux kernel can load and unload object code on demand.">
 <icon BUILTIN="idea"/>
@@ -18,8 +31,7 @@
       <i><b>module_init</b></i>(hello_init);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1312597534889" ID="ID_1605905863" MODIFIED="1401346783024">
 <richcontent TYPE="NODE"><html>
@@ -31,8 +43,7 @@
       <i><b>module_exit</b></i>(hello_exit);
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1312597508819" ID="ID_1290602893" MODIFIED="1312600044941" TEXT="Build"/>
@@ -107,8 +118,7 @@
       <i><b>Kernel objects</b></i>&#160;support for adding simple object-oriented behavior and a parent/child relationship to kernel data structures.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1312873812243" ID="ID_1657487878" MODIFIED="1401348764682" TEXT="Fundamental">
@@ -123,8 +133,7 @@
       Kobject provides basic facilities, such as reference counting, a name, and a parent pointer, enabling the creation of a <b><i><font color="#0000ff">hierarchy of objects</font></i></b>.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1401342153989" ID="ID_261703795" MODIFIED="1401342249014" TEXT="include/linux/kobject.h">
@@ -165,8 +174,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1401344004081" FOLDED="true" ID="ID_619549415" MODIFIED="1401348777260" TEXT="ktypes">
@@ -272,8 +280,7 @@
       Ksets are aggregate <b><i><font color="#0000ff">collections</font></i></b>&#160;of kobjects, and it work as the base <b><font color="#0000ff"><i>container</i></font></b>&#160;class for a set of kernel objects.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="idea"/>
 </node>
 <node CREATED="1401342153989" ID="ID_589091205" MODIFIED="1401344032349" TEXT="include/linux/kobject.h">
@@ -305,8 +312,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

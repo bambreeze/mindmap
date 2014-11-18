@@ -89,7 +89,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1401172861502" POSITION="right" TEXT="Zoned Page Frame Allocator">
+<node CREATED="1358324355641" FOLDED="true" ID="ID_1942651027" MODIFIED="1416289742835" POSITION="right" TEXT="Zoned Page Frame Allocator">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1312872066748" ID="ID_761493369" MODIFIED="1400654136623" TEXT="Slab Layer">
 <font NAME="SansSerif" SIZE="12"/>
@@ -159,6 +159,17 @@
     <img src="kernel/mm/zoned_page_frame_allocator.png" />
   </body>
 </html></richcontent>
+<node CREATED="1416289674032" ID="ID_1680148322" MODIFIED="1416289719175">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/mm/zoned_page_frame_allocator2.png" />
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node CREATED="1358153120946" FOLDED="true" ID="ID_347001048" MODIFIED="1400747588751" TEXT="node">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -327,7 +338,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1401172838117" POSITION="right" TEXT="Process Address Space">
+<node CREATED="1358324000021" FOLDED="true" ID="ID_1644107989" MODIFIED="1416289625675" POSITION="right" TEXT="Process Address Space">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
 <node CREATED="1312872830109" ID="ID_11445334" MODIFIED="1400739659945" TEXT="Memory Descriptor">
 <font BOLD="true" NAME="SansSerif" SIZE="12"/>
@@ -850,8 +861,7 @@
       };
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401183946039" ID="ID_220730770" MODIFIED="1401184270069" TEXT="The buffer_head, representing a block-to-page mapping; the bio, representing in-flight I/O; and the request structure, representing a specific I/O request.">
 <icon BUILTIN="idea"/>
@@ -864,8 +874,7 @@
   <body>
     <img src="kernel/mm/bio-ops.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1401184016559" ID="ID_1360164915" MODIFIED="1401184019546" TEXT="I/O Scheduler Selection">
 <node CREATED="1401184026679" ID="ID_1119386734" MODIFIED="1401184081415">
@@ -876,8 +885,7 @@
   <body>
     <img src="kernel/mm/io-elevator.png" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
