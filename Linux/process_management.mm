@@ -14,7 +14,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1358849568031" FOLDED="true" ID="ID_1241600752" MODIFIED="1417762501060">
+<node CREATED="1358849568031" FOLDED="true" ID="ID_1241600752" MODIFIED="1450948672114">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -66,8 +66,7 @@
       #define <i><font color="#ff0000"><b>current</b></font></i>&#160;get_current()
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1315906535124" ID="ID_632220490" MODIFIED="1398827071378">
@@ -122,7 +121,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1417762754052">
+<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1450948656109">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -156,8 +155,7 @@
       ...
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1315914126372" ID="ID_1983933720" MODIFIED="1417760992794">
@@ -172,7 +170,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1417762756010">
+<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1450948641551">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -183,6 +181,18 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1316843734093" ID="ID_803741408" MODIFIED="1450947186227">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>process list</b>&#160;- a list that links together all existing process descriptors.&#160;
+    </p>
+  </body>
+</html></richcontent>
+</node>
 <node CREATED="1316843916945" ID="ID_27378462" MODIFIED="1417760486858">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -200,18 +210,6 @@
 </node>
 <node CREATED="1398835996859" ID="ID_334993240" MODIFIED="1398836000187" TEXT="struct task_struct init_task = INIT_TASK(init_task);"/>
 </node>
-<node CREATED="1316843734093" ID="ID_803741408" MODIFIED="1316843763407">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>process list</b>&#160;- a list that links together all existing process descriptors.&#160;
-    </p>
-  </body>
-</html></richcontent>
-</node>
 <node CREATED="1316917476163" ID="ID_686524080" MODIFIED="1398836021528">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -223,9 +221,29 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1398835951861" ID="ID_696556427" MODIFIED="1450947368164" TEXT="init/init_task.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1450947338830" ID="ID_1526688402" MODIFIED="1450947347353">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      #define for_each_process(p) \
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;for (p = &amp;init_task ; (p = next_task(p)) != &amp;init_task ; )
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1417762763477">
+</node>
+<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1450948643149">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -245,10 +263,23 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1450947527026" ID="ID_347719853" MODIFIED="1450948543153">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>process tree </b>- describe parent/childen/sibling relations
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1398838272680" TEXT="&quot;real_parent&quot; - Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists."/>
 <node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1398838289493" TEXT="&quot;parent&quot; - Points to the current parent of P "/>
 </node>
-<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1417767310370">
+<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1450948645935">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -268,6 +299,22 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1450948430874" ID="ID_1433629728" MODIFIED="1450948620721">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>process hash table </b>- A struct pid is the kernel's internal notion of a <b><i>process identifier</i></b>. It refers to individual tasks, process groups, and sessions.&#160;&#160;
+    </p>
+    <p>
+      While there are processes attached to it the struct pid lives in a <b><i>hash table</i></b>, so it and then the processes that it refers to can be found quickly from the numeric pid value.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node CREATED="1393232863003" ID="ID_819099011" MODIFIED="1393232869723" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -350,7 +397,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1417763062993" TEXT="struct mm_struct *mm, *active_mm;">
+<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1450947719983" TEXT="struct mm_struct *mm, *active_mm;">
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -395,7 +442,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1401170387906" FOLDED="true" ID="ID_623807789" MODIFIED="1417763099396">
+<node CREATED="1401170387906" FOLDED="true" ID="ID_623807789" MODIFIED="1450947781022">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -500,7 +547,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1417763105166">
+<node CREATED="1315917811701" FOLDED="true" ID="ID_749542623" MODIFIED="1450947793773">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -525,8 +572,7 @@
       ...
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393231927959" ID="ID_94896969" MODIFIED="1393231936526" TEXT="arch/x86/include/asm/processor.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -567,7 +613,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1417765867255" POSITION="right" TEXT="Process Creation/Execution/Termination">
+<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1450949372374" POSITION="right" TEXT="Process Creation/Execution/Termination">
 <node CREATED="1398840513254" ID="ID_509227697" MODIFIED="1417765082366">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -578,8 +624,7 @@
       <font color="#000000">Process creation&#160;in Unix is unique. Most operating systems implement a spawn&#160;mechanism to&#160;create&#160;a new process in a new address space, read in an executable, and begin executing it.&#160;Unix takes the unusual approach of separating these steps into two distinct functions: fork() and exec().</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1398840885045" ID="ID_1909904793" MODIFIED="1417764141868">
 <richcontent TYPE="NODE"><html>
@@ -597,8 +642,7 @@
       <font color="#000000">The only overhead&#160;incurred by fork() is the duplication of the parent&#8217;s <i><b>page tables</b></i>&#160;and the creation of a unique <i><b>process descriptor</b></i>&#160;for the child.</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398840297436" ID="ID_126426966" MODIFIED="1398840304498" TEXT="kernel/fork.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -655,8 +699,7 @@
       <i><font color="#0000ff"><b>Text segment(ELF)</b></font></i>&#160;- Includes the program's executable code.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395133091549" ID="ID_30950379" MODIFIED="1417763449599">
 <richcontent TYPE="NODE"><html>
@@ -668,8 +711,7 @@
       <i><font color="#0000ff"><b>Initialized data segment</b></font></i>&#160;- Contains the initialized datathat is, the static variables and the global variables whose initial values are stored in the executable file (because the program must know their values at startup).
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395133123093" ID="ID_387757498" MODIFIED="1417763462078">
 <richcontent TYPE="NODE"><html>
@@ -681,8 +723,7 @@
       <i><font color="#0000ff"><b>Uninitialized data segment (bss)</b></font></i>&#160;- Contains the uninitialized datathat is, all global variables whose initial values are not stored in the executable file (because the program sets the values before referencing them); it is historically called a bss segment.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395133152732" ID="ID_677290223" MODIFIED="1417763476285">
 <richcontent TYPE="NODE"><html>
@@ -694,8 +735,7 @@
       <i><font color="#0000ff"><b>Stack segment</b></font></i>&#160;- Contains the program stack, which includes the return addresses, parameters, and local variables of the functions being executed.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -709,8 +749,7 @@
       When a process terminates, the kernel releases the resources&#160;owned by the process and notifies the child&#8217;s parent&#160;of its demise. Processes ultimately die forcefully or intentionally via <i><font color="#ff0000"><b>exit()</b></font></i>, and parents glean information about their deceased children via the <i><font color="#ff0000"><b>wait()</b></font></i>&#160; family of system calls.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398844773298" ID="ID_1320983370" MODIFIED="1398844806483" TEXT="kernel/exit.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -745,7 +784,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1417765864802" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1450949562364" POSITION="right" TEXT="Process Contexts">
 <node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -758,7 +797,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1398837047848" FOLDED="true" ID="ID_153365591" MODIFIED="1417765858232">
+<node CREATED="1398837047848" FOLDED="true" ID="ID_153365591" MODIFIED="1450949560959">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -792,20 +831,6 @@
     </p>
   </body>
 </html></richcontent>
-</node>
-</node>
-<node CREATED="1398837072884" FOLDED="true" ID="ID_1220407681" MODIFIED="1417765859186">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      In <font color="#0000ff"><i><b>kernel-space</b></i></font>, in <font color="#0000ff"><i><b>interrupt context</b></i></font>, not associated with a process, handling an interrupt
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1399274379116" ID="ID_1180042969" MODIFIED="1399274390940" TEXT="Interrupt context cannot sleep&#x2014;how would it ever reschedule?"/>
 </node>
 <node CREATED="1398845651802" FOLDED="true" ID="ID_57271949" MODIFIED="1417765860752">
 <richcontent TYPE="NODE"><html>
@@ -844,24 +869,73 @@
 </node>
 </node>
 </node>
-<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1417766049518" POSITION="right" TEXT="Process Scheduling">
-<node CREATED="1399183810902" ID="ID_1735785535" MODIFIED="1399183830546" TEXT="policy">
-<node CREATED="1399183831062" FOLDED="true" ID="ID_135059142" MODIFIED="1417765969265" TEXT="process priority">
-<node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1399184105962" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)"/>
-<node CREATED="1399184750088" ID="ID_1570252583" MODIFIED="1399195944140">
+<node CREATED="1398837072884" FOLDED="true" ID="ID_1220407681" MODIFIED="1450949471829">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <font color="#0000ff"><i><b>nice value</b></i></font>, a number from &#8211;20 to +19 with a default of 0. Larger nice values correspond to a lower priority&#8212;you are being &#8220;nice&#8221; to the other processes on the system. By default, this means the &#8211;20 to +19 nice range maps directly onto the priority space from 100 to 139.
+      In <font color="#0000ff"><i><b>kernel-space</b></i></font>, in <font color="#0000ff"><i><b>interrupt context</b></i></font>, not associated with a process, handling an interrupt
     </p>
   </body>
 </html></richcontent>
-<icon BUILTIN="full-1"/>
+<node CREATED="1399274379116" ID="ID_1180042969" MODIFIED="1399274390940" TEXT="Interrupt context cannot sleep&#x2014;how would it ever reschedule?"/>
 </node>
-<node CREATED="1399184811160" ID="ID_836725979" MODIFIED="1399184835233">
+</node>
+<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1450951145589" POSITION="right" TEXT="Process Scheduling">
+<node CREATED="1399183810902" ID="ID_1735785535" MODIFIED="1450950677440" TEXT="policy">
+<node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1450950863796" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)"/>
+<node CREATED="1450950969177" ID="ID_1338208634" MODIFIED="1450950982319" TEXT="category">
+<node CREATED="1393231629106" ID="ID_1195752606" MODIFIED="1450950509776" TEXT="include/linux/sched.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1450950463379" ID="ID_1800462793" MODIFIED="1450950486839">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      #define SCHED_NORMAL&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;0
+    </p>
+    <p>
+      #define SCHED_FIFO&#160;&#160;&#160;&#160;&#160;&#160;1
+    </p>
+    <p>
+      #define SCHED_RR&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;2
+    </p>
+    <p>
+      #define SCHED_BATCH&#160;&#160;&#160;&#160;&#160;3
+    </p>
+    <p>
+      /* SCHED_ISO: reserved but not implemented yet */
+    </p>
+    <p>
+      #define SCHED_IDLE&#160;&#160;&#160;&#160;&#160;&#160;5
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1399195098576" ID="ID_1767980307" MODIFIED="1450950754845" TEXT="Real-Time Scheduling Policies">
+<node CREATED="1399195026459" ID="ID_1824177182" MODIFIED="1399195550017" TEXT="kernel/sched/rt.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399195431461" ID="ID_1136354332" MODIFIED="1399196160630" TEXT="SCHED_FIFO - a simple first-in, first-out scheduling algorithm without timeslices."/>
+<node CREATED="1399195449116" ID="ID_1253013825" MODIFIED="1399196174491" TEXT="SCHED_RR - each process can run only until it exhausts a predetermined timeslice."/>
+</node>
+<node CREATED="1399196188846" ID="ID_1207348297" MODIFIED="1450950761005" TEXT="Normal Scheduling Policies">
+<node CREATED="1399189020892" ID="ID_951127327" MODIFIED="1399189295905" TEXT="kernel/sched/fair.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399196223565" ID="ID_1633010073" MODIFIED="1399196800391" TEXT="SCHED_NORMAL - Completely Fair Scheduler (CFS)"/>
+</node>
+</node>
+<node CREATED="1399183831062" ID="ID_135059142" MODIFIED="1450949873030" TEXT="process priority">
+<node CREATED="1399184811160" ID="ID_836725979" MODIFIED="1450951039551">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -872,10 +946,21 @@
     </p>
   </body>
 </html></richcontent>
-<icon BUILTIN="full-2"/>
+</node>
+<node CREATED="1399184750088" ID="ID_1570252583" MODIFIED="1450951041941">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><i><b>nice value</b></i></font>, a number from &#8211;20 to +19 with a default of 0. Larger nice values correspond to a lower priority&#8212;you are being &#8220;nice&#8221; to the other processes on the system. By default, this means the &#8211;20 to +19 nice range maps directly onto the priority space from 100 to 139.
+    </p>
+  </body>
+</html></richcontent>
 </node>
 </node>
-<node CREATED="1399184165108" FOLDED="true" ID="ID_153398619" MODIFIED="1417765977410" TEXT="timeslice">
+<node CREATED="1399184165108" ID="ID_153398619" MODIFIED="1450950455136" TEXT="timeslice">
 <node CREATED="1399184640091" ID="ID_1374000925" MODIFIED="1399184658403" TEXT="The timeslice is the numeric value that represents how long a task can run until it is preempted."/>
 <node CREATED="1399184169718" ID="ID_1912944811" MODIFIED="1399184568190" TEXT="When a process&apos;s timeslice runs out, the process is considered expired. A process with no timeslice is not eligible to run until all other processes have exhausted their timeslices (that is, they all have zero timeslice remaining). At that point, the timeslices for all processes are recalculated. "/>
 </node>
@@ -912,21 +997,6 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1399196188846" ID="ID_1207348297" MODIFIED="1399196256135" TEXT="Normal Scheduling Policies">
-<node CREATED="1399189020892" ID="ID_951127327" MODIFIED="1399189295905" TEXT="kernel/sched/fair.c">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1399196223565" ID="ID_1633010073" MODIFIED="1399196800391" TEXT="SCHED_NORMAL - Completely Fair Scheduler (CFS)"/>
-</node>
-<node CREATED="1399195098576" ID="ID_1767980307" MODIFIED="1399196213472" TEXT="Real-Time Scheduling Policies">
-<node CREATED="1399195026459" ID="ID_1824177182" MODIFIED="1399195550017" TEXT="kernel/sched/rt.c">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1399195431461" ID="ID_1136354332" MODIFIED="1399196160630" TEXT="SCHED_FIFO - a simple first-in, first-out scheduling algorithm without timeslices."/>
-<node CREATED="1399195449116" ID="ID_1253013825" MODIFIED="1399196174491" TEXT="SCHED_RR - each process can run only until it exhausts a predetermined timeslice."/>
-</node>
 </node>
 <node CREATED="1399193905072" ID="ID_740199658" MODIFIED="1399196840045" TEXT="preemption">
 <node CREATED="1399193968337" ID="ID_526264413" MODIFIED="1399194095868">
@@ -953,7 +1023,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1417766728637" POSITION="right" TEXT="Interrupts and Exceptions">
+<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1450951188481" POSITION="right" TEXT="Interrupts and Exceptions">
 <node CREATED="1316769068729" ID="ID_1349911850" MODIFIED="1399620625601" TEXT="Definition">
 <node CREATED="1316766926536" ID="ID_1498465646" MODIFIED="1399620628022" TEXT="Interrupts (Asynchronous, generated by hardware)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
@@ -1236,8 +1306,7 @@
       Interrupt handlers run with the <i><font color="#0000ff"><b>current interrupt level disabled</b></font></i>&#160; at best (if IRQF_DISABLED is unset), and at worst (if IRQF_DISABLED is set) with all interrupts on the current processor disabled.As disabling interrupts prevents hardware from communicating with the operating systems, interrupt handlers need to run as quickly as possible.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1399602629313" ID="ID_840783943" MODIFIED="1399602638396" TEXT="Interrupt handlers are often timing-critical because they deal with hardware."/>
 <node CREATED="1417766447506" ID="ID_1475075375" MODIFIED="1417766465987">
@@ -1250,8 +1319,7 @@
       Interrupt handlers do not run in process context; therefore, they <i><font color="#0000ff"><b>cannot block</b></font></i>.This limits what they can do.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1312768870057" ID="ID_1414900085" MODIFIED="1417766711459" TEXT="Bottom Halves">
@@ -1502,7 +1570,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1417766805065" POSITION="right" TEXT="System Call">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1450951169841" POSITION="right" TEXT="System Call">
 <node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399962878636">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -1620,7 +1688,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1417767268645" POSITION="right" TEXT="Concurrency">
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1450951172801" POSITION="right" TEXT="Concurrency">
 <node CREATED="1399770844089" ID="ID_869416328" MODIFIED="1399962757390" TEXT="Definiton">
 <node CREATED="1399771002871" ID="ID_261412793" MODIFIED="1399771167398">
 <richcontent TYPE="NODE"><html>
@@ -2016,7 +2084,7 @@
 <node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1399960511566" TEXT="rw_semaphore/completion"/>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1417768323022" POSITION="right" TEXT="Process Communication">
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1450951175843" POSITION="right" TEXT="Process Communication">
 <node CREATED="1411896802001" FOLDED="true" ID="ID_1519744102" MODIFIED="1417767683390" TEXT="common concept">
 <node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1411119495305" TEXT="include/linux/ipc_namespace.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -2141,8 +2209,7 @@
       FIFO&#65288;&#21629;&#21517;&#31649;&#36947;&#65289;&#19982;pipe&#65288;&#21311;&#21517;&#31649;&#36947;&#65289;&#20043;&#38388;&#21807;&#19968;&#30340;&#21306;&#21035;&#22312;&#23427;&#20204;&#21019;&#24314;&#19982;&#25171;&#24320;&#30340;&#26041;&#24335;&#19981;&#21516;&#65292;&#36825;&#20123;&#24037;&#20316;&#23436;&#25104;&#20043;&#21518;&#65292;&#23427;&#20204;&#20855;&#26377;&#30456;&#21516;&#30340;&#35821;&#20041;&#12290;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1409040182453" TEXT="compose">
