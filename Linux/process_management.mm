@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1314436073487" ID="ID_1195057024" MODIFIED="1395371901167" TEXT="Process Management">
-<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1417768326764" POSITION="right" TEXT="Process Descriptor">
+<node CREATED="1393233067733" ID="ID_266019102" MODIFIED="1451095521865" POSITION="right" TEXT="Process Descriptor">
 <node CREATED="1393233137666" ID="ID_1178062783" MODIFIED="1395843035816">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -121,7 +121,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1450948656109">
+<node CREATED="1398838631337" FOLDED="true" ID="ID_691973270" MODIFIED="1451096606559">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -170,7 +170,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1450948641551">
+<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1451096547904">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -193,44 +193,37 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316843916945" ID="ID_27378462" MODIFIED="1417760486858">
+<node CREATED="1316917476163" ID="ID_686524080" MODIFIED="1451096497167">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      <b>init_task</b>&#160;- Initial task structure
+      for_each_process(p)&#160;- scans the whole process list
     </p>
   </body>
-</html></richcontent>
-<node CREATED="1398835951861" ID="ID_712481122" MODIFIED="1417759455320" TEXT="init/init_task.c">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1398835996859" ID="ID_334993240" MODIFIED="1398836000187" TEXT="struct task_struct init_task = INIT_TASK(init_task);"/>
-</node>
-<node CREATED="1316917476163" ID="ID_686524080" MODIFIED="1398836021528">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>for_each_process(p)</b>&#160;- scans the whole process list
-    </p>
-  </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1398835951861" ID="ID_696556427" MODIFIED="1450947368164" TEXT="init/init_task.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1450947338830" ID="ID_1526688402" MODIFIED="1450947347353">
+<node CREATED="1450947338830" ID="ID_1526688402" MODIFIED="1451096421573">
 <richcontent TYPE="NODE"><html>
   <head>
     
   </head>
   <body>
+    <p>
+      /* <b>init_task</b>&#160;- Initial task structure */
+    </p>
+    <p>
+      struct task_struct init_task = INIT_TASK(init_task);
+    </p>
+    <p>
+      
+    </p>
     <p>
       #define for_each_process(p) \
     </p>
@@ -243,7 +236,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1450948643149">
+<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1451096546567">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -273,13 +266,54 @@
       <b>process tree </b>- describe parent/childen/sibling relations
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1398838272680" TEXT="&quot;real_parent&quot; - Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists."/>
 <node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1398838289493" TEXT="&quot;parent&quot; - Points to the current parent of P "/>
 </node>
-<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1450948645935">
+<node CREATED="1451095632942" FOLDED="true" ID="ID_1583938106" MODIFIED="1451096545559" TEXT="struct pid_link pids[PIDTYPE_MAX]; /* PID/PID hash table linkage. */">
+<node CREATED="1450948430874" ID="ID_1433629728" MODIFIED="1451096526314">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>process hash table</b>&#160;- A struct <b><i>pid</i></b>&#160;is the kernel's internal notion of a <b><i>process identifier</i></b>. It refers to individual tasks, process groups, and sessions.&#160;&#160;While there are processes attached to it the struct pid lives in a <b><i>hash table</i></b>, so it and then the processes that it refers to can be found quickly from the numeric pid value.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1393232863003" ID="ID_768721619" MODIFIED="1451096062766" TEXT="include/linux/pid.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1316928699044" ID="ID_1729999827" MODIFIED="1316932589085" TEXT="struct hlist_node node;"/>
+<node CREATED="1316931912268" ID="ID_28056775" MODIFIED="1398846797474">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct pid *pid;
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1316928771487" ID="ID_116010920" MODIFIED="1316928793593" TEXT="atomic_t count;"/>
+<node CREATED="1316928794768" ID="ID_340123140" MODIFIED="1358327572333" TEXT="struct hlist_head tasks[PIDTYPE_MAX]; // lists of tasks that use this pid">
+<arrowlink DESTINATION="ID_1729999827" ENDARROW="Default" ENDINCLINATION="251;0;" ID="Arrow_ID_375258231" STARTARROW="None" STARTINCLINATION="251;0;"/>
+</node>
+<node CREATED="1316928813011" ID="ID_640516611" MODIFIED="1316928814767" TEXT="..."/>
+<node CREATED="1316932018473" ID="ID_1149046420" MODIFIED="1398847933844" TEXT="struct upid numbers[1];">
+<node CREATED="1316932051355" ID="ID_1051743616" MODIFIED="1358327592195" TEXT="int nr; // The PID number"/>
+<node CREATED="1316932056544" ID="ID_513109031" MODIFIED="1316932085118" TEXT="struct pid_namespace *ns;"/>
+<node CREATED="1316932086156" ID="ID_373966593" MODIFIED="1358327611217" TEXT="struct hlist_node pid_chain; // The links to the next and previous elements in the hash chain list"/>
+</node>
+</node>
+</node>
+<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1451096308001">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -294,27 +328,9 @@
     <p>
       struct task_struct *group_leader;&#160;&#160;/* Process descriptor pointer of the group leader of P */
     </p>
-    <p>
-      struct pid_link pids[PIDTYPE_MAX];
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1450948430874" ID="ID_1433629728" MODIFIED="1450948620721">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>process hash table </b>- A struct pid is the kernel's internal notion of a <b><i>process identifier</i></b>. It refers to individual tasks, process groups, and sessions.&#160;&#160;
-    </p>
-    <p>
-      While there are processes attached to it the struct pid lives in a <b><i>hash table</i></b>, so it and then the processes that it refers to can be found quickly from the numeric pid value.
-    </p>
   </body>
 </html>
 </richcontent>
-</node>
 <node CREATED="1393232863003" ID="ID_819099011" MODIFIED="1393232869723" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -348,29 +364,6 @@
     </p>
   </body>
 </html></richcontent>
-</node>
-<node CREATED="1316928699044" ID="ID_1729999827" MODIFIED="1316932589085" TEXT="struct hlist_node node;"/>
-<node CREATED="1316931912268" ID="ID_28056775" MODIFIED="1398846797474">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct pid *pid;
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1316928771487" ID="ID_116010920" MODIFIED="1316928793593" TEXT="atomic_t count;"/>
-<node CREATED="1316928794768" ID="ID_340123140" MODIFIED="1358327572333" TEXT="struct hlist_head tasks[PIDTYPE_MAX]; // lists of tasks that use this pid">
-<arrowlink DESTINATION="ID_1729999827" ENDARROW="Default" ENDINCLINATION="251;0;" ID="Arrow_ID_375258231" STARTARROW="None" STARTINCLINATION="251;0;"/>
-</node>
-<node CREATED="1316928813011" ID="ID_640516611" MODIFIED="1316928814767" TEXT="..."/>
-<node CREATED="1316932018473" ID="ID_1149046420" MODIFIED="1398847933844" TEXT="struct upid numbers[1];">
-<node CREATED="1316932051355" ID="ID_1051743616" MODIFIED="1358327592195" TEXT="int nr; // The PID number"/>
-<node CREATED="1316932056544" ID="ID_513109031" MODIFIED="1316932085118" TEXT="struct pid_namespace *ns;"/>
-<node CREATED="1316932086156" ID="ID_373966593" MODIFIED="1358327611217" TEXT="struct hlist_node pid_chain; // The links to the next and previous elements in the hash chain list"/>
-</node>
 </node>
 </node>
 <node CREATED="1365579658729" ID="ID_676626903" MODIFIED="1409303646088">
@@ -613,7 +606,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1450949372374" POSITION="right" TEXT="Process Creation/Execution/Termination">
+<node CREATED="1398840731946" FOLDED="true" ID="ID_1719288201" MODIFIED="1451093998243" POSITION="right" TEXT="Process Creation/Execution/Termination">
 <node CREATED="1398840513254" ID="ID_509227697" MODIFIED="1417765082366">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -784,7 +777,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1450949562364" POSITION="right" TEXT="Process Contexts">
+<node CREATED="1398836995454" FOLDED="true" ID="ID_1104515770" MODIFIED="1451094004005" POSITION="right" TEXT="Process Contexts">
 <node CREATED="1398837009357" ID="ID_1855528316" MODIFIED="1398837189907">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -883,10 +876,9 @@
 <node CREATED="1399274379116" ID="ID_1180042969" MODIFIED="1399274390940" TEXT="Interrupt context cannot sleep&#x2014;how would it ever reschedule?"/>
 </node>
 </node>
-<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1450951145589" POSITION="right" TEXT="Process Scheduling">
+<node CREATED="1399183800754" FOLDED="true" ID="ID_1745803509" MODIFIED="1451094002288" POSITION="right" TEXT="Process Scheduling">
 <node CREATED="1399183810902" ID="ID_1735785535" MODIFIED="1450950677440" TEXT="policy">
-<node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1450950863796" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)"/>
-<node CREATED="1450950969177" ID="ID_1338208634" MODIFIED="1450950982319" TEXT="category">
+<node CREATED="1399184102899" ID="ID_602928757" MODIFIED="1450950863796" TEXT="higher priority run before those with a lower priority, whereas processes with the same priority are scheduled round-robin (one after the next, repeating)">
 <node CREATED="1393231629106" ID="ID_1195752606" MODIFIED="1450950509776" TEXT="include/linux/sched.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -918,23 +910,15 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1399195098576" ID="ID_1767980307" MODIFIED="1450950754845" TEXT="Real-Time Scheduling Policies">
+</node>
+<node CREATED="1450950969177" ID="ID_1338208634" MODIFIED="1451010623824" TEXT="priority">
+<node CREATED="1399195098576" ID="ID_1767980307" MODIFIED="1451010510337" TEXT="Real-Time Scheduling Policies (0 - 99)">
 <node CREATED="1399195026459" ID="ID_1824177182" MODIFIED="1399195550017" TEXT="kernel/sched/rt.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
 <node CREATED="1399195431461" ID="ID_1136354332" MODIFIED="1399196160630" TEXT="SCHED_FIFO - a simple first-in, first-out scheduling algorithm without timeslices."/>
-<node CREATED="1399195449116" ID="ID_1253013825" MODIFIED="1399196174491" TEXT="SCHED_RR - each process can run only until it exhausts a predetermined timeslice."/>
-</node>
-<node CREATED="1399196188846" ID="ID_1207348297" MODIFIED="1450950761005" TEXT="Normal Scheduling Policies">
-<node CREATED="1399189020892" ID="ID_951127327" MODIFIED="1399189295905" TEXT="kernel/sched/fair.c">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1399196223565" ID="ID_1633010073" MODIFIED="1399196800391" TEXT="SCHED_NORMAL - Completely Fair Scheduler (CFS)"/>
-</node>
-</node>
-<node CREATED="1399183831062" ID="ID_135059142" MODIFIED="1450949873030" TEXT="process priority">
+<node CREATED="1399195449116" ID="ID_1253013825" MODIFIED="1451010468795" TEXT="SCHED_RR - run only until it exhausts a predetermined timeslice. (SCHED_FIFO + timeslices)"/>
 <node CREATED="1399184811160" ID="ID_836725979" MODIFIED="1450951039551">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -947,6 +931,19 @@
   </body>
 </html></richcontent>
 </node>
+</node>
+<node CREATED="1399196188846" ID="ID_1207348297" MODIFIED="1451010536782" TEXT="Normal Scheduling Policies (100 - 139)">
+<node CREATED="1399189020892" ID="ID_951127327" MODIFIED="1399189295905" TEXT="kernel/sched/fair.c">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1399196223565" ID="ID_1633010073" MODIFIED="1399196800391" TEXT="SCHED_NORMAL - Completely Fair Scheduler (CFS)">
+<node CREATED="1451010222532" ID="ID_1060219051" MODIFIED="1451010281012" TEXT="vruntime = real_runtime/weight">
+<font BOLD="true" NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1451010242819" ID="ID_514457496" MODIFIED="1451010378001" TEXT="the less nice process, the more higher weight"/>
+<node CREATED="1451010284354" ID="ID_1381512181" MODIFIED="1451010329850" TEXT="CFS select the least node from a time-ordered red-black tree"/>
+</node>
 <node CREATED="1399184750088" ID="ID_1570252583" MODIFIED="1450951041941">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -958,6 +955,7 @@
     </p>
   </body>
 </html></richcontent>
+</node>
 </node>
 </node>
 <node CREATED="1399184165108" ID="ID_153398619" MODIFIED="1450950455136" TEXT="timeslice">
@@ -1023,7 +1021,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1450951188481" POSITION="right" TEXT="Interrupts and Exceptions">
+<node CREATED="1316766906971" FOLDED="true" ID="ID_645308379" MODIFIED="1451012609904" POSITION="right" TEXT="Interrupts and Exceptions">
 <node CREATED="1316769068729" ID="ID_1349911850" MODIFIED="1399620625601" TEXT="Definition">
 <node CREATED="1316766926536" ID="ID_1498465646" MODIFIED="1399620628022" TEXT="Interrupts (Asynchronous, generated by hardware)">
 <node CREATED="1316767054709" ID="ID_1599617338" MODIFIED="1316767078512" TEXT="Maskable Interrupts"/>
@@ -1688,7 +1686,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1450951172801" POSITION="right" TEXT="Concurrency">
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1451096717025" POSITION="right" TEXT="Concurrency">
 <node CREATED="1399770844089" ID="ID_869416328" MODIFIED="1399962757390" TEXT="Definiton">
 <node CREATED="1399771002871" ID="ID_261412793" MODIFIED="1399771167398">
 <richcontent TYPE="NODE"><html>
@@ -2084,72 +2082,8 @@
 <node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1399960511566" TEXT="rw_semaphore/completion"/>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1450951175843" POSITION="right" TEXT="Process Communication">
-<node CREATED="1411896802001" FOLDED="true" ID="ID_1519744102" MODIFIED="1417767683390" TEXT="common concept">
-<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1411119495305" TEXT="include/linux/ipc_namespace.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1395047483349" ID="ID_1230410566" MODIFIED="1411895787503">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1411897264730">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct <b><font color="#660066"><i>ipc_ids</i></font></b>&#160;{
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int in_use;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned short seq_max;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct idr ipcs_idr;</i></font></b>
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int next_id;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1411119483158" ID="ID_1032073067" MODIFIED="1411119627784" TEXT="idr&#xff0c;&#x201c;Small id to pointer translation service.&#x201d; &#x5b9e;&#x9645;&#x4e0a;&#xff0c;&#x5c31;&#x662f;&#x5c06;&#x4e00;&#x4e2a;&#x6574;&#x6570;ID&#x53f7;&#x548c;&#x4e00;&#x4e2a;&#x6307;&#x9488;&#x5173;&#x8054;&#x5728;&#x4e00;&#x8d77;&#x7684;&#x673a;&#x5236;&#x3002;"/>
-</node>
-<node CREATED="1394607940675" ID="ID_833366660" MODIFIED="1417767347982">
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1451096711397" POSITION="right" TEXT="Process Communication (IPC)">
+<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1451095321442">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2161,7 +2095,7 @@
   </body>
 </html></richcontent>
 <node CREATED="1410333198083" ID="ID_1422765972" MODIFIED="1411897177530" TEXT="&#x7ba1;&#x9053;&#xff0c;&#x672c;&#x8d28;&#x5c31;&#x662f;&#x5171;&#x4eab;&#x7269;&#x7406;&#x7684;&#x201c;page&#x201d;&#xff0c;&#x9700;&#x8981;&#x7684;&#x65f6;&#x5019;&#x201c;&#x751f;&#x4ea7;&#x8005;&#x201d;&#x6216;&#x8005;&#x201c;&#x6d88;&#x8d39;&#x8005;&#x201d;&#x518d;&#x6620;&#x5c04;&#x540c;&#x4e00;&#x5757;&#x7269;&#x7406;&#x5730;&#x5740;&#xff08;page&#xff09;&#x5230;&#x81ea;&#x5df1;&#x7684;&#x865a;&#x62df;&#x5185;&#x5b58;&#x3002;"/>
-<node CREATED="1394608278558" FOLDED="true" ID="ID_1674073083" MODIFIED="1417768226343">
+<node CREATED="1394608278558" ID="ID_1674073083" MODIFIED="1451094238193">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2213,7 +2147,7 @@
 </node>
 </node>
 <node CREATED="1394692670453" ID="ID_1377888996" MODIFIED="1409040182453" TEXT="compose">
-<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1417767838118">
+<node CREATED="1394692688493" FOLDED="true" ID="ID_1129761090" MODIFIED="1451094363155">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2292,7 +2226,7 @@
 <node CREATED="1394692743203" ID="ID_530105720" MODIFIED="1394692746367" TEXT="writing"/>
 </node>
 </node>
-<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1417768190913" TEXT="The pipefs special filesystem">
+<node CREATED="1394613049810" FOLDED="true" ID="ID_1831364965" MODIFIED="1451094682640" TEXT="The pipefs special filesystem">
 <node CREATED="1394691860955" ID="ID_1473907831" MODIFIED="1394691903602" TEXT="include/linux/pipe_fs_i.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -2477,7 +2411,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1409303258109" ID="ID_447036192" MODIFIED="1417767497542" TEXT="Signal">
+<node CREATED="1409303258109" FOLDED="true" ID="ID_447036192" MODIFIED="1451095086386" TEXT="Signal">
 <node CREATED="1409303271084" ID="ID_191823609" MODIFIED="1411897163004">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2490,7 +2424,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1417767853367" TEXT="data structure">
+<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1451094694353" TEXT="data structure">
 <node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1409304524041">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2541,7 +2475,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1409304856682">
+<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1451094693300">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2617,7 +2551,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1409303791185" ID="ID_275050707" MODIFIED="1410333410391">
+<node CREATED="1409303791185" FOLDED="true" ID="ID_275050707" MODIFIED="1451094441200">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2734,8 +2668,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1409304872194" ID="ID_1556239518" MODIFIED="1417767854730" TEXT="operation">
-<node CREATED="1409304875825" FOLDED="true" ID="ID_1277062803" MODIFIED="1417767863754" TEXT="setup signal action">
+<node CREATED="1409304872194" FOLDED="true" ID="ID_1556239518" MODIFIED="1451094727442" TEXT="operation">
+<node CREATED="1409304875825" FOLDED="true" ID="ID_1277062803" MODIFIED="1451094725916" TEXT="setup signal action">
 <node CREATED="1365580728182" ID="ID_1475758844" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2766,7 +2700,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1409304877946" FOLDED="true" ID="ID_653617886" MODIFIED="1417767864678" TEXT="send signal">
+<node CREATED="1409304877946" FOLDED="true" ID="ID_653617886" MODIFIED="1451094709365" TEXT="send signal">
 <node CREATED="1365580728182" ID="ID_465583667" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2809,7 +2743,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1409304879914" FOLDED="true" ID="ID_25058641" MODIFIED="1417767865536" TEXT="receive signal">
+<node CREATED="1409304879914" FOLDED="true" ID="ID_25058641" MODIFIED="1451094723490" TEXT="receive signal">
 <node CREATED="1365580728182" ID="ID_1825578398" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2845,10 +2779,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1411119668587" ID="ID_1760454121" MODIFIED="1411896868392" TEXT="IPC">
-<font BOLD="true" NAME="SansSerif" SIZE="12"/>
-<node CREATED="1394608019438" ID="ID_1660392140" MODIFIED="1411895855509" TEXT="Messages">
-<node CREATED="1411896237332" ID="ID_1843314913" MODIFIED="1417767661418" TEXT="overview">
+<node CREATED="1394608019438" FOLDED="true" ID="ID_1660392140" MODIFIED="1451095280009" TEXT="Messages">
+<node CREATED="1411896237332" FOLDED="true" ID="ID_1843314913" MODIFIED="1451094975780" TEXT="overview">
 <node CREATED="1411119119971" ID="ID_317725713" MODIFIED="1411896984308">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2864,7 +2796,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1394784671796" ID="ID_742765223" MODIFIED="1411897050742" TEXT="compose">
+<node CREATED="1394784671796" ID="ID_742765223" MODIFIED="1451094816162" TEXT="compose">
 <node CREATED="1394784681207" ID="ID_518594583" MODIFIED="1394784707690">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2911,7 +2843,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1411118423286" FOLDED="true" ID="ID_1502062810" MODIFIED="1417767959432" TEXT="data structure">
+<node CREATED="1411118423286" FOLDED="true" ID="ID_1502062810" MODIFIED="1451094969401" TEXT="data structure">
 <node CREATED="1395042319785" ID="ID_1164296285" MODIFIED="1395042338581" TEXT="include/linux/msg.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -3035,14 +2967,15 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1411119076865" ID="ID_1321898770" MODIFIED="1417767942398" TEXT="operation">
+<node CREATED="1411119076865" ID="ID_1321898770" MODIFIED="1451094970718" TEXT="operation">
 <node CREATED="1411119080670" ID="ID_1869855198" MODIFIED="1411119106788" TEXT="msg send"/>
 <node CREATED="1411119093120" ID="ID_1194337764" MODIFIED="1411119101370" TEXT="msg receive"/>
 <node CREATED="1411119108640" ID="ID_1371475236" MODIFIED="1411119115403" TEXT="msg ctrl"/>
 </node>
 </node>
-<node CREATED="1394608023737" ID="ID_230625253" MODIFIED="1411897299139" TEXT="Shared memory regions">
-<node CREATED="1411896052711" ID="ID_1174668635" MODIFIED="1417767668871" TEXT="overview">
+<node CREATED="1394608023737" FOLDED="true" ID="ID_230625253" MODIFIED="1451095469783" TEXT="Shared memory regions">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1411896052711" FOLDED="true" ID="ID_1174668635" MODIFIED="1451095468647" TEXT="overview">
 <node CREATED="1411896363569" ID="ID_1240329312" MODIFIED="1411896647271" TEXT="&#x5171;&#x4eab;&#x5185;&#x5b58;&#xff0c;&#x672c;&#x8d28;&#x4e0a;&#x662f;&#x6bcf;&#x4e2a;&#x8fdb;&#x7a0b;&#xff0c;&#x901a;&#x8fc7;&#x4e00;&#x4e2a;&#x952e;&#x503c;&#xff0c;&#x5c06;&#x201c;&#x5171;&#x4eab;&#x5185;&#x5b58;&#x533a;&#x201d;&#x6620;&#x5c04;&#x5230;&#x5404;&#x81ea;&#x7684;&#x865a;&#x62df;&#x7a7a;&#x95f4;&#x3002;"/>
 <node CREATED="1395047974244" ID="ID_1761056915" MODIFIED="1411896675274">
 <richcontent TYPE="NODE"><html>
@@ -3055,7 +2988,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1411896041247" ID="ID_1648456789" MODIFIED="1417768091398" TEXT="data structure">
+<node CREATED="1411896041247" FOLDED="true" ID="ID_1648456789" MODIFIED="1451095463211" TEXT="data structure">
 <node CREATED="1395048394074" ID="ID_767020341" MODIFIED="1395048452957" TEXT="include/linux/shm.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -3118,15 +3051,15 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1411896047495" ID="ID_1345048409" MODIFIED="1417768029878" TEXT="operation">
+<node CREATED="1411896047495" FOLDED="true" ID="ID_1345048409" MODIFIED="1451095467533" TEXT="operation">
 <node CREATED="1411896324737" ID="ID_1263935069" MODIFIED="1411896337271" TEXT="shm get"/>
 <node CREATED="1411896337578" ID="ID_721405858" MODIFIED="1411896344575" TEXT="shm attach"/>
 <node CREATED="1411896345002" ID="ID_972185020" MODIFIED="1411896350094" TEXT="shm detach"/>
 <node CREATED="1411896350785" ID="ID_471388277" MODIFIED="1411896357694" TEXT="shm ctrl"/>
 </node>
 </node>
-<node CREATED="1394607980850" ID="ID_1023591222" MODIFIED="1411896887398" TEXT="Semaphores">
-<node CREATED="1411896893014" FOLDED="true" ID="ID_919488769" MODIFIED="1417768271117" TEXT="overview">
+<node CREATED="1394607980850" FOLDED="true" ID="ID_1023591222" MODIFIED="1451095513551" TEXT="Semaphores">
+<node CREATED="1411896893014" FOLDED="true" ID="ID_919488769" MODIFIED="1451095510207" TEXT="overview">
 <node CREATED="1395045170834" FOLDED="true" ID="ID_1885555279" MODIFIED="1395371901164">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -3372,8 +3305,9 @@
 <node CREATED="1411896903094" ID="ID_1205245231" MODIFIED="1411896906067" TEXT="data structure"/>
 <node CREATED="1411896906461" ID="ID_758467113" MODIFIED="1411896908562" TEXT="operation"/>
 </node>
+<node CREATED="1394608032169" ID="ID_1896979205" MODIFIED="1451094985063" TEXT="Sockets">
+<icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1394608032169" ID="ID_1896979205" MODIFIED="1394608041287" TEXT="Sockets"/>
 </node>
 </node>
 </map>

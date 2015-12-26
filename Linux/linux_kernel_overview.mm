@@ -125,7 +125,7 @@
 <node CREATED="1400055486282" ID="ID_1458917537" MODIFIED="1400057331259" TEXT="/var/tmp - Temporary files to be preserved between reboots."/>
 </node>
 </node>
-<node CREATED="1395825956102" ID="ID_51099828" MODIFIED="1416294516065" POSITION="right" TEXT="Data Structure">
+<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1451096749007" POSITION="right" TEXT="Data Structure">
 <node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1400642361080" TEXT="Standard C Types"/>
 <node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400642367571" TEXT="Typedef Types"/>
 <node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1416294530029" TEXT="Linux Types">
@@ -223,6 +223,70 @@
 <node CREATED="1416294775219" FOLDED="true" ID="ID_669885770" MODIFIED="1416294807586" TEXT="big endian">
 <node CREATED="1416294746084" ID="ID_1696780945" MODIFIED="1416294760888" TEXT="cpu_to_be32/be32_to_cpu"/>
 </node>
+</node>
+<node CREATED="1411896802001" FOLDED="true" ID="ID_1519744102" MODIFIED="1451096744828" TEXT="idr">
+<node CREATED="1395044658672" ID="ID_229321882" MODIFIED="1411119495305" TEXT="include/linux/ipc_namespace.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1395047483349" ID="ID_1230410566" MODIFIED="1411895787503">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <i><font color="#660066"><b>ipc_namespace</b></font></i>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t&#160;&#160;&#160;&#160;count;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct ipc_ids&#160;&#160;<i><font color="#0000ff"><b>ids</b></font></i>[3];
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1395044669455" ID="ID_1660358231" MODIFIED="1411897264730">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct <b><font color="#660066"><i>ipc_ids</i></font></b>&#160;{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int in_use;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned short seq_max;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct rw_semaphore rwsem;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct idr ipcs_idr;</i></font></b>
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int next_id;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1411119483158" ID="ID_1032073067" MODIFIED="1451094550445" TEXT="idr&#xff0c;&#x201c;Small id to pointer translation service.&#x201d; &#x5b9e;&#x9645;&#x4e0a;&#xff0c;&#x5c31;&#x662f;&#x5c06;&#x4e00;&#x4e2a;&#x6574;&#x6570;ID&#x53f7;&#x548c;&#x4e00;&#x4e2a;&#x6307;&#x9488;&#x5173;&#x8054;&#x5728;&#x4e00;&#x8d77;&#x7684;&#x673a;&#x5236;&#x3002;"/>
 </node>
 </node>
 <node CREATED="1395826578792" FOLDED="true" ID="ID_921166443" MODIFIED="1401349033328" POSITION="right" TEXT="Time Management">
