@@ -125,7 +125,7 @@
 <node CREATED="1400055486282" ID="ID_1458917537" MODIFIED="1400057331259" TEXT="/var/tmp - Temporary files to be preserved between reboots."/>
 </node>
 </node>
-<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1451096749007" POSITION="right" TEXT="Data Structure">
+<node CREATED="1395825956102" FOLDED="true" ID="ID_51099828" MODIFIED="1451186330549" POSITION="right" TEXT="Data Structure">
 <node CREATED="1312691484673" ID="ID_1308539733" MODIFIED="1400642361080" TEXT="Standard C Types"/>
 <node CREATED="1312691550460" ID="ID_805149776" MODIFIED="1400642367571" TEXT="Typedef Types"/>
 <node CREATED="1312691530047" FOLDED="true" ID="ID_139786634" MODIFIED="1416294530029" TEXT="Linux Types">
@@ -524,6 +524,211 @@
 <node CREATED="1400047613162" ID="ID_1581118990" MODIFIED="1400047742466" TEXT="Calculate the infamous load average.">
 <icon BUILTIN="full-6"/>
 </node>
+</node>
+</node>
+</node>
+<node CREATED="1451186334312" ID="ID_151475913" MODIFIED="1451186340504" POSITION="right" TEXT="debug">
+<node CREATED="1451186350247" ID="ID_1977086057" MODIFIED="1451186451181" TEXT="top - display Linux tasks"/>
+<node CREATED="1451186354617" FOLDED="true" ID="ID_1385725181" MODIFIED="1451187214870" TEXT="chrt - manipulate the real-time attributes of a process">
+<node CREATED="1451186873088" ID="ID_570299530" MODIFIED="1451186900265" TEXT="Usage &amp; Example"/>
+<node CREATED="1451186534592" ID="ID_1701713590" MODIFIED="1451186617549">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier 10 Pitch">Set policy: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;chrt [options] &lt;policy&gt; &lt;priority&gt; {&lt;pid&gt; | &lt;command&gt; [&lt;arg&gt; ...]} </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">Get policy: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;chrt [options] {&lt;pid&gt; | &lt;command&gt; [&lt;arg&gt; ...]} </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">Scheduling policies: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-b | --batch&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;set policy to SCHED_BATCH </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-f | --fifo&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;set policy to SCHED_FIFO </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-i | --idle&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;set policy to SCHED_IDLE </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-o | --other&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;set policy to SCHED_OTHER </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-r | --rr&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;set policy to SCHED_RR (default) </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">Options: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-h | --help&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;display this help </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-p | --pid&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;operate on existing given pid </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-m | --max&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;show min and max valid priorities </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-v | --verbose&#160;&#160;&#160;&#160;&#160;&#160;&#160;display status information </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-V | --version&#160;&#160;&#160;&#160;&#160;&#160;&#160;output version information</font>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1451186521862" ID="ID_173361819" MODIFIED="1451186868070">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier 10 Pitch">$ chrt -f -p 50 3423 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">$ chrt -p 3423 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">pid 3423's current scheduling policy: SCHED_FIFO </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">pid 3423's current scheduling priority: 50 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">$ chrt -o -p 0 3423 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">$ chrt -p 3423 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">pid 3423's current scheduling policy: SCHED_OTHER </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">pid 3423's current scheduling priority: 0</font>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1451187075548" FOLDED="true" ID="ID_1594624187" MODIFIED="1451187355331" TEXT="taskset - retrieve or set a process&apos;s CPU affinity">
+<node CREATED="1451186873088" ID="ID_1882658531" MODIFIED="1451186900265" TEXT="Usage &amp; Example"/>
+<node CREATED="1451187106413" ID="ID_1867525873" MODIFIED="1451187195845">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier 10 Pitch">taskset (util-linux-ng 2.17.2) </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">usage: taskset [options] [mask | cpu-list] [pid | cmd [args...]] </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">set or get the affinity of a process </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-p, --pid&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;operate on existing given pid </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-c, --cpu-list&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;display and specify cpus in list format </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-h, --help&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;display this help </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;-V, --version&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;output version information </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">The default behavior is to run a new command: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;taskset 03 sshd -b 1024 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">You can retrieve the mask of an existing task: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;taskset -p 700 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">Or set it: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;taskset -p 03 700 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">List format uses a comma-separated list instead of a mask: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;taskset -pc 0,3,7-11 700 </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">Ranges in list format can take a stride argument: </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;e.g. 0-31:2 is equivalent to mask 0x55555555 </font>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1451187217039" ID="ID_1833319172" MODIFIED="1451187353126">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $ taskset -p 3423
+    </p>
+    <p>
+      pid 3423's current affinity mask: 1
+    </p>
+    <p>
+      $ taskset -p 3 3423
+    </p>
+    <p>
+      pid 3423's current affinity mask: 1
+    </p>
+    <p>
+      pid 3423's new affinity mask: 1
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
