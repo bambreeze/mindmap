@@ -170,7 +170,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1451096547904">
+<node CREATED="1316843584303" FOLDED="true" ID="ID_1772179729" MODIFIED="1451227899612">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -203,8 +203,7 @@
       for_each_process(p)&#160;- scans the whole process list
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1398835951861" ID="ID_696556427" MODIFIED="1450947368164" TEXT="init/init_task.c">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -231,12 +230,11 @@
       &#160;&#160;&#160;&#160;for (p = &amp;init_task ; (p = next_task(p)) != &amp;init_task ; )
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
-<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1451096546567">
+<node CREATED="1398838166869" FOLDED="true" ID="ID_1751707897" MODIFIED="1451227896852">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -271,7 +269,7 @@
 <node CREATED="1316920156962" ID="ID_505848288" MODIFIED="1398838272680" TEXT="&quot;real_parent&quot; - Points to the process descriptor of the process that created P or to the descriptor of process 1 (init) if the parent process no longer exists."/>
 <node CREATED="1316920269649" ID="ID_1301081112" MODIFIED="1398838289493" TEXT="&quot;parent&quot; - Points to the current parent of P "/>
 </node>
-<node CREATED="1451095632942" FOLDED="true" ID="ID_1583938106" MODIFIED="1451096545559" TEXT="struct pid_link pids[PIDTYPE_MAX]; /* PID/PID hash table linkage. */">
+<node CREATED="1451095632942" FOLDED="true" ID="ID_1583938106" MODIFIED="1451227894746" TEXT="struct pid_link pids[PIDTYPE_MAX]; /* PID/PID hash table linkage. */">
 <node CREATED="1450948430874" ID="ID_1433629728" MODIFIED="1451096526314">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -282,8 +280,7 @@
       <b>process hash table</b>&#160;- A struct <b><i>pid</i></b>&#160;is the kernel's internal notion of a <b><i>process identifier</i></b>. It refers to individual tasks, process groups, and sessions.&#160;&#160;While there are processes attached to it the struct pid lives in a <b><i>hash table</i></b>, so it and then the processes that it refers to can be found quickly from the numeric pid value.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1393232863003" ID="ID_768721619" MODIFIED="1451096062766" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
@@ -313,7 +310,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1451096308001">
+<node CREATED="1316928554073" FOLDED="true" ID="ID_62137992" MODIFIED="1451227888555">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -329,8 +326,7 @@
       struct task_struct *group_leader;&#160;&#160;/* Process descriptor pointer of the group leader of P */
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393232863003" ID="ID_819099011" MODIFIED="1393232869723" TEXT="include/linux/pid.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -366,7 +362,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1365579658729" ID="ID_676626903" MODIFIED="1409303646088">
+<node CREATED="1365579658729" ID="ID_676626903" MODIFIED="1451227238311">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -390,7 +386,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1450947719983" TEXT="struct mm_struct *mm, *active_mm;">
+<node CREATED="1401170358179" FOLDED="true" ID="ID_465317439" MODIFIED="1451225211958" TEXT="struct mm_struct *mm, *active_mm;">
 <node CREATED="1358303465051" ID="ID_1231007921" MODIFIED="1400660267961" TEXT="include/linux/mm_types.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -1568,8 +1564,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1450951169841" POSITION="right" TEXT="System Call">
-<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1399962878636">
+<node CREATED="1358477579981" FOLDED="true" ID="ID_188150470" MODIFIED="1451225201512" POSITION="right" TEXT="System Call">
+<node CREATED="1358477815733" FOLDED="true" ID="ID_538922577" MODIFIED="1451224970132">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -1616,8 +1612,8 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1358755437681" ID="ID_175528966" MODIFIED="1395844966215" TEXT="__kernel_vsyscall">
-<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1417766788291" TEXT="int $0x80">
+<node CREATED="1358755437681" FOLDED="true" ID="ID_175528966" MODIFIED="1451225200284" TEXT="__kernel_vsyscall">
+<node CREATED="1358755526774" FOLDED="true" ID="ID_1499798077" MODIFIED="1451225199306" TEXT="int $0x80">
 <icon BUILTIN="button_cancel"/>
 <node CREATED="1358755597086" ID="ID_621679404" MODIFIED="1358755775563">
 <richcontent TYPE="NODE"><html>
@@ -1659,7 +1655,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1417766796281" TEXT="sysenter">
+<node CREATED="1358755538689" FOLDED="true" ID="ID_6960833" MODIFIED="1451225198296" TEXT="sysenter">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1358909136188" ID="ID_1297482190" MODIFIED="1358910510104">
 <richcontent TYPE="NODE"><html>
@@ -1686,7 +1682,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1451096717025" POSITION="right" TEXT="Concurrency">
+<node CREATED="1395826105267" FOLDED="true" ID="ID_1799415634" MODIFIED="1451225190265" POSITION="right" TEXT="Concurrency">
 <node CREATED="1399770844089" ID="ID_869416328" MODIFIED="1399962757390" TEXT="Definiton">
 <node CREATED="1399771002871" ID="ID_261412793" MODIFIED="1399771167398">
 <richcontent TYPE="NODE"><html>
@@ -2082,8 +2078,8 @@
 <node CREATED="1312693352465" ID="ID_752258416" MODIFIED="1399960511566" TEXT="rw_semaphore/completion"/>
 </node>
 </node>
-<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1451096711397" POSITION="right" TEXT="Process Communication (IPC)">
-<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1451095321442">
+<node CREATED="1394607772301" FOLDED="true" ID="ID_232140513" MODIFIED="1451227859726" POSITION="right" TEXT="Process Communication (IPC)">
+<node CREATED="1394607940675" FOLDED="true" ID="ID_833366660" MODIFIED="1451227225926">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2411,8 +2407,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1409303258109" FOLDED="true" ID="ID_447036192" MODIFIED="1451095086386" TEXT="Signal">
-<node CREATED="1409303271084" ID="ID_191823609" MODIFIED="1411897163004">
+<node CREATED="1409303258109" FOLDED="true" ID="ID_447036192" MODIFIED="1451227858026" TEXT="Signal">
+<node CREATED="1409303271084" FOLDED="true" ID="ID_191823609" MODIFIED="1451227772895">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2423,8 +2419,115 @@
     </p>
   </body>
 </html></richcontent>
+<node CREATED="1451225959548" ID="ID_1823465551" MODIFIED="1451227643841">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A <span class="docEmphasis">signal</span>&#160;is a very short message that may be sent to a process or a group of processes. The only information given to the process is usually a <font color="#0000ff"><i><b>number</b></i></font>&#160;identifying the signal; there is no room in standard signals for arguments, a message, or other accompanying information.
+    </p>
+  </body>
+</html></richcontent>
 </node>
-<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1451094694353" TEXT="data structure">
+<node CREATED="1451225644696" ID="ID_1414326029" MODIFIED="1451227732275" TEXT="The Role of Signals">
+<node CREATED="1451225678672" ID="ID_114427589" MODIFIED="1451225761320">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To make a process aware that a specific <font color="#0000ff"><i><b>event</b></i></font>&#160;has occurred
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1451225720592" ID="ID_866947776" MODIFIED="1451225779200">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To cause a process to execute a <font color="#0000ff"><i><b>signal handler function</b></i></font>&#160; included in its code
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+<node CREATED="1451226096342" ID="ID_761091401" MODIFIED="1451227739498" TEXT="Signal Transmission">
+<node CREATED="1451226140137" ID="ID_1646588686" MODIFIED="1451226249660">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>signal generation</b>&#160;- The kernel updates a data structure of the destination process to represent that a new signal has been sent.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1451226204553" ID="ID_526670546" MODIFIED="1451226252206">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>Signal delivery</b>&#160;- The kernel forces the destination process to react to the signal by changing its execution state, by starting the execution of a specified signal handler, or both.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+<node CREATED="1451226302435" ID="ID_1053601021" MODIFIED="1451227744399">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Pending Signals
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1451226461379" ID="ID_164053106" MODIFIED="1451226464740" TEXT="Signals that have been generated but not yet delivered are called pending signals."/>
+<node CREATED="1451226466068" ID="ID_635881880" MODIFIED="1451226612962">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>shared pending signal queue</b>&#160;- rooted at the <font color="#0000ff"><i><b>shared_pending</b></i></font>&#160; field of the signal descriptor, stores the pending signals of the whole thread group.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-1"/>
+</node>
+<node CREATED="1451226615220" ID="ID_742740012" MODIFIED="1451226658944">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>private pending signal queue</b>&#160;- rooted at the <font color="#0000ff"><i><b>pending</b></i></font>&#160; field of the process descriptor, stores the pending signals of the specific (lightweight) process.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="full-2"/>
+</node>
+</node>
+</node>
+<node CREATED="1409304818475" FOLDED="true" ID="ID_1253989942" MODIFIED="1451227837976" TEXT="data structure">
 <node CREATED="1365580728182" ID="ID_943912073" MODIFIED="1409304524041">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2439,119 +2542,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1398847367261">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct signal_struct {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;int nr_threads;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wait_queue_head_t wait_chldexit;&#160;&#160;&#160;/* The processes sleeping in a wait4() system call */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct task_struct *curr_target;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct sigpending shared_pending; /* Data structure storing the shared pending signals */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;...
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1451094693300">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      struct sighand_struct {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;<b><font color="#0000ff"><i>struct k_sigaction action[_NSIG]</i></font></b>;&#160;&#160;&#160;&#160;/* The actions to be performed upon delivering the signals */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;wait_queue_head_t&#160;&#160;&#160;signalfd_wqh;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-<node CREATED="1366168611255" ID="ID_1270956179" MODIFIED="1409304073945" TEXT="include/linux/signal.h">
-<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
-<icon BUILTIN="attach"/>
-</node>
-<node CREATED="1366168658355" ID="ID_1469689717" MODIFIED="1409304502421">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      /*&#160;&#160;Type of a signal handler.&#160;&#160;*/
-    </p>
-    <p>
-      typedef void (*__sighandler_t)(int);
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      struct sigaction {&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;sa_flags;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;__sighandler_t&#160;&#160;<b><font color="#0000ff"><i>sa_handler</i></font></b>;
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;sigset_t&#160;&#160;&#160;&#160;sa_mask;&#160;&#160;&#160;&#160;/* mask last for extensibility */
-    </p>
-    <p>
-      };
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      struct k_sigaction {
-    </p>
-    <p>
-      &#160;&#160;&#160;&#160;struct sigaction sa;
-    </p>
-    <p>
-      };
-    </p>
-  </body>
-</html></richcontent>
-</node>
-</node>
-<node CREATED="1409303791185" FOLDED="true" ID="ID_275050707" MODIFIED="1451094441200">
+<node CREATED="1409303791185" ID="ID_275050707" MODIFIED="1451227461899">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2561,7 +2552,7 @@
       struct sigpending {
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct list_head <b><font color="#000000"><i>list</i></font></b>;
+      &#160;&#160;&#160;&#160;struct list_head <font color="#0000ff"><i><b>list</b></i></font>;
     </p>
     <p>
       &#160;&#160;&#160;&#160;sigset_t signal;
@@ -2570,12 +2561,13 @@
       };
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1366168611255" ID="ID_1145813047" MODIFIED="1409304194557" TEXT="include/linux/signal.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1409303924982" ID="ID_424028508" MODIFIED="1409304724634">
+<node CREATED="1409303924982" FOLDED="true" ID="ID_424028508" MODIFIED="1451227472868">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2585,7 +2577,7 @@
       struct sigqueue {
     </p>
     <p>
-      &#160;&#160;&#160;&#160;struct list_head <b><font color="#000000"><i>list</i></font></b>;
+      &#160;&#160;&#160;&#160;struct list_head <font color="#0000ff"><i><b>list</b></i></font>;
     </p>
     <p>
       &#160;&#160;&#160;&#160;int flags;
@@ -2600,7 +2592,8 @@
       };
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1366168611255" ID="ID_585150410" MODIFIED="1409304565926" TEXT="include/uapi/asm-generic/siginfo.h">
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
@@ -2667,9 +2660,133 @@
 </node>
 </node>
 </node>
+<node CREATED="1365579764329" ID="ID_544839362" MODIFIED="1451227443079">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct signal_struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t sigcnt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t live;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Number of live processes in the thread group */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;int nr_threads;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wait_queue_head_t wait_chldexit;&#160;&#160;&#160;/* The processes sleeping in a wait4() system call */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct task_struct *curr_target;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* last process in the thread group that received a signal */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct sigpending <font color="#0000ff"><i><b>shared_pending</b></i></font>; /* Data structure storing the shared pending signals */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node CREATED="1409304872194" FOLDED="true" ID="ID_1556239518" MODIFIED="1451094727442" TEXT="operation">
-<node CREATED="1409304875825" FOLDED="true" ID="ID_1277062803" MODIFIED="1451094725916" TEXT="setup signal action">
+<node CREATED="1365580739916" FOLDED="true" ID="ID_462838517" MODIFIED="1451227536198">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      struct sighand_struct {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;atomic_t count;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* Usage counter of the signal handler descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;<font color="#333333">struct k_sigaction </font><font color="#0000ff"><i><b>action[_NSIG]</b></i></font>;&#160;&#160;&#160;&#160;/* The actions to be performed upon delivering the signals */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;spinlock_t siglock;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/* For signal descriptor and the signal handler descriptor */
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;wait_queue_head_t&#160;&#160;&#160;signalfd_wqh;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1366168611255" ID="ID_1270956179" MODIFIED="1409304073945" TEXT="include/linux/signal.h">
+<font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="attach"/>
+</node>
+<node CREATED="1366168658355" ID="ID_1469689717" MODIFIED="1409304502421">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      /*&#160;&#160;Type of a signal handler.&#160;&#160;*/
+    </p>
+    <p>
+      typedef void (*__sighandler_t)(int);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      struct sigaction {&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;unsigned int&#160;&#160;&#160;&#160;sa_flags;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;__sighandler_t&#160;&#160;<b><font color="#0000ff"><i>sa_handler</i></font></b>;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;sigset_t&#160;&#160;&#160;&#160;sa_mask;&#160;&#160;&#160;&#160;/* mask last for extensibility */
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      struct k_sigaction {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;struct sigaction sa;
+    </p>
+    <p>
+      };
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1451225408710" ID="ID_744847259" MODIFIED="1451225449626">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <img src="kernel/signal/signal-data-structure.jpg" />
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1409304872194" FOLDED="true" ID="ID_1556239518" MODIFIED="1451227855110" TEXT="operation">
+<node CREATED="1409304875825" ID="ID_1277062803" MODIFIED="1451225086357" TEXT="setup signal action">
 <node CREATED="1365580728182" ID="ID_1475758844" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2684,7 +2801,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1409304933688" ID="ID_405456301" MODIFIED="1409305054337">
+<node CREATED="1409304933688" ID="ID_405456301" MODIFIED="1451226862884">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2694,13 +2811,14 @@
       sys_signal()
     </p>
     <p>
-      &#160;&#160;do_sigaction()
+      &#160;&#160;<font color="#0000ff"><i><b>do_sigaction</b></i></font>()
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1409304877946" FOLDED="true" ID="ID_653617886" MODIFIED="1451094709365" TEXT="send signal">
+<node CREATED="1409304877946" ID="ID_653617886" MODIFIED="1451225090661" TEXT="send signal">
 <node CREATED="1365580728182" ID="ID_465583667" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2715,7 +2833,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1409305068334" ID="ID_1868114363" MODIFIED="1409305170558">
+<node CREATED="1409305068334" ID="ID_1868114363" MODIFIED="1451226778607">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2737,13 +2855,14 @@
       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;deliver_signal()
     </p>
     <p>
-      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;send_signal()
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<font color="#0000ff"><i><b>send_signal</b></i></font>()
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 </node>
-<node CREATED="1409304879914" FOLDED="true" ID="ID_25058641" MODIFIED="1451094723490" TEXT="receive signal">
+<node CREATED="1409304879914" ID="ID_25058641" MODIFIED="1451225092693" TEXT="receive signal">
 <node CREATED="1365580728182" ID="ID_1825578398" MODIFIED="1409304929922">
 <richcontent TYPE="NODE"><html>
   <head>
@@ -2758,7 +2877,7 @@
 <font BOLD="true" ITALIC="true" NAME="SansSerif" SIZE="12"/>
 <icon BUILTIN="attach"/>
 </node>
-<node CREATED="1409305235547" ID="ID_840637216" MODIFIED="1409305309316">
+<node CREATED="1409305235547" ID="ID_840637216" MODIFIED="1451226815348">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -2768,13 +2887,27 @@
       ret_with_reschedule()
     </p>
     <p>
-      &#160;&#160;do_signal()
+      &#160;&#160;<font color="#0000ff"><i><b>do_signal</b></i></font>()
     </p>
     <p>
       &#160;&#160;&#160;&#160;handle_signal()
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
+<node CREATED="1451226946121" ID="ID_671968837" MODIFIED="1451227060356">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The kernel checks the value of the <font color="#0000ff"><i><b>TIF_SIGPENDING</b></i></font>&#160;flag of the process before allowing the process to resume its execution in User Mode. Thus, the kernel checks for the existence of pending signals every time it <font color="#0000ff"><i><b>finishes handling an interrupt</b></i>&#160;</font>or an exception.
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
