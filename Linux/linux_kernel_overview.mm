@@ -598,8 +598,7 @@
       <font face="Courier 10 Pitch">&#160;&#160;-V | --version&#160;&#160;&#160;&#160;&#160;&#160;&#160;output version information</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1451186521862" ID="ID_173361819" MODIFIED="1451186868070">
 <richcontent TYPE="NODE"><html>
@@ -632,8 +631,7 @@
       <font face="Courier 10 Pitch">pid 3423's current scheduling priority: 0</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1451187075548" FOLDED="true" ID="ID_1594624187" MODIFIED="1451187355331" TEXT="taskset - retrieve or set a process&apos;s CPU affinity">
@@ -702,8 +700,7 @@
       <font face="Courier 10 Pitch">&#160;&#160;e.g. 0-31:2 is equivalent to mask 0x55555555 </font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1451187217039" ID="ID_1833319172" MODIFIED="1451187353126">
 <richcontent TYPE="NODE"><html>
@@ -725,6 +722,36 @@
     </p>
     <p>
       pid 3423's new affinity mask: 1
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1451190398700" FOLDED="true" ID="ID_1813235767" MODIFIED="1451191723492" TEXT="syslog - send messages to the system logger">
+<node CREATED="1451190459338" ID="ID_1123030259" MODIFIED="1451190482534" TEXT="$ tail -f /var/log/messages"/>
+<node CREATED="1451190438055" ID="ID_1846112954" MODIFIED="1451190453270">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="Courier 10 Pitch">SYNOPSIS </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;&#160;&#160;&#160;&#160;&#160;#include &lt;syslog.h&gt; </font>
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;&#160;&#160;&#160;&#160;&#160;void openlog(const char *ident, int option, int facility); </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;&#160;&#160;&#160;&#160;&#160;void syslog(int priority, const char *format, ...); </font>
+    </p>
+    <p>
+      <font face="Courier 10 Pitch">&#160;&#160;&#160;&#160;&#160;&#160;&#160;void closelog(void);</font>
     </p>
   </body>
 </html>
