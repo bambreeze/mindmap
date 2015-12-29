@@ -527,9 +527,100 @@
 </node>
 </node>
 </node>
-<node CREATED="1451186334312" ID="ID_151475913" MODIFIED="1451186340504" POSITION="right" TEXT="debug">
-<node CREATED="1451186350247" ID="ID_1977086057" MODIFIED="1451186451181" TEXT="top - display Linux tasks"/>
-<node CREATED="1451186354617" FOLDED="true" ID="ID_1385725181" MODIFIED="1451187214870" TEXT="chrt - manipulate the real-time attributes of a process">
+<node CREATED="1451186334312" FOLDED="true" ID="ID_151475913" MODIFIED="1451401207162" POSITION="right" TEXT="debug">
+<node CREATED="1451186350247" FOLDED="true" ID="ID_1977086057" MODIFIED="1451400423422" TEXT="top - display Linux tasks">
+<node CREATED="1451397262151" ID="ID_85882267" MODIFIED="1451397994470">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#333333">$</font><font color="#0000ff"><b>&#160;top -H</b></font>: show threads
+    </p>
+  </body>
+</html>
+</richcontent>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node CREATED="1451397964420" ID="ID_1207874968" MODIFIED="1451398087053">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $ <font color="#0000ff"><b>top -H -p &lt;pid&gt;</b></font><font color="#333333">: show specific process whth it's threads</font>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1451397456686" ID="ID_674538728" MODIFIED="1451397523653" TEXT="Toggle SMP view: &apos;1&apos; single/separate states;"/>
+<node CREATED="1451397531998" ID="ID_1341123063" MODIFIED="1451397620679" TEXT="Manipulate tasks: &apos;k&apos; kill; &apos;r&apos; renice"/>
+</node>
+<node CREATED="1451397664047" FOLDED="true" ID="ID_1346038192" MODIFIED="1451401187728" TEXT="ps - report a snapshot of the current processes.">
+<node CREATED="1451398496917" ID="ID_178779975" MODIFIED="1451398634442">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $ <font color="#0000ff"><b>ps -ef</b></font>: every process on the system using standard syntax
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1451398496917" ID="ID_1746688281" MODIFIED="1451398629475">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      $ <font color="#0000ff"><b>ps aux</b></font>: check every process on the system using BSD syntax
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1451397674498" ID="ID_1375365226" MODIFIED="1451398765588">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><b>ps -T p &lt;pid&gt;</b></font>: Show threads, possibly with SPID column
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1451397674498" ID="ID_1282366078" MODIFIED="1451398854093">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font color="#0000ff"><b>ps -m p &lt;pid&gt;</b></font>: Show threads after processes
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1451397666079" ID="ID_984091418" MODIFIED="1451401067054" TEXT="pstree - display a tree of processes"/>
+<node CREATED="1451400143562" FOLDED="true" ID="ID_972036430" MODIFIED="1451400187693" TEXT="renice - alter priority of running processes">
+<node CREATED="1451400174497" ID="ID_1646025348" MODIFIED="1451400184868" TEXT="$ sudo renice -g &lt;pid&gt; -n -5">
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1451186354617" FOLDED="true" ID="ID_1385725181" MODIFIED="1451400288200" TEXT="chrt - manipulate the real-time attributes of a process">
 <node CREATED="1451186873088" ID="ID_570299530" MODIFIED="1451186900265" TEXT="Usage &amp; Example"/>
 <node CREATED="1451186534592" ID="ID_1701713590" MODIFIED="1451186617549">
 <richcontent TYPE="NODE"><html>
@@ -634,7 +725,7 @@
 </html></richcontent>
 </node>
 </node>
-<node CREATED="1451187075548" FOLDED="true" ID="ID_1594624187" MODIFIED="1451187355331" TEXT="taskset - retrieve or set a process&apos;s CPU affinity">
+<node CREATED="1451187075548" FOLDED="true" ID="ID_1594624187" MODIFIED="1451401043862" TEXT="taskset - retrieve or set a process&apos;s CPU affinity">
 <node CREATED="1451186873088" ID="ID_1882658531" MODIFIED="1451186900265" TEXT="Usage &amp; Example"/>
 <node CREATED="1451187106413" ID="ID_1867525873" MODIFIED="1451187195845">
 <richcontent TYPE="NODE"><html>
@@ -726,8 +817,36 @@
   </body>
 </html></richcontent>
 </node>
+<node CREATED="1451400340242" ID="ID_1412894590" MODIFIED="1451400375701">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # set IRQ affinity
+    </p>
+    <p>
+      $ sudo echo 1 &gt; /proc/irq/19/smp_affinity
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      # set SOFTIRQ affinity
+    </p>
+    <p>
+      $ cd /&lt;netcard&gt;.../rx_0
+    </p>
+    <p>
+      $ echo 1 &gt; rps_cpu
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
-<node CREATED="1451190398700" FOLDED="true" ID="ID_1813235767" MODIFIED="1451191723492" TEXT="syslog - send messages to the system logger">
+</node>
+<node CREATED="1451190398700" FOLDED="true" ID="ID_1813235767" MODIFIED="1451399747922" TEXT="syslog - send messages to the system logger">
 <node CREATED="1451190459338" ID="ID_1123030259" MODIFIED="1451190482534" TEXT="$ tail -f /var/log/messages"/>
 <node CREATED="1451190438055" ID="ID_1846112954" MODIFIED="1451190453270">
 <richcontent TYPE="NODE"><html>
@@ -754,9 +873,30 @@
       <font face="Courier 10 Pitch">&#160;&#160;&#160;&#160;&#160;&#160;&#160;void closelog(void);</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
+</node>
+<node CREATED="1451399742733" FOLDED="true" ID="ID_575881791" MODIFIED="1451399792540" TEXT="watch - execute a program periodically, showing output fullscreen">
+<node CREATED="1451399749594" ID="ID_522752973" MODIFIED="1451399765598" TEXT="$ watch -n 1 cat /proc/interrrupts"/>
+<node CREATED="1451399766106" ID="ID_467651981" MODIFIED="1451399782014" TEXT="$ watch -n 1 cat /proc/softirqs"/>
+</node>
+<node CREATED="1451400877920" ID="ID_1562702368" MODIFIED="1451400962339">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      # check thread id
+    </p>
+    <p>
+      $ cd /proc/&lt;pid&gt;/task
+    </p>
+    <p>
+      $ ls
+    </p>
+  </body>
+</html></richcontent>
 </node>
 </node>
 </node>
