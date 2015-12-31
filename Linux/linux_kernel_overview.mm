@@ -527,7 +527,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1451186334312" FOLDED="true" ID="ID_151475913" MODIFIED="1451401207162" POSITION="right" TEXT="debug">
+<node CREATED="1451186334312" FOLDED="true" ID="ID_151475913" MODIFIED="1451543657266" POSITION="right" TEXT="debug">
 <node CREATED="1451186350247" FOLDED="true" ID="ID_1977086057" MODIFIED="1451400423422" TEXT="top - display Linux tasks">
 <node CREATED="1451397262151" ID="ID_85882267" MODIFIED="1451397994470">
 <richcontent TYPE="NODE"><html>
@@ -539,8 +539,7 @@
       <font color="#333333">$</font><font color="#0000ff"><b>&#160;top -H</b></font>: show threads
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 <node CREATED="1451397964420" ID="ID_1207874968" MODIFIED="1451398087053">
@@ -553,14 +552,13 @@
       $ <font color="#0000ff"><b>top -H -p &lt;pid&gt;</b></font><font color="#333333">: show specific process whth it's threads</font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1451397456686" ID="ID_674538728" MODIFIED="1451397523653" TEXT="Toggle SMP view: &apos;1&apos; single/separate states;"/>
 <node CREATED="1451397531998" ID="ID_1341123063" MODIFIED="1451397620679" TEXT="Manipulate tasks: &apos;k&apos; kill; &apos;r&apos; renice"/>
 </node>
-<node CREATED="1451397664047" FOLDED="true" ID="ID_1346038192" MODIFIED="1451401187728" TEXT="ps - report a snapshot of the current processes.">
-<node CREATED="1451398496917" ID="ID_178779975" MODIFIED="1451398634442">
+<node CREATED="1451397664047" ID="ID_1346038192" MODIFIED="1451527881784" TEXT="ps - report a snapshot of the current processes.">
+<node CREATED="1451398496917" FOLDED="true" ID="ID_178779975" MODIFIED="1451543648199">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -570,9 +568,9 @@
       $ <font color="#0000ff"><b>ps -ef</b></font>: every process on the system using standard syntax
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="button_ok"/>
+<node CREATED="1451527903192" ID="ID_1513061481" MODIFIED="1451527944646" TEXT="$ ps -efL | grep xxx: display threads"/>
 </node>
 <node CREATED="1451398496917" ID="ID_1746688281" MODIFIED="1451398629475">
 <richcontent TYPE="NODE"><html>
@@ -584,8 +582,7 @@
       $ <font color="#0000ff"><b>ps aux</b></font>: check every process on the system using BSD syntax
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1451397674498" ID="ID_1375365226" MODIFIED="1451398765588">
 <richcontent TYPE="NODE"><html>
@@ -597,8 +594,7 @@
       <font color="#0000ff"><b>ps -T p &lt;pid&gt;</b></font>: Show threads, possibly with SPID column
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1451397674498" ID="ID_1282366078" MODIFIED="1451398854093">
 <richcontent TYPE="NODE"><html>
@@ -610,8 +606,7 @@
       <font color="#0000ff"><b>ps -m p &lt;pid&gt;</b></font>: Show threads after processes
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1451397666079" ID="ID_984091418" MODIFIED="1451401067054" TEXT="pstree - display a tree of processes"/>
@@ -842,8 +837,7 @@
       $ echo 1 &gt; rps_cpu
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1451190398700" FOLDED="true" ID="ID_1813235767" MODIFIED="1451399747922" TEXT="syslog - send messages to the system logger">
